@@ -6,7 +6,7 @@
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Welcome to Jazzy-devel documentation! &mdash; Ubiquity Robotics Documentation 1.0.0 documentation</title>
+  <title>Ubiquity Robotics Gen 6 Documentation &mdash; Ubiquity Robotics Documentation 1.0.0 documentation</title>
       <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=b86133f3" />
       <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=e59714d7" />
 
@@ -19,7 +19,7 @@
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="File" href="file.html" /> 
+    <link rel="next" title="Magni 6 Mini" href="models/magni6_mini.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -41,9 +41,16 @@
   </form>
 </div>
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
-              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+              <p class="caption" role="heading"><span class="caption-text">Magni 6 Model Introduction</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="file.html">File</a></li>
+<li class="toctree-l1"><a class="reference internal" href="models/magni6_mini.html">Magni 6 Mini</a></li>
+<li class="toctree-l1"><a class="reference internal" href="models/magni6_midi.html">Magni6 Midi</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Waiting for Your Robot</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="requirements/waiting_for_robot.html">Waiting for Your Robot</a></li>
+<li class="toctree-l1"><a class="reference internal" href="requirements/workstation.html">Setting up your Workstation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="requirements/batteries.html">Batteries</a></li>
 </ul>
 
         </div>
@@ -60,7 +67,7 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="#" class="icon icon-home" aria-label="Home"></a></li>
-      <li class="breadcrumb-item active">Welcome to Jazzy-devel documentation!</li>
+      <li class="breadcrumb-item active">Ubiquity Robotics Gen 6 Documentation</li>
       <li class="wy-breadcrumbs-aside">
               <a href="https://github.com//learn2/blob/jazzy-devel/docs/index.rst" class="fa fa-github"> Edit on GitHub</a>
       </li>
@@ -70,22 +77,70 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <section id="welcome-to-jazzy-devel-documentation">
-<h1>Welcome to Jazzy-devel documentation!<a class="headerlink" href="#welcome-to-jazzy-devel-documentation" title="Link to this heading"></a></h1>
-<p>This is the page for the official Jazzy-devel documentation for Ubiquity Robotics.</p>
-<div class="toctree-wrapper compound">
-<p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+  <section id="ubiquity-robotics-gen-6-documentation">
+<h1>Ubiquity Robotics Gen 6 Documentation<a class="headerlink" href="#ubiquity-robotics-gen-6-documentation" title="Link to this heading"></a></h1>
+<p>Welcome to the Ubiquity Robotics Magni Gen 6 documentation!
+This  guide will help you get started with your robot, from unboxing to driving, and provide resources you need to troubleshoot common issues.
+Learn how to connect, operate, and interact with our robots, all in a step-by-step, beginner-friendly format.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This documentation is designed for beginners.</p>
+<p>Expect clear, friendly instructions that guide you from unboxing your robot to running it smoothly.</p>
+</div>
+<section id="sections">
+<h2>Sections<a class="headerlink" href="#sections" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p><a class="reference internal" href="#model-introduction">Magni 6 Model Introduction</a>: Introduction to our Magni 6 robots. This section highligets their key specifications and typical use cases to help you choose the right model for your needs.</p></li>
+<li><p><a class="reference internal" href="#requirements">Waiting for Your Robot</a>: Covers what you should do while waiting for your robot to arrive. System requirements, recommended preparations like buying the correct batteries, and setting up your workstation.</p></li>
+<li><p><a href="#id1"><span class="problematic" id="id2">`Setting Up Your Workstation `workstation_`_</span></a>: Explains how to configure your workstation to be fully compatible with our robots, including hardware and software requirements.</p></li>
+<li><p><a class="reference internal" href="#unboxing">Unboxing</a>: Step-by-step instructions for safely unboxing your robot. Learn how to check for damages and ensure all components are included.</p></li>
+<li><p><a class="reference internal" href="#driving">Driving the Robot</a>: Learn how to operate your robot, from basic controls to advanced driving tips.</p></li>
+<li><p><a class="reference internal" href="#ez-map">EZ-MAP</a>: Our custom SLAM software for automating your robot. Includes installation, setup, and usage instructions.</p></li>
+<li><p><a class="reference internal" href="#simulation">Simulation</a>: Step-by-step guide to running RVIZ simulations of your robot, including a brief introduction to what RVIZ is._</p></li>
+<li><p><a class="reference internal" href="#ros2">ROS2</a>: Overview of ROS2 and its role in our systems, with rpactical guides on interacting with your robot via ROS2.</p></li>
+<li><p><a class="reference internal" href="#troubleshooting">Troubleshooting</a>: Solutions to common hardware and software issues. Your first stop if you encounter problems.</p></li>
+</ul>
+<div class="toctree-wrapper compound" id="model-introduction">
+<p class="caption" role="heading"><span class="caption-text">Magni 6 Model Introduction</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="file.html">File</a></li>
+<li class="toctree-l1"><a class="reference internal" href="models/magni6_mini.html">Magni 6 Mini</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="models/magni6_mini.html#sneak-peak-of-the-mini">Sneak peak of the Mini</a></li>
+<li class="toctree-l2"><a class="reference internal" href="models/magni6_mini.html#overview">Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="models/magni6_mini.html#build-specifications">Build Specifications</a></li>
+<li class="toctree-l2"><a class="reference internal" href="models/magni6_mini.html#sensors">Sensors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="models/magni6_mini.html#projects">Projects</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="models/magni6_midi.html">Magni6 Midi</a></li>
 </ul>
 </div>
+<div class="toctree-wrapper compound" id="requirements">
+<p class="caption" role="heading"><span class="caption-text">Waiting for Your Robot</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="requirements/waiting_for_robot.html">Waiting for Your Robot</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="requirements/waiting_for_robot.html#requirements">Requirements</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="requirements/workstation.html">Setting up your Workstation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="requirements/batteries.html">Batteries</a></li>
+</ul>
+</div>
+<div class="toctree-wrapper compound" id="unboxing">
+</div>
+<div class="toctree-wrapper compound" id="driving">
+</div>
+<div class="toctree-wrapper compound" id="ros2">
+<span id="simulation"></span><span id="ez-map"></span></div>
+<div class="toctree-wrapper compound" id="troubleshooting">
+</div>
+</section>
 </section>
 
 
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="file.html" class="btn btn-neutral float-right" title="File" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="models/magni6_mini.html" class="btn btn-neutral float-right" title="Magni 6 Mini" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
