@@ -1,5 +1,0 @@
-rinohtype
-pigments
-gitpython
-sphinx
-sphinx-rtd-theme
