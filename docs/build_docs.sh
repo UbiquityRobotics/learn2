@@ -4,7 +4,7 @@
 # Inspired by common Sphinx + GitHub Pages workflows; fully rewritten for this project.
 # Author: Paveljolak
 # Project: Ubiquity Robotics Documentation
-# Date: [TODO]
+# Date: Sep 2, 2025
 
 set -e
 set -x

@@ -14,7 +14,7 @@ sys.path.insert(0, os.path.abspath('../src'))
 # -- Project information -----------------------------------------------------
 project = 'Ubiquity Robotics Documentation'
 copyright = '2025, Ubiquity Robotics'
-author = 'Pavel for now'
+author = 'Paveljolak'
 version = ''
 release = '1.0.0'
 
