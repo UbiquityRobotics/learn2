@@ -28,8 +28,10 @@ jobs:
         GITHUB_ACTOR: ${{ github.actor }}
         REPO_NAME: ${{ github.repository_name }}
         OWNER: ${{ github.repository_owner }}
-        # Add the custom domain to repository secrets and pull it from there.
-        # CUSTOM_DOMAIN: ${{ secrets.CUSTOM_DOMAIN }}
+        # preappend the repo name to the custom domain so we have the deploy properly
+         # NOTE: The domain name will be added in secrets
+          
+        # CUSTOM_DOMAIN: ${{ github.repository_name }}.${{ secrets.CUSTOM_DOMAIN }}
       run: |
         # Go to repo root
         cd ${{ github.workspace }}
