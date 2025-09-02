@@ -1,9 +1,7 @@
-Welcome to Main documentation!
-======================================
+Welcome to Jazzy documentation!
+===============================
 
-Main documentation.
-
-Update again.
+This is the page for the official Jazzy documentation for Ubiquity Robotics.
 
 .. toctree::
    :maxdepth: 2
