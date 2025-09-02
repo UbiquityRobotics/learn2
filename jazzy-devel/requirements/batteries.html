@@ -50,7 +50,26 @@
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="waiting_for_robot.html">Waiting for Your Robot</a></li>
 <li class="toctree-l1"><a class="reference internal" href="workstation.html">Setting up your Workstation</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Batteries</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Batteries</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#shipping">Shipping</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#what-kind-of-battery">What kind of Battery?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#which-battery">Which Battery?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#battery-specifications">Battery Specifications</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#charging">Charging</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#how-to-charge">How to charge?</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#typical-current-draw">Typical Current Draw</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#typical-current-draw-for-mini">Typical Current Draw for Mini</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#typical-current-draw-for-midi">Typical Current Draw for Midi</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#capacity-and-aging">Capacity and Aging</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#charge-capacity-reference-table">Charge Capacity Reference Table</a></li>
+</ul>
+</li>
+</ul>
+</li>
 </ul>
 
         </div>
@@ -79,7 +98,312 @@
              
   <section id="batteries">
 <h1>Batteries<a class="headerlink" href="#batteries" title="Link to this heading"></a></h1>
-<p><strong>CONTENT INCOMING</strong></p>
+<section id="shipping">
+<h2>Shipping<a class="headerlink" href="#shipping" title="Link to this heading"></a></h2>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The robot ships worldwide by air <strong>withouth batteries</strong>.
+This reduces shipping costs and avoids restrictions on transporting batteries.
+Lead acid batteries are easy to source locally.</p>
+</div>
+<p>The robot supports different battery sizes.
+This allows users to choose between a long-endurance but heavier setup, or a lighter and more portable configuration.
+Typical sources for suitable batteries include scooter, wheelchair, UPS, and automotive suppliers.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p><strong>THE VOLTAGE CONNECTED TO THE MAIN CONTROL BOARD (MCB) MUST REMAIN 30.0V OR LESS AT ALL TIMES!</strong></p>
+</div>
+</section>
+<section id="what-kind-of-battery">
+<h2>What kind of Battery?<a class="headerlink" href="#what-kind-of-battery" title="Link to this heading"></a></h2>
+<p>The batteries used in Magni 6 robots are sealed lead-acid (SLA) batteries, specifically Absorbent Glass Mat (AGM) Valve-Regulated Lead-Acid (VRLA) types.
+These batteries are safe, maintanance-free, and don’t leak, making them ideal for robotics.</p>
+</section>
+<section id="which-battery">
+<h2>Which Battery?<a class="headerlink" href="#which-battery" title="Link to this heading"></a></h2>
+<p>We recommend using two identical 12V, 5Ah AGM VRLA batteries with F2 termninals, such as Fiamm 12FGH23 or equivalents.
+Some equivalent batteries include:</p>
+<ul class="simple">
+<li><p>Yuasa NP5-12</p></li>
+<li><p>PowerSonic PS-1250</p></li>
+<li><p>Universal Power UB1250</p></li>
+<li><p>CSB HR1221W F2</p></li>
+</ul>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>This list of equivalent batteries was written from an internet search.
+It is not exaustive, definitve, or the primary reference, but merely a sample of compatible options.</p>
+</div>
+<p>For the best battery choice, consult a local supplier.</p>
+</section>
+<section id="battery-specifications">
+<h2>Battery Specifications<a class="headerlink" href="#battery-specifications" title="Link to this heading"></a></h2>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Feature</p></th>
+<th class="head"><p>Details</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Voltage</p></td>
+<td><p>12V</p></td>
+</tr>
+<tr class="row-odd"><td><p>Capacity</p></td>
+<td><p>5Ah</p></td>
+</tr>
+<tr class="row-even"><td><p>Type</p></td>
+<td><p>AGM VRLA</p></td>
+</tr>
+<tr class="row-odd"><td><p>Terminals</p></td>
+<td><p>F2 (6.3mm)</p></td>
+</tr>
+<tr class="row-even"><td><p>Size (approx.)</p></td>
+<td><p>90x70x101mm</p></td>
+</tr>
+<tr class="row-odd"><td><p>Weight (approx.)</p></td>
+<td><p>2kg</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="charging">
+<h2>Charging<a class="headerlink" href="#charging" title="Link to this heading"></a></h2>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>The stock battery charger we supply is <strong>ONLY FOR LEAD ACID</strong> batteries and will not work and if fact may be dangerous for other battery technologies.
+As the system is designed for lead acid batteries if you use anything else the battery state topic could give misleading numbers as to the true battery state,
+but this will not affect the ability of the robot to drive properly.</p>
+</div>
+<section id="how-to-charge">
+<h3>How to charge?<a class="headerlink" href="#how-to-charge" title="Link to this heading"></a></h3>
+<p>To charge the batteries, follow these steps:</p>
+<ol class="arabic simple">
+<li><p><strong>Check Your Robot’s Documentation</strong>: Refer to the documentation for specific charging instructions, as different models have different requirements.</p></li>
+<li><p><strong>Use a Compatible Charger</strong>: Use the designated 24V lead-acid charger provided with your Magni 6 robot, or ensure any replacement charger is rated for 24V AGM VRLA batteries.</p></li>
+<li><dl class="simple">
+<dt><strong>Charging Method</strong>:</dt><dd><ul class="simple">
+<li><dl class="simple">
+<dt><strong>Using Designated Charger</strong>:</dt><dd><ul>
+<li><p>Locate the charger port (varies by model: Mini, Midi).</p></li>
+<li><p>Remove the port cap.</p></li>
+<li><p>Plug the charger into the wall socket, then connect the connector (inner pin positive, outer sleeve negative) to the charger port.</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Manual Separate Charging</strong>:</dt><dd><ul>
+<li><p>Disconnect both batteries from the robot.</p></li>
+<li><p>Charge each 12V battery individually using a 12V lead-acid charger.</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Manual Series Charging</strong>:</dt><dd><ul>
+<li><p>Disconnect batteries from robot circuits, keeping them connected in series (positive of first to negative of second).</p></li>
+<li><p>Use a 24V lead-acid charger, connecting positive to the second battery’s positive terminal and negative to the first battery’s negative terminal.</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Charge Time</strong>: Charge time will vary depending on the robot and batteries.</dt><dd><ul class="simple">
+<li><p>When charging with our charger, check the LED: <strong>GREEN</strong> = fully charged, <strong>RED</strong> = charging.</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Safety Tips</strong>:</dt><dd><ul class="simple">
+<li><p>Charge in a well-ventilated area.</p></li>
+<li><p>When manually charging the robot, avoid overcharging.</p></li>
+<li><p>Do not use or charge a damaged battery.</p></li>
+<li><p>Check the polarity.</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ol>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>Verify the polarity (inner pin positive, outer sleeve negative) before connecting.</p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Incorrect charging can damage the batteries or pose safety risks.
+Always follow the manufacturer’s instructions. Every battery has relevant information on the side.</p>
+</div>
+</section>
+</section>
+<section id="typical-current-draw">
+<h2>Typical Current Draw<a class="headerlink" href="#typical-current-draw" title="Link to this heading"></a></h2>
+<section id="typical-current-draw-for-mini">
+<h3>Typical Current Draw for Mini<a class="headerlink" href="#typical-current-draw-for-mini" title="Link to this heading"></a></h3>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Operating State</p></th>
+<th class="head"><p>Current (Amps)</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Stationary, Pi4/Pi5 (4GB) only, motors off</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>Driving, flat surface, ~0.5 m/s, no load</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>Rotating in place, no load</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>Stationary, motors powered</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>Stationary, pushing wheels (fighting torque, no slipping)</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>Locked wheels, applying strong torque</p></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="typical-current-draw-for-midi">
+<h3>Typical Current Draw for Midi<a class="headerlink" href="#typical-current-draw-for-midi" title="Link to this heading"></a></h3>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Operating State</p></th>
+<th class="head"><p>Current (Amps)</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Stationary, Pi4/Pi5 (4GB) only, motors off</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>Driving, flat surface, ~0.5 m/s, no load</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>Rotating in place, no load</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>Stationary, motors powered</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>Stationary, pushing wheels (fighting torque, no slipping)</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>Locked wheels, applying strong torque</p></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<ul class="simple">
+<li><p>Instantaneous peaks can exceed 10A but are transient and not useful for battery.</p></li>
+<li><p>Driving uphill or with heavy loads increases draw further.</p></li>
+</ul>
+</div>
+</section>
+</section>
+<section id="capacity-and-aging">
+<h2>Capacity and Aging<a class="headerlink" href="#capacity-and-aging" title="Link to this heading"></a></h2>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>The Magni robots cannot detech battery health or age.
+Percantage values are based on <em>new batteries</em>.
+Over time, lead acid batteries lose capacity and may never again charge to “100%”.</p>
+</div>
+<p>Key points:</p>
+<ol class="arabic simple">
+<li><dl class="simple">
+<dt>Do not run the robot below <strong>50% capacity (~24V for 24V system, ~12V per cell)</strong></dt><dd><p>Deep discharge causes sulfation and shortents lifespan.
+The robot must be fully powered off at the MCB switch, not just via Pi shutdown.</p>
+</dd>
+</dl>
+</li>
+<li><p>The MCB cuts off power at ~20V to prevent total discharge.</p></li>
+<li><dl class="simple">
+<dt>Old or damaged cells may <strong>gas (rotten egg smell)</strong> if left on charge.</dt><dd><p>Disconnect charger once charging is complete in these cases.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>The MCB draws ~0.04W (1-2mA at 24V) even when off.</dt><dd><p>For storage longer than 3 weeks, <strong>disconnect at least one battery lead</strong>.</p>
+</dd>
+</dl>
+</li>
+</ol>
+<section id="charge-capacity-reference-table">
+<h3>Charge Capacity Reference Table<a class="headerlink" href="#charge-capacity-reference-table" title="Link to this heading"></a></h3>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Capacity</p></th>
+<th class="head"><p>24V System Voltage</p></th>
+<th class="head"><p>12V Battery</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>100%</p></td>
+<td><p>25.77 V</p></td>
+<td><p>12.89 V</p></td>
+</tr>
+<tr class="row-odd"><td><p>90%</p></td>
+<td><p>25.56 V</p></td>
+<td><p>12.78 V</p></td>
+</tr>
+<tr class="row-even"><td><p>80%</p></td>
+<td><p>25.31 V</p></td>
+<td><p>12.65 V</p></td>
+</tr>
+<tr class="row-odd"><td><p>70%</p></td>
+<td><p>25.02 V</p></td>
+<td><p>12.51 V</p></td>
+</tr>
+<tr class="row-even"><td><p>60%</p></td>
+<td><p>24.81 V</p></td>
+<td><p>12.41 V</p></td>
+</tr>
+<tr class="row-odd"><td><p>50%</p></td>
+<td><p>24.45 V</p></td>
+<td><p>12.23 V</p></td>
+</tr>
+<tr class="row-even"><td><p>40%</p></td>
+<td><p>24.21 V</p></td>
+<td><p>12.11 V</p></td>
+</tr>
+<tr class="row-odd"><td><p>30%</p></td>
+<td><p>23.91 V</p></td>
+<td><p>11.96 V</p></td>
+</tr>
+<tr class="row-even"><td><p>20%</p></td>
+<td><p>23.61 V</p></td>
+<td><p>11.81 V</p></td>
+</tr>
+<tr class="row-odd"><td><p>10%</p></td>
+<td><p>23.40 V</p></td>
+<td><p>11.70 V</p></td>
+</tr>
+<tr class="row-even"><td><p>0%</p></td>
+<td><p>23.25 V</p></td>
+<td><p>11.63 V</p></td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>For more detail see: <a class="reference external" href="https://www.batterystuff.com/kb/articles/battery-articles/battery-basics.html">Batterystuff Lead Acid Battery Basics</a></p>
+</div>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>If you are unsure about any aspect of battery selection or charging, consult a professional or contact <a class="reference external" href="mailto:support&#37;&#52;&#48;ubiquityrobotics&#46;com">Ubiquity Robotics support</a>.</p>
+</div>
+</section>
+</section>
 </section>
 
 
