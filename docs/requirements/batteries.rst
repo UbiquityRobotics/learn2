@@ -5,7 +5,7 @@ Shipping
 ########
 
 .. note:: 
-    The robot ships worldwide by air **withouth batteries**.
+    The robot ships worldwide by air **without batteries**.
     This reduces shipping costs and avoids restrictions on transporting batteries.
     Lead acid batteries are easy to source locally.
 
@@ -67,9 +67,9 @@ Charging
 ########
 
 .. important::
-    The stock battery charger we supply is **ONLY FOR LEAD ACID** batteries and will not work and if fact may be dangerous for other battery technologies.
-    As the system is designed for lead acid batteries if you use anything else the battery state topic could give misleading numbers as to the true battery state, 
-    but this will not affect the ability of the robot to drive properly.
+    The stock battery charger we supply is **ONLY FOR LEAD ACID** batteries and will not work and in fact may be dangerous for other battery technologies.
+    As the system is designed for lead acid batteries if you use anything else the battery state topic could give misleading numbers as to the true battery state. 
+    This will not affect the ability of the robot to drive properly.
 
 How to charge?
 --------------
@@ -158,7 +158,7 @@ Capacity and Aging
 ##################
 
 .. important::
-    The Magni robots cannot detech battery health or age.
+    The Magni robots cannot detect battery health or age.
     Percantage values are based on *new batteries*.
     Over time, lead acid batteries lose capacity and may never again charge to "100%".
 
