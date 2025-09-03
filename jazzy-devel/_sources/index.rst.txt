@@ -47,8 +47,9 @@ Sections
    :caption: Waiting for Your Robot 
 
    requirements/waiting_for_robot
-   requirements/workstation
    requirements/batteries
+   requirements/workstation
+   requirements/simulation
 
 .. _unboxing:
 
