@@ -231,7 +231,7 @@ Be careful with the wires.
 Connect Batteries in Series
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-   Attach the yellow-green wire: red connector to the RED spade of the first battery, black connector to the BLACK spade of the second battery.
+Attach the yellow-green wire: red connector to the RED spade of the first battery, black connector to the BLACK spade of the second battery.
 
 .. note:: 
 Red connector from the wire goes to the RED spade of the first battery. Black connector of the wire goes to the black spade of the second battery.
@@ -298,7 +298,7 @@ Attach the short RED spade connector to the positive battery pin (green circle).
   <div class="rst-content">
     <div style="display: flex; gap: 10px;">
       <img src="/learn2/jazzy-devel/_static/unboxing/wire_harness_connector_for_battery2.png" alt="Wires with green and yellow circle." style="width: 50%; height: auto;">
-      <img src="/learn2/jazyy-devel/_static/unboxing/batteries_wires_connected_to_second_battery.png" alt="Wires connected to the battery with yellow and green circle. " style="width: 50%; height: auto;">
+      <img src="/learn2/jazzy-devel/_static/unboxing/batteries_wires_connected_to_second_battery.png" alt="Wires connected to the battery with yellow and green circle. " style="width: 50%; height: auto;">
     </div>
   </div>
 |
