@@ -6,7 +6,7 @@
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Test Driving the robot &mdash; Ubiquity Robotics Documentation 1.0.0 documentation</title>
+  <title>Driving the robot using Terminal &mdash; Ubiquity Robotics Documentation 1.0.0 documentation</title>
       <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b86133f3" />
       <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=e59714d7" />
 
@@ -18,7 +18,9 @@
       <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
-    <link rel="search" title="Search" href="../search.html" /> 
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Driving the robot through EZ-MAP" href="ez_map_simple_drive.html" />
+    <link rel="prev" title="Connecting to the Robot" href="connecting.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -51,11 +53,18 @@
 <li class="toctree-l1"><a class="reference internal" href="../requirements/batteries.html">Batteries</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../requirements/workstation.html">Setting up your Workstation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../requirements/simulation.html">Magni Robot Simulation Documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../requirements/images.html">Magni 6 Images</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Unboxing Your model</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../unboxing/unboxing_mini.html">Unboxing and Setting Up the Magni 6 Mini</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../unboxing/unboxing_midi.html">Unboxing and Setting Up the Magni 6 Midi</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Driving the Robot</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="connecting.html">Connecting to the Robot</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Driving the robot using Terminal</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ez_map_simple_drive.html">Driving the robot through EZ-MAP</a></li>
 </ul>
 
         </div>
@@ -72,9 +81,9 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
-      <li class="breadcrumb-item active">Test Driving the robot</li>
+      <li class="breadcrumb-item active">Driving the robot using Terminal</li>
       <li class="wy-breadcrumbs-aside">
-              <a href="https://github.com//learn2/blob/jazzy-devel/docs/driving/test_driving.rst" class="fa fa-github"> Edit on GitHub</a>
+              <a href="https://github.com//learn2/blob/jazzy-devel/docs/driving/teleop.rst" class="fa fa-github"> Edit on GitHub</a>
       </li>
   </ul>
   <hr/>
@@ -82,56 +91,47 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <section id="test-driving-the-robot">
-<h1>Test Driving the robot<a class="headerlink" href="#test-driving-the-robot" title="Link to this heading"></a></h1>
-<p>To drive the robot you must fulfill the following requirements:</p>
+  <section id="driving-the-robot-using-terminal">
+<h1>Driving the robot using Terminal<a class="headerlink" href="#driving-the-robot-using-terminal" title="Link to this heading"></a></h1>
+<p>To drive the robot using the terminal you must fulfill the following requirements:</p>
 <ol class="arabic simple">
 <li><p>Ensure the robot is powered on.</p></li>
-<li><p>Open three terminal sessions connected to the robot (via SSH)</p></li>
+<li><p>Open one terminal session that is connected to the robot (via SSH), check <a class="reference internal" href="connecting.html"><span class="doc">Connecting to the Robot</span></a> for details.</p></li>
 </ol>
-<a class="reference internal image-reference" href="_static/magni-mini/getting_started/.jpg"><img alt="Three empty terminals connected to the robot" class="align-center" src="_static/magni-mini/getting_started/.jpg" style="width: 400px;" />
-</a>
+<p><strong>IMAGE CONTENT INCOMING</strong></p>
 <ol class="arabic simple" start="3">
-<li><p>Activate the MCB by pressing the button closest to the wires.</p></li>
+<li><p>Wait for the robot to activate the MCB, this will lock the robot wheels, and you will not be able to manually push the robot anymore.</p></li>
 </ol>
-<a class="reference internal image-reference" href="_static/magni-mini/getting_started/mini-MCB_buttons.jpg"><img alt="MCB buttons" class="align-center" src="_static/magni-mini/getting_started/mini-MCB_buttons.jpg" style="width: 400px;" />
-</a>
-<div class="line-block">
-<div class="line"><br /></div>
-</div>
+<p><strong>VIDEO CONTENT INCOMING</strong></p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>Place the robot on the ground before driving to prevent it from falling off a table.</p>
+<p>Our robots are meant to be table-top robots and we take measures against this, however the risk is always there.</p>
 </div>
 <ol class="arabic simple" start="4">
-<li><p>In each terminal, run the following commands (one per terminal):</p></li>
+<li><p>In the terminal (the one already connected to the robot), run the following command:</p></li>
 </ol>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>zenoh
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ros2<span class="w"> </span>run<span class="w"> </span>teleop_twist_keyboard<span class="w"> </span>teleop_twist_keyboard<span class="w"> </span>--ros-args<span class="w"> </span>--remap<span class="w"> </span>cmd_vel:<span class="o">=</span>mcb/cmd_vel
 </pre></div>
 </div>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>zenoh<span class="w"> </span>bridge
-</pre></div>
-</div>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>teleop
-</pre></div>
-</div>
-<a class="reference internal image-reference" href="_static/magni-mini/getting_started/.jpg"><img alt="Three terminals with full commands" class="align-center" src="_static/magni-mini/getting_started/.jpg" style="width: 400px;" />
-</a>
+<p><strong>IMAGE CONTENT INCOMING</strong></p>
 <ol class="arabic simple" start="5">
-<li><p>Focus on the third terminal and follow the teleop instructions to drive the robot.</p></li>
+<li><p>Focus the terminal and follow the teleop instructions to drive the robot.</p></li>
 </ol>
-<p>You can follow the following video for exact step-by-step guide of driving the robot:</p>
-<p>[TODO: Video of driving the robot ]</p>
+<p>You can follow the next video for exact step-by-step guide of driving the robot through Teleop:</p>
+<p><strong>VIDEO CONTENT INCOMING</strong></p>
 <hr class="docutils" />
-<p>If you’ve followed this guide, you’ve unboxed the Magni 6 Mini, inspected for damage, installed batteries, connected wiring, powered on, connected to, and driven the robot.</p>
-<p>Congratulations! You are now a robotics engineer.</p>
-<p>Explore our project guides here: <span class="xref std std-doc">../../projects/mini/main_projects_mini</span>.</p>
+<p>Congratulations! You have successfully driven the robot using the terminal.</p>
+<p>If you prefer a graphical interface, follow our next guide <a class="reference internal" href="ez_map_simple_drive.html"><span class="doc">Driving the robot through EZ-MAP</span></a> to learn how to control the robot using the EZ-MAP UI.</p>
 </section>
 
 
            </div>
           </div>
-          <footer>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="connecting.html" class="btn btn-neutral float-left" title="Connecting to the Robot" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="ez_map_simple_drive.html" class="btn btn-neutral float-right" title="Driving the robot through EZ-MAP" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
 
   <hr/>
 

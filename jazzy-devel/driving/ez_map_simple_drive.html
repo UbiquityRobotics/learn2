@@ -6,7 +6,7 @@
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Connecting to the Robot &mdash; Ubiquity Robotics Documentation 1.0.0 documentation</title>
+  <title>Driving the robot through EZ-MAP &mdash; Ubiquity Robotics Documentation 1.0.0 documentation</title>
       <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b86133f3" />
       <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=e59714d7" />
 
@@ -19,8 +19,7 @@
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Driving the robot using Terminal" href="teleop.html" />
-    <link rel="prev" title="Unboxing and Setting Up the Magni 6 Midi" href="../unboxing/unboxing_midi.html" /> 
+    <link rel="prev" title="Driving the robot using Terminal" href="teleop.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -62,13 +61,9 @@
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Driving the Robot</span></p>
 <ul class="current">
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Connecting to the Robot</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#option-1-connect-via-robot-s-wi-fi">Option 1: Connect via Robot’s Wi-Fi</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#option-2-connect-via-home-network">Option 2: Connect via Home Network</a></li>
-</ul>
-</li>
+<li class="toctree-l1"><a class="reference internal" href="connecting.html">Connecting to the Robot</a></li>
 <li class="toctree-l1"><a class="reference internal" href="teleop.html">Driving the robot using Terminal</a></li>
-<li class="toctree-l1"><a class="reference internal" href="ez_map_simple_drive.html">Driving the robot through EZ-MAP</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Driving the robot through EZ-MAP</a></li>
 </ul>
 
         </div>
@@ -85,9 +80,9 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
-      <li class="breadcrumb-item active">Connecting to the Robot</li>
+      <li class="breadcrumb-item active">Driving the robot through EZ-MAP</li>
       <li class="wy-breadcrumbs-aside">
-              <a href="https://github.com//learn2/blob/jazzy-devel/docs/driving/connecting.rst" class="fa fa-github"> Edit on GitHub</a>
+              <a href="https://github.com//learn2/blob/jazzy-devel/docs/driving/ez_map_simple_drive.rst" class="fa fa-github"> Edit on GitHub</a>
       </li>
   </ul>
   <hr/>
@@ -95,67 +90,16 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <section id="connecting-to-the-robot">
-<h1>Connecting to the Robot<a class="headerlink" href="#connecting-to-the-robot" title="Link to this heading"></a></h1>
-<p>The Magni 6 Mini emits its own Wi-Fi for SSH access, or you can connect via home network.</p>
-<section id="option-1-connect-via-robot-s-wi-fi">
-<h2>Option 1: Connect via Robot’s Wi-Fi<a class="headerlink" href="#option-1-connect-via-robot-s-wi-fi" title="Link to this heading"></a></h2>
-<ol class="arabic simple">
-<li><p>Open a terminal.</p></li>
-<li><p>SSH into the robot:</p></li>
-</ol>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ssh<span class="w"> </span>ubuntu@10.42.0.1
-</pre></div>
-</div>
-<p><strong>IMAGE CONTENT INCOMING</strong></p>
-<ol class="arabic simple" start="3">
-<li><p>You will be prompted a password, the password is: <strong>ubuntu</strong></p></li>
-</ol>
-<p><strong>IMAGE CONTENT INCOMING</strong></p>
-<div class="line-block">
-<div class="line"><br /></div>
-</div>
-<p>You can follow the following video for exact step-by-step guide of connecting to the robot through Robot’s Wi-Fi here:</p>
-<p><strong>VIDEO CONTENT INCOMING</strong></p>
-<p>If you followed the steps successfully you will be connected to the robot:</p>
-<p><strong>IMAGE CONTENT INCOMING</strong></p>
-<div class="line-block">
-<div class="line"><br /></div>
-</div>
-</section>
-<section id="option-2-connect-via-home-network">
-<h2>Option 2: Connect via Home Network<a class="headerlink" href="#option-2-connect-via-home-network" title="Link to this heading"></a></h2>
-<ol class="arabic simple">
-<li><p>Connect to the robot to your local network:</p></li>
-</ol>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>nmcli<span class="w"> </span>device<span class="w"> </span>wifi<span class="w"> </span>connect<span class="w"> </span>&lt;Local_Network_name&gt;<span class="w"> </span>password<span class="w"> </span>&lt;password&gt;
-</pre></div>
-</div>
-<p>Example:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>nmcli<span class="w"> </span>device<span class="w"> </span>wifi<span class="w"> </span>connect<span class="w"> </span>mywifi<span class="w"> </span>password<span class="w"> </span>mypass1234
-</pre></div>
-</div>
-<ol class="arabic simple" start="2">
-<li><p>Open a new terminal (the first will be frozen).</p></li>
-<li><p>Identify the robot’s IP address on the network (hostname: <strong>ubuntu</strong>).</p></li>
-<li><p>SSH into the robot:</p></li>
-</ol>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ssh<span class="w"> </span>ubuntu@<span class="o">[</span>robots<span class="w"> </span>IP<span class="o">]</span>
-</pre></div>
-</div>
-<p>You can follow the following video for exact step-by-step guide of connecting to the robot through the network:</p>
-<p>[TODO: Video of connecting to the robot through network mode. ]</p>
-<p>You are now connected to the robot with Internet access.</p>
-<p><strong>IMAGE CONTENT INCOMING</strong></p>
-</section>
+  <section id="driving-the-robot-through-ez-map">
+<h1>Driving the robot through EZ-MAP<a class="headerlink" href="#driving-the-robot-through-ez-map" title="Link to this heading"></a></h1>
+<p><strong>CONTENT INCOMING</strong></p>
 </section>
 
 
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="../unboxing/unboxing_midi.html" class="btn btn-neutral float-left" title="Unboxing and Setting Up the Magni 6 Midi" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="teleop.html" class="btn btn-neutral float-right" title="Driving the robot using Terminal" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="teleop.html" class="btn btn-neutral float-left" title="Driving the robot using Terminal" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
     </div>
 
   <hr/>

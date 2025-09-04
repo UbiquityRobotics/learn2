@@ -14,33 +14,46 @@ Option 1: Connect via Robot's Wi-Fi
 
     ssh ubuntu@10.42.0.1
 
-.. image:: /_static/magni-mini/getting_started/.jpg
-    :alt: Connect - username written 
-    :width: 400px
-    :align: center
+.. .. image:: /_static/magni-mini/getting_started/.jpg
+..     :alt: Connect - username written 
+..     :width: 400px
+..     :align: center
+
+.. TODO: Add the images here connecting to the robot via AP.
+
+**IMAGE CONTENT INCOMING**
+
 
 3. You will be prompted a password, the password is: **ubuntu**
 
-.. image:: /_static/magni-mini/getting_started/.jpg
-    :alt: Connect - password written 
-    :width: 400px
-    :align: center
+.. .. image:: /_static/magni-mini/getting_started/.jpg
+..     :alt: Connect - password written 
+..     :width: 400px
+..     :align: center
+
+.. TODO: Add the images here writing the password for connection via AP
+
+**IMAGE CONTENT INCOMING**
 
 | 
 
 You can follow the following video for exact step-by-step guide of connecting to the robot through Robot's Wi-Fi here:
 
-**CONTENT INCOMING**
+**VIDEO CONTENT INCOMING**
 
 ..  TODO: Video of connecting to the robot through AP mode.
 
 
 If you followed the steps successfully you will be connected to the robot:
 
-.. image:: /_static/magni-mini/getting_started/.jpg
-    :alt: Connection to the robot via Terminal Successful
-    :width: 400px
-    :align: center
+.. .. image:: /_static/magni-mini/getting_started/.jpg
+..     :alt: Connection to the robot via Terminal Successful
+..     :width: 400px
+..     :align: center
+
+.. TODO: Add the image of successfull conection.
+
+**IMAGE CONTENT INCOMING**
 
 |
 
@@ -77,8 +90,13 @@ You can follow the following video for exact step-by-step guide of connecting to
 
 You are now connected to the robot with Internet access.
 
-.. image:: /_static/magni-mini/getting_started/.jpg
-    :alt: Connection to the robot via Network Successful
-    :width: 400px
-    :align: center
-| 
+.. .. image:: /_static/magni-mini/getting_started/.jpg
+..     :alt: Connection to the robot via Network Successful
+..     :width: 400px
+..     :align: center
+
+**IMAGE CONTENT INCOMING**
+
+.. TODO: Add similar image but connected trough network.
+
+
