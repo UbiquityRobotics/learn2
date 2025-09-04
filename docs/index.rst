@@ -50,6 +50,7 @@ Sections
    requirements/batteries
    requirements/workstation
    requirements/simulation
+   requirements/images
 
 .. _unboxing:
 
@@ -66,19 +67,18 @@ Sections
    :maxdepth: 2
    :caption: Driving the Robot 
    
-   driving/driving
+   driving/connecting
+   driving/teleop
+   driving/ez_map_simple_drive
+
 
 .. _ez_map:
-
-.. _simulation: 
-
-.. _ros2:
 
 .. toctree:: 
    :maxdepth: 2
    :caption: EZ-MAP 
 
-   ez_map/introduction_to_ez_map
+   ez_map/ez_map_intro
    ez_map/ez_map_guide
    ez_map/ez_map_advanced
 
@@ -88,7 +88,10 @@ Sections
    :maxdepth: 2
    :caption: Troubleshooting
 
-   troubleshooting/overall_problems
-   troubleshooting/hardware
-   troubleshooting/software
+   troubleshooting/lidars
+   troubleshooting/camera
+   troubleshooting/rpi
+   troubleshooting/sonars
+   troubleshooting/images
+
 

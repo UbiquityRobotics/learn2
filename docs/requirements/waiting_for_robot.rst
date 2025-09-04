@@ -5,7 +5,6 @@ This section covers what you'll need to prepare before your Ubiquity Robot arriv
 
 Requirements
 ############
-
 1. 12V Batteries (2x)
 ---------------------
 
@@ -34,5 +33,16 @@ The simulation lets you explore how the robot works, practice using our system, 
 It's also a cost-effective way to evaluate whether our solution fits your needs before pruchasing the physical robot.
 
 
+4. Robot's Image
+----------------
 
+The Magni 6 robots use a custom software image that comes pre-installed on the robot.
+If you want to explore other versions or experiment with the system, you can find them here: :doc:`./images.rst`
+
+.. note::
+    
+    Older images may be marked as deprecated. 
+    We strongly recommend using the latest version for best compatibility and support.
+
+    If you believe an older image better suits your needs and enouncter issues, please contact us at `Ubiquity Robotics support <support@ubiquityrobotics.com>`_.
 
