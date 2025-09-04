@@ -170,21 +170,20 @@ For for exact instructions on how to charge the batteries before adding them to 
 - Connect them to the MCB, the switch, and to each other using the supplied cables.
 - Ensure the connection is firm to avoid power issues.
 
-
 ----- 
 
 Install First Battery
 ~~~~~~~~~~~~~~~~~~~~~
 
-   Position the first BATTERY in the BASE according to the pictures below. 
-   Pay close attention to its orientation.
+Position the first BATTERY in the BASE according to the pictures below. 
+Pay close attention to its orientation.
 
 .. raw:: html
 
   <div class="rst-content">
     <div style="display: flex; gap: 10px;">
-      <img src="/learn2/_static/unboxing/batteries_adding_first_one1.png" alt="Adding first battery to the robot upper pic 1." style="width: 50%; height: auto;">
-      <img src="/learn2/_static/unboxing/batteries_adding_first_one2.png" alt="Adding first battery to the robot upper pic 2." style="width: 50%; height: auto;">
+      <img src="/learn2/jazzy-devel/_static/unboxing/batteries_adding_first_one1.png" alt="Adding first battery to the robot upper pic 1." style="width: 50%; height: auto;">
+      <img src="/learn2/jazzy-devel/_static/unboxing/batteries_adding_first_one2.png" alt="Adding first battery to the robot upper pic 2." style="width: 50%; height: auto;">
     </div>
   </div>
 
@@ -194,8 +193,8 @@ Install First Battery
 
   <div class="rst-content">
     <div style="display: flex; gap: 10px;">
-      <img src="/learn2/_static/unboxing/batteries_adding_first_one3.png" alt="Adding first battery to the robot lower pic 1." style="width: 50%; height: auto;">
-      <img src="/learn2/_static/unboxing/batteries_adding_first_one4.png" alt="Adding first battery to the robot lower pic 2." style="width: 50%; height: auto;">
+      <img src="/learn2/jazzy-devel/_static/unboxing/batteries_adding_first_one3.png" alt="Adding first battery to the robot lower pic 1." style="width: 50%; height: auto;">
+      <img src="/learn2/jazzy-devel/_static/unboxing/batteries_adding_first_one4.png" alt="Adding first battery to the robot lower pic 2." style="width: 50%; height: auto;">
     </div>
   </div>
 
@@ -204,14 +203,14 @@ Install First Battery
 Install Second Battery
 ~~~~~~~~~~~~~~~~~~~~~~
 
-   Use the BATTERY HOLDER to secure the second BATTERY in the BASE as shown in the picture.
+Use the BATTERY HOLDER to secure the second BATTERY in the BASE as shown in the picture.
 
 .. raw:: html
 
   <div class="rst-content">
     <div style="display: flex; gap: 10px;">
-      <img src="/learn2/_static/unboxing/batteries_adding_second_one1.png" alt="Adding second battery to the robot with battery holder pic 1." style="width: 45%; height: auto;">
-      <img src="/learn2/_static/unboxing/batteries_adding_second_one2.png" alt="Adding second battery to the robot with battery holder pic 2." style="width: 55%; height: auto;">
+      <img src="/learn2/jazzy-devel/_static/unboxing/batteries_adding_second_one1.png" alt="Adding second battery to the robot with battery holder pic 1." style="width: 45%; height: auto;">
+      <img src="/learn2/jazzy-devel/_static/unboxing/batteries_adding_second_one2.png" alt="Adding second battery to the robot with battery holder pic 2." style="width: 55%; height: auto;">
     </div>
   </div>
 
@@ -220,7 +219,7 @@ Install Second Battery
 Properly Adding the Second Battery
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
    
-   Be careful with the wires.
+Be careful with the wires.
 
 .. image:: /_static/unboxing/batteries_minding_the_wires.png
     :alt: Adding second battery, being carefull with the wires.
@@ -235,14 +234,14 @@ Connect Batteries in Series
    Attach the yellow-green wire: red connector to the RED spade of the first battery, black connector to the BLACK spade of the second battery.
 
 .. note:: 
-  Red connector from the wire goes to the RED spade of the first battery. Black connector of the wire goes to the black spade of the second battery.
+Red connector from the wire goes to the RED spade of the first battery. Black connector of the wire goes to the black spade of the second battery.
 
 .. raw:: html
 
   <div class="rst-content">
     <div style="display: flex; gap: 10px;">
-      <img src="/learn2/_static/unboxing/batteries_connecting_in_series.png" alt="Connecting the batteries in series pic 1." style="width: 50%; height: auto;">
-      <img src="/learn2/_static/unboxing/batteries_connected_in_series.png" alt="Connecting the batteries in series pic 2." style="width: 50%; height: 50%">
+      <img src="/learn2/jazzy-devel/_static/unboxing/batteries_connecting_in_series.png" alt="Connecting the batteries in series pic 1." style="width: 50%; height: auto;">
+      <img src="/learn2/jazzy-devel/_static/unboxing/batteries_connected_in_series.png" alt="Connecting the batteries in series pic 2." style="width: 50%; height: 50%">
     </div>
   </div>
 
@@ -251,15 +250,15 @@ Connect Batteries in Series
 Connect Black Spade to Battery
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-   Take the wire harness and connect the black female spade terminal to the negative battery pin as shown in the picture. 
-   Press it in firmly.
+Take the wire harness and connect the black female spade terminal to the negative battery pin as shown in the picture. 
+Press it in firmly.
 
 .. raw:: html
 
   <div class="rst-content">
     <div style="display: flex; gap: 10px;">
-      <img src="/learn2/_static/unboxing/wire_harness_connector_for_battery1.png" alt="Wire harness with shown black connector." style="width: 50%; height: auto;">
-      <img src="/learn2/_static/unboxing/batteries_wires_connected_to_first_battery.png" alt="Connecting the wires to the batteries." style="width: 50%; height: auto;">
+      <img src="/learn2/jazzy-devel/_static/unboxing/wire_harness_connector_for_battery1.png" alt="Wire harness with shown black connector." style="width: 50%; height: auto;">
+      <img src="/learn2/jazzy-devel/_static/unboxing/batteries_wires_connected_to_first_battery.png" alt="Connecting the wires to the batteries." style="width: 50%; height: auto;">
     </div>
   </div>
 
@@ -268,14 +267,14 @@ Connect Black Spade to Battery
 Connect Black Spade to Ground
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-   Grab the only free black female spade connector and attach it to the GND pin on the CONNECTOR BOARD as shown in the picture.
+Grab the only free black female spade connector and attach it to the GND pin on the CONNECTOR BOARD as shown in the picture.
 
 .. raw:: html
 
   <div class="rst-content">
     <div style="display: flex; gap: 10px;">
-      <img src="/learn2/_static/unboxing/wire_harness_connector_for_MCB2.png" alt="Wire black connector with green circle." style="width: 55%; height: auto;">
-      <img src="/learn2/_static/unboxing/MCB_wire_harness_connected_to_MCB.png" alt="Wire black connector added to the MCB with green circle." style="width: 45%; height: auto;">
+      <img src="/learn2/jazzy-devel/_static/unboxing/wire_harness_connector_for_MCB2.png" alt="Wire black connector with green circle." style="width: 55%; height: auto;">
+      <img src="/learn2/jazzy-devel/_static/unboxing/MCB_wire_harness_connected_to_MCB.png" alt="Wire black connector added to the MCB with green circle." style="width: 45%; height: auto;">
     </div>
   </div>
 
@@ -292,28 +291,29 @@ Connect Black Spade to Ground
 Connect Red Spade and Charger
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-   Attach the short RED spade connector to the positive battery pin (green circle). Connect the charger connector to the 5.5 x 2.1 mm DC POWER CHARGER (yellow circle). Finally connect the BLACK spade connector to the negative spade of the first battery (blue circle).
-
-.. raw:: html
-
-   <div style="display: flex; gap: 10px;">
-     <img src="../_static/unboxing/wire_harness_connector_for_battery2.png" alt="Wires with green and yellow circle." style="width: 50%; height: auto;">
-     <img src="../_static/unboxing/batteries_wires_connected_to_second_battery.png" alt="Wires connected to the battery with yellow and green circle. " style="width: 50%; height: auto;">
-   </div>
-
-|
-
-Connect Red Spade to Switch
-~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-   Attach the remaining red spade connector to the upper pin of the ON/OFF switch.
+Attach the short RED spade connector to the positive battery pin (green circle). Connect the charger connector to the 5.5 x 2.1 mm DC POWER CHARGER (yellow circle). Finally connect the BLACK spade connector to the negative spade of the first battery (blue circle).
 
 .. raw:: html
 
   <div class="rst-content">
     <div style="display: flex; gap: 10px;">
-      <img src="/learn2/_static/unboxing/wire_harness_connector_for_switch.png" alt="Rest of the wires with green circle." style="width: 55%; height: auto;">
-      <img src="/learn2/_static/unboxing/switch_spade_connector_for_wire.png" alt="ON/OFF SWITCH with green circle for upper spade connector." style="width: 45%; height: auto;">
+      <img src="learn2/jazzy-devel/_static/unboxing/wire_harness_connector_for_battery2.png" alt="Wires with green and yellow circle." style="width: 50%; height: auto;">
+      <img src="learn2/jazyy-devel/_static/unboxing/batteries_wires_connected_to_second_battery.png" alt="Wires connected to the battery with yellow and green circle. " style="width: 50%; height: auto;">
+    </div>
+  </div>
+|
+
+Connect Red Spade to Switch
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Attach the remaining red spade connector to the upper pin of the ON/OFF switch.
+
+.. raw:: html
+
+  <div class="rst-content">
+    <div style="display: flex; gap: 10px;">
+      <img src="/learn2/jazzy-devel/_static/unboxing/wire_harness_connector_for_switch.png" alt="Rest of the wires with green circle." style="width: 55%; height: auto;">
+      <img src="/learn2/jazzy-devel/_static/unboxing/switch_spade_connector_for_wire.png" alt="ON/OFF SWITCH with green circle for upper spade connector." style="width: 45%; height: auto;">
     </div>
   </div>
 
@@ -321,15 +321,15 @@ Connect Red Spade to Switch
 
 47. **Connect Second Wire Harness**
 
-   Use the wire harness with 3 red spade connectors. 
-   Attach the split connector (yellow circle) to the bottom pin of the ON/OFF SWITCH.
+Use the wire harness with 3 red spade connectors. 
+Attach the split connector (yellow circle) to the bottom pin of the ON/OFF SWITCH.
 
 .. raw:: html
 
   <div class="rst-content">
     <div style="display: flex; gap: 10px;">
-      <img src="/learn2/_static/unboxing/wire_harness_connector_for_lower_spade_on_switch.png" alt="Second wire harness with green circle.." style="width: 55%; height: auto;">
-      <img src="/learn2/_static/unboxing/switch_lower_spade.png" alt="ON/OFF SWITCH with green circle for lower spade connector." style="width: 45%; height: auto;">
+      <img src="/learn2/jazzy-devel/_static/unboxing/wire_harness_connector_for_lower_spade_on_switch.png" alt="Second wire harness with green circle.." style="width: 55%; height: auto;">
+      <img src="/learn2/jazzy-devel/_static/unboxing/switch_lower_spade.png" alt="ON/OFF SWITCH with green circle for lower spade connector." style="width: 45%; height: auto;">
     </div>
   </div>
 
@@ -339,7 +339,7 @@ Connect Red Spade to Switch
 Connect Remaining Spade Connectors
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-   Attach on red spade connector to the 12V pin on the CONNECTION BOARD and the other to the 12V pin on the MOTOR BOARD.
+Attach on red spade connector to the 12V pin on the CONNECTION BOARD and the other to the 12V pin on the MOTOR BOARD.
 
 .. raw:: html
 
@@ -355,7 +355,7 @@ Connect Remaining Spade Connectors
 Verify Wiring
 ~~~~~~~~~~~~~
 
-   Ensure all spade connectors are firmly attached. Route wires as shown.
+Ensure all spade connectors are firmly attached. Route wires as shown.
 
 .. Important::
   Double-check that all connections (all pins are firmly connected).
