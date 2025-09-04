@@ -298,8 +298,8 @@ Connect Red Spade and Charger
 
   <div class="rst-content">
    <div style="display: flex; gap: 10px;">
-     <img src="/learn2/_static/unboxing/wire_harness_connector_for_battery2.png" alt="Wires with green and yellow circle." style="width: 50%; height: auto;">
-     <img src="/learn2/_static/unboxing/batteries_wires_connected_to_second_battery.png" alt="Wires connected to the battery with yellow and green circle. " style="width: 50%; height: auto;">
+     <img src="_static/unboxing/wire_harness_connector_for_battery2.png" alt="Wires with green and yellow circle." style="width: 50%; height: auto;">
+     <img src="_static/unboxing/batteries_wires_connected_to_second_battery.png" alt="Wires connected to the battery with yellow and green circle. " style="width: 50%; height: auto;">
    </div>
   </div>
 
