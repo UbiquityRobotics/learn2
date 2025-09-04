@@ -54,8 +54,8 @@
 <li class="toctree-l1"><a class="reference internal" href="workstation.html">Setting up your Workstation</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Magni Robot Simulation Documentation</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#overview">Overview</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#robot-specifications">Robot Specifications</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#physical-characteristics">Physical Characteristics</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#robot-specifications">Robot Specifications</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#physical-characteristics">Physical Characteristics</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#computing-platform">Computing Platform</a></li>
 </ul>
 </li>
@@ -95,11 +95,6 @@
 <li class="toctree-l3"><a class="reference internal" href="#teleoperation-testing">Teleoperation Testing</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#step-1-launch-teleop-node">Step 1: Launch Teleop Node</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#step-2-robot-control-commands">Step 2: Robot Control Commands</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="#advanced-simulation-scenarios">Advanced Simulation Scenarios</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#multi-robot-simulation">Multi-Robot Simulation</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#custom-world-integration">Custom World Integration</a></li>
 </ul>
 </li>
 </ul>
@@ -182,9 +177,8 @@
 <hr class="docutils" />
 <section id="robot-specifications">
 <h2>Robot Specifications<a class="headerlink" href="#robot-specifications" title="Link to this heading"></a></h2>
-</section>
 <section id="physical-characteristics">
-<h2>Physical Characteristics<a class="headerlink" href="#physical-characteristics" title="Link to this heading"></a></h2>
+<h3>Physical Characteristics<a class="headerlink" href="#physical-characteristics" title="Link to this heading"></a></h3>
 <table class="docutils align-default" id="id1">
 <caption><span class="caption-text">Physical Specifications</span><a class="headerlink" href="#id1" title="Link to this table"></a></caption>
 <colgroup>
@@ -220,6 +214,7 @@
 </tr>
 </tbody>
 </table>
+</section>
 <section id="computing-platform">
 <h3>Computing Platform<a class="headerlink" href="#computing-platform" title="Link to this heading"></a></h3>
 <table class="docutils align-default" id="id2">
@@ -385,14 +380,15 @@ ros2<span class="w"> </span>launch<span class="w"> </span>magni_description<span
 <p>After launching, verify the following:</p>
 <ul class="simple">
 <li><p>Gazebo simulator window opens with the Magni robot visible</p></li>
-<li><p>Robot model loads with correct visual and collision properties</p></li>
-<li><p>All joints and sensors initialize properly</p></li>
+<li><p>Robot model loads with correct visual and collision properties. You will see 2 windows: Gazebo and RViz</p></li>
+<li><p>Robot is positioned on the ground plane without falling through</p></li>
+<li><p>All joints and sensors initialize properly. check RViz for joint states and sensor data</p></li>
 </ul>
 </section>
 <section id="step-3-check-ros-topics">
 <h4>Step 3: Check ROS Topics<a class="headerlink" href="#step-3-check-ros-topics" title="Link to this heading"></a></h4>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># List active topics</span>
-rostopic<span class="w"> </span>list
+ros2<span class="w"> </span>topic<span class="w"> </span>list
 </pre></div>
 </div>
 <p>Expected topics include:</p>
@@ -402,6 +398,22 @@ rostopic<span class="w"> </span>list
 /tf                   # Transform tree
 /scan                 # Laser scan data (if lidar enabled)
 /sonar_*              # Sonar sensor readings
+/battery_state
+/camera/camera_info
+/clicked_point
+/clock
+/controller_manager/activity
+/controller_manager/introspection_data/full
+/controller_manager/introspection_data/names
+/controller_manager/introspection_data/values
+/diagnostics
+/diff_drive_controller/cmd_vel
+/goal_pose
+/initialpose
+/parameter_events
+/robot_description
+/rosout
+/tf_static
 </pre></div>
 </div>
 </section>
@@ -411,7 +423,7 @@ rostopic<span class="w"> </span>list
 <section id="step-1-launch-teleop-node">
 <h4>Step 1: Launch Teleop Node<a class="headerlink" href="#step-1-launch-teleop-node" title="Link to this heading"></a></h4>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># Keyboard teleoperation</span>
-rosrun<span class="w"> </span>teleop_twist_keyboard<span class="w"> </span>teleop_twist_keyboard.py
+ros2<span class="w"> </span>run<span class="w"> </span>teleop_twist_keyboard<span class="w"> </span>teleop_twist_keyboard<span class="w"> </span>--ros-args<span class="w"> </span>-p<span class="w"> </span>stamped:<span class="o">=</span><span class="nb">true</span>
 </pre></div>
 </div>
 </section>
@@ -460,25 +472,7 @@ rosrun<span class="w"> </span>teleop_twist_keyboard<span class="w"> </span>teleo
 </table>
 </section>
 </section>
-<section id="advanced-simulation-scenarios">
-<h3>Advanced Simulation Scenarios<a class="headerlink" href="#advanced-simulation-scenarios" title="Link to this heading"></a></h3>
-<section id="multi-robot-simulation">
-<h4>Multi-Robot Simulation<a class="headerlink" href="#multi-robot-simulation" title="Link to this heading"></a></h4>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># Launch multiple Magni robots</span>
-roslaunch<span class="w"> </span>magni_gazebo<span class="w"> </span>multi_magni.launch<span class="w"> </span>robot_count:<span class="o">=</span><span class="m">3</span>
-</pre></div>
-</div>
 </section>
-<section id="custom-world-integration">
-<h4>Custom World Integration<a class="headerlink" href="#custom-world-integration" title="Link to this heading"></a></h4>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># Launch with custom Gazebo world</span>
-roslaunch<span class="w"> </span>magni_gazebo<span class="w"> </span>magni_world.launch<span class="w"> </span>world_name:<span class="o">=</span>custom_warehouse
-</pre></div>
-</div>
-</section>
-</section>
-</section>
-<hr class="docutils" />
 <section id="troubleshooting">
 <h2>Troubleshooting<a class="headerlink" href="#troubleshooting" title="Link to this heading"></a></h2>
 <section id="common-issues-and-solutions">
@@ -629,7 +623,7 @@ roslaunch<span class="w"> </span>magni_gazebo<span class="w"> </span>magni_world
 <section id="additional-resources">
 <h3>Additional Resources<a class="headerlink" href="#additional-resources" title="Link to this heading"></a></h3>
 <ul class="simple">
-<li><p><a class="reference external" href="http://gazebosim.org/tutorials">Gazebo Simulation Tutorials</a></p></li>
+<li><p><a class="reference external" href="https://gazebosim.org/docs/harmonic/getstarted/">Gazebo Simulation Tutorials</a></p></li>
 <li><p><a class="reference external" href="http://wiki.ros.org/navigation">ROS Navigation Stack Documentation</a></p></li>
 <li><p><a class="reference external" href="http://wiki.ros.org/urdf/Tutorials">URDF Tutorials and Examples</a></p></li>
 </ul>
@@ -639,9 +633,7 @@ roslaunch<span class="w"> </span>magni_gazebo<span class="w"> </span>magni_world
 <p>This documentation is maintained by the Ubiquity Robotics simulation team.
 For updates and contributions, please refer to the official repositories and documentation channels.</p>
 </div>
-<hr class="docutils" />
-<p class="centered">
-<strong><strong>Ubiquity Robotics Simulation Team</strong></strong></p></section>
+</section>
 </section>
 </section>
 

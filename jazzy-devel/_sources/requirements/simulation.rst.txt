@@ -9,6 +9,7 @@ Magni Robot Simulation Documentation
 Overview
 ########
 
+
 The **Ubiquity Robotics Magni** is a robust differential drive mobile robot platform engineered for industrial and research applications. This guide provides step-by-step instructions for setting up and running the Magni robot in simulation using ROS and Gazebo.
 
 --------
@@ -17,7 +18,7 @@ Robot Specifications
 ####################
 
 Physical Characteristics
-########################
+------------------------
 
 .. table:: Physical Specifications
    :widths: 30 70
@@ -171,8 +172,9 @@ Step 2: Verify Robot Spawning
 After launching, verify the following:
 
 - Gazebo simulator window opens with the Magni robot visible
-- Robot model loads with correct visual and collision properties
-- All joints and sensors initialize properly
+- Robot model loads with correct visual and collision properties. You will see 2 windows: Gazebo and RViz
+- Robot is positioned on the ground plane without falling through
+- All joints and sensors initialize properly. check RViz for joint states and sensor data
 
 Step 3: Check ROS Topics
 ~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -180,7 +182,7 @@ Step 3: Check ROS Topics
 .. code-block:: bash
 
    # List active topics
-   rostopic list
+   ros2 topic list
 
 Expected topics include:
 
@@ -192,6 +194,23 @@ Expected topics include:
    /tf                   # Transform tree
    /scan                 # Laser scan data (if lidar enabled)
    /sonar_*              # Sonar sensor readings
+   /battery_state
+   /camera/camera_info
+   /clicked_point
+   /clock
+   /controller_manager/activity
+   /controller_manager/introspection_data/full
+   /controller_manager/introspection_data/names
+   /controller_manager/introspection_data/values
+   /diagnostics
+   /diff_drive_controller/cmd_vel
+   /goal_pose
+   /initialpose
+   /parameter_events
+   /robot_description
+   /rosout
+   /tf_static 
+
 
 Teleoperation Testing
 ---------------------
@@ -202,8 +221,7 @@ Step 1: Launch Teleop Node
 .. code-block:: bash
 
    # Keyboard teleoperation
-   rosrun teleop_twist_keyboard teleop_twist_keyboard.py
-
+   ros2 run teleop_twist_keyboard teleop_twist_keyboard --ros-args -p stamped:=true
 Step 2: Robot Control Commands
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -223,27 +241,6 @@ Step 2: Robot Control Commands
    m       Move backward with left turn
    .       Move backward with right turn
    ======= ================================
-
-Advanced Simulation Scenarios
------------------------------
-
-Multi-Robot Simulation
-~~~~~~~~~~~~~~~~~~~~~~
-
-.. code-block:: bash
-
-   # Launch multiple Magni robots
-   roslaunch magni_gazebo multi_magni.launch robot_count:=3
-
-Custom World Integration
-~~~~~~~~~~~~~~~~~~~~~~~~
-
-.. code-block:: bash
-
-   # Launch with custom Gazebo world
-   roslaunch magni_gazebo magni_world.launch world_name:=custom_warehouse
-
---------
 
 Troubleshooting
 ###############
@@ -368,7 +365,7 @@ Community Support
 Additional Resources
 --------------------
 
-- `Gazebo Simulation Tutorials <http://gazebosim.org/tutorials>`_
+- `Gazebo Simulation Tutorials <https://gazebosim.org/docs/harmonic/getstarted/>`_
 - `ROS Navigation Stack Documentation <http://wiki.ros.org/navigation>`_
 - `URDF Tutorials and Examples <http://wiki.ros.org/urdf/Tutorials>`_
 
@@ -377,7 +374,3 @@ Additional Resources
 .. note::
    This documentation is maintained by the Ubiquity Robotics simulation team. 
    For updates and contributions, please refer to the official repositories and documentation channels.
-
---------
-
-.. centered:: **Ubiquity Robotics Simulation Team**
