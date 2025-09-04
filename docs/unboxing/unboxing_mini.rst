@@ -82,12 +82,16 @@ Before powering on, check all components are included and undamaged.
         :width: 400px
         :align: center 
 
+|
+
 - PCB Connector 
 
-.. image:: /_static/unboxing/.jpg
-        :alt: Magni 6 Mini PCB Connecter
-        :width: 400px
-        :align: center 
+**IMAGE CONTENT INCOMING**
+
+.. .. image:: /_static/unboxing/.jpg
+..         :alt: Magni 6 Mini PCB Connecter
+..         :width: 400px
+..         :align: center 
 
 - Raspberry Pi 
 
@@ -105,10 +109,12 @@ Before powering on, check all components are included and undamaged.
 
 - All the necessary wires, listed in the images bellow.
 
-.. image:: /_static/unboxing/.jpg
-    :alt: Magni 6 Mini Wires
-    :width: 400px
-    :align: center 
+**IMAGE CONTENT INCOMING**
+
+.. .. image:: /_static/unboxing/.jpg
+..     :alt: Magni 6 Mini Wires
+..     :width: 400px
+..     :align: center 
 
 
 3. Checklist
@@ -162,24 +168,228 @@ For for exact instructions on how to charge the batteries before adding them to 
 
 - Place both batteries inside the chassis.
 - Connect them to the MCB, the switch, and to each other using the supplied cables.
-- Ensure the connectio nis firm to avoid power issues.
+- Ensure the connection is firm to avoid power issues.
 
-.. image:: /_static/unboxing/batteries_with_no_wires.jpg
-    :alt: Batteries inside the robot without wires
+
+----- 
+
+Install First Battery
+~~~~~~~~~~~~~~~~~~~~~
+
+   Position the first BATTERY in the BASE according to the pictures below. 
+   Pay close attention to its orientation.
+
+.. raw:: html
+
+  <div class="rst-content">
+    <div style="display: flex; gap: 10px;">
+      <img src="/learn2/_static/unboxing/batteries_adding_first_one1.png" alt="Adding first battery to the robot upper pic 1." style="width: 50%; height: auto;">
+      <img src="/learn2/_static/unboxing/batteries_adding_first_one2.png" alt="Adding first battery to the robot upper pic 2." style="width: 50%; height: auto;">
+    </div>
+  </div>
+
+|
+
+.. raw:: html
+
+  <div class="rst-content">
+    <div style="display: flex; gap: 10px;">
+      <img src="/learn2/_static/unboxing/batteries_adding_first_one3.png" alt="Adding first battery to the robot lower pic 1." style="width: 50%; height: auto;">
+      <img src="/learn2/_static/unboxing/batteries_adding_first_one4.png" alt="Adding first battery to the robot lower pic 2." style="width: 50%; height: auto;">
+    </div>
+  </div>
+
+|
+
+Install Second Battery
+~~~~~~~~~~~~~~~~~~~~~~
+
+   Use the BATTERY HOLDER to secure the second BATTERY in the BASE as shown in the picture.
+
+.. raw:: html
+
+  <div class="rst-content">
+    <div style="display: flex; gap: 10px;">
+      <img src="/learn2/_static/unboxing/batteries_adding_second_one1.png" alt="Adding second battery to the robot with battery holder pic 1." style="width: 45%; height: auto;">
+      <img src="/learn2/_static/unboxing/batteries_adding_second_one2.png" alt="Adding second battery to the robot with battery holder pic 2." style="width: 55%; height: auto;">
+    </div>
+  </div>
+
+|
+
+Properly Adding the Second Battery
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   
+   Be careful with the wires.
+
+.. image:: /_static/unboxing/batteries_minding_the_wires.png
+    :alt: Adding second battery, being carefull with the wires.
     :width: 400px
     :align: center
+
+|
+
+Connect Batteries in Series
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+   Attach the yellow-green wire: red connector to the RED spade of the first battery, black connector to the BLACK spade of the second battery.
+
+.. note:: 
+  Red connector from the wire goes to the RED spade of the first battery. Black connector of the wire goes to the black spade of the second battery.
+
+.. raw:: html
+
+  <div class="rst-content">
+    <div style="display: flex; gap: 10px;">
+      <img src="/learn2/_static/unboxing/batteries_connecting_in_series.png" alt="Connecting the batteries in series pic 1." style="width: 50%; height: auto;">
+      <img src="/learn2/_static/unboxing/batteries_connected_in_series.png" alt="Connecting the batteries in series pic 2." style="width: 50%; height: 50%">
+    </div>
+  </div>
+
+|
+
+Connect Black Spade to Battery
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+   Take the wire harness and connect the black female spade terminal to the negative battery pin as shown in the picture. 
+   Press it in firmly.
+
+.. raw:: html
+
+  <div class="rst-content">
+    <div style="display: flex; gap: 10px;">
+      <img src="/learn2/_static/unboxing/wire_harness_connector_for_battery1.png" alt="Wire harness with shown black connector." style="width: 50%; height: auto;">
+      <img src="/learn2/_static/unboxing/batteries_wires_connected_to_first_battery.png" alt="Connecting the wires to the batteries." style="width: 50%; height: auto;">
+    </div>
+  </div>
+
+|
+
+Connect Black Spade to Ground
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+   Grab the only free black female spade connector and attach it to the GND pin on the CONNECTOR BOARD as shown in the picture.
+
+.. raw:: html
+
+  <div class="rst-content">
+    <div style="display: flex; gap: 10px;">
+      <img src="/learn2/_static/unboxing/wire_harness_connector_for_MCB2.png" alt="Wire black connector with green circle." style="width: 55%; height: auto;">
+      <img src="/learn2/_static/unboxing/MCB_wire_harness_connected_to_MCB.png" alt="Wire black connector added to the MCB with green circle." style="width: 45%; height: auto;">
+    </div>
+  </div>
+
+|
+
+.. image:: /_static/unboxing/MCB_wire_harness_connected_to_MCB_preview.png
+    :alt: Close up image of the wire to the MCB with green circle.
+    :width: 400px
+    :align: center
+
+|
+
+
+Connect Red Spade and Charger
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+   Attach the short RED spade connector to the positive battery pin (green circle). Connect the charger connector to the 5.5 x 2.1 mm DC POWER CHARGER (yellow circle). Finally connect the BLACK spade connector to the negative spade of the first battery (blue circle).
+
+.. raw:: html
+
+  <div class="rst-content">
+   <div style="display: flex; gap: 10px;">
+     <img src="/learn2/_static/unboxing/wire_harness_connector_for_battery2.png" alt="Wires with green and yellow circle." style="width: 50%; height: auto;">
+     <img src="/learn2/_static/unboxing/batteries_wires_connected_to_second_battery.png" alt="Wires connected to the battery with yellow and green circle. " style="width: 50%; height: auto;">
+   </div>
+  </div>
+
+|
+
+Connect Red Spade to Switch
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+   Attach the remaining red spade connector to the upper pin of the ON/OFF switch.
+
+.. raw:: html
+
+  <div class="rst-content">
+    <div style="display: flex; gap: 10px;">
+      <img src="/learn2/_static/unboxing/wire_harness_connector_for_switch.png" alt="Rest of the wires with green circle." style="width: 55%; height: auto;">
+      <img src="/learn2/_static/unboxing/switch_spade_connector_for_wire.png" alt="ON/OFF SWITCH with green circle for upper spade connector." style="width: 45%; height: auto;">
+    </div>
+  </div>
+
+|
+
+47. **Connect Second Wire Harness**
+
+   Use the wire harness with 3 red spade connectors. 
+   Attach the split connector (yellow circle) to the bottom pin of the ON/OFF SWITCH.
+
+.. raw:: html
+
+  <div class="rst-content">
+    <div style="display: flex; gap: 10px;">
+      <img src="/learn2/_static/unboxing/wire_harness_connector_for_lower_spade_on_switch.png" alt="Second wire harness with green circle.." style="width: 55%; height: auto;">
+      <img src="/learn2/_static/unboxing/switch_lower_spade.png" alt="ON/OFF SWITCH with green circle for lower spade connector." style="width: 45%; height: auto;">
+    </div>
+  </div>
+
+|
+
+
+Connect Remaining Spade Connectors
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+   Attach on red spade connector to the 12V pin on the CONNECTION BOARD and the other to the 12V pin on the MOTOR BOARD.
+
+.. raw:: html
+
+  <div class="rst-content">
+    <div style="display: flex; gap: 10px;">
+      <img src="/learn2/_static/unboxing/wire_harness_connectors_for_MCB_and_PCB.png" alt="Second wire harness with green and yellow circle." style="width: 40%; height: auto;">
+      <img src="/learn2/_static/unboxing/spade_connectors_on_mcb_and_pcb.png" alt="MCB with green and yellow circle." style="width: 60%; height: auto;">
+    </div>
+  </div>
+
+|
+
+Verify Wiring
+~~~~~~~~~~~~~
+
+   Ensure all spade connectors are firmly attached. Route wires as shown.
+
+.. Important::
+  Double-check that all connections (all pins are firmly connected).
+
+.. note:: 
+  UPDATE of the WIRE ROUTING is coming soon.
+
+.. TODO: Add image here without the wires being taped/secured to the second battery.
+
+.. image:: /_static/unboxing/final_wiring.png
+    :alt: Final wiring. 
+    :width: 400px
+    :align: center
+
+
+----- 
 
 .. warning::
     **THE VOLTAGE CONNECTED TO THE MAIN CONTROL BOARD (MCB) MUST REMAIN 30.0V OR LESS AT ALL TIMES!**
 
 The wires should be connected like this: 
 
-.. image:: /_static/unboxing/wiring.jpg
-    :alt: Wiring Harnesss
-    :width: 400px
-    :align: center
+.. TODO: Add image of the wiring.
 
-|
+**IMAGE CONTENT INCOMING**
+
+.. .. image:: /_static/unboxing/wiring.jpg
+..     :alt: Wiring Harnesss
+..     :width: 400px
+..     :align: center
+
+.. |
 
 You can follow the following video for exact step-by-step guide of adding the batteries inside the robot:
 
@@ -192,20 +402,29 @@ You can follow the following video for exact step-by-step guide of adding the ba
 
 - Use a multimeter to confirm voltage. Keep the batteries always charged.
 
-.. image:: /_static/unboxing/.jpg
-    :alt: Checking the batteries voltage inside the Robot
-    :width: 400px
-    :align: center
+.. TODO: Image of the voltage of the batteries. 
 
-|
+**IMAGE CONTENT INCOMING**
+
+.. .. image:: /_static/unboxing/.jpg
+..     :alt: Checking the batteries voltage inside the Robot
+..     :width: 400px
+..     :align: center
+
+.. |
 
 - Once the batteries are inside the robot use the provided charger to charge them.
 
-     .. image:: /_static/unboxing/.jpg
-        :alt: Charging the batteries inside the Robot 
-        :width: 400px
-        :align: center
-|
+.. TODO: Add the image for charging the robot with provided charger here.
+
+**IMAGE CONTENT INCOMING**
+
+..     .. image:: /_static/unboxing/.jpg
+..        :alt: Charging the batteries inside the Robot 
+..        :width: 400px
+..        :align: center
+.. |
+..
 
 You can follow the following video for exact step-by-step guide of charging the batteries inside the robot or manually:
 
@@ -238,6 +457,7 @@ Powering On
     :align: center
 
 |
+
 
 You can follow the following video for exact step-by-step guide of powering on the robot. 
 
