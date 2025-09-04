@@ -345,8 +345,8 @@ Connect Remaining Spade Connectors
 
   <div class="rst-content">
     <div style="display: flex; gap: 10px;">
-      <img src="/learn2/_static/unboxing/wire_harness_connectors_for_MCB_and_PCB.png" alt="Second wire harness with green and yellow circle." style="width: 40%; height: auto;">
-      <img src="/learn2/_static/unboxing/spade_connectors_on_mcb_and_pcb.png" alt="MCB with green and yellow circle." style="width: 60%; height: auto;">
+      <img src="/learn2/jazzy-devel/_static/unboxing/wire_harness_connectors_for_MCB_and_PCB.png" alt="Second wire harness with green and yellow circle." style="width: 40%; height: auto;">
+      <img src="/learn2/jazzy-devel/_static/unboxing/spade_connectors_on_mcb_and_pcb.png" alt="MCB with green and yellow circle." style="width: 60%; height: auto;">
     </div>
   </div>
 
