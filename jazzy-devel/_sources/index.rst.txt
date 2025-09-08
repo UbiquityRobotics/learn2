@@ -13,21 +13,16 @@ Learn how to connect, operate, and interact with our robots, all in a step-by-st
 Sections
 ########
 
+
 - `Magni 6 Model Introduction <model_introduction_>`_: Introduction to our Magni 6 robots. This section highligets their key specifications and typical use cases to help you choose the right model for your needs.
 
-- `Waiting for Your Robot <requirements_>`_: Covers what you should do while waiting for your robot to arrive. System requirements, recommended preparations like buying the correct batteries, and setting up your workstation.
+- `Waiting for Your Robot <requirements_>`_: Covers what you should do while waiting for your robot to arrive. System requirements, recommended preparations like buying the correct batteries, setting up your workstations and trying out the simulation environment. In this section our custom images are also introduced.
 
-- `Setting Up Your Workstation `workstation_`_: Explains how to configure your workstation to be fully compatible with our robots, including hardware and software requirements.
+- `Unboxing <unboxing_>`_: Step-by-step instructions for unboxing your robot. Learn how to safely unpack it, check for any damages, verify all components are included, install the batteries and power on the robot.
 
-- `Unboxing <unboxing_>`_: Step-by-step instructions for safely unboxing your robot. Learn how to check for damages and ensure all components are included.
-
-- `Driving the Robot <driving_>`_: Learn how to operate your robot, from basic controls to advanced driving tips.
+- `Driving the Robot <driving_>`_: Learn how to operate your robot in the most basic way possible. How to drive it through Teleop and through our custom sofware EZ-MAP.
 
 - `EZ-MAP <ez_map_>`_: Our custom SLAM software for automating your robot. Includes installation, setup, and usage instructions.
-
-- `Simulation <simulation_>`_: Step-by-step guide to running RVIZ simulations of your robot, including a brief introduction to what RVIZ is._
-
-- `ROS2 <ros2_>`_: Overview of ROS2 and its role in our systems, with rpactical guides on interacting with your robot via ROS2. 
 
 - `Troubleshooting <troubleshooting_>`_: Solutions to common hardware and software issues. Your first stop if you encounter problems.
 
@@ -91,5 +86,7 @@ Sections
    troubleshooting/hardware/lidars
    troubleshooting/hardware/rpi
    troubleshooting/hardware/pi_camera
+
+
 
 
