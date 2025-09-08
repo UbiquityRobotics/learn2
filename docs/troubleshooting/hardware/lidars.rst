@@ -8,6 +8,8 @@ Our robots support two LiDAR options:
 
 These sensors enhance navigation and mapping capabilities, and fitting various operational needs. 
 
+.. _lidar_short_range:
+
 Short Range LiDAR
 #################
 
@@ -56,6 +58,9 @@ Its high accuracy and 360 degrees scanning make it perfect for precise mapping a
    * - Communication Interface
      - Standard Asynchronous Serial Port (Baud Rate: 230400 bps)
 
+
+
+.. _lidar_long_range:
 
 Long Range LiDAR    
 ################
