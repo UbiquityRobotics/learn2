@@ -1,7 +1,8 @@
 Connecting to the Robot
 =======================
 
-The Magni 6 Mini emits its own Wi-Fi for SSH access, or you can connect via home network.
+The Magni 6 robots emit their own Wi-Fi network.
+You can access them via SSH via this network, or by connecting them to your local network.
 
 Option 1: Connect via Robot's Wi-Fi
 ###################################
@@ -22,7 +23,6 @@ Option 1: Connect via Robot's Wi-Fi
 .. TODO: Add the images here connecting to the robot via AP.
 
 **IMAGE CONTENT INCOMING**
-
 
 3. You will be prompted a password, the password is: **ubuntu**
 
@@ -83,10 +83,9 @@ Example:
 
 You can follow the following video for exact step-by-step guide of connecting to the robot through the network: 
 
-[TODO: Video of connecting to the robot through network mode. ]
+**VIDEO CONTENT INCOMING**
 
 ..  TODO: Video of connecting to the robot through network mode.
-
 
 You are now connected to the robot with Internet access.
 

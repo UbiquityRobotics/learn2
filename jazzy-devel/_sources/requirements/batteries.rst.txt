@@ -17,9 +17,6 @@ Typical sources for suitable batteries include scooter, wheelchair, UPS, and aut
 .. warning::
     **THE VOLTAGE CONNECTED TO THE MAIN CONTROL BOARD (MCB) MUST REMAIN 30.0V OR LESS AT ALL TIMES!**
 
-
-
-
 What kind of Battery?
 #####################
 
@@ -113,6 +110,10 @@ Typical Current Draw
 Typical Current Draw for Mini
 -----------------------------
 
+.. TODO: Add the table content. 
+
+**TABLE CONTENT INCOMING**
+
 +------------------------------------------------------------+-----------------+
 | Operating State                                            | Current (Amps)  |
 +============================================================+=================+
@@ -132,6 +133,10 @@ Typical Current Draw for Mini
 
 Typical Current Draw for Midi
 -----------------------------
+
+.. TODO: Add the table content. 
+
+**TABLE CONTENT INCOMING**
 
 +------------------------------------------------------------+-----------------+
 | Operating State                                            | Current (Amps)  |

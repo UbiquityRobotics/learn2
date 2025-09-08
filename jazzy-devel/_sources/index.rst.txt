@@ -56,7 +56,7 @@ Sections
 
 .. toctree::
    :maxdepth: 2
-   :caption: Unboxing Your model
+   :caption: Unboxing Your Model
 
    unboxing/unboxing_mini
    unboxing/unboxing_midi
@@ -88,10 +88,8 @@ Sections
    :maxdepth: 2
    :caption: Troubleshooting
 
-   troubleshooting/lidars
-   troubleshooting/camera
-   troubleshooting/rpi
-   troubleshooting/sonars
-   troubleshooting/images
+   troubleshooting/hardware/lidars
+   troubleshooting/hardware/rpi
+   troubleshooting/hardware/pi_camera
 
 
