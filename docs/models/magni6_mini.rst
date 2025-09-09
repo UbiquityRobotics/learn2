@@ -74,39 +74,49 @@ The Magni 6 Mini comes equipped with essential sensors for navigation and intera
 It also has support for additional add-ons to expand functionality. 
 
 **Built-in Sensors**:
-    - :doc:`Short-range LIDAR <../../hardware/beginner/lidars>`
-    - :doc:`Raspberry Pi Camera Wide <../../hardware/beginner/raspberry_pi_camera>`
+    - :ref:`Short-range LIDAR <lidar_short_range>`
+    - :doc:`Raspberry Pi Camera Wide <../troubleshooting/hardware/pi_camera>`
 
 **Supported Add-ons**:
-    - :doc:`Second Raspberry Pi Camera <../../hardware/beginner/raspberry_pi_camera>`
-    - :doc:`Sonars <../../hardware/beginner/main_beginner_hardware>`
+    - :doc:`Second Raspberry Pi Camera <../troubleshooting/hardware/pi_camera>`
+    - :doc:`Sonars <../troubleshooting/hardware/sonars>`
 
 .. TODO: Ask regarding the sonars.
 
 .. note:: 
-    For installing the add-ons to the robot, please check the :doc:`Assembly page for the Mini <../full_assembly/assembly_magni6_mini>`.
+
+    For installing add-ons to the robot, please consult with us at `Ubiquity Robotics support <support@ubiquityrobotics.com>`_.
+
 
 Projects
 ########
 
-Get started with these :doc:`beginner-friendly projects <../../projects/mini/beginner/main_beginner_projects>` to explore the Magni 6 Mini's capabilities.
-Always test on safe and obstale-free environment to ensure smooth operation.
+To explore the possibilites and capabilities of the Magni 6 Mini, try the following projects:
 
-.. note::
-    Test all projects in an obstacle-free environment to ensure safe operation.
+.. important:: 
+
+    Our robot solutions are designed to be safe for use on a table. 
+    However, we strongly recommend testing in asafe, obstacle-free environment to ensure smooth operation.
 
 .. warning::
-    Testing on a table top can lead to flying robots. Please when driving and testing the robot, keep it on the floor.
+    
+    While tabletop testing is generally safe, make sure there is enough space for the robot to move,
+     and handle it carefully when driving to avoid accidents.
 
-- **Room Mapping Starter**: Create a 2D map of your environment using the short-range LIDAR and Ez-Map software. Ideal for learning SLAM basics.
 
-..    See: :doc:`../../projects/mini/beginner/ezmap`
+Room Mapping Starter 
+~~~~~~~~~~~~~~~~~~~~
 
-- **Obstacle Avoidance**: Program the Magni 6 Mini to navigate around obstacles using the short-range LIDAR for proximity detection. Perfect for beginners experimenting with autonomous navigation.
+Create a 2D map of your environment using the short-range LIDAR and Ez-Map software. 
+Ideal for learning SLAM basics.
 
-..    See: :doc:`../../projects/mini/beginner/obstacle_avoidance`
+Obstacle Avoidance
+~~~~~~~~~~~~~~~~~~
 
-- **Live Video Patrol**: Use the Raspberry Pi Camera to stream live video, turning the Magni 6 Mini into a mobile surveillance bot. Great for remote monitoring.
+Program the Magni 6 Mini to navigate around obstacles using the short-range LIDAR for proximity detection. 
+Perfect for beginners experimenting with autonomous navigation.
 
-..    See: :doc:`../../projects/mini/beginner/telepresence`
+Live Video Patrol
+~~~~~~~~~~~~~~~~~
 
+Use the Raspberry Pi Camera to stream live video, turning the Magni 6 Mini into a mobile surveillance bot. Great for remote monitoring.

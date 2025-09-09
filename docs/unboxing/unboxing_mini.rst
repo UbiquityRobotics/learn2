@@ -234,7 +234,8 @@ Connect Batteries in Series
 Attach the yellow-green wire: red connector to the RED spade of the first battery, black connector to the BLACK spade of the second battery.
 
 .. note:: 
-Red connector from the wire goes to the RED spade of the first battery. Black connector of the wire goes to the black spade of the second battery.
+
+  Red connector from the wire goes to the RED spade of the first battery. Black connector of the wire goes to the black spade of the second battery.
 
 .. raw:: html
 
@@ -301,6 +302,8 @@ Attach the short RED spade connector to the positive battery pin (green circle).
       <img src="/learn2/jazzy-devel/_static/unboxing/batteries_wires_connected_to_second_battery.png" alt="Wires connected to the battery with yellow and green circle. " style="width: 50%; height: auto;">
     </div>
   </div>
+
+
 |
 
 Connect Red Spade to Switch
