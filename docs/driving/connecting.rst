@@ -84,9 +84,13 @@ Example:
 - By logging into the local router (usually on the webpage http://192.168.0.1) and checking connected devices
 - By performing a network scan using a utility such as nmap to list local IPs:
 .. code-block:: bash
+
     nmap -sP 192.168.0.0/24
+
 .. warning::
+
     **Scanning should only be performed on authorized networks!**
+
 .. TODO: Add some better way of distinguishing the RPI IP in the network scan
    
 5. SSH into the robot from the local network:
