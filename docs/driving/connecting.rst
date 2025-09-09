@@ -1,15 +1,17 @@
 Connecting to the Robot
 =======================
 
-The Magni 6 robots emit their own Wi-Fi network.
-You can access them via SSH via this network, or by connecting them to your local network.
+If not connected to a local network the Magni 6 robots emit own their own Wi-Fi network.
+You have two options on how to connect to the robot.
 
 Option 1: Connect via Robot's Wi-Fi
 ###################################
 
-1. Open a terminal.
+1. Connect your computer to the robot's network named ubiquityrobotxxxx (where xxxx is a four digit code). The password for the network is "robotseverywhere".
 
-2. SSH into the robot:
+2. Open a terminal.
+
+3. SSH into the robot:
 
 .. code-block:: bash
 
@@ -24,7 +26,7 @@ Option 1: Connect via Robot's Wi-Fi
 
 **IMAGE CONTENT INCOMING**
 
-3. You will be prompted a password, the password is: **ubuntu**
+4. You will be prompted a password, the password is: **ubuntu**
 
 .. .. image:: /_static/magni-mini/getting_started/.jpg
 ..     :alt: Connect - password written 
@@ -60,7 +62,9 @@ If you followed the steps successfully you will be connected to the robot:
 Option 2: Connect via Home Network 
 ##################################
 
-1. Connect to the robot to your local network:
+1. On first boot follow Option 1 to connect to the robot
+
+2. Connect the robot to your local network:
 
 .. code-block:: bash
 
@@ -73,9 +77,19 @@ Example:
     sudo nmcli device wifi connect mywifi password mypass1234
 
 
-2. Open a new terminal (the first will be frozen).
-3. Identify the robot's IP address on the network (hostname: **ubuntu**).
-4. SSH into the robot:
+3. Open a new terminal (the first will be frozen).
+
+4. Identify the robot's IP address on the local network (hostname: **ubuntu**).
+   This can be done in two ways:
+- By logging into the local router (usually on the webpage http://192.168.0.1) and checking connected devices
+- By performing a network scan using a utility such as nmap to list local IPs:
+.. code-block:: bash
+    nmap -sP 192.168.0.0/24
+.. warning::
+    **Scanning should only be performed on authorized networks!**
+.. TODO: Add some better way of distinguishing the RPI IP in the network scan
+   
+5. SSH into the robot from the local network:
 
 .. code-block:: bash
 
