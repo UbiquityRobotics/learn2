@@ -88,6 +88,7 @@ To charge the batteries, follow these steps:
         - Use a 24V lead-acid charger, connecting positive to the second battery's positive terminal and negative to the first battery's negative terminal.
 4. **Charge Time**: Charge time will vary depending on the robot and batteries. 
     - When charging with our charger, check the LED: **GREEN** = fully charged, **RED** = charging.
+
     .. TODO: Check this with the charger and the LED. It has LED but does it make sense.
 5. **Safety Tips**: 
     - Charge in a well-ventilated area.

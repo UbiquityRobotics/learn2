@@ -49,7 +49,12 @@
 <li class="toctree-l2"><a class="reference internal" href="#overview">Overview</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#build-specifications">Build Specifications</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#sensors">Sensors</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#projects">Projects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#projects">Projects</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#room-mapping-starter">Room Mapping Starter</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#obstacle-avoidance">Obstacle Avoidance</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#live-video-patrol">Live Video Patrol</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="magni6_midi.html">Magni6 Midi</a></li>
@@ -84,6 +89,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../troubleshooting/hardware/lidars.html">LiDAR Sensors</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../troubleshooting/hardware/rpi.html">Raspberry Pi 5</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../troubleshooting/hardware/pi_camera.html">Pi Camera 3 Module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../troubleshooting/hardware/sonars.html">Sonars</a></li>
 </ul>
 
         </div>
@@ -195,42 +201,50 @@ It’s compact and perfect for navigating tight indoor spaces while supporting a
 It also has support for additional add-ons to expand functionality.</p>
 <dl class="simple">
 <dt><strong>Built-in Sensors</strong>:</dt><dd><ul class="simple">
-<li><p><span class="xref std std-doc">Short-range LIDAR</span></p></li>
-<li><p><span class="xref std std-doc">Raspberry Pi Camera Wide</span></p></li>
+<li><p><a class="reference internal" href="../troubleshooting/hardware/lidars.html#lidar-short-range"><span class="std std-ref">Short-range LIDAR</span></a></p></li>
+<li><p><a class="reference internal" href="../troubleshooting/hardware/pi_camera.html"><span class="doc">Raspberry Pi Camera Wide</span></a></p></li>
 </ul>
 </dd>
 <dt><strong>Supported Add-ons</strong>:</dt><dd><ul class="simple">
-<li><p><span class="xref std std-doc">Second Raspberry Pi Camera</span></p></li>
-<li><p><span class="xref std std-doc">Sonars</span></p></li>
+<li><p><a class="reference internal" href="../troubleshooting/hardware/pi_camera.html"><span class="doc">Second Raspberry Pi Camera</span></a></p></li>
+<li><p><a class="reference internal" href="../troubleshooting/hardware/sonars.html"><span class="doc">Sonars</span></a></p></li>
 </ul>
 </dd>
 </dl>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>For installing the add-ons to the robot, please check the <span class="xref std std-doc">Assembly page for the Mini</span>.</p>
+<p>For installing add-ons to the robot, please consult with us at <a class="reference external" href="mailto:support&#37;&#52;&#48;ubiquityrobotics&#46;com">Ubiquity Robotics support</a>.</p>
 </div>
 </section>
 <section id="projects">
 <h2>Projects<a class="headerlink" href="#projects" title="Link to this heading"></a></h2>
-<p>Get started with these <span class="xref std std-doc">beginner-friendly projects</span> to explore the Magni 6 Mini’s capabilities.
-Always test on safe and obstale-free environment to ensure smooth operation.</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>Test all projects in an obstacle-free environment to ensure safe operation.</p>
+<p>To explore the possibilites and capabilities of the Magni 6 Mini, try the following projects:</p>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>Our robot solutions are designed to be safe for use on a table.
+However, we strongly recommend testing in asafe, obstacle-free environment to ensure smooth operation.</p>
 </div>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
-<p>Testing on a table top can lead to flying robots. Please when driving and testing the robot, keep it on the floor.</p>
+<dl class="simple">
+<dt>While tabletop testing is generally safe, make sure there is enough space for the robot to move,</dt><dd><p>and handle it carefully when driving to avoid accidents.</p>
+</dd>
+</dl>
 </div>
-<ul class="simple">
-<li><p><strong>Room Mapping Starter</strong>: Create a 2D map of your environment using the short-range LIDAR and Ez-Map software. Ideal for learning SLAM basics.</p></li>
-</ul>
-<ul class="simple">
-<li><p><strong>Obstacle Avoidance</strong>: Program the Magni 6 Mini to navigate around obstacles using the short-range LIDAR for proximity detection. Perfect for beginners experimenting with autonomous navigation.</p></li>
-</ul>
-<ul class="simple">
-<li><p><strong>Live Video Patrol</strong>: Use the Raspberry Pi Camera to stream live video, turning the Magni 6 Mini into a mobile surveillance bot. Great for remote monitoring.</p></li>
-</ul>
+<section id="room-mapping-starter">
+<h3>Room Mapping Starter<a class="headerlink" href="#room-mapping-starter" title="Link to this heading"></a></h3>
+<p>Create a 2D map of your environment using the short-range LIDAR and Ez-Map software.
+Ideal for learning SLAM basics.</p>
+</section>
+<section id="obstacle-avoidance">
+<h3>Obstacle Avoidance<a class="headerlink" href="#obstacle-avoidance" title="Link to this heading"></a></h3>
+<p>Program the Magni 6 Mini to navigate around obstacles using the short-range LIDAR for proximity detection.
+Perfect for beginners experimenting with autonomous navigation.</p>
+</section>
+<section id="live-video-patrol">
+<h3>Live Video Patrol<a class="headerlink" href="#live-video-patrol" title="Link to this heading"></a></h3>
+<p>Use the Raspberry Pi Camera to stream live video, turning the Magni 6 Mini into a mobile surveillance bot. Great for remote monitoring.</p>
+</section>
 </section>
 </section>
 

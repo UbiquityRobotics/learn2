@@ -37,7 +37,7 @@ It's also a cost-effective way to evaluate whether our solution fits your needs 
 ----------------
 
 The Magni 6 robots use a custom software image that comes pre-installed on the robot.
-If you want to explore other versions or experiment with the system, you can find them here: :doc:`./images.rst`
+If you want to explore other versions or experiment with the system, you can find them here: :doc:`./images`.
 
 .. note::
     

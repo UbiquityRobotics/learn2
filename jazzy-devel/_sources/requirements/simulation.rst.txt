@@ -222,6 +222,8 @@ Step 1: Launch Teleop Node
 
    # Keyboard teleoperation
    ros2 run teleop_twist_keyboard teleop_twist_keyboard --ros-args -p stamped:=true
+
+
 Step 2: Robot Control Commands
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
