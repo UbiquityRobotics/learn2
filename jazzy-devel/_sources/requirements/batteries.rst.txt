@@ -5,11 +5,11 @@ Shipping
 ########
 
 .. note:: 
-    The robot ships worldwide by air **without batteries**.
+    The robots ship worldwide by air **without batteries**.
     This reduces shipping costs and avoids restrictions on transporting batteries.
     Lead acid batteries are easy to source locally.
 
-The robot supports different battery sizes. 
+The robots support different battery sizes. 
 This allows users to choose between a long-endurance but heavier setup, or a lighter and more portable configuration.
 Typical sources for suitable batteries include scooter, wheelchair, UPS, and automotive suppliers.
 
@@ -26,7 +26,22 @@ These batteries are safe, maintanance-free, and don't leak, making them ideal fo
 Which Battery?
 ##############
 
-We recommend using two identical 12V, 5Ah AGM VRLA batteries with F2 termninals, such as Fiamm 12FGH23 or equivalents.
+For all of our robots we suggest using two identical 12V, AGM VRLA lead acid batteries with F2 terminals.  
+
+.. TODO: Check the terminals F1 or F2.
+
+Recommendation for batteries:
+
+Magni 6 Mini
+~~~~~~~~~~~~
+
+The recommended battery for Magni 6 Mini is Fiamm 12FGH23.
+
+.. image:: /_static/requirements/batteries/battery_small.png
+   :alt: Small Battery 12V ~5Ah
+   :width: 400px
+   :align: center
+
 Some equivalent batteries include:
 
 - Yuasa NP5-12
@@ -38,32 +53,77 @@ Some equivalent batteries include:
     This list of equivalent batteries was written from an internet search. 
     It is not exaustive, definitve, or the primary reference, but merely a sample of compatible options.
 
+
+Magni 6 Midi
+~~~~~~~~~~~~
+
+The recommended battery for Magni 6 Midi is Fiamm FG21202.
+
+.. image:: /_static/requirements/batteries/battery_medium.png
+   :alt: Medium Battery 12V ~12Ah
+   :width: 400px
+   :align: center
+
+Some equivalent batteries include:
+
+- CSB GP12120 
+- Ritar RT12120 
+- Yuasa NP12-12 (2.5 mm higher than the rest)
+
+
+.. important:: 
+    This list of equivalent batteries was written from an internet search. 
+    It is not exaustive, definitve, or the primary reference, but merely a sample of compatible options.
+
 For the best battery choice, consult a local supplier.
 
 Battery Specifications
 ######################
 
-+-------------------+-------------+
-| Feature           | Details     |
-+===================+=============+
-| Voltage           | 12V         |
-+-------------------+-------------+
-| Capacity          | 5Ah         |
-+-------------------+-------------+
-| Type              | AGM VRLA    |
-+-------------------+-------------+
-| Terminals         | F2 (6.3mm)  |
-+-------------------+-------------+
-| Size (approx.)    | 90x70x101mm |
-+-------------------+-------------+
-| Weight (approx.)  | 2kg         |
-+-------------------+-------------+
+
+Mini 
+~~~~
+
++-------------------+---------------+
+| Feature           | Details       |
++===================+===============+
+| Voltage           | 12V           |
++-------------------+---------------+
+| Capacity          | 5Ah (20h rate)|
++-------------------+---------------+
+| Type              | AGM VRLA      |
++-------------------+---------------+
+| Terminals         | F2 (6.3mm)    |
++-------------------+---------------+
+| Size (LxWxH)      | 90x70x101mm   |
++-------------------+---------------+
+| Weight (approx.)  | 1.65-2 kg     |
++-------------------+---------------+
+
+Midi 
+~~~~
+
++------------------+-----------------+
+| Feature          | Details         |
++==================+=================+
+| Voltage          | 12V             |
++------------------+-----------------+
+| Capacity         | 12Ah (20hr rate)|  
++------------------+-----------------+
+| Type             | AGM VRLA        |
++------------------+-----------------+
+| Terminals        | F2 (6.3mm)      |
++------------------+-----------------+
+| Size (LxWxH)     | 151x98x95mm     |
++------------------+-----------------+
+| Weight (approx.) | 3.8-4.0 kg      |
++------------------+-----------------+
 
 
 Charging
 ########
 
-.. important::
+.. warning::
     The stock battery charger we supply is **ONLY FOR LEAD ACID** batteries and will not work and in fact may be dangerous for other battery technologies.
     As the system is designed for lead acid batteries if you use anything else the battery state topic could give misleading numbers as to the true battery state. 
     This will not affect the ability of the robot to drive properly.
@@ -82,14 +142,20 @@ To charge the batteries, follow these steps:
         - Plug the charger into the wall socket, then connect the connector (inner pin positive, outer sleeve negative) to the charger port.
     - **Manual Separate Charging**:
         - Disconnect both batteries from the robot.
-        - Charge each 12V battery individually using a 12V lead-acid charger.
+        - Take both batteries out of the robot.
+        - Charge each 12V battery individually using a 12V lead-acid charger or a `Power Supply <charge_power_supply_>`_.
     - **Manual Series Charging**: 
-        - Disconnect batteries from robot circuits, keeping them connected in series (positive of first to negative of second).
-        - Use a 24V lead-acid charger, connecting positive to the second battery's positive terminal and negative to the first battery's negative terminal.
+        - Disconnect batteries from circuits.
+        - Take them out of the robot. 
+        - Keep them connected in series (positive of first battery connected to negative of second battery)
+        - Charge the batteries 
+        - Charge both batteries together connected in series by using 24V lead-acid charger or a `Power Supply <charge_power_supply_>`_.
 4. **Charge Time**: Charge time will vary depending on the robot and batteries. 
     - When charging with our charger, check the LED: **GREEN** = fully charged, **RED** = charging.
+    - When charging with Power Supply with upper bound on voltage and constant current charge until supply switches from constant current to constant voltage and the current drops to 0.05 A.
 
     .. TODO: Check this with the charger and the LED. It has LED but does it make sense.
+
 5. **Safety Tips**: 
     - Charge in a well-ventilated area.
     - When manually charging the robot, avoid overcharging.
@@ -105,6 +171,28 @@ To charge the batteries, follow these steps:
     Always follow the manufacturer's instructions. Every battery has relevant information on the side.
 
 
+.. _charge_power_supply:
+
+Charging with Power Supply
+##########################
+
+
+Charging with a Power Supply depends on both the battery capacity and the number of batteries connected.
+
+For a single 12V, ~5Ah battery, use a charging voltage of around 14V with a current of about 0.5 A(5Ah / 10).
+For safer, slower charging, set the current slightly lower at 0.44~0.46A.
+
+When charging multiple batteries in series, the required voltage increases proportionally (two batteries: ~27-28V),
+but the charging current should remain at 0.45-0.5 Ah.
+Higher current can be used for faster charging, but never exceed the manufacturer's specified maximum current rating. 
+
+.. important::
+
+    This section assumes you have a power supply equivalent to PCWork PCW07A Power Supply.
+
+    The guide also assumes that you are using one of the lead acid batteries listed above.
+
+
 Typical Current Draw
 ####################
 
@@ -118,17 +206,17 @@ Typical Current Draw for Mini
 +------------------------------------------------------------+-----------------+
 | Operating State                                            | Current (Amps)  |
 +============================================================+=================+
-| Stationary, Pi4/Pi5 (4GB) only, motors off                 |                 |
+| Stationary, Pi4/Pi5 (4GB) only, motors off                 | [to be tested]  |
 +------------------------------------------------------------+-----------------+
-| Driving, flat surface, ~0.5 m/s, no load                   |                 |
+| Driving, flat surface, ~0.5 m/s, no load                   | [to be tested]  |
 +------------------------------------------------------------+-----------------+
-| Rotating in place, no load                                 |                 |
+| Rotating in place, no load                                 | [to be tested]  |
 +------------------------------------------------------------+-----------------+
-| Stationary, motors powered                                 |                 |
+| Stationary, motors powered                                 | [to be tested]  |
 +------------------------------------------------------------+-----------------+
-| Stationary, pushing wheels (fighting torque, no slipping)  |                 |
+| Stationary, pushing wheels (fighting torque, no slipping)  | [to be tested]  |
 +------------------------------------------------------------+-----------------+
-| Locked wheels, applying strong torque                      |                 |
+| Locked wheels, applying strong torque                      | [to be tested]  |
 +------------------------------------------------------------+-----------------+
 
 
@@ -142,17 +230,17 @@ Typical Current Draw for Midi
 +------------------------------------------------------------+-----------------+
 | Operating State                                            | Current (Amps)  |
 +============================================================+=================+
-| Stationary, Pi4/Pi5 (4GB) only, motors off                 |                 |
+| Stationary, Pi4/Pi5 (4GB) only, motors off                 | [to be tested]  |
 +------------------------------------------------------------+-----------------+
-| Driving, flat surface, ~0.5 m/s, no load                   |                 |
+| Driving, flat surface, ~0.5 m/s, no load                   | [to be tested]  |
 +------------------------------------------------------------+-----------------+
-| Rotating in place, no load                                 |                 |
+| Rotating in place, no load                                 | [to be tested]  | 
 +------------------------------------------------------------+-----------------+
-| Stationary, motors powered                                 |                 |
+| Stationary, motors powered                                 | [to be tested]  |  
 +------------------------------------------------------------+-----------------+
-| Stationary, pushing wheels (fighting torque, no slipping)  |                 |
+| Stationary, pushing wheels (fighting torque, no slipping)  | [to be tested]  | 
 +------------------------------------------------------------+-----------------+
-| Locked wheels, applying strong torque                      |                 |
+| Locked wheels, applying strong torque                      | [to be tested]  |  
 +------------------------------------------------------------+-----------------+
 
 .. note:: 
@@ -186,36 +274,34 @@ Key points:
 Charge Capacity Reference Table
 -------------------------------
 
-+----------+----------------------+-------------------+
-| Capacity | 24V System Voltage   | 12V Battery       |
-+==========+======================+===================+
-| 100%     | 25.77 V              | 12.89 V           |
-+----------+----------------------+-------------------+
-| 90%      | 25.56 V              | 12.78 V           |
-+----------+----------------------+-------------------+
-| 80%      | 25.31 V              | 12.65 V           |
-+----------+----------------------+-------------------+
-| 70%      | 25.02 V              | 12.51 V           |
-+----------+----------------------+-------------------+
-| 60%      | 24.81 V              | 12.41 V           |
-+----------+----------------------+-------------------+
-| 50%      | 24.45 V              | 12.23 V           |
-+----------+----------------------+-------------------+
-| 40%      | 24.21 V              | 12.11 V           |
-+----------+----------------------+-------------------+
-| 30%      | 23.91 V              | 11.96 V           |
-+----------+----------------------+-------------------+
-| 20%      | 23.61 V              | 11.81 V           |
-+----------+----------------------+-------------------+
-| 10%      | 23.40 V              | 11.70 V           |
-+----------+----------------------+-------------------+
-| 0%       | 23.25 V              | 11.63 V           |
-+----------+----------------------+-------------------+
-
++----------+----------------------+---------------+
+| Capacity | 24V System Voltage   | 12V Battery   |
++==========+======================+===============+
+| 100%     | 26.0 V               | 13.0 V        |
++----------+----------------------+---------------+
+| 90%      | 25.5 V               | 12.75 V       |
++----------+----------------------+---------------+
+| 80%      | 25.0 V               | 12.50 V       |
++----------+----------------------+---------------+
+| 70%      | 24.60 V              | 12.30 V       |
++----------+----------------------+---------------+
+| 60%      | 24.30 V              | 12.15 V       |
++----------+----------------------+---------------+
+| 50%      | 24.10 V              | 12.05 V       |
++----------+----------------------+---------------+
+| 40%      | 23.9 V               | 11.95 V       |
++----------+----------------------+---------------+
+| 30%      | 23.62 V              | 11.81 V       |
++----------+----------------------+---------------+
+| 20%      | 23.32 V              | 11.66 V       |
++----------+----------------------+---------------+
+| 10%      | 23.02 V              | 11.51 V       |
++----------+----------------------+---------------+
+| 0%       | 21.0 V               | 10.50 V       |
++----------+----------------------+---------------+
 
 .. note::
     For more detail see: `Batterystuff Lead Acid Battery Basics <https://www.batterystuff.com/kb/articles/battery-articles/battery-basics.html>`_
-
 
 .. important::
     If you are unsure about any aspect of battery selection or charging, consult a professional or contact `Ubiquity Robotics support <support@ubiquityrobotics.com>`_.
