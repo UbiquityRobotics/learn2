@@ -64,7 +64,8 @@
 <ul class="current">
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Connecting to the Robot</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#option-1-connect-via-robot-s-wi-fi">Option 1: Connect via Robot’s Wi-Fi</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#option-2-connect-via-home-network">Option 2: Connect via Home Network</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#option-2-connect-via-local-network">Option 2: Connect via Local Network</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#next-steps">Next Steps</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="teleop.html">Driving the robot using Terminal</a></li>
@@ -110,57 +111,103 @@
              
   <section id="connecting-to-the-robot">
 <h1>Connecting to the Robot<a class="headerlink" href="#connecting-to-the-robot" title="Link to this heading"></a></h1>
-<p>The Magni 6 robots emit their own Wi-Fi network.
-You can access them via SSH via this network, or by connecting them to your local network.</p>
-<section id="option-1-connect-via-robot-s-wi-fi">
-<h2>Option 1: Connect via Robot’s Wi-Fi<a class="headerlink" href="#option-1-connect-via-robot-s-wi-fi" title="Link to this heading"></a></h2>
-<ol class="arabic simple">
-<li><p>Open a terminal.</p></li>
-<li><p>SSH into the robot:</p></li>
-</ol>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ssh<span class="w"> </span>ubuntu@10.42.0.1
-</pre></div>
+<p>Magni 6 robots broadcast their own Wi-Fi network by default.
+You can connect via this Wi-Fi or integrate the robot into your local network.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>When first unboxed or after flashing a fresh image, the robot will always start by broadcasting its own Wi-Fi network.</p>
 </div>
-<p><strong>IMAGE CONTENT INCOMING</strong></p>
-<ol class="arabic simple" start="3">
-<li><p>You will be prompted a password, the password is: <strong>ubuntu</strong></p></li>
-</ol>
-<p><strong>IMAGE CONTENT INCOMING</strong></p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>While connected to the robot’s Wi-Fi, you will <strong>not</strong> have internet access.
+To use both the robot and the internet, switch to the local network option.</p>
+</div>
+<p>Before continuing, ensure your workstation is set up: <a class="reference internal" href="../requirements/workstation.html"><span class="doc">Setting up your Workstation</span></a>.</p>
+<hr class="docutils" />
+<section id="option-1-connect-via-robot-s-wi-fi">
+<span id="connect-ap"></span><h2>Option 1: Connect via Robot’s Wi-Fi<a class="headerlink" href="#option-1-connect-via-robot-s-wi-fi" title="Link to this heading"></a></h2>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This section assumes you already unboxed and set up the robot.</p>
+</div>
 <div class="line-block">
 <div class="line"><br /></div>
 </div>
-<p>You can follow the following video for exact step-by-step guide of connecting to the robot through Robot’s Wi-Fi here:</p>
-<p><strong>VIDEO CONTENT INCOMING</strong></p>
-<p>If you followed the steps successfully you will be connected to the robot:</p>
-<p><strong>IMAGE CONTENT INCOMING</strong></p>
+<ol class="arabic">
+<li><p>Power on the robot.</p></li>
+<li><p>Connect your computer to the Wi-Fi network:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><strong>SSID:</strong> <code class="docutils literal notranslate"><span class="pre">UbiquityRobotXXXX</span></code></p></li>
+<li><p><strong>Password:</strong> <code class="docutils literal notranslate"><span class="pre">robotseverywhere</span></code></p></li>
+</ul>
+</div></blockquote>
+</li>
+</ol>
+<ol class="arabic" start="3">
+<li><p>Open a terminal and SSH into the robot:</p>
+<blockquote>
+<div><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ssh<span class="w"> </span>ubuntu@192.168.4.1
+</pre></div>
+</div>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>The IP <code class="docutils literal notranslate"><span class="pre">192.168.4.1</span></code> is static and is valid for all of the robots.</p>
+<p>Meaning that for every robot, when the robot emits its own Wi-Fi you can SSH through this IP.</p>
+</div>
+</div></blockquote>
+</li>
+<li><p>Enter the SSH password when promtped: <strong>ubuntu</strong>.</p></li>
+</ol>
+<p>You are now connected directly to the robot.</p>
+<p><strong>Coming soon:</strong> step-by-step video tutorial.</p>
+<p>If you successfully connected to the robot you can now drive it through the terminal.
+Follow this guide: <a class="reference internal" href="teleop.html"><span class="doc">Driving the robot using Terminal</span></a> to see how to do it.</p>
 <div class="line-block">
 <div class="line"><br /></div>
 </div>
 </section>
-<section id="option-2-connect-via-home-network">
-<h2>Option 2: Connect via Home Network<a class="headerlink" href="#option-2-connect-via-home-network" title="Link to this heading"></a></h2>
+<section id="option-2-connect-via-local-network">
+<h2>Option 2: Connect via Local Network<a class="headerlink" href="#option-2-connect-via-local-network" title="Link to this heading"></a></h2>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>This method allows simultaneous access to the robot <strong>and</strong> the internet.</p>
+</div>
 <ol class="arabic simple">
-<li><p>Connect to the robot to your local network:</p></li>
+<li><p>First connect to the robot via robots Wi-Fi (see <a class="reference internal" href="#connect-ap"><span class="std std-ref">Option 1</span></a>).</p></li>
+<li><p>From the SSH session, connect the robot to your Wi-Fi network:</p></li>
 </ol>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>nmcli<span class="w"> </span>device<span class="w"> </span>wifi<span class="w"> </span>connect<span class="w"> </span>&lt;Local_Network_name&gt;<span class="w"> </span>password<span class="w"> </span>&lt;password&gt;
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>nmcli<span class="w"> </span>device<span class="w"> </span>wifi<span class="w"> </span>connect<span class="w"> </span>&lt;Local_Netowork_name&gt;<span class="w"> </span>password<span class="w"> </span>&lt;password&gt;
 </pre></div>
 </div>
 <p>Example:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>nmcli<span class="w"> </span>device<span class="w"> </span>wifi<span class="w"> </span>connect<span class="w"> </span>mywifi<span class="w"> </span>password<span class="w"> </span>mypass1234
 </pre></div>
 </div>
-<ol class="arabic simple" start="2">
-<li><p>Open a new terminal (the first will be frozen).</p></li>
-<li><p>Identify the robot’s IP address on the network (hostname: <strong>ubuntu</strong>).</p></li>
-<li><p>SSH into the robot:</p></li>
+<ol class="arabic simple" start="3">
+<li><p>Find the robot’s new IP address on your router (hostname: <code class="docutils literal notranslate"><span class="pre">ubiquityrobotXXXX</span></code>).</p></li>
 </ol>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ssh<span class="w"> </span>ubuntu@<span class="o">[</span>robots<span class="w"> </span>IP<span class="o">]</span>
+<ol class="arabic simple" start="4">
+<li><p>SSH into the robot using the IP:</p></li>
+</ol>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ssh<span class="w"> </span>ubuntu@<span class="o">[</span>ROBOT_IP<span class="o">]</span>
 </pre></div>
 </div>
-<p>You can follow the following video for exact step-by-step guide of connecting to the robot through the network:</p>
-<p><strong>VIDEO CONTENT INCOMING</strong></p>
-<p>You are now connected to the robot with Internet access.</p>
-<p><strong>IMAGE CONTENT INCOMING</strong></p>
+<p>You are now connected through the local network with the internet access.</p>
+<p><strong>Coming soon:</strong> step-by-step video tutorial.</p>
+<p>Test your connection by driving the robot: <a class="reference internal" href="teleop.html"><span class="doc">Driving the robot using Terminal</span></a>.</p>
+</section>
+<hr class="docutils" />
+<section id="next-steps">
+<h2>Next Steps<a class="headerlink" href="#next-steps" title="Link to this heading"></a></h2>
+<p>Now that your robot is connected with internet access, you can start interacting with it.
+A good first step is driving the robot manually.</p>
+<p>We provide two simple options:</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="teleop.html"><span class="doc">Driving the robot through the terminal</span></a></p></li>
+<li><p><a class="reference internal" href="ez_map_simple_drive.html"><span class="doc">Driving the robot through our custom mapping application</span></a></p></li>
+</ul>
+<p>Try them out to verify your setup and begin exploring the robot’s capabilities.</p>
 </section>
 </section>
 
