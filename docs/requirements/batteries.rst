@@ -53,7 +53,6 @@ Some equivalent batteries include:
     This list of equivalent batteries was written from an internet search. 
     It is not exaustive, definitve, or the primary reference, but merely a sample of compatible options.
 
-
 Magni 6 Midi
 ~~~~~~~~~~~~
 
@@ -129,7 +128,7 @@ Charging
     This will not affect the ability of the robot to drive properly.
 
 How to charge?
---------------
+~~~~~~~~~~~~~~
 
 To charge the batteries, follow these steps:
 
@@ -143,13 +142,13 @@ To charge the batteries, follow these steps:
     - **Manual Separate Charging**:
         - Disconnect both batteries from the robot.
         - Take both batteries out of the robot.
-        - Charge each 12V battery individually using a 12V lead-acid charger or a `Power Supply <charge_power_supply_>`_.
+        - Charge each 12V battery individually using a 12V lead-acid charger or a :ref:`Power Supply <charge_power_supply>`.
     - **Manual Series Charging**: 
         - Disconnect batteries from circuits.
         - Take them out of the robot. 
         - Keep them connected in series (positive of first battery connected to negative of second battery)
         - Charge the batteries 
-        - Charge both batteries together connected in series by using 24V lead-acid charger or a `Power Supply <charge_power_supply_>`_.
+        - Charge both batteries together connected in series by using 24V lead-acid charger or a :ref:`Power Supply <charge_power_supply>`.
 4. **Charge Time**: Charge time will vary depending on the robot and batteries. 
     - When charging with our charger, check the LED: **GREEN** = fully charged, **RED** = charging.
     - When charging with Power Supply with upper bound on voltage and constant current charge until supply switches from constant current to constant voltage and the current drops to 0.05 A.
@@ -174,8 +173,7 @@ To charge the batteries, follow these steps:
 .. _charge_power_supply:
 
 Charging with Power Supply
-##########################
-
+~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Charging with a Power Supply depends on both the battery capacity and the number of batteries connected.
 
@@ -197,7 +195,7 @@ Typical Current Draw
 ####################
 
 Typical Current Draw for Mini
------------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. TODO: Add the table content. 
 
@@ -221,7 +219,7 @@ Typical Current Draw for Mini
 
 
 Typical Current Draw for Midi
------------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. TODO: Add the table content. 
 
@@ -272,7 +270,8 @@ Key points:
 
 
 Charge Capacity Reference Table
--------------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 
 +----------+----------------------+---------------+
 | Capacity | 24V System Voltage   | 12V Battery   |

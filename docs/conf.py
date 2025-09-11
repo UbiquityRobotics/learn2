@@ -81,4 +81,3 @@ html_context['github_user'] = OWNER
 html_context['github_repo'] = REPO_NAME
 html_context['github_version'] = f'{current_version}/docs/'
 
-
