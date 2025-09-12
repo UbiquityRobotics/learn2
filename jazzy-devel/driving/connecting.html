@@ -133,8 +133,7 @@ To use both the robot and the internet, switch to the local network option.</p>
 <div class="line-block">
 <div class="line"><br /></div>
 </div>
-<ol class="arabic">
-<li><p>Power on the robot.</p></li>
+<ol class="arabic" start="2">
 <li><p>Connect your computer to the Wi-Fi network:</p>
 <blockquote>
 <div><ul class="simple">
@@ -144,6 +143,16 @@ To use both the robot and the internet, switch to the local network option.</p>
 </div></blockquote>
 </li>
 </ol>
+<a class="reference internal image-reference" href="../_images/robot_name.jpg"><img alt="Robot's AP name" class="align-center" src="../_images/robot_name.jpg" style="width: 400px;" />
+</a>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<a class="reference internal image-reference" href="../_images/robot_password.jpg"><img alt="Robot's password for Wi-Fi" class="align-center" src="../_images/robot_password.jpg" style="width: 400px;" />
+</a>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
 <ol class="arabic" start="3">
 <li><p>Open a terminal and SSH into the robot:</p>
 <blockquote>
@@ -157,9 +166,19 @@ To use both the robot and the internet, switch to the local network option.</p>
 </div>
 </div></blockquote>
 </li>
-<li><p>Enter the SSH password when promtped: <strong>ubuntu</strong>.</p></li>
+<li><p>Enter the SSH password when prompted: <strong>ubuntu</strong>. Note that the password will not be visible while typing.</p></li>
 </ol>
+<a class="reference internal image-reference" href="../_images/SSH_url.jpg"><img alt="SSH-ing to the robot through Robot's Wi-Fi" class="align-center" src="../_images/SSH_url.jpg" style="width: 400px;" />
+</a>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
 <p>You are now connected directly to the robot.</p>
+<a class="reference internal image-reference" href="../_images/SSH_outcome.jpg"><img alt="The outcome of the SSH to the robot" class="align-center" src="../_images/SSH_outcome.jpg" style="width: 800px;" />
+</a>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
 <p><strong>Coming soon:</strong> step-by-step video tutorial.</p>
 <p>If you successfully connected to the robot you can now drive it through the terminal.
 Follow this guide: <a class="reference internal" href="teleop.html"><span class="doc">Driving the robot using Terminal</span></a> to see how to do it.</p>
@@ -184,14 +203,29 @@ Follow this guide: <a class="reference internal" href="teleop.html"><span class=
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>nmcli<span class="w"> </span>device<span class="w"> </span>wifi<span class="w"> </span>connect<span class="w"> </span>mywifi<span class="w"> </span>password<span class="w"> </span>mypass1234
 </pre></div>
 </div>
+<a class="reference internal image-reference" href="../_images/connect_robot_to_internet.jpg"><img alt="Connecting robot to internet" class="align-center" src="../_images/connect_robot_to_internet.jpg" style="width: 800px;" />
+</a>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
 <ol class="arabic simple" start="3">
 <li><p>Find the robot’s new IP address on your router (hostname: <code class="docutils literal notranslate"><span class="pre">ubiquityrobotXXXX</span></code>).</p></li>
 </ol>
+<a class="reference internal image-reference" href="../_images/robot_name_in_router_list.jpg"><img alt="The robot name screenshotted from the router list." class="align-center" src="../_images/robot_name_in_router_list.jpg" style="width: 800px;" />
+</a>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
 <ol class="arabic simple" start="4">
 <li><p>SSH into the robot using the IP:</p></li>
 </ol>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ssh<span class="w"> </span>ubuntu@<span class="o">[</span>ROBOT_IP<span class="o">]</span>
 </pre></div>
+</div>
+<a class="reference internal image-reference" href="../_images/robot_local_net_ssh.jpg"><img alt="SSH-ing into the robot trough the Local Network" class="align-center" src="../_images/robot_local_net_ssh.jpg" style="width: 800px;" />
+</a>
+<div class="line-block">
+<div class="line"><br /></div>
 </div>
 <p>You are now connected through the local network with the internet access.</p>
 <p><strong>Coming soon:</strong> step-by-step video tutorial.</p>
