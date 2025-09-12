@@ -28,26 +28,26 @@ Option 1: Connect via Robot's Wi-Fi
 
 |
     
-1. Power on the robot.
+.. 1. Power on the robot.
 
 2. Connect your computer to the Wi-Fi network:
 
     - **SSID:** ``UbiquityRobotXXXX``
     - **Password:** ``robotseverywhere``
 
-.. .. image:: /_static/connecting/robot_name.jpg
-..     :alt: Robot's name
-..     :width: 400px
-..     :align: center
+.. image:: /_static/connecting/robot_name.jpg
+    :alt: Robot's AP name
+    :width: 400px
+    :align: center
 
-.. |
+|
 
-.. .. image:: /_static/connecting/robot_password.jpg
-..     :alt: Robot's passoword for Wi-Fi
-..     :width: 400px
-..     :align: center
+.. image:: /_static/connecting/robot_password.jpg
+    :alt: Robot's password for Wi-Fi
+    :width: 400px
+    :align: center
 
-.. |
+|
 
 
 3. Open a terminal and SSH into the robot:
@@ -62,25 +62,25 @@ Option 1: Connect via Robot's Wi-Fi
 
         Meaning that for every robot, when the robot emits its own Wi-Fi you can SSH through this IP.
 
-4. Enter the SSH password when promtped: **ubuntu**.
+4. Enter the SSH password when prompted: **ubuntu**. Note that the password will not be visible while typing.
 
-.. .. image:: /_static/connecting/SSH_url.jpg
-..     :alt: SSH-ing to the robot through Robot's Wi-Fi
-..     :width: 400px
-..     :align: center
+.. image:: /_static/connecting/SSH_url.jpg
+    :alt: SSH-ing to the robot through Robot's Wi-Fi
+    :width: 400px
+    :align: center
 
-.. |
+|
 
 You are now connected directly to the robot.
 
 .. TODO: Here you can add the outcome of the ssh of the robot, do the ls command or something inside the robot.
 
-.. .. image:: /_static/connecting/SSH_outcome.jpg
-..     :alt: The outcome of the SSH to the robot
-..     :width: 400px
-..     :align: center
+.. image:: /_static/connecting/SSH_outcome.jpg
+    :alt: The outcome of the SSH to the robot
+    :width: 800px
+    :align: center
 
-.. | 
+| 
 
 
 ..  TODO: Video of connecting to the robot through AP mode.
@@ -116,22 +116,22 @@ Example:
     sudo nmcli device wifi connect mywifi password mypass1234
 
 
-.. .. image:: /_static/connecting/connect_robot_to_internet.jpg
-..     :alt: Connecting robot to internet
-..     :width: 400px
-..     :align: center
+.. image:: /_static/connecting/connect_robot_to_internet.jpg
+    :alt: Connecting robot to internet
+    :width: 800px
+    :align: center
 
-.. | 
+| 
 
 
 3. Find the robot's new IP address on your router (hostname: ``ubiquityrobotXXXX``).
 
-.. .. image:: /_static/connecting/robot_name_in_router_list.jpg
-..     :alt: The robot name screenshotted from the router list.
-..     :width: 400px
-..     :align: center
+.. image:: /_static/connecting/robot_name_in_router_list.jpg
+    :alt: The robot name screenshotted from the router list.
+    :width: 800px
+    :align: center
 
-.. | 
+| 
 
 4. SSH into the robot using the IP:
 
@@ -139,12 +139,12 @@ Example:
 
     ssh ubuntu@[ROBOT_IP]
 
-.. .. image:: /_static/connecting/robot_local_net_ssh.jpg
-..     :alt: SSH-ing into the robot trough the Local Network
-..     :width: 400px
-..     :align: center
+.. image:: /_static/connecting/robot_local_net_ssh.jpg
+    :alt: SSH-ing into the robot trough the Local Network
+    :width: 800px
+    :align: center
 
-.. | 
+| 
 
 You are now connected through the local network with the internet access.
 
