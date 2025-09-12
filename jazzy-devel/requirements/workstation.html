@@ -19,7 +19,7 @@
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Magni Robot Simulation Documentation" href="simulation.html" />
+    <link rel="next" title="Magni Robot Simulation" href="simulation.html" />
     <link rel="prev" title="Batteries" href="batteries.html" /> 
 </head>
 
@@ -51,8 +51,21 @@
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="waiting_for_robot.html">Waiting for Your Robot</a></li>
 <li class="toctree-l1"><a class="reference internal" href="batteries.html">Batteries</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Setting up your Workstation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="simulation.html">Magni Robot Simulation Documentation</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Setting up your Workstation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#what-is-a-workstation">What is a Workstation?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#requirements-for-a-workstation">Requirements for a Workstation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#setting-up-the-desktop-workstation">Setting up the Desktop Workstation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#setting-up-a-virtual-machine">Setting up a Virtual Machine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#testing-the-connection">Testing the connection</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#testing-ubuntu-installation">Testing Ubuntu Installation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#testing-ros-2-instalation">Testing ROS 2 Instalation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#testing-connection-to-the-robot">Testing Connection to the Robot</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#next-steps">Next Steps</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="simulation.html">Magni Robot Simulation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="images.html">Magni 6 Images</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Unboxing Your Model</span></p>
@@ -106,7 +119,125 @@
              
   <section id="setting-up-your-workstation">
 <h1>Setting up your Workstation<a class="headerlink" href="#setting-up-your-workstation" title="Link to this heading"></a></h1>
-<p><strong>CONTENT INCOMING</strong></p>
+<section id="what-is-a-workstation">
+<h2>What is a Workstation?<a class="headerlink" href="#what-is-a-workstation" title="Link to this heading"></a></h2>
+<p>A <strong>workstation</strong> is a computer (desktop, laptop, or virtual machine) set up to connect and interact with our robots.
+It runs the same operating system as the robot, allowing you to:</p>
+<ul class="simple">
+<li><p>Monitor ROS 2 topics and system status.</p></li>
+<li><p>Visualize sensor data and robot perception (e.g. using <cite>RViz</cite>).</p></li>
+<li><p>Send commands to the robot.</p></li>
+<li><p>Offload heavy data processing to more powerful hardware.</p></li>
+<li><p>Run tools such as <cite>rqt_plot</cite> for PID tuning or <cite>image_view</cite> for camera streams.</p></li>
+<li><p>Launch simulations (<a class="reference internal" href="simulation.html"><span class="doc">Magni Robot Simulation</span></a>).</p></li>
+</ul>
+<p>In short, the workstation is your main interface for programming, debugging, and testing robotic applications.</p>
+</section>
+<section id="requirements-for-a-workstation">
+<h2>Requirements for a Workstation<a class="headerlink" href="#requirements-for-a-workstation" title="Link to this heading"></a></h2>
+<p>To work with our robots, a ROS 2-compatible workstation is required. We recommend:</p>
+<ul class="simple">
+<li><p><strong>Operating System</strong>: Ubuntu 24.04 LTS</p></li>
+<li><p><strong>ROS 2 Distribution</strong>: Jazzy (officially supported)</p></li>
+</ul>
+<p>Other ROS 2 versions may work with adjustments, but only Jazzy is guaranteed to function out of the box with our robots.</p>
+</section>
+<section id="setting-up-the-desktop-workstation">
+<h2>Setting up the Desktop Workstation<a class="headerlink" href="#setting-up-the-desktop-workstation" title="Link to this heading"></a></h2>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This section assumes that you have already following the <strong>Requirements for a Workstation</strong> section.</p>
+</div>
+<p>We will not cover how to install Ubuntu 24.04 itself, since there are many good guides available.
+Instead, here are some usefull resources:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://ubuntu.com/download/desktop">Download Ubuntu 24.04 Desktop</a></p></li>
+<li><p><a class="reference external" href="https://onlinux.systems/guides/20240925_ubuntu-2404-installation-guide/">Instalation Guide for Ubuntu 24.04</a></p></li>
+</ul>
+<p>Once Ubuntu 24.04 is installed and configured, you can proceed with setting up <strong>ROS 2 Jazzy</strong>.
+We recommend following the official ROS 2 installation guide:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://docs.ros.org/en/jazzy/Installation.html">ROS 2 Jazzy Instalation Guide</a></p></li>
+</ul>
+<p>This will walk you through the step-by-step installation process.</p>
+</section>
+<section id="setting-up-a-virtual-machine">
+<h2>Setting up a Virtual Machine<a class="headerlink" href="#setting-up-a-virtual-machine" title="Link to this heading"></a></h2>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>A guide for running a virtual machine setup will be provided soon.</p>
+</div>
+</section>
+<section id="testing-the-connection">
+<h2>Testing the connection<a class="headerlink" href="#testing-the-connection" title="Link to this heading"></a></h2>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This section assumes that you already have Ubuntu 24.04 and ROS 2 Jazzy installed on your workstation.</p>
+</div>
+<section id="testing-ubuntu-installation">
+<h3>Testing Ubuntu Installation<a class="headerlink" href="#testing-ubuntu-installation" title="Link to this heading"></a></h3>
+<p>To check your Ubuntu version, run:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>lsb_release<span class="w"> </span>-a
+</pre></div>
+</div>
+<p>You should see output confirming you are running <strong>Ubuntu 24.04 LTS</strong>.</p>
+<p>Something like this:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>No<span class="w"> </span>LSB<span class="w"> </span>modules<span class="w"> </span>are<span class="w"> </span>available.
+Distributor<span class="w"> </span>ID:<span class="w">     </span>Ubuntu
+Description:<span class="w">        </span>Ubuntu<span class="w"> </span><span class="m">24</span>.04.2<span class="w"> </span>LTS
+Release:<span class="w">    </span><span class="m">24</span>.04
+Codename:<span class="w">   </span>noble
+</pre></div>
+</div>
+</section>
+<section id="testing-ros-2-instalation">
+<h3>Testing ROS 2 Instalation<a class="headerlink" href="#testing-ros-2-instalation" title="Link to this heading"></a></h3>
+<p>To verify ROS 2 is installed correctly and check its version, run:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>which<span class="w"> </span>ros2
+</pre></div>
+</div>
+<p>You should see something like:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>/opt/ros/jazzy/bin/ros2
+</pre></div>
+</div>
+</section>
+<section id="testing-connection-to-the-robot">
+<h3>Testing Connection to the Robot<a class="headerlink" href="#testing-connection-to-the-robot" title="Link to this heading"></a></h3>
+<p>Once Ubuntu and ROS 2 are confirmed working, you can test the connection to your robot.
+First, follow the connection guide: <a class="reference internal" href="../driving/connecting.html"><span class="doc">Connecting to the Robot</span></a>.</p>
+<p>After connecting, list the active ROS 2 topics:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ros2<span class="w"> </span>topic<span class="w"> </span>list
+</pre></div>
+</div>
+<p>You should see something like this:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>/action_info
+/battery_state
+/buzz
+/camera/image_raw/compressed
+/client_count
+/cmd_vel
+/connected_clients
+/continue_clicked
+/curr_route
+/curve
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The actual list of topics may be much longer than the examples shown here.
+The goal is simply to confirm that your workstation is correctly connected to the robot and able to see ROS 2 topics.</p>
+</div>
+<p>If you see a list of topics, your workstation is successfully connected and ready to use.</p>
+</section>
+</section>
+<section id="next-steps">
+<h2>Next Steps<a class="headerlink" href="#next-steps" title="Link to this heading"></a></h2>
+<p>Now that your workstation is set up, you can continue in one of two ways:</p>
+<ul class="simple">
+<li><p>If you are still waiting for your robot, try out the <a class="reference internal" href="simulation.html"><span class="doc">Magni Robot Simulation</span></a> to get familiar with the system.</p></li>
+<li><p>If you already have a robot, follow the guide <a class="reference internal" href="../driving/connecting.html"><span class="doc">Connecting to the Robot</span></a> to connect to the robot and start driving it.</p></li>
+</ul>
+</section>
 </section>
 
 
@@ -114,7 +245,7 @@
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
         <a href="batteries.html" class="btn btn-neutral float-left" title="Batteries" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="simulation.html" class="btn btn-neutral float-right" title="Magni Robot Simulation Documentation" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="simulation.html" class="btn btn-neutral float-right" title="Magni Robot Simulation" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
