@@ -143,4 +143,4 @@ Next Steps
 Now that your workstation is set up, you can continue in one of two ways:
 
 - If you are still waiting for your robot, try out the :doc:`./simulation` to get familiar with the system.
-- If you already have a root, follow the guide to :doc:`../driving/connecting` to connect to the robot and start driving it.
+- If you already have a robot, follow the guide :doc:`../driving/connecting` to connect to the robot and start driving it.
