@@ -1,5 +1,5 @@
-Magni Robot Simulation Documentation
-====================================
+Magni Robot Simulation
+======================
 
 .. note::
    A comprehensive guide to running the Ubiquity Robotics Magni platform in simulation
