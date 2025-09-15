@@ -69,7 +69,29 @@
 <p class="caption" role="heading"><span class="caption-text">EZ-MAP</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="ez_map_intro.html">Introduction to EZ-MAP</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">EZ-MAP Guide</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">EZ-MAP Guide</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#connecting-to-ez-map">Connecting to EZ-MAP</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#optional-add-to-home-screen">Optional: Add to Home Screen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#initial-setup">Initial setup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#menus-and-actions">Menus and actions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#remote-control">Remote control</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#mapping">Mapping</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#map-management">Map Management</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#landmarks">Landmarks</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#localizing-on-a-loaded-map">Localizing on a loaded map</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#routes">Routes</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#creating-a-route">Creating a route</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#robot-movement">Robot Movement</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#goal-actions">Goal Actions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#looping">Looping</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#locking">Locking</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#initialization-triggers">Initialization Triggers</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="ez_map_advanced.html">EZ-MAP Advanced Guide</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Troubleshooting</span></p>
@@ -106,7 +128,276 @@
              
   <section id="ez-map-guide">
 <h1>EZ-MAP Guide<a class="headerlink" href="#ez-map-guide" title="Link to this heading"></a></h1>
-<p><strong>CONTENT INCOMING</strong></p>
+<section id="connecting-to-ez-map">
+<h2>Connecting to EZ-MAP<a class="headerlink" href="#connecting-to-ez-map" title="Link to this heading"></a></h2>
+<p>To start using the EZ-MAP webapp you should first connect to the robot, see <a class="reference internal" href="../driving/connecting.html"><span class="doc">Connecting to the Robot</span></a> for details. Note down the robot’s IP.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The primary targeted devices are smartphones and tablets since it’s easier to follow the robot around with them, however almost all common phones, tablets and laptops should work.</p>
+</div>
+<p>The EZ-MAP interface is available on the webpage:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>http://&lt;ROBOT-IP&gt;:3000
+</pre></div>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>If you are connected to the robot using the access point, you will <strong>not</strong> have internet access. Therefore if you are using a device with enabled mobile data transfer, disable it before connecting since the mobile device won’t route packets trough the robot by default. To use both the robot and the internet, switch to the local network option. See <a class="reference internal" href="../driving/connecting.html"><span class="doc">Connecting to the Robot</span></a> for details.</p>
+</div>
+</section>
+<section id="optional-add-to-home-screen">
+<h2>Optional: Add to Home Screen<a class="headerlink" href="#optional-add-to-home-screen" title="Link to this heading"></a></h2>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The app can be used straight away, however saving it as a home screen app (See the image below) eliminates certain usage issues, so it is encouraged.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>A guide for saving as a home screen app will be provided soon.</p>
+</div>
+</section>
+<section id="initial-setup">
+<h2>Initial setup<a class="headerlink" href="#initial-setup" title="Link to this heading"></a></h2>
+<p>When the robot first starts you’ll be asked to provide a location and orientation for your sensors. The process can also be skipped by opening and closing the menu once and can later accessed in the calibration menu (<a class="reference internal" href="../_images/calibrations.svg"><img alt="Image of the EZ-MAP calibration widget icon" src="../_images/calibrations.svg" style="width: 55px;" /></a>).</p>
+<a class="reference internal image-reference" href="_static/ez_map/calibration_and_sensor_setup.jpg"><img alt="Image of calibration page" src="_static/ez_map/calibration_and_sensor_setup.jpg" style="width: 400px;" />
+</a>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p>This step is absolutely essential to make sure your robot is configured properly.</p>
+</section>
+<section id="menus-and-actions">
+<h2>Menus and actions<a class="headerlink" href="#menus-and-actions" title="Link to this heading"></a></h2>
+<p>The app contains a collection of submenus and actions represented by icons that are described in this section. The icons should always be visible somewhere in the app interface, however their size and location differs depending on the screen orientation. Since the design of EZ-MAP is modular, these can be added or removed, or you can even write your own custom ones.</p>
+<p><a class="reference internal" href="../_images/viewswitch_landscape.svg"><img alt="Image of the EZ-MAP view switch widget icon" src="../_images/viewswitch_landscape.svg" style="width: 55px;" /></a></p>
+<p>Pressing it swaps the app main views, which are by default the camera video stream and the navigation system, showing a map of the robot’s surroundings, generated by the LIDAR.</p>
+<a class="reference internal image-reference" href="../_images/100.svg"><img alt="Image of the EZ-MAP battery widget icon" src="../_images/100.svg" style="width: 55px;" />
+</a>
+<p>Shows the percentage charge of the robot’s battery, when pressed shows a menu with voltage and percentage values. Note that lead acid batteries should not be deep cycled for best longevity (it’s also best to keep them in the range of 50-100%, otherwise system issues can occur due to excessive voltage drops).</p>
+<p><a class="reference internal" href="../_images/calibrations.svg"><img alt="Image of the EZ-MAP calibration widget icon" src="../_images/calibrations.svg" style="width: 55px;" /></a></p>
+<p>A collection of 3 different setup menus, that allow easy setup of the robot’s lidar, camera and wheels. This should ideally be done before use, to make sure the robot performs as expected.</p>
+<a class="reference internal image-reference" href="../_images/record_off.svg"><img alt="Image of the EZ-MAP record widget icon" src="../_images/record_off.svg" style="width: 55px;" />
+</a>
+<p>Opens the menu that lets the user record all of the robot’s current internal data as a rosbag file (with an option for AVI video export) to an external USB drive (if plugged in) or onto the sd card.</p>
+<a class="reference internal image-reference" href="../_images/photo.svg"><img alt="Image of the EZ-MAP photo widget icon" src="../_images/photo.svg" style="width: 55px;" />
+</a>
+<p>Takes a photo from the video stream and downloads it through the browser to your device directly. Warning, on some browsers it may override the current tab.</p>
+<a class="reference internal image-reference" href="../_images/map_defaults_settings.svg"><img alt="Image of the EZ-MAP map defaults settings widget icon" src="../_images/map_defaults_settings.svg" style="width: 55px;" />
+</a>
+<p>Opens a menu that lets the user set default options for the map on EZ-MAP boot.</p>
+<p><a class="reference internal" href="../_images/settings.svg"><img alt="Image of the EZ-MAP settings widget icon" src="../_images/settings.svg" style="width: 55px;" /></a></p>
+<p>Opens a menu for all general robot settings: speed limits, control scheme, system power, etc.</p>
+<a class="reference internal image-reference" href="../_images/settings_menu.jpg"><img alt="Image of the EZ-MAP settings menu" class="align-center" src="../_images/settings_menu.jpg" style="width: 600px;" />
+</a>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p><strong>THE NOTE BELOW HAS TO BE FACT CHECKED!!</strong></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Powering off and rebooting the robot is not instant. After pressing the buttons it will take about a minute to take effect.</p>
+</div>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</section>
+<section id="remote-control">
+<h2>Remote control<a class="headerlink" href="#remote-control" title="Link to this heading"></a></h2>
+<p>Assuming the camera is connected correctly, one of the main two screens (<a class="reference internal" href="../_images/viewswitch_landscape.svg"><img alt="Image of the EZ-MAP view switch widget icon" src="../_images/viewswitch_landscape.svg" style="width: 55px;" /></a>) should show the video stream from the robot.</p>
+<p>The robot can be driven around using the joysticks which show up by default, see <a class="reference internal" href="../driving/ez_map_simple_drive.html"><span class="doc">Driving the robot through EZ-MAP</span></a> for details.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>You can select alternative control schemes in the settings menu (<a class="reference internal" href="../_images/settings.svg"><img alt="Image of the EZ-MAP settings widget icon" src="../_images/settings.svg" style="width: 55px;" /></a>).</p>
+</div>
+<a class="reference internal image-reference" href="_static/ez_map/ezmap_video_stream.png"><img alt="Image of the EZ-MAP video stream" src="_static/ez_map/ezmap_video_stream.png" style="width: 400px;" />
+</a>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If the battery widget appears as gray (<a class="reference internal" href="../_images/unknown.svg"><img alt="Image of the uninitialized EZ-MAP battery widget" src="../_images/unknown.svg" style="width: 55px;" /></a>), then the MCB and motor node have not yet connected and you may need to wait a few more seconds until the robot is ready to go. If it persists for longer than a minute or two then it may be an indicator that there’s something wrong with the motor control.</p>
+</div>
+</section>
+<section id="mapping">
+<h2>Mapping<a class="headerlink" href="#mapping" title="Link to this heading"></a></h2>
+<p>To use the start mapping the robot’s surroundings, first switch to the navigation view (<a class="reference internal" href="../_images/viewswitch_landscape.svg"><img alt="Image of the EZ-MAP view switch widget icon" src="../_images/viewswitch_landscape.svg" style="width: 55px;" /></a>). The interface shown should look as follows:</p>
+<a class="reference internal image-reference" href="../_images/ezmap_navigation_view.jpg"><img alt="Image of the EZ-MAP navigation view" class="align-center" src="../_images/ezmap_navigation_view.jpg" style="width: 800px;" />
+</a>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If the screen shows a checklist (see image below) instead of the mapped surroundings, give the system a minute to start or move the robot around slightly so the lidar can gather more data for the initial map iteration. If the message persists for longer it’s likely that the system has not received required data for functioning: i.e. the motor node hasn’t started yet (no battery info) or the lidar hasn’t been connected or configured properly. The checklist should give you an idea of what is missing</p>
+</div>
+<a class="reference internal image-reference" href="_static/ez_map/ezmap_navigation_view_checklist.png"><img alt="Image of the EZ-MAP navigation view checklist" src="_static/ez_map/ezmap_navigation_view_checklist.png" style="width: 400px;" />
+</a>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<section id="map-management">
+<h3>Map Management<a class="headerlink" href="#map-management" title="Link to this heading"></a></h3>
+<p>Clicking the map manegement icon(<a class="reference internal" href="../_images/map_slam.svg"><img alt="Image of the EZ-MAP map manegement icon" src="../_images/map_slam.svg" style="width: 55px;" /></a>) opens a dropdown menu where one can inspect the currently saved maps, select one for loading or launch creation of a new map and subsequently save it. Resetting the map will clear the currently displayed version of the map and does not affect saved maps. It will also place the starting point (coordinate 0,0) to the robot’s current location.</p>
+<a class="reference internal image-reference" href="../_images/map_dropdown.jpg"><img alt="Image of the EZ-MAP map dropdown" class="align-center" src="../_images/map_dropdown.jpg" style="width: 100px;" />
+</a>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p><strong>INCOMING SLAM AND LOCALIZATION MODE EXPLANATION</strong></p>
+<p><strong>INCOMING EXPLORATION MODE EXPLANATION</strong></p>
+<a class="reference internal image-reference" href="../_images/map_exploration_mode.jpg"><img alt="Image of the EZ-MAP exploration mode popup" class="align-center" src="../_images/map_exploration_mode.jpg" style="width: 800px;" />
+</a>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Maps are not automatically saved, if you want to save changes make sure you save the map again.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>It is possible to switch from the SLAM (mapping) mode to a localization-only mode at any time by clicking the bottom slider. When a saved map is loaded it will automatically go into localization mode, so the map is preserved as-is, however you can switch back to mapping to extend existing maps.</p>
+</div>
+</section>
+<section id="landmarks">
+<h3>Landmarks<a class="headerlink" href="#landmarks" title="Link to this heading"></a></h3>
+<p>The hybrid particle filter SLAM also supports landmarks as a way to improve localization accuracy. By default, these are set up to be ArUco markers that can be printed out and laid out around in view of the camera. Once located with reasonable accuracy they will be implemented into the map and rendered as shown below.</p>
+<a class="reference internal image-reference" href="../_images/landmark.png"><img alt="Image of the EZ-MAP ArUco marker image" src="../_images/landmark.png" style="width: 100px;" />
+</a>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>In order to get the correct positional data it is crucial to set up the camera position. This can be done in the calibration menu (<a class="reference internal" href="../_images/calibrations.svg"><img alt="Image of the EZ-MAP calibration widget icon" src="../_images/calibrations.svg" style="width: 55px;" /></a>).</p>
+</div>
+</section>
+<section id="localizing-on-a-loaded-map">
+<h3>Localizing on a loaded map<a class="headerlink" href="#localizing-on-a-loaded-map" title="Link to this heading"></a></h3>
+<p>On loading a new map the robot may not be in the same place as when it was when the map was created. As such it may be shown out of position:</p>
+<a class="reference internal image-reference" href="../_images/unlocalized_map.png"><img alt="Image of a unlocalized EZ-MAP map" src="../_images/unlocalized_map.png" style="width: 600px;" />
+</a>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p>To help the system gain a good starting point you can drag and drop the robot to a new location in a way that the red dots align with the black walls. After the robot is dropped an arrow will appear showing the forward direction. On mobile it requires another tap and drag for rotation, while on desktop you just need to move the mouse and click once.</p>
+<a class="reference internal image-reference" href="../_images/positioning_localization_map.png"><img alt="Image of positioning the robot in EZ-MAP" src="../_images/positioning_localization_map.png" style="width: 400px;" />
+</a>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p>Once the red dots vaguely align with the walls you can let go and the system will localize the robot. Once the robot moves a little it should snap to the map and confirm its position.</p>
+<a class="reference internal image-reference" href="../_images/localized_map.png"><img alt="Image of a correctly localized EZ-MAP map" src="../_images/localized_map.png" style="width: 600px;" />
+</a>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p><strong>VIDEO CONTENT INCOMING</strong></p>
+</section>
+</section>
+<section id="routes">
+<h2>Routes<a class="headerlink" href="#routes" title="Link to this heading"></a></h2>
+<p>Clicking the route management icon (<a class="reference internal" href="../_images/routes.png"><img alt="Image of the EZ-MAP route manegement icon" src="../_images/routes.png" style="width: 55px;" /></a>) opens the route menu window, where routes can be selected, added and deleted.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Routes are automatically saved along with a map, if the map isn’t saved the route changes will be discarded on shutdown. If you are using an existing map, the routes will auto-save to the map location.</p>
+</div>
+<a class="reference internal image-reference" href="_static/ez_map/route_menu.png"><img alt="Image of the EZ-MAP route menu" src="_static/ez_map/route_menu.png" style="width: 400px;" />
+</a>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<section id="creating-a-route">
+<h3>Creating a route<a class="headerlink" href="#creating-a-route" title="Link to this heading"></a></h3>
+<p>Double tapping anywhere on the map allows you to add a new goal or prompt you for creation of the first route. Unselected routes of the same map are drawn as greyed out.</p>
+<a class="reference internal image-reference" href="../_images/route_creation.png"><img alt="Image of the EZ-MAP route creation" src="../_images/route_creation.png" style="width: 600px;" />
+</a>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p>Once a route is created and selected you can double click/tap on the map to add and remove new goals. Double tapping on the line between goals also creates a new goal between them. You can of course also drag goals around to make adjustments.</p>
+<p><strong>VIDEO CONTENT INCOMING</strong></p>
+</section>
+<section id="robot-movement">
+<h3>Robot Movement<a class="headerlink" href="#robot-movement" title="Link to this heading"></a></h3>
+<p>When the route is set, press one of the movement buttons to send the robot forward (<a class="reference internal" href="../_images/route_play.svg"><img alt="Image of the EZ-MAP drive forward icon" src="../_images/route_play.svg" style="width: 55px;" /></a>) or backwards (<a class="reference internal" href="../_images/route_reverse.svg"><img alt="Image of the EZ-MAP drive backward icon" src="../_images/route_reverse.svg" style="width: 55px;" /></a>) (opposite the drawn arrows in the UI) along the specified route.</p>
+<p>The robot will then first proceed to the nearest goal and then follow the route onwards to the last point, where it will stop, unless the route is a loop in which case it’ll continue driving until stopped.</p>
+<p>If the robot is in motion one of the previous two buttons will change to stop icon (<a class="reference internal" href="../_images/route_cancel.svg"><img alt="Image of the EZ-MAP stop icon" src="../_images/route_cancel.svg" style="width: 55px;" /></a>), and pressing it will stop the robot and cancel the route.</p>
+<p><strong>VIDEO CONTENT INCOMING</strong></p>
+</section>
+<section id="goal-actions">
+<h3>Goal Actions<a class="headerlink" href="#goal-actions" title="Link to this heading"></a></h3>
+<p>When you have a route set up, the next step is to define actions executed upon reaching a goal. Hold down your mouse/finger on a goal until the Actions menu appears.</p>
+<a class="reference internal image-reference" href="_static/ez_map/actions_menu.png"><img alt="Image of the EZ-MAP actions menu" src="_static/ez_map/actions_menu.png" style="width: 400px;" />
+</a>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p>As the robot arrives at the specified goal it will then check the defined actions and execute them sequentially one after the other:</p>
+<p><strong>VIDEO CONTENT INCOMING</strong></p>
+<p><strong>EXAMPLE GOAL ACTION INCOMING</strong></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The goal will change colour and shape of the node to indicate stored actions:</p>
+</div>
+<a class="reference internal image-reference" href="../_images/goal_action_node.png"><img alt="Image of a EZ-MAP route that has stored actions" src="../_images/goal_action_node.png" style="width: 400px;" />
+</a>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The command line functionality allows for running custom scripts at specific points in the route or sending data to other parts of the system.</p>
+</div>
+</section>
+<section id="looping">
+<h3>Looping<a class="headerlink" href="#looping" title="Link to this heading"></a></h3>
+<p>There are currently two ways to create perpetual driving:</p>
+<ol class="arabic">
+<li><p>Simply moving the first and last goal together (requires a minimum of 3 goals). The route will then turn purple to indicate successful looping.</p>
+<blockquote>
+<div><a class="reference internal image-reference" href="../_images/looped_route.png"><img alt="Image of a looped EZ-MAP route" src="../_images/looped_route.png" style="width: 800px;" />
+</a>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>As the first and last goal are joined together only the first goal will execute it’s defined actions (as the last goal is never processed).</p>
+</div>
+</div></blockquote>
+</li>
+<li><p>Creating so called ping-pong looping, which is to set the first and last goal to trigger the route in opposite ways using actions</p>
+<blockquote>
+<div><a class="reference internal image-reference" href="../_images/ping_pong_looping.png"><img alt="Image of a ping-pong looped EZ-MAP route" class="align-center" src="../_images/ping_pong_looping.png" style="width: 800px;" />
+</a>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p>The robot should then drive the route one way, then reverse and return to the start, and continue forward again. By removing the “Forward” action we also get go-and-return behaviour for example. There are further possible combinations by setting the drive commands to other routes, which lets you chain different routes together.</p>
+</div></blockquote>
+</li>
+</ol>
+<p><strong>VIDEO CONTENT INCOMING</strong></p>
+</section>
+<section id="locking">
+<h3>Locking<a class="headerlink" href="#locking" title="Link to this heading"></a></h3>
+<p>In case of small devices, it may be easier to lock the positions of goals so they are not accidentally moved when setting up actions. The route management menu has an option labelled [🔒 Lock Goal Movement] which will globally lock route editing until you turn it back on.</p>
+</section>
+</section>
+<section id="initialization-triggers">
+<h2>Initialization Triggers<a class="headerlink" href="#initialization-triggers" title="Link to this heading"></a></h2>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p>The global triggers menu (<a class="reference internal" href="../_images/route_trigger.svg"><img alt="Image of the EZ-MAP global route trigger menu icon" src="../_images/route_trigger.svg" style="width: 55px;" /></a>) lets you set a string of actions that will be executed once the set conditions are met. The actions are much the same as the ones you can set on specific goals, however they will be triggered globally by some sort of event instead of the robot arriving at the goal. The functionality can be enabled or disabled in order to easily set up and reset the cooldown timers of triggers.</p>
+<a class="reference internal image-reference" href="_static/ez_map/global_triggers.png"><img alt="Image of the EZ-MAP global triggers menu" src="_static/ez_map/global_triggers.png" style="width: 400px;" />
+</a>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p><strong>INCOMING GLOBAL TRIGGER EXAMPLE IMAGES AND VIDEOS</strong></p>
+</section>
 </section>
 
 
