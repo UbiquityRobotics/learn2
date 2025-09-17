@@ -1,18 +1,10 @@
 Driving the robot using Terminal
-################################
+================================
 
 To drive the robot using the terminal you must fulfill the following requirements: 
 
 1. Ensure the robot is powered on.
 2. Open one terminal session that is connected to the robot (via SSH), check :doc:`./connecting` for details.
-
-**IMAGE CONTENT INCOMING**
-
-.. .. image:: /_static/magni-mini/getting_started/.jpg
-..     :alt: Single terminal open in the connected robot
-..     :width: 400px
-..     :align: center
-
 3. Wait for the robot to activate the MCB, this will lock the robot wheels, and you will not be able to manually push the robot anymore.
 
 .. TODO: Add video for this. 
@@ -20,6 +12,7 @@ To drive the robot using the terminal you must fulfill the following requirement
 **VIDEO CONTENT INCOMING**
 
 .. warning:: 
+
     Place the robot on the ground before driving to prevent it from falling off a table.
 
     Our robots are meant to be table-top robots and we take measures against this, however the risk is always there.
@@ -54,4 +47,4 @@ You can follow the next video for exact step-by-step guide of driving the robot 
 
 Congratulations! You have successfully driven the robot using the terminal.
 
-If you prefer a graphical interface, follow our next guide :doc:`./ez_map_simple_drive` to learn how to control the robot using the EZ-MAP UI.
+If you prefer a graphical interface, follow our next guide :doc:`./ez_map_simple_drive` to learn how to control the robot using the EZ-Map UI.

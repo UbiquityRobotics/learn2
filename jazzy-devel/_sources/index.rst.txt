@@ -6,6 +6,7 @@ This  guide will help you get started with your robot, from unboxing to driving,
 Learn how to connect, operate, and interact with our robots, all in a step-by-step, beginner-friendly format.
 
 .. note:: 
+
     This documentation is designed for beginners.
 
     Expect clear, friendly instructions that guide you from unboxing your robot to running it smoothly.
@@ -26,11 +27,11 @@ Sections
 
 |  
 
-- `Driving the Robot <driving_>`_: Learn how to operate your robot in the most basic way possible. How to drive it through Teleop and through our custom sofware EZ-MAP.
+- `Driving the Robot <driving_>`_: Learn how to operate your robot in the most basic way possible. How to drive it through Teleop and through our custom sofware EZ-Map.
 
 |  
 
-- `EZ-MAP <ez_map_>`_: Our custom SLAM software for automating your robot. Includes installation, setup, and usage instructions.
+- `EZ-Map <ez_map_>`_: Our custom SLAM software for automating your robot. Includes installation, setup, and usage instructions.
 
 |  
 
@@ -83,7 +84,7 @@ Sections
 
 .. toctree:: 
    :maxdepth: 2
-   :caption: EZ-MAP 
+   :caption: EZ-Map 
 
    ez_map/ez_map_intro
    ez_map/ez_map_guide

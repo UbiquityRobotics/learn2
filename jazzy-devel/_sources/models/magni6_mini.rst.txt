@@ -39,12 +39,11 @@ It's compact and perfect for navigating tight indoor spaces while supporting adv
 
 Key features include:
     - **Compact Design**: Easily maneuvers in confined areas, ideal for indoor environments like classrooms, labs, wide vents.
-    - **Built-In LIDAR**: Equipped with a short-range LIDAR sensor for precise navigation and mapping.
-    - **Software Compatibillity**: Supports ROS2, Open-RMF, and EZ-MAP. This ensures seamless integration with other Magni 6 series robots for consistent workflows across the family.
-    - **Transferable Skills**: Learn on the Magni 6 Mini and apply the same principles to operate all other Magni 6 robot.
+    - **Built-In LiDAR**: Equipped with a short-range LiDAR sensor for precise navigation and mapping.
+    - **Software Compatibillity**: Supports ROS2, Open-RMF, and EZ-Map. This ensures seamless integration with other Magni 6 series robots for consistent workflows across the family.
+    - **Transferable Skills**: Learn on the Magni 6 Mini and apply the same principles to operate all other Magni 6 robots.
     - **User-Friendly**: Suitable for beginners learning robotics and advanced users developing complex applications.
 
-|
 
 **Already got a Mini?**
 
@@ -74,7 +73,7 @@ The Magni 6 Mini comes equipped with essential sensors for navigation and intera
 It also has support for additional add-ons to expand functionality. 
 
 **Built-in Sensors**:
-    - :ref:`Short-range LIDAR <lidar_short_range>`
+    - :ref:`Short-range LiDAR <LiDAR_short_range>`
     - :doc:`Raspberry Pi Camera Wide <../troubleshooting/hardware/pi_camera>`
 
 **Supported Add-ons**:
@@ -96,24 +95,24 @@ To explore the possibilites and capabilities of the Magni 6 Mini, try the follow
 .. important:: 
 
     Our robot solutions are designed to be safe for use on a table. 
-    However, we strongly recommend testing in asafe, obstacle-free environment to ensure smooth operation.
+    However, we strongly recommend testing in a safe, obstacle-free environment to ensure smooth operation.
 
 .. warning::
     
     While tabletop testing is generally safe, make sure there is enough space for the robot to move,
-     and handle it carefully when driving to avoid accidents.
+    and handle it carefully when driving to avoid accidents.
 
 
 Room Mapping Starter 
 ~~~~~~~~~~~~~~~~~~~~
 
-Create a 2D map of your environment using the short-range LIDAR and Ez-Map software. 
+Create a 2D map of your environment using the short-range LiDAR and EZ-Map software. 
 Ideal for learning SLAM basics.
 
 Obstacle Avoidance
 ~~~~~~~~~~~~~~~~~~
 
-Program the Magni 6 Mini to navigate around obstacles using the short-range LIDAR for proximity detection. 
+Program the Magni 6 Mini to navigate around obstacles using the short-range LiDAR for proximity detection. 
 Perfect for beginners experimenting with autonomous navigation.
 
 Live Video Patrol

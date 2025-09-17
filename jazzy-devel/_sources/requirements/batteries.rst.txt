@@ -5,6 +5,7 @@ Shipping
 ########
 
 .. note:: 
+
     The robots ship worldwide by air **without batteries**.
     This reduces shipping costs and avoids restrictions on transporting batteries.
     Lead acid batteries are easy to source locally.
@@ -13,20 +14,20 @@ The robots support different battery sizes.
 This allows users to choose between a long-endurance but heavier setup, or a lighter and more portable configuration.
 Typical sources for suitable batteries include scooter, wheelchair, UPS, and automotive suppliers.
 
-
 .. warning::
+
     **THE VOLTAGE CONNECTED TO THE MAIN CONTROL BOARD (MCB) MUST REMAIN 30.0V OR LESS AT ALL TIMES!**
 
 What kind of Battery?
 #####################
 
-The batteries used in Magni 6 robots are sealed lead-acid (SLA) batteries, specifically Absorbent Glass Mat (AGM) Valve-Regulated Lead-Acid (VRLA) types. 
+The batteries used in Magni 6 robots are sealed lead-acid (SLA) batteries.
 These batteries are safe, maintanance-free, and don't leak, making them ideal for robotics.
 
 Which Battery?
 ##############
 
-For all of our robots we suggest using two identical 12V, AGM VRLA lead acid batteries with F2 terminals.  
+For all of our robots we suggest using two identical 12V, lead acid batteries with F2 terminals, as these batteries are cheap and easy to find.  
 
 .. TODO: Check the terminals F1 or F2.
 
@@ -34,6 +35,11 @@ Recommendation for batteries:
 
 Magni 6 Mini
 ~~~~~~~~~~~~
+
+.. important:: 
+
+    This list of equivalent batteries was written from an internet search. 
+    It is not exaustive, definitve, or the primary reference, but merely a sample of compatible options.
 
 The recommended battery for Magni 6 Mini is Fiamm 12FGH23.
 
@@ -49,12 +55,16 @@ Some equivalent batteries include:
 - Universal Power UB1250
 - CSB HR1221W F2 
 
-.. important:: 
-    This list of equivalent batteries was written from an internet search. 
-    It is not exaustive, definitve, or the primary reference, but merely a sample of compatible options.
+As noted earlier, this list is only a sample of compatible options and is not exhaustive or definitive. 
+Additional batteries that meet the voltage, capacity, and size requirements will also work with the robot.
 
 Magni 6 Midi
 ~~~~~~~~~~~~
+
+.. important:: 
+
+    This list of equivalent batteries was written from an internet search. 
+    It is not exaustive, definitve, or the primary reference, but merely a sample of compatible options.
 
 The recommended battery for Magni 6 Midi is Fiamm FG21202.
 
@@ -70,59 +80,56 @@ Some equivalent batteries include:
 - Yuasa NP12-12 (2.5 mm higher than the rest)
 
 
-.. important:: 
-    This list of equivalent batteries was written from an internet search. 
-    It is not exaustive, definitve, or the primary reference, but merely a sample of compatible options.
+As noted earlier, this list is only a sample of compatible options and is not exhaustive or definitive. 
+Additional batteries that meet the voltage, capacity, and size requirements will also work with the robot.
+
+----
 
 For the best battery choice, consult a local supplier.
 
 Battery Specifications
 ######################
 
-
 Mini 
 ~~~~
 
-+-------------------+---------------+
-| Feature           | Details       |
-+===================+===============+
-| Voltage           | 12V           |
-+-------------------+---------------+
-| Capacity          | 5Ah (20h rate)|
-+-------------------+---------------+
-| Type              | AGM VRLA      |
-+-------------------+---------------+
-| Terminals         | F2 (6.3mm)    |
-+-------------------+---------------+
-| Size (LxWxH)      | 90x70x101mm   |
-+-------------------+---------------+
-| Weight (approx.)  | 1.65-2 kg     |
-+-------------------+---------------+
++---------------------+---------------+
+| Feature             | Details       |
++=====================+===============+
+| Voltage             | 12V           |
++---------------------+---------------+
+| Capacity            | 5Ah (20h rate)|
++---------------------+---------------+
+| Terminals           | F2 (6.3mm)    |
++---------------------+---------------+
+| Size(LxWxH) approx. | 90x70x101mm   |
++---------------------+---------------+
+| Weight (approx.)    | 1.65-2 kg     |
++---------------------+---------------+
 
 Midi 
 ~~~~
 
-+------------------+-----------------+
-| Feature          | Details         |
-+==================+=================+
-| Voltage          | 12V             |
-+------------------+-----------------+
-| Capacity         | 12Ah (20hr rate)|  
-+------------------+-----------------+
-| Type             | AGM VRLA        |
-+------------------+-----------------+
-| Terminals        | F2 (6.3mm)      |
-+------------------+-----------------+
-| Size (LxWxH)     | 151x98x95mm     |
-+------------------+-----------------+
-| Weight (approx.) | 3.8-4.0 kg      |
-+------------------+-----------------+
++--------------------+-----------------+
+| Feature            | Details         |
++====================+=================+
+| Voltage            | 12V             |
++--------------------+-----------------+
+| Capacity           | 12Ah (20hr rate)|  
++--------------------+-----------------+
+| Terminals          | F2 (6.3mm)      |
++--------------------+-----------------+
+| Size(LxWxH) approx.| 151x98x95mm     |
++--------------------+-----------------+
+| Weight (approx.)   | 3.8-4.0 kg      |
++--------------------+-----------------+
 
 
 Charging
 ########
 
 .. warning::
+
     The stock battery charger we supply is **ONLY FOR LEAD ACID** batteries and will not work and in fact may be dangerous for other battery technologies.
     As the system is designed for lead acid batteries if you use anything else the battery state topic could give misleading numbers as to the true battery state. 
     This will not affect the ability of the robot to drive properly.
@@ -162,13 +169,15 @@ To charge the batteries, follow these steps:
     - Check the polarity. 
 
 .. important:: 
+
     Verify the polarity (inner pin positive, outer sleeve negative) before connecting.
+
 .. TODO: Check this positive, negative whether it is correct.
 
 .. warning::
+
     Incorrect charging can damage the batteries or pose safety risks.
     Always follow the manufacturer's instructions. Every battery has relevant information on the side.
-
 
 .. _charge_power_supply:
 
@@ -199,7 +208,7 @@ Typical Current Draw for Mini
 
 .. TODO: Add the table content. 
 
-**TABLE CONTENT INCOMING**
+**THE FOLLOWING INFORMATION IS PLANNED FOR FUTURE TESTING. FOR SPECIFIC INQUIRES:** `Ubiquity Robotics support <support@ubiquityrobotics.com>`_.
 
 +------------------------------------------------------------+-----------------+
 | Operating State                                            | Current (Amps)  |
@@ -223,7 +232,7 @@ Typical Current Draw for Midi
 
 .. TODO: Add the table content. 
 
-**TABLE CONTENT INCOMING**
+**THE FOLLOWING INFORMATION IS PLANNED FOR FUTURE TESTING. FOR SPECIFIC INQUIRES:** `Ubiquity Robotics support <support@ubiquityrobotics.com>`_.
 
 +------------------------------------------------------------+-----------------+
 | Operating State                                            | Current (Amps)  |
@@ -242,6 +251,7 @@ Typical Current Draw for Midi
 +------------------------------------------------------------+-----------------+
 
 .. note:: 
+
     - Instantaneous peaks can exceed 10A but are transient and not useful for battery.
     - Driving uphill or with heavy loads increases draw further.
 
@@ -250,6 +260,7 @@ Capacity and Aging
 ##################
 
 .. important::
+
     The Magni robots cannot detect battery health or age.
     Percantage values are based on *new batteries*.
     Over time, lead acid batteries lose capacity and may never again charge to "100%".
@@ -257,21 +268,20 @@ Capacity and Aging
 Key points:
 
 1. Do not run the robot below **50% capacity (~24V for 24V system, ~12V per cell)**
-    Deep discharge causes sulfation and shortents lifespan. 
-    The robot must be fully powered off at the MCB switch, not just via Pi shutdown.
+   Deep discharge causes sulfation and shortents lifespan. 
+   The robot must be fully powered off at the MCB switch, not just via Pi shutdown.
 
 2. The MCB cuts off power at ~20V to prevent total discharge.
 
 3. Old or damaged cells may **gas (rotten egg smell)** if left on charge. 
-    Disconnect charger once charging is complete in these cases. 
+   Disconnect charger once charging is complete in these cases. 
 
 4. The MCB draws ~0.04W (1-2mA at 24V) even when off.
-    For storage longer than 3 weeks, **disconnect at least one battery lead**.
+   For storage longer than 3 weeks, **disconnect at least one battery lead**.
 
 
 Charge Capacity Reference Table
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
 
 +----------+----------------------+---------------+
 | Capacity | 24V System Voltage   | 12V Battery   |
@@ -300,8 +310,10 @@ Charge Capacity Reference Table
 +----------+----------------------+---------------+
 
 .. note::
+
     For more detail see: `Batterystuff Lead Acid Battery Basics <https://www.batterystuff.com/kb/articles/battery-articles/battery-basics.html>`_
 
 .. important::
+
     If you are unsure about any aspect of battery selection or charging, consult a professional or contact `Ubiquity Robotics support <support@ubiquityrobotics.com>`_.
 

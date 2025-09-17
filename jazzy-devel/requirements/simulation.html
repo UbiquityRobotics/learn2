@@ -45,7 +45,7 @@
               <p class="caption" role="heading"><span class="caption-text">Magni 6 Model Introduction</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../models/magni6_mini.html">Magni 6 Mini</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../models/magni6_midi.html">Magni6 Midi</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../models/magni6_midi.html">Magni 6 Midi</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Waiting for Your Robot</span></p>
 <ul class="current">
@@ -89,7 +89,7 @@
 <li class="toctree-l3"><a class="reference internal" href="#basic-simulation-launch">Basic Simulation Launch</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#step-1-start-gazebo-with-magni-model">Step 1: Start Gazebo with Magni Model</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#step-2-verify-robot-spawning">Step 2: Verify Robot Spawning</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#step-3-check-ros-topics">Step 3: Check ROS Topics</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#step-3-check-ros2-topics">Step 3: Check ROS2 Topics</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="#teleoperation-testing">Teleoperation Testing</a><ul>
@@ -143,13 +143,13 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../driving/connecting.html">Connecting to the Robot</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../driving/teleop.html">Driving the robot using Terminal</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../driving/ez_map_simple_drive.html">Driving the robot through EZ-MAP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../driving/ez_map_simple_drive.html">Driving the robot through EZ-Map</a></li>
 </ul>
-<p class="caption" role="heading"><span class="caption-text">EZ-MAP</span></p>
+<p class="caption" role="heading"><span class="caption-text">EZ-Map</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../ez_map/ez_map_intro.html">Introduction to EZ-MAP</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../ez_map/ez_map_guide.html">EZ-MAP Guide</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../ez_map/ez_map_advanced.html">EZ-MAP Advanced Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ez_map/ez_map_intro.html">Introduction to EZ-Map</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ez_map/ez_map_guide.html">EZ-Map Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ez_map/ez_map_advanced.html">EZ-Map Advanced Guide</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Troubleshooting</span></p>
 <ul>
@@ -192,7 +192,8 @@
 <hr class="docutils" />
 <section id="overview">
 <h2>Overview<a class="headerlink" href="#overview" title="Link to this heading"></a></h2>
-<p>The <strong>Ubiquity Robotics Magni</strong> is a robust differential drive mobile robot platform engineered for industrial and research applications. This guide provides step-by-step instructions for setting up and running the Magni robot in simulation using ROS and Gazebo.</p>
+<p>The <strong>Ubiquity Robotics Magni</strong> is a robust differential drive mobile robot platform engineered for industrial and research applications.
+This guide provides step-by-step instructions for setting up and running the Magni robot in simulation using ROS2 and Gazebo.</p>
 </section>
 <hr class="docutils" />
 <section id="robot-specifications">
@@ -253,7 +254,7 @@
 <td><p>Raspberry Pi 4</p></td>
 </tr>
 <tr class="row-odd"><td><p>Operating System</p></td>
-<td><p>Ubuntu with ROS</p></td>
+<td><p>Ubuntu with ROS2</p></td>
 </tr>
 <tr class="row-even"><td><p>Connectivity</p></td>
 <td><p>WiFi, Ethernet, 4x USB ports</p></td>
@@ -274,7 +275,7 @@
 <h4>System Requirements<a class="headerlink" href="#system-requirements" title="Link to this heading"></a></h4>
 <ul class="simple">
 <li><p><strong>Operating System:</strong> Ubuntu 24.04 LTS (recommended)</p></li>
-<li><p><strong>ROS Version:</strong> Jazzy (for Ubuntu 24.04)</p></li>
+<li><p><strong>ROS2 Version:</strong> Jazzy (for Ubuntu 24.04)</p></li>
 <li><p><strong>Simulator:</strong> Gz sim harmonic (<a class="reference external" href="https://gazebosim.org/docs/harmonic/install/">https://gazebosim.org/docs/harmonic/install/</a>)</p></li>
 <li><p><strong>Graphics:</strong> NVIDIA GPU recommended for optimal performance</p></li>
 <li><p><strong>Memory:</strong> Minimum 8GB RAM, 16GB recommended</p></li>
@@ -405,8 +406,8 @@ ros2<span class="w"> </span>launch<span class="w"> </span>magni_description<span
 <li><p>All joints and sensors initialize properly. check RViz for joint states and sensor data</p></li>
 </ul>
 </section>
-<section id="step-3-check-ros-topics">
-<h4>Step 3: Check ROS Topics<a class="headerlink" href="#step-3-check-ros-topics" title="Link to this heading"></a></h4>
+<section id="step-3-check-ros2-topics">
+<h4>Step 3: Check ROS2 Topics<a class="headerlink" href="#step-3-check-ros2-topics" title="Link to this heading"></a></h4>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># List active topics</span>
 ros2<span class="w"> </span>topic<span class="w"> </span>list
 </pre></div>
@@ -594,7 +595,7 @@ ros2<span class="w"> </span>run<span class="w"> </span>teleop_twist_keyboard<spa
 <p>For developing custom motion controllers:</p>
 <ol class="arabic simple">
 <li><p><strong>Interface Definition:</strong> Define clear control inputs and feedback mechanisms</p></li>
-<li><p><strong>ROS Integration:</strong> Create appropriate ROS nodes and topic interfaces</p></li>
+<li><p><strong>ROS2 Integration:</strong> Create appropriate ROS2 nodes and topic interfaces</p></li>
 <li><p><strong>Simulation Testing:</strong> Validate controller behavior in Gazebo before hardware deployment</p></li>
 <li><p><strong>Parameter Tuning:</strong> Optimize controller gains specifically for simulation environment</p></li>
 </ol>
@@ -627,24 +628,24 @@ ros2<span class="w"> </span>run<span class="w"> </span>teleop_twist_keyboard<spa
 <section id="official-documentation">
 <h3>Official Documentation<a class="headerlink" href="#official-documentation" title="Link to this heading"></a></h3>
 <ul class="simple">
-<li><p><a class="reference external" href="https://learn.ubiquityrobotics.com/">Ubiquity Robotics Documentation</a></p></li>
-<li><p><a class="reference external" href="http://wiki.ros.org/Robots/Magni">ROS Wiki - Magni Robot</a></p></li>
+<li><p><a class="reference external" href="https://ubiquityrobotics.github.io/learn2/">Ubiquity Robotics Documentation</a></p></li>
+<li><p><a class="reference external" href="http://wiki.ros.org/Robots/Magni">ROS2 Wiki - Magni Robot</a></p></li>
 <li><p><a class="reference external" href="https://github.com/UbiquityRobotics/magni_robot">GitHub Repository</a></p></li>
 </ul>
 </section>
 <section id="community-support">
 <h3>Community Support<a class="headerlink" href="#community-support" title="Link to this heading"></a></h3>
 <ul class="simple">
-<li><p><a class="reference external" href="https://discourse.ros.org/">ROS Discourse Forum</a></p></li>
-<li><p>Ubiquity Robotics Community Forums</p></li>
-<li><p>GitHub Issues for bug reports and feature requests</p></li>
+<li><p><a class="reference external" href="https://discourse.openrobotics.org/c/ng-ros">ROS2 Discourse Forum</a>. (<strong>You will need an Account</strong>)</p></li>
+<li><p><a class="reference external" href="https://forum.ubiquityrobotics.com/">Ubiquity Robotics Community Forum</a></p></li>
+<li><p><a class="reference external" href="https://github.com/UbiquityRobotics/ubiquity_main">GitHub Issues for bug reports and feature requests</a></p></li>
 </ul>
 </section>
 <section id="additional-resources">
 <h3>Additional Resources<a class="headerlink" href="#additional-resources" title="Link to this heading"></a></h3>
 <ul class="simple">
 <li><p><a class="reference external" href="https://gazebosim.org/docs/harmonic/getstarted/">Gazebo Simulation Tutorials</a></p></li>
-<li><p><a class="reference external" href="http://wiki.ros.org/navigation">ROS Navigation Stack Documentation</a></p></li>
+<li><p><a class="reference external" href="https://github.com/ros-navigation/navigation2">ROS 2 Navigation Stack GitHub</a></p></li>
 <li><p><a class="reference external" href="http://wiki.ros.org/urdf/Tutorials">URDF Tutorials and Examples</a></p></li>
 </ul>
 <hr class="docutils" />

@@ -6,7 +6,7 @@
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Driving the robot through EZ-MAP &mdash; Ubiquity Robotics Documentation 1.0.0 documentation</title>
+  <title>Driving the robot through EZ-Map &mdash; Ubiquity Robotics Documentation 1.0.0 documentation</title>
       <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b86133f3" />
       <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=e59714d7" />
 
@@ -19,7 +19,7 @@
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Introduction to EZ-MAP" href="../ez_map/ez_map_intro.html" />
+    <link rel="next" title="Introduction to EZ-Map" href="../ez_map/ez_map_intro.html" />
     <link rel="prev" title="Driving the robot using Terminal" href="teleop.html" /> 
 </head>
 
@@ -45,7 +45,7 @@
               <p class="caption" role="heading"><span class="caption-text">Magni 6 Model Introduction</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../models/magni6_mini.html">Magni 6 Mini</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../models/magni6_midi.html">Magni6 Midi</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../models/magni6_midi.html">Magni 6 Midi</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Waiting for Your Robot</span></p>
 <ul>
@@ -64,13 +64,13 @@
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="connecting.html">Connecting to the Robot</a></li>
 <li class="toctree-l1"><a class="reference internal" href="teleop.html">Driving the robot using Terminal</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Driving the robot through EZ-MAP</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Driving the robot through EZ-Map</a></li>
 </ul>
-<p class="caption" role="heading"><span class="caption-text">EZ-MAP</span></p>
+<p class="caption" role="heading"><span class="caption-text">EZ-Map</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../ez_map/ez_map_intro.html">Introduction to EZ-MAP</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../ez_map/ez_map_guide.html">EZ-MAP Guide</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../ez_map/ez_map_advanced.html">EZ-MAP Advanced Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ez_map/ez_map_intro.html">Introduction to EZ-Map</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ez_map/ez_map_guide.html">EZ-Map Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ez_map/ez_map_advanced.html">EZ-Map Advanced Guide</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Troubleshooting</span></p>
 <ul>
@@ -94,7 +94,7 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
-      <li class="breadcrumb-item active">Driving the robot through EZ-MAP</li>
+      <li class="breadcrumb-item active">Driving the robot through EZ-Map</li>
       <li class="wy-breadcrumbs-aside">
               <a href="https://github.com/UbiquityRobotics/learn2/blob/jazzy-devel/docs/driving/ez_map_simple_drive.rst" class="fa fa-github"> Edit on GitHub</a>
       </li>
@@ -105,12 +105,13 @@
            <div itemprop="articleBody">
              
   <section id="driving-the-robot-through-ez-map">
-<h1>Driving the robot through EZ-MAP<a class="headerlink" href="#driving-the-robot-through-ez-map" title="Link to this heading"></a></h1>
-<p>To drive the robot using the EZ-MAP webapp you should follow the steps:</p>
+<h1>Driving the robot through EZ-Map<a class="headerlink" href="#driving-the-robot-through-ez-map" title="Link to this heading"></a></h1>
+<p>To drive the robot using the EZ-Map web application you should follow the steps:</p>
 <ol class="arabic simple">
-<li><p>Ensure that you are connected to the robot, check <a class="reference internal" href="connecting.html"><span class="doc">Connecting to the Robot</span></a> for details. Note down the robot’s IP, as you will need it to connect to EZ-MAP.</p></li>
+<li><p>Ensure that you are connected to the robot, check <a class="reference internal" href="connecting.html"><span class="doc">Connecting to the Robot</span></a> for details.
+Write down the robot’s IP, as you will need it to connect to EZ-Map.</p></li>
 <li><p>Ensure the robot’s wheels are locked, meaning you are not able to manually push the robot around.</p></li>
-<li><p>The EZ-MAP webapp should be accessible through the browser by typing in the address:</p></li>
+<li><p>The EZ-Map web application should be accessible through the browser by typing in the address:</p></li>
 </ol>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>http://&lt;ROBOT-IP&gt;:3000
 </pre></div>
@@ -120,26 +121,27 @@
 <p>Place the robot on the ground before driving to prevent it from falling off a table.</p>
 <p>Our robots are meant to be table-top robots and we take measures against this, however the risk is always there.</p>
 </div>
-<img alt="EZ-MAP webapp being shown on a computer screen" class="align-center" src="../_images/ezmap_full_page.png" />
-<div class="line-block">
-<div class="line"><br /></div>
-</div>
-<a class="reference internal image-reference" href="../_images/ezmap_full_page_portrait.jpg"><img alt="EZ-MAP webapp being shown on a phone in portrait mode" class="align-center" src="../_images/ezmap_full_page_portrait.jpg" style="width: 300px;" />
-</a>
-<div class="line-block">
-<div class="line"><br /></div>
-</div>
 <ol class="arabic simple" start="4">
-<li><p>In the images above you can see how EZ-MAP will look. You will either see:</p></li>
+<li><p>In the images above you can see how EZ-Map looks like. You will either see:</p></li>
 </ol>
 <ul>
-<li><p>Two joysticks, when connecting from a computer or phone in landscape mode (seen in the top image).</p>
+<li><p>Two joysticks, when connecting from a computer or phone in landscape mode.</p>
+<blockquote>
+<div><img alt="EZ-Map web application being shown on a computer screen" class="align-center" src="../_images/ezmap_full_page.png" />
+</div></blockquote>
 <p>Use the left joystick to move the robot forwards and backwards. Use the right joystick to rotate the robot.</p>
 </li>
-<li><p>Dedicated buttons for all directions, when connecting from a phone in portrait mode (seen in the bottom image).</p></li>
+<li><p>Dedicated buttons for all directions, when connecting from a phone in portrait mode.</p>
+<blockquote>
+<div><a class="reference internal image-reference" href="../_images/ezmap_full_page_portrait.jpg"><img alt="EZ-Map web application being shown on a phone in portrait mode" class="align-center" src="../_images/ezmap_full_page_portrait.jpg" style="width: 300px;" />
+</a>
+</div></blockquote>
+</li>
 </ul>
 <hr class="docutils" />
-<p>Congratulations! You have successfully driven the robot using EZ-MAP. To learn more see the general introduction to EZ-MAP <a class="reference internal" href="../ez_map/ez_map_intro.html"><span class="doc">Introduction to EZ-MAP</span></a>.</p>
+<p>Congratulations!</p>
+<p>You have successfully driven the robot using EZ-Map.
+To learn more about the features of EZ-Map, see: <a class="reference internal" href="../ez_map/ez_map_intro.html"><span class="doc">Introduction to EZ-Map</span></a>.</p>
 </section>
 
 
@@ -147,7 +149,7 @@
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
         <a href="teleop.html" class="btn btn-neutral float-left" title="Driving the robot using Terminal" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="../ez_map/ez_map_intro.html" class="btn btn-neutral float-right" title="Introduction to EZ-MAP" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="../ez_map/ez_map_intro.html" class="btn btn-neutral float-right" title="Introduction to EZ-Map" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>

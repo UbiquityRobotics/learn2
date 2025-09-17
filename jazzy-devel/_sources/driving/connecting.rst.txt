@@ -26,9 +26,8 @@ Option 1: Connect via Robot's Wi-Fi
 
     This section assumes you already unboxed and set up the robot.
 
-|
     
-.. 1. Power on the robot.
+1. Power on the robot.
 
 2. Connect your computer to the Wi-Fi network:
 
@@ -90,7 +89,6 @@ You are now connected directly to the robot.
 If you successfully connected to the robot you can now drive it through the terminal.
 Follow this guide: :doc:`./teleop` to see how to do it.
 
-|
 
 Option 2: Connect via Local Network 
 ###################################
@@ -162,7 +160,7 @@ A good first step is driving the robot manually.
 
 We provide two simple options:
 
-- :doc:`Driving the robot through the terminal <./teleop>`
+- :doc:`Driving the robot through the terminal <./teleop>` which you may have already tested if you followed the guide.
 - :doc:`Driving the robot through our custom mapping application <./ez_map_simple_drive>`
 
 Try them out to verify your setup and begin exploring the robot's capabilities.

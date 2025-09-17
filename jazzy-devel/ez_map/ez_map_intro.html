@@ -6,7 +6,7 @@
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Introduction to EZ-MAP &mdash; Ubiquity Robotics Documentation 1.0.0 documentation</title>
+  <title>Introduction to EZ-Map &mdash; Ubiquity Robotics Documentation 1.0.0 documentation</title>
       <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b86133f3" />
       <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=e59714d7" />
 
@@ -19,8 +19,8 @@
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="EZ-MAP Guide" href="ez_map_guide.html" />
-    <link rel="prev" title="Driving the robot through EZ-MAP" href="../driving/ez_map_simple_drive.html" /> 
+    <link rel="next" title="EZ-Map Guide" href="ez_map_guide.html" />
+    <link rel="prev" title="Driving the robot through EZ-Map" href="../driving/ez_map_simple_drive.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -45,7 +45,7 @@
               <p class="caption" role="heading"><span class="caption-text">Magni 6 Model Introduction</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../models/magni6_mini.html">Magni 6 Mini</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../models/magni6_midi.html">Magni6 Midi</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../models/magni6_midi.html">Magni 6 Midi</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Waiting for Your Robot</span></p>
 <ul>
@@ -64,11 +64,11 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../driving/connecting.html">Connecting to the Robot</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../driving/teleop.html">Driving the robot using Terminal</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../driving/ez_map_simple_drive.html">Driving the robot through EZ-MAP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../driving/ez_map_simple_drive.html">Driving the robot through EZ-Map</a></li>
 </ul>
-<p class="caption" role="heading"><span class="caption-text">EZ-MAP</span></p>
+<p class="caption" role="heading"><span class="caption-text">EZ-Map</span></p>
 <ul class="current">
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Introduction to EZ-MAP</a><ul>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Introduction to EZ-Map</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#setup">Setup</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#magni-robot">Magni robot</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#lidar-sensor">LiDAR Sensor</a></li>
@@ -79,8 +79,8 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="ez_map_guide.html">EZ-MAP Guide</a></li>
-<li class="toctree-l1"><a class="reference internal" href="ez_map_advanced.html">EZ-MAP Advanced Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ez_map_guide.html">EZ-Map Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ez_map_advanced.html">EZ-Map Advanced Guide</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Troubleshooting</span></p>
 <ul>
@@ -104,7 +104,7 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
-      <li class="breadcrumb-item active">Introduction to EZ-MAP</li>
+      <li class="breadcrumb-item active">Introduction to EZ-Map</li>
       <li class="wy-breadcrumbs-aside">
               <a href="https://github.com/UbiquityRobotics/learn2/blob/jazzy-devel/docs/ez_map/ez_map_intro.rst" class="fa fa-github"> Edit on GitHub</a>
       </li>
@@ -115,13 +115,16 @@
            <div itemprop="articleBody">
              
   <section id="introduction-to-ez-map">
-<h1>Introduction to EZ-MAP<a class="headerlink" href="#introduction-to-ez-map" title="Link to this heading"></a></h1>
-<a class="reference internal image-reference" href="../_images/ezmap_logo.png"><img alt="EZ-MAP Logo" class="align-center" src="../_images/ezmap_logo.png" style="width: 400px;" />
+<h1>Introduction to EZ-Map<a class="headerlink" href="#introduction-to-ez-map" title="Link to this heading"></a></h1>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<a class="reference internal image-reference" href="../_images/ezmap_logo.png"><img alt="EZ-Map Logo" class="align-center" src="../_images/ezmap_logo.png" style="width: 400px;" />
 </a>
 <div class="line-block">
 <div class="line"><br /></div>
 </div>
-<p>Welcome to <strong>EZ-MAP</strong>.
+<p>Welcome to <strong>EZ-Map</strong>.
 This application will help you map a room using LiDAR, create routes for the robot to follow, and control the robot remotely with live video streaming.</p>
 <div style="display: flex; justify-content: center;">
     <iframe
@@ -143,13 +146,13 @@ This application will help you map a room using LiDAR, create routes for the rob
 If you haven’t selected one yet, choose from our available models:</p>
 <ul class="simple">
 <li><p><a class="reference internal" href="../models/magni6_mini.html"><span class="doc">Magni 6 Mini</span></a></p></li>
-<li><p><a class="reference internal" href="../models/magni6_midi.html"><span class="doc">Magni6 Midi</span></a></p></li>
+<li><p><a class="reference internal" href="../models/magni6_midi.html"><span class="doc">Magni 6 Midi</span></a></p></li>
 </ul>
 <p>Once you have your robot, follow the corresponding unboxing and power-on guide in the navigation menu to complete the initial setup.</p>
 </section>
 <section id="lidar-sensor">
 <h3>LiDAR Sensor<a class="headerlink" href="#lidar-sensor" title="Link to this heading"></a></h3>
-<p>EZ-MAP requires a LiDAR for mapping, and all Magni robots come with one pre-installed.
+<p>EZ-Map requires a LiDAR for mapping, and all Magni robots come with one pre-installed.
 We currently offer two LiDAR options:</p>
 <ul class="simple">
 <li><p><a class="reference internal" href="../troubleshooting/hardware/lidars.html#lidar-short-range"><span class="std std-ref">Short Range LIDAR</span></a> (Magni 6 Mini, and Magni 6 Midi)</p></li>
@@ -159,8 +162,8 @@ We currently offer two LiDAR options:</p>
 If you need help with alternative sensors or drivers, contact <a class="reference external" href="mailto:support&#37;&#52;&#48;ubiquityrobotics&#46;com">Ubiquity Robotics support</a>.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>EZ-MAP ships with its own configuration files.
-If you’ve made manual changes to the robot software and EZ-MAP no longer works, re-flash the original image before troubleshooting further.</p>
+<p>EZ-Map ships with its own configuration files.
+If you’ve made manual changes to the robot software and EZ-Map no longer works, re-flash the original image before troubleshooting further.</p>
 </div>
 </section>
 <section id="pi-camera">
@@ -170,13 +173,14 @@ For more details, see <a class="reference internal" href="../troubleshooting/har
 </section>
 <section id="ez-map-software-image">
 <h3>EZ-Map Software Image<a class="headerlink" href="#ez-map-software-image" title="Link to this heading"></a></h3>
-<p>The EZ-MAP software image is usually delivered via email.
-After downloading the <cite>img.xz</cite> file, flash it to a microSD card and insert it into the robot.
-If you encounter issues, reach out to <a class="reference external" href="mailto:support&#37;&#52;&#48;ubiquityrobotics&#46;com">Ubiquity Robotics support</a>.</p>
+<p>The EZ-Map software image is usually delivered via email.
+After downloading the <cite>img.xz</cite> file, flash it to a microSD card and insert it into the robot.</p>
+<p>You can read more about our images on this page: <a class="reference internal" href="../requirements/images.html"><span class="doc">Magni 6 Images</span></a>.</p>
+<p>If you encounter issues, reach out to <a class="reference external" href="mailto:support&#37;&#52;&#48;ubiquityrobotics&#46;com">Ubiquity Robotics support</a>.</p>
 </section>
 <section id="next-up">
 <h3>Next up?<a class="headerlink" href="#next-up" title="Link to this heading"></a></h3>
-<p>Once you have all required items set up, continue to <a class="reference internal" href="ez_map_guide.html"><span class="doc">EZ-MAP Guide</span></a> to explore EZ-MAP’s features.</p>
+<p>Once you have all required items set up, continue to <a class="reference internal" href="ez_map_guide.html"><span class="doc">EZ-Map Guide</span></a> to explore EZ-Map’s features.</p>
 </section>
 </section>
 </section>
@@ -185,8 +189,8 @@ If you encounter issues, reach out to <a class="reference external" href="mailto
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="../driving/ez_map_simple_drive.html" class="btn btn-neutral float-left" title="Driving the robot through EZ-MAP" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="ez_map_guide.html" class="btn btn-neutral float-right" title="EZ-MAP Guide" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="../driving/ez_map_simple_drive.html" class="btn btn-neutral float-left" title="Driving the robot through EZ-Map" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="ez_map_guide.html" class="btn btn-neutral float-right" title="EZ-Map Guide" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
