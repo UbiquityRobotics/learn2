@@ -1,242 +1,340 @@
-EZ-MAP Guide
+EZ-Map Guide
 ============
 
-Connecting to EZ-MAP
-#########
-To start using the EZ-MAP webapp, you should first connect to the robot. See :doc:`../driving/connecting` for details. Note down the robot's IP.
+Connecting to EZ-Map
+####################
+
+To start using the EZ-Map application, you should first connect to the robot.
+See :doc:`../driving/connecting` for details.  
+Write down the robot's IP that you will use when connecting to the robot.
 
 .. note::
-    The primary targeted devices are smartphones and tablets since it's easier to follow the robot around with them. However, almost all common phones, tablets, and laptops should work.
+   
+   The primary devices for using this application are smartphones and tablets. 
+   The reason for this is since they are easier to follow the robot with.
+   However, almost all devices that can run a browser should work.
 
-The EZ-MAP interface is available on the webpage:
+The EZ-Map interface is available on the following webpage:
 
 .. code-block:: bash
 
     http://<ROBOT-IP>:3000
 
+.. note:: 
+
+   This ``ROBOT-IP`` is the same IP that you used to connect to the robot. 
+   If you followed the :doc:`../driving/connecting` properly then you should have this IP.
+
+
 .. warning::
-   If you are connected to the robot using the access point, you will **not** have internet access. Therefore, if you are using a device with enabled mobile data transfer, disable it before connecting, since the mobile device won't route packets through the robot by default. To use both the robot and the internet, switch to the local network option. See :doc:`../driving/connecting` for details.
+
+   If you are connected to the robot using the robot's Wi-Fi, you will **not** have internet access. 
+   Therefore, if you are using a device with enabled moile data transfer, disable it before connecting, since the mobile device won't route packets through the robot by default.
+   To use both the robot and the internet, switch to local network connection option. 
+   
+   See :doc:`../driving/connecting` for details.
 
 Optional: Add to Home Screen
-#########
-.. note:: 
-    The app can be used straight away. However, saving it as a home screen app (see the image below) eliminates certain usage issues, so it is encouraged.
+############################
 
-On certain occasions the required manifest file is not sent (③) which when saved will not launch the full screen setup properly. Please repeat the addition (and cancel unless the icon is shown) until it appears properly.
+.. note:: 
+   
+   The application can be used straight away.
+   However, saving it as home screen application (see the image bellow) eliminates certain usage issues, so it is recommneded.
+
+On certain occasions the required manifest file is not sent (**3**) which when saved will not launch the full screen setup properly. 
+Please repeat the addition (and cancel unless the icon is shown) until it appears properly.
 
 .. image:: /_static/ez_map/homescreen.png
-   :alt: Image of adding EZ-MAP to the home screen
+   :alt: Ez-Map - Adding to the home screen 
    :align: center
    :width: 800px
 
-
+|
 
 Initial setup
-#########
+#############
 
 .. Icons that are used multiple times:
 
 .. |calibration_button| image:: /_static/ez_map/icons/calibrations.svg
-   :alt: Image of the EZ-MAP calibration widget icon
-   :width: 55px
-
-.. |view_switch_icon| image:: /_static/ez_map/icons/viewswitch_landscape.svg
-   :alt: Image of the EZ-MAP view switch widget icon
-   :width: 55px
-
-.. |settings_icon| image:: /_static/ez_map/icons/settings.svg
-   :alt: Image of the EZ-MAP settings widget icon
-   :width: 55px
-
-
-.. |uninitialized_battery_icon| image:: /_static/ez_map/icons/unknown.svg
-   :alt: Image of the uninitialized EZ-MAP battery widget
+   :alt: EZ-Map - calibration widget icon
    :width: 55px
 
 .. |map_management_icon| image:: /_static/ez_map/icons/map_slam.svg
-   :alt: Image of the EZ-MAP map manegement icon
+   :alt: EZ-Map - map manegement icon
    :width: 55px
 
-When the robot first starts, you’ll be asked to provide a location and orientation for your sensors. The process can also be skipped by opening and closing the menu once and can later be accessed in the calibration menu (|calibration_button|).
+
+When the robot first starts, you'll be asked to provide a location and orientation for your sensors. 
+The process can also be skipped by opening and closing the menu once and can later be accessed in the calibration menu (|calibration_button|).
 
 .. image:: /_static/ez_map/calibration_and_sensor_setup.png
-   :alt: Image of calibration page
+   :alt: Ez-Map - Calibration page
    :align: center
    :width: 800px
 
 |
 
-This step is absolutely essential to make sure your robot is configured properly.
+.. important:: 
+
+   This step is absolutely essential to make sure your robot is configured properly.
 
 Menus and actions
-#########
+#################
 
-The app contains a collection of submenus and actions represented by icons that are described in this section. The icons should always be visible somewhere in the app interface, however, their size and location differ depending on the screen orientation. Since the design of EZ-MAP is modular, these can be added or removed, or you can even write your own custom ones.
+The application contains a collection of sub-menus and actions represented by icons that are described in this section.
+The icons should always be visible somewhere in the application interface, however, their size and location may differ depending on the screen orientation.
+Since the design of EZ-Map is modular, these can be added or removed, or even custom ones can be written.
 
-|view_switch_icon|
-
-Pressing it swaps the app's main views, which are by default the camera video stream and the navigation system, showing a map of the robot's surroundings generated by the LIDAR.
-
-.. image:: /_static/ez_map/icons/100.svg
-   :alt: Image of the EZ-MAP battery widget icon
+.. image:: /_static/ez_map/icons/viewswitch_landscape.svg
+   :alt: EZ-Map - View Swap button
+   :align: left
    :width: 55px
 
-Shows the percentage charge of the robot’s battery. When pressed, it shows a menu with voltage and percentage values. 
+Pressing it swaps between the applications main views.
+These views by default are the camera video stream and navigation system, which shows a map of the robot's surroundings generated by the LiDAR.  
+
+.. image:: /_static/ez_map/icons/100.svg
+   :alt: EZ-Map battery widget icon
+   :align: left
+   :width: 55px
+
+Shows the percentage of charge of the robot's battery, 
+When pressed, it shows a menu with voltage and percentage values.
 
 .. warning::
-    Lead acid batteries should not be deep-cycled for best longevity. It is also best to keep them in the range of 50-100%, otherwise, system issues can occur due to excessive voltage drops. See :doc:`../requirements/batteries` for details
+
+   Lead acid batteries should not be deep-cycled for best longetivity.
+   It is also best to keep them in the range of 50-100%, otherwise, system issues can occur due to excessive voltage drops.
+
+   See :doc:`../requirements/batteries` for details.
 
 
-|calibration_button|
+.. image:: /_static/ez_map/icons/calibrations.svg
+   :alt: EZ-Map - callibration button
+   :align: left
+   :width: 55px
 
-A collection of three different setup menus that allow easy setup of the robot’s lidar, camera, and wheels. This should ideally be done before use to make sure the robot performs as expected.
+A collection of three different setup menus that allow easy setup of the robot's LiDAR, camera, and wheels.
+This should ideally be done before use to make sure the robot performs as expected.
 
 
 .. image:: /_static/ez_map/icons/record_off.svg
-   :alt: Image of the EZ-MAP record widget icon
+   :alt: EZ-Map - record button
+   :align: left
    :width: 55px
 
-Opens the menu that lets the user record all of the robot’s current internal data as a rosbag file (with an option for AVI video export) to an external USB drive (if plugged in) or onto the SD card. 
-
+Opens the menu that lets user record all of the robot's current internal data as a rosbag file (with an option for AVI video export) to an external USB drive (if plugged in) or onto the SD card.
 
 .. image:: /_static/ez_map/icons/photo.svg
-   :alt: Image of the EZ-MAP photo widget icon
+   :alt: EZ-Map - photo button
+   :align: left
    :width: 55px
 
-Takes a photo from the video stream and downloads it through the browser to your device directly.
+Takes a photo from the video stream and downloads it through the browser to your device directly. 
 
 .. warning::
-    On some browsers this may override the current tab.
 
+   On some browsers this may override the current tab.
 
 .. image:: /_static/ez_map/icons/map_defaults_settings.svg
-   :alt: Image of the EZ-MAP map defaults settings widget icon
+   :alt: EZ-Map - map defaults settings button
+   :align: left
    :width: 55px
 
-Opens a menu that lets the user set default options for the map on EZ-MAP boot.
+Opens a menu that lets the user set default options for the map on EZ-Map boot.
 
-|settings_icon|
+|
+
+.. image:: /_static/ez_map/icons/settings.svg
+   :alt: EZ-Map - settings button
+   :align: left
+   :width: 55px
 
 Opens a menu for all general robot settings: speed limits, control scheme, system power, etc.
 
-
 .. image:: /_static/ez_map/settings_menu.jpg
-   :alt: Image of the EZ-MAP settings menu
+   :alt: EZ-Map - settings menu
    :align: center
    :width: 800px
-|
-
-.. note::
-   Powering off and rebooting the robot is not instant. After pressing the buttons it will take about a minute to take effect.
 
 |
 
+.. important::
 
+   Powering off or rebooting the robot is not instant.
+   After pressing the buttons it will take about a minute to take effect.
 
 Remote control
-#########
+##############
+
+.. |view_switch_icon| image:: /_static/ez_map/icons/viewswitch_landscape.svg
+   :alt: EZ-Map - view switch widget icon
+   :width: 55px 
+
 Assuming the camera is connected correctly, one of the main two screens (|view_switch_icon|) should show the video stream from the robot.
 
 The robot can be driven around using the joysticks which show up by default, see :doc:`../driving/ez_map_simple_drive` for details.
 
-.. note::
-    You can select alternative control schemes in the settings menu (|settings_icon|).
+.. |settings_icon| image:: /_static/ez_map/icons/settings.svg
+   :alt: EZ-Map - settings widget icon
+   :width: 55px
 
+.. note::
+
+   You can select alternative control schemes in the settings menu (|settings_icon|).
+
+.. TODO: Add the image of the video stream. 
 
 .. image:: /_static/ez_map/ezmap_video_stream.png
-   :alt: Image of the EZ-MAP video stream
+   :alt: EZ-Map - video stream
+   :align: center
    :width: 400px
+
 |
 
+.. |uninitialized_battery_icon| image:: /_static/ez_map/icons/unknown.svg
+   :alt: EZ-Map -uninitialized batttery widget
+   :width: 55px
+
 .. note:: 
-    If the battery widget appears as gray (|uninitialized_battery_icon|), then the MCB and motor node have not yet connected, and you may need to wait a few more seconds until the robot is ready to go. If it persists for longer than a minute or two, then it may be an indicator that there’s something wrong with the motor control.
+
+   If the battery widget appears as gray (|uninitialized_battery_icon|), then the MCB and motor node have not yet connected.
+   You may need to wait few more seconds until the robot is ready to go.
+   If it persists for longer than a minute or two, then it may be an indicator that there's something wrong with the motor control.
 
 
 Mapping
-#########
-To start mapping the robot's surroundings, first switch to the navigation view (|view_switch_icon|). The interface shown should look as follows:
+#######
+
+To start mapping the robot's surroundings, first switch to the navigation view (|view_switch_icon|).
+The interface shown should look like this:
 
 .. image:: /_static/ez_map/ezmap_navigation_view.jpg
-   :alt: Image of the EZ-MAP navigation view
+   :alt: EZ-Map - navigation view
    :align: center
    :width: 800px
+
 |
 
 .. note::
-    If the screen shows a checklist (see image below) instead of the mapped surroundings, give the system a minute to start or move the robot around slightly so the lidar can gather more data for the initial map iteration. If the message persists for longer, it’s likely that the system has not received the required data for functioning: i.e., the motor node hasn’t started yet (no battery info), or the lidar hasn’t been connected or configured properly. The checklist should give you an idea of what is missing.
+
+   If the screen displays a checklist instead of the map, wait a minute for the system to initialize or gently move the robot so the LiDAR can collect enough data for the first map build.
+   If the checklist remains, the system likely isn't receiveing the required input. 
+   For example: the motor node may not be running (no battery data) or the LiDAR may be disconnected or misconfigured. 
+   The checklist will indicate what's missing.
+
 .. TODO: add some troubleshooting options
 
 .. image:: /_static/ez_map/ezmap_navigation_view_checklist.png
-   :alt: Image of the EZ-MAP navigation view checklist
+   :alt: EZ-Map - navigation view checklist
    :align: center
    :width: 800px
+
 |
 
 Map Management
---------
-Clicking the map management icon (|map_management_icon|) opens a dropdown menu where one can inspect the currently saved maps, select one for loading, or launch the creation of a new map and subsequently save it. Resetting the map will clear the currently displayed version of the map and does not affect saved maps. It will also place the starting point (coordinate 0,0) to the robot’s current location.
+--------------
+
+Clicking the map management icon (|map_management_icon|) opens a dropdown menu. 
+From here, you can view saved maps, load a selected map, or create and save a new one.
+Resetting the map clears the currently displayed map (without deleting saved maps) and sets the starting point (0,0) to the robot's current location.
 
 .. image:: /_static/ez_map/map_dropdown.jpg
-   :alt: Image of the EZ-MAP map dropdown
+   :alt: EZ-Map - map dropdown
    :align: center
    :width: 100px
+
 |
 
 The robot's mapping software can operate in two modes:
 
-#. When the robot is in **SLAM** (Simultaneous Localization and Mapping) mode, also known as just "mapping" mode, it's operating in a fully or partly unknown environment. The robot simultaneously builds a new map or extends an existing map of its surroundings while also keeping track of its own position within that developing map.
+1. In **SLAM** (Simultaneous Localization and Mapping) mode, or simply *mapping* mode, the robot operates in an unknown or partially known environment.
+   It builds or extends a map of its surroundings while tracking its position within that evolving map.
 
-#. In **Localization Mode**, the robot uses a pre-existing map that has been loaded and locked. The robot will try to determine its precise location relative to the features on that static map.
+2. In **Localization Mode**, the robot relies on a pre-loaded, fixed map. 
+   It determines its position by matching observed features to those on the static map.
+
 
 **INCOMING EXPLORATION MODE EXPLANATION**
 
 .. image:: /_static/ez_map/map_exploration_mode.jpg
-   :alt: Image of the EZ-MAP exploration mode popup
+   :alt: EZ-Map - exploration mode popup
    :align: center
    :width: 800px
+
 |
 
 .. warning::
-   Maps are not automatically saved. If you want to save changes, make sure you save the map again.
+
+   Maps are not automatically saved.
+   If you want to save changes, make sure you save the map again.
+
 
 .. note::
-   It is possible to switch from the SLAM (mapping) mode to a localization-only mode at any time by clicking the bottom slider. When a saved map is loaded, it will automatically go into localization mode, so the map is preserved as-is. However, you can switch back to mapping to extend existing maps.
+
+   It is possible to switch from SLAM (mapping) mode to a localization-only mode at any time by clicking the bottom slider.
+   When a saved map is loaded, it will automatically go into localization mode, so the map is preserved as-is.
+   However, you can switch back to mapping to extend existing maps.
+
 
 Landmarks
--------
-The hybrid particle filter SLAM also supports landmarks as a way to improve localization accuracy. These are set up to be ArUco markers that can be printed out and laid out around in view of the camera. Once located with reasonable accuracy, they will be implemented into the map and rendered as shown below.
+---------
+
+The hybrid particle filter SLAM also supports landmarks to improve localization accuracy.
+These landmarks are implemented as ArUco markers, which can be printed and placed within the camera's view.
+Once detected with sufficient accuracy, they are added to the map and displayed as shown below.
 
 .. image:: /_static/ez_map/landmark.png
-   :alt: Image of the EZ-MAP ArUco marker image
+   :alt: EZ-Map - ArUco marker
+   :align: center
    :width: 100px
+
 |
 
 .. note::
-   In order to get the correct positional data, it is crucial to set up the camera position. This can be done in the calibration menu (|calibration_button|).
-.. Will this be already set up in the images?
+
+   In order to get the correct positional data, it is crucial to set up the camera position.
+   This can be done in the calibration (|calibration_button|).
+
+.. TODO: Will this be already set up in the images?
 
 
 Localizing on a loaded map
--------
-On loading a new map, the robot may not be in the same place as when it was when the map was created. As such, it may be shown out of position:
+--------------------------
+
+On loading a new map, the robot may not be in the same place as when it was when the map was created. 
+As such, it may be shown out of position:
 
 .. image:: /_static/ez_map/unlocalized_map.png
-   :alt: Image of a unlocalized EZ-MAP map
+   :alt: EZ-Map - Unlocalized map
+   :align: center
    :width: 600px
+
 |
 
-To help the system gain a good starting point, you can drag and drop the robot to a new location in a way that the red dots align with the black walls. After the robot is dropped, an arrow will appear showing the forward direction. On mobile, it requires another tap and drag for rotation, while on desktop, you just need to move the mouse and click once.
+To give the system a good starting reference, drag and drop the robot so the red dots align with the black walls.
+After placement, an arrow appears indicating the forward direction. 
+
+- On mobile, rotate the robot with an extra tap-and-drag. 
+- On Desktop, move the robot mouse and click once to set the orientation.
 
 .. image:: /_static/ez_map/positioning_localization_map.png
-   :alt: Image of positioning the robot in EZ-MAP
+   :alt:  EZ-Map - positioning the robot
+   :align: center
    :width: 400px
+
 |
 
-Once the red dots vaguely align with the walls, you can let go and the system will localize the robot. Once the robot moves a little, it should snap to the map and confirm its position.
+When the red dots are roughly aligned with the walls, release the robot and the system will attempt to localize it. 
+As soon as the robot moves, it should snap to the map and confirm its position.
 
 .. image:: /_static/ez_map/localized_map.png
-   :alt: Image of a correctly localized EZ-MAP map
+   :alt: EZ-Map - correctly localized map
+   :align: center
    :width: 600px
+
 |
 
 **VIDEO CONTENT INCOMING**
@@ -245,157 +343,199 @@ Routes
 ######
 
 .. |route_management_icon| image:: /_static/ez_map/icons/routes.png
-   :alt: Image of the EZ-MAP route manegement icon
+   :alt: EZ-Map route manegement icon
    :width: 55px
 
 .. |route_drive_forward_icon| image:: /_static/ez_map/icons/route_play.svg
-   :alt: Image of the EZ-MAP drive forward icon
+   :alt: EZ-Map drive forward icon
    :width: 55px
 
 .. |route_drive_backward_icon| image:: /_static/ez_map/icons/route_reverse.svg
-   :alt: Image of the EZ-MAP drive backward icon
+   :alt: EZ-Map drive backward icon
    :width: 55px
 
 .. |route_drive_stop_icon| image:: /_static/ez_map/icons/route_cancel.svg
-   :alt: Image of the EZ-MAP stop icon
+   :alt: EZ-Map stop icon
    :width: 55px
 
-Clicking the route management icon (|route_management_icon|) opens the route menu window, where routes can be selected, added, and deleted.
+Clicking the route management icon (|route_management_icon|) opens the route menu, where you can select, add, or delete routes.
 
 .. image:: /_static/ez_map/route_menu.png
-   :alt: Image of the EZ-MAP route menu
+   :alt: EZ-Map - route menu
    :align: center
    :width: 800px
+
 |
 
 .. note::
-   Routes are automatically saved along with a map. If the map isn’t saved, the route changes will be discarded on shutdown. If you are using an existing map, the routes will auto-save to the map location.
+
+   Routes are automatically saved along with a map. 
+   If the map isn't saved, the route changes will be discarded on shutdown. 
+   If you are using an existing map, the routes will auto-save to the map location.
+
 
 Creating a route
---------
-Double-tapping anywhere on the map allows you to add a new goal or prompts you for the creation of the first route. Unselected routes of the same map are drawn as greyed out.
+----------------
+
+Double-tap anywhere on the map to add a new goal or, if no routes exist, to create the first one.
+Routes not currently selected on the same map are shown greyed out.
 
 .. image:: /_static/ez_map/route_creation.png
-   :alt: Image of the EZ-MAP route creation
+   :alt: EZ-Map - route creation
+   :align: center
    :width: 600px
+
 |
 
-Once a route is created and selected, you can double-click/tap on the map to add and remove new goals. Double-tapping on the line between goals also creates a new goal between them. You can, of course, also drag goals around to make adjustments.
+After creating and selecting a route, you can double-click/tap on the map to add or remove goals.
+Double-tapping on a line between goals inserts a new one, and goals can be dragged to adjust their positons.
 
 **VIDEO CONTENT INCOMING**
 
 Robot Movement
--------
-When the route is set, press one of the movement buttons to send the robot forward (|route_drive_forward_icon|) or backward (|route_drive_backward_icon|) (opposite the drawn arrows in the UI) along the specified route.
+--------------
 
-The robot will then first proceed to the nearest goal and then follow the route onwards to the last point, where it will stop, unless the route is a loop, in which case it’ll continue driving until stopped.
+Once the route is set, press forward (|route_drive_forward_icon|) or backward (|route_drive_backward_icon|) button to move the robot along the route,
+opposite to the drawn arrows in the UI. 
+The robot will first go to the nearest goal, then follow the route to the last point, stopping unless the route is a loop, in which case it continues until manually stopped.
 
-If the robot is in motion, one of the previous two buttons will change to a stop icon (|route_drive_stop_icon|), and pressing it will stop the robot and cancel the route.
+While the robot is moving, the forward/backward button changes to a stop icon (|route_drive_stop_icon|).
+Pressing it stops the robot and cancels the route.
 
 **VIDEO CONTENT INCOMING**
 
 Goal Actions
-----------
-When you have a route set up, the next step is to define actions executed upon reaching a goal. Hold down your mouse/finger on a goal until the Actions menu appears.
+------------
+
+When a route is set up, define actions for each goal by holding down the mouse or finger on the goal until the Actions menu appears.
 
 .. image:: /_static/ez_map/actions_menu.png
-   :alt: Image of the EZ-MAP actions menu
+   :alt: EZ-Map - actions menu
    :align: center
    :width: 800px
+
 |
 
-As the robot arrives at the specified goal, it will then check the defined actions and execute them sequentially one after the other.
+When the robot reaches a goal, it will sequentially execute the actions defined for that goal.
 
 .. image:: /_static/ez_map/goal_action_example.png
-   :alt: Image of an example EZ-MAP goal action setup
+   :alt: EZ-Map - Example of goal action setup
    :align: center
    :width: 800px
+
 |
 
-In the above example the robot would:
+In the example above, the robot would:
 
--    wait for one second
--    set the movement speed to as fast as possible
--    execute a speech to text command on the robot (requires a speaker)
-
+- Wait for one second
+- Set its movement speed to maximum
+- Execute a speech-to-text command (requires a speaker)
 
 **VIDEO CONTENT INCOMING**
 
-The goal will change the color and shape of the node to indicate stored actions.
+The goal's node will change color and shape to indicate that actions have been assigned to it.
 
 .. image:: /_static/ez_map/goal_action_node.png
-   :alt: Image of a EZ-MAP route that has stored actions
+   :alt: EZ-Map - route with stored actions
+   :align: center
    :width: 400px
+
 |
 
 .. note::
-    The command line functionality allows for running custom scripts at specific points in the route or sending data to other parts of the system.
+
+   The command line feature lets you run custom scripts at specific points along the route or send data to other system components. 
+
 
 Looping
------
-There are currently two ways to create perpetual driving:
+-------
 
-#. Simply moving the first and last goal together (requires a minimum of three goals). The route will then turn purple to indicate successful looping.
+There are currently two ways to enable perpetual driving: 
+
+1. Move the first and last goal together (requires at least three goals). 
+   The route will turn purple to indicate a successful loop.
+
 
     .. image:: /_static/ez_map/looped_route.png
-       :alt: Image of a looped EZ-MAP route 
-       :width: 800px
-    |
-
-    .. note::
-        As the first and last goals are joined together, only the first goal will execute its defined actions (as the last goal is never processed).
-   
-#. Creating so-called ping-pong looping, which is to set the first and last goal to trigger the route in opposite ways using actions.
-
-    .. image:: /_static/ez_map/ping_pong_looping.png
-       :alt: Image of a ping-pong looped EZ-MAP route 
+       :alt: EZ-Map - looped route 
        :align: center
        :width: 800px
-    |
-    The robot should then drive the route one way, then reverse and return to the start, and continue forward again. By removing the “Forward” action, we also get go-and-return behavior, for example. There are further possible combinations by setting the drive commands to other routes, which lets you chain different routes together.
 
+|
+
+    .. note::
+
+      When the first and last goals are joined, only the first goal's actions will be executed, since the last goal is never processed.
+   
+
+2. Create a "ping-pong" loop by setting the first and last goals to trigger the route in opposite directions using actions. 
+
+   .. image:: /_static/ez_map/ping_pong_looping.png
+         :alt: EZ-Map - ping-pong looped route 
+         :align: center
+         :width: 800px
+
+   The robot will drive the route forward, then reverse back to the start, and continue forward again.
+   Removing the "Forward" action creates a simple go-and-return behavior.
+   Additional combinations are possible by linking drive commands to other routes, allowing multiple routes to be chained together.
 
 **VIDEO CONTENT INCOMING**
 
 Locking
-------
-In the case of small devices, it may be easier to lock the positions of goals so they are not accidentally moved when setting up actions. The route management menu has an option labeled [🔒 Lock Goal Movement] which will globally lock route editing until you turn it back on.
+-------
+
+On small devices, it can be helpful to lock goal positions to prevent accidental movement while setting up actions. 
+The route management menu includes a [🔒 Lock Goal Movement] option, which locks route editing globally until it is turned off. 
 
 Initialization Triggers
-######
+#######################
 
 .. |global_triggers_menu_icon| image:: /_static/ez_map/icons/route_trigger.svg
-   :alt: Image of the EZ-MAP global route trigger menu icon 
+   :alt: EZ-Map - global route trigger menu icon 
    :width: 55px
+
 |
 
-The global triggers menu (|global_triggers_menu_icon|) lets you set a string of actions that will be executed once the set conditions are met. The actions are much the same as the ones you can set on specific goals; however, they will be triggered globally by some sort of event instead of the robot arriving at the goal. The functionality can be enabled or disabled in order to easily set up and reset the cooldown timers of triggers.
+The global triggers menu (|global_triggers_menu_icon|) allows you to define a sequence of actions that execute when specified conditions are met.
+These actions are similar to those assigned to individual goals but are triggered by events rather than the robot reaching a goal.
+The functionality can be enabled or disabled to conveniently conigure and reset trigger cooldowns.
 
 .. image:: /_static/ez_map/triggers_example1.png
-   :alt: Image of the EZ-MAP global triggers example
+   :alt: EZ-Map - global triggers example 1
    :align: center
    :width: 800px
-|
 
-In this example we see that the executed actions will be the following:
+In this example, the executed actions are:
 
-- Upon spotting the ArUco marker number 3, the robot will wait 1 second and then slow down movement
-- If the battery drops below 60% the robot will stop route driving
+- When the robot detects ArUco marker number 3, it waits 1 second and then slows its movement.
+- If the battery drops bellow 60%, the robot stops route driving.
 
-.. note:: 
-    Triggers (and actions) are web app independent, so they will run in the background regardless of the webapp running in a browser.
+.. note::
 
-Another example below will load a saved map upon seeing marker 23, then start a predefined route on the map at max speed:
+   Triggers and actions run independently of the web application, so they continue in the background even if the browser is closed.
+
+Another example: upon detecting marker 23, the robot loads a saved map and starts a predefined route at maximum speed.
 
 .. image:: /_static/ez_map/triggers_example2.png
-   :alt: Image of the EZ-MAP global triggers example
+   :alt: EZ-Map - global triggers example 2
    :align: center
    :width: 800px
+
 |
 
-This trigger allows for driving the robot using remote control into a room so it sees the marker, upon which it takes over and runs the automated route.
+This trigger setup allows you to manually drive the robot into a room so it sees the marker, at which point it takes over and runs the automated route.
 
 .. note:: 
-   At present time the robot does **NOT** do global initial localization, so it should be rotated and positioned as close to the map’s starting point / origin as possible for best results.
+
+   Currently, the robot does **NOT** perform global initial localization, so it should be positioned and oriented near the map's starting point/origin for best results.
+
 
 **INCOMING GLOBAL TRIGGER VIDEOS**
+
+
+Next Steps
+##########
+
+To contribute to EZ-Map or customize it for your own configurations, continue to the advanced guide:
+
+See :doc:`./ez_map_advanced`.

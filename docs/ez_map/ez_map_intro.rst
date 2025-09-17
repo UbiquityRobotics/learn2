@@ -1,14 +1,16 @@
-Introduction to EZ-MAP
+Introduction to EZ-Map
 ======================
 
+|
+
 .. image:: /_static/ez_map/ezmap_logo.png
-   :alt: EZ-MAP Logo
+   :alt: EZ-Map Logo
    :width: 400px
    :align: center 
 
 |
 
-Welcome to **EZ-MAP**. 
+Welcome to **EZ-Map**. 
 This application will help you map a room using LiDAR, create routes for the robot to follow, and control the robot remotely with live video streaming.
 
 .. raw:: html
@@ -44,7 +46,7 @@ Once you have your robot, follow the corresponding unboxing and power-on guide i
 LiDAR Sensor
 ------------
 
-EZ-MAP requires a LiDAR for mapping, and all Magni robots come with one pre-installed.
+EZ-Map requires a LiDAR for mapping, and all Magni robots come with one pre-installed.
 We currently offer two LiDAR options:
 
 - :ref:`Short Range LIDAR <lidar_short_range>` (Magni 6 Mini, and Magni 6 Midi)
@@ -55,8 +57,8 @@ If you need help with alternative sensors or drivers, contact `Ubiquity Robotics
 
 .. note::
 
-    EZ-MAP ships with its own configuration files.
-    If you've made manual changes to the robot software and EZ-MAP no longer works, re-flash the original image before troubleshooting further.
+    EZ-Map ships with its own configuration files.
+    If you've made manual changes to the robot software and EZ-Map no longer works, re-flash the original image before troubleshooting further.
 
 
 Pi Camera
@@ -68,8 +70,11 @@ For more details, see :doc:`../troubleshooting/hardware/pi_camera`.
 EZ-Map Software Image
 ---------------------
 
-The EZ-MAP software image is usually delivered via email. 
+The EZ-Map software image is usually delivered via email. 
 After downloading the `img.xz` file, flash it to a microSD card and insert it into the robot.
+
+You can read more about our images on this page: :doc:`../requirements/images`.
+
 If you encounter issues, reach out to `Ubiquity Robotics support <support@ubiquityrobotics.com>`_.
 
 .. Changelogs
@@ -80,5 +85,5 @@ If you encounter issues, reach out to `Ubiquity Robotics support <support@ubiqui
 Next up?
 --------
 
-Once you have all required items set up, continue to :doc:`./ez_map_guide` to explore EZ-MAP's features.
+Once you have all required items set up, continue to :doc:`./ez_map_guide` to explore EZ-Map's features.
 
