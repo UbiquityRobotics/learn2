@@ -1,5 +1,8 @@
-EZ-MAP Advanced Guide
+EZ-Map Advanced Guide
 =====================
 
-**CONTENT INCOMING**
+
+**THE ADVANCED GUIDE FOR EZ-MAP IS STILL IS STILL IN DEVELOPMENT.**
+
+**FOR SPECIFIC INQUIRIES, PLEASE CONTACT US AT:** `Ubiquity Robotics support <support@ubiquityrobotics.com>`_.
 

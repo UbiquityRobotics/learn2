@@ -17,6 +17,7 @@ Integrated with the robot's software, it provides vision of the robot's surround
 
 Why is the Camera Useful?
 #########################
+
 - **See in Low Light**: Takes clear pictures even when it's dark, great for night projects.
 - **Auto Focus**: Adjusts focus on its own, making it easy to capture moving objects.
 - **Wide Views**: Comes in standard or wide-angle versions to see more around the robot. The robot comes with the wide version, but you can always switch it for the standard version if you wish.
@@ -34,7 +35,7 @@ If you want to switch to the standard camera module and run into trouble with th
 How to use?
 ###########
 
-**CONTENT INCOMING**
+**CONTENT REGARDING CAMERA USAGE INCOMING**
 
 .. TODO: This section will be written once we have the camera working on the Mini's.
 .. TODO: How to take turn it on, how to record videos, how to save them, how to adjust settings.

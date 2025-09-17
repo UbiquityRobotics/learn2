@@ -33,7 +33,7 @@ Magni 6 Mini
 
 .. note:: 
 
-    These tables have placeholders for now. They will be updated in due time.
+    The following table has placeholders for now. It will be updated in due time.
 
 **TABLE CONTENT INCOMING**
 
@@ -58,7 +58,12 @@ Magni 6 Mini
 Magni 6 Medi
 ------------
 
+.. note:: 
+
+    The following table has placeholders for now. It will be updated in due time.
+
 **TABLE CONTENT INCOMING**
+
 
 .. TODO: Fill the table with proper values.
 
@@ -85,11 +90,12 @@ GPIO Lines for Customazation
 Magni 6 Mini - Customazation Lines
 ----------------------------------
 
-.. note::
-    
-    The table bellow has placeholder values, it will be updated with the correct values in due time.
+.. note:: 
+
+    The following table has placeholders for now. It will be updated in due time.
 
 **TABLE CONTENT INCOMING**
+
 
 .. TODO: Fill the table with proper values.
 
@@ -106,11 +112,12 @@ Magni 6 Mini - Customazation Lines
 Magni 6 Medi - Customazation Lines
 ----------------------------------
 
-.. note::
-    
-    The table bellow has placeholder values, it will be updated with the correct values in due time.
+.. note:: 
+
+    The following table has placeholders for now. It will be updated in due time.
 
 **TABLE CONTENT INCOMING**
+
 
 .. TODO: Fill the table with proper values.
 
@@ -133,10 +140,11 @@ If you want to take your Magni robots to the next level, then you can:
 - **Upgrade Sensors**  - Experiment with advnced sensors on the free GPIO lines to enhance mapping or navigation. 
  
 .. note:: 
+
     Feel free to share your projects with us on our `Blog <https://forum.ubiquityrobotics.com>`_ and tag us on social media *#ubiquityrobotics*.
 
 
 .. tip::
 
     For more in-depth guide for Raspberry Pi 5, see:
-    `Raspberry Pi 5 <https://www.hackatronic.com/raspberry-pi-5-pinout-specifications-pricing-a-complete-guide/>`_
+    `Raspberry Pi 5 <https://www.hackatronic.com/raspberry-pi-5-pinout-specifications-pricing-a-complete-guide/>`_.

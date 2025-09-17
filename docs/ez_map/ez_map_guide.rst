@@ -1,6 +1,48 @@
 EZ-Map Guide
 ============
 
+.. Icons that will be used multiple times throughout this page:
+
+.. |calibration_button| image:: /_static/ez_map/icons/calibrations.svg
+   :alt: EZ-Map - calibration widget icon
+   :width: 55px
+
+.. |map_management_icon| image:: /_static/ez_map/icons/map_slam.svg
+   :alt: EZ-Map - map manegement icon
+   :width: 55px
+
+.. |view_switch_icon| image:: /_static/ez_map/icons/viewswitch_landscape.svg
+   :alt: EZ-Map - view switch widget icon
+   :width: 55px 
+
+.. |global_triggers_menu_icon| image:: /_static/ez_map/icons/route_trigger.svg
+   :alt: EZ-Map - global route trigger menu icon 
+   :width: 55px
+
+.. |route_management_icon| image:: /_static/ez_map/icons/routes.png
+   :alt: EZ-Map route manegement icon
+   :width: 55px
+
+.. |route_drive_forward_icon| image:: /_static/ez_map/icons/route_play.svg
+   :alt: EZ-Map drive forward icon
+   :width: 55px
+
+.. |route_drive_backward_icon| image:: /_static/ez_map/icons/route_reverse.svg
+   :alt: EZ-Map drive backward icon
+   :width: 55px
+
+.. |route_drive_stop_icon| image:: /_static/ez_map/icons/route_cancel.svg
+   :alt: EZ-Map stop icon
+   :width: 55px
+
+.. |settings_icon| image:: /_static/ez_map/icons/settings.svg
+   :alt: EZ-Map - settings widget icon
+   :width: 55px
+
+.. |uninitialized_battery_icon| image:: /_static/ez_map/icons/unknown.svg
+   :alt: EZ-Map -uninitialized batttery widget
+   :width: 55px
+
 Connecting to EZ-Map
 ####################
 
@@ -55,16 +97,11 @@ Please repeat the addition (and cancel unless the icon is shown) until it appear
 Initial setup
 #############
 
-.. Icons that are used multiple times:
+.. important::
 
-.. |calibration_button| image:: /_static/ez_map/icons/calibrations.svg
-   :alt: EZ-Map - calibration widget icon
-   :width: 55px
-
-.. |map_management_icon| image:: /_static/ez_map/icons/map_slam.svg
-   :alt: EZ-Map - map manegement icon
-   :width: 55px
-
+   This setup must be performed at least once on everey robot the first time you use the LiDAR. 
+   After configuration, the LiDAR will retain these settings on each boot. 
+   On a fresh image, however, the setup must be repeated to ensure proper operation.
 
 When the robot first starts, you'll be asked to provide a location and orientation for your sensors. 
 The process can also be skipped by opening and closing the menu once and can later be accessed in the calibration menu (|calibration_button|).
@@ -86,6 +123,8 @@ Menus and actions
 The application contains a collection of sub-menus and actions represented by icons that are described in this section.
 The icons should always be visible somewhere in the application interface, however, their size and location may differ depending on the screen orientation.
 Since the design of EZ-Map is modular, these can be added or removed, or even custom ones can be written.
+
+To see more on how to add these buttons visit: :doc:`./ez_map_advanced`.
 
 .. image:: /_static/ez_map/icons/viewswitch_landscape.svg
    :alt: EZ-Map - View Swap button
@@ -109,7 +148,6 @@ When pressed, it shows a menu with voltage and percentage values.
    It is also best to keep them in the range of 50-100%, otherwise, system issues can occur due to excessive voltage drops.
 
    See :doc:`../requirements/batteries` for details.
-
 
 .. image:: /_static/ez_map/icons/calibrations.svg
    :alt: EZ-Map - callibration button
@@ -169,17 +207,10 @@ Opens a menu for all general robot settings: speed limits, control scheme, syste
 Remote control
 ##############
 
-.. |view_switch_icon| image:: /_static/ez_map/icons/viewswitch_landscape.svg
-   :alt: EZ-Map - view switch widget icon
-   :width: 55px 
 
 Assuming the camera is connected correctly, one of the main two screens (|view_switch_icon|) should show the video stream from the robot.
 
 The robot can be driven around using the joysticks which show up by default, see :doc:`../driving/ez_map_simple_drive` for details.
-
-.. |settings_icon| image:: /_static/ez_map/icons/settings.svg
-   :alt: EZ-Map - settings widget icon
-   :width: 55px
 
 .. note::
 
@@ -187,16 +218,14 @@ The robot can be driven around using the joysticks which show up by default, see
 
 .. TODO: Add the image of the video stream. 
 
+**IMAGE INCOMING**
+
 .. image:: /_static/ez_map/ezmap_video_stream.png
    :alt: EZ-Map - video stream
    :align: center
    :width: 400px
 
 |
-
-.. |uninitialized_battery_icon| image:: /_static/ez_map/icons/unknown.svg
-   :alt: EZ-Map -uninitialized batttery widget
-   :width: 55px
 
 .. note:: 
 
@@ -342,21 +371,6 @@ As soon as the robot moves, it should snap to the map and confirm its position.
 Routes
 ######
 
-.. |route_management_icon| image:: /_static/ez_map/icons/routes.png
-   :alt: EZ-Map route manegement icon
-   :width: 55px
-
-.. |route_drive_forward_icon| image:: /_static/ez_map/icons/route_play.svg
-   :alt: EZ-Map drive forward icon
-   :width: 55px
-
-.. |route_drive_backward_icon| image:: /_static/ez_map/icons/route_reverse.svg
-   :alt: EZ-Map drive backward icon
-   :width: 55px
-
-.. |route_drive_stop_icon| image:: /_static/ez_map/icons/route_cancel.svg
-   :alt: EZ-Map stop icon
-   :width: 55px
 
 Clicking the route management icon (|route_management_icon|) opens the route menu, where you can select, add, or delete routes.
 
@@ -490,12 +504,6 @@ The route management menu includes a [🔒 Lock Goal Movement] option, which loc
 Initialization Triggers
 #######################
 
-.. |global_triggers_menu_icon| image:: /_static/ez_map/icons/route_trigger.svg
-   :alt: EZ-Map - global route trigger menu icon 
-   :width: 55px
-
-|
-
 The global triggers menu (|global_triggers_menu_icon|) allows you to define a sequence of actions that execute when specified conditions are met.
 These actions are similar to those assigned to individual goals but are triggered by events rather than the robot reaching a goal.
 The functionality can be enabled or disabled to conveniently conigure and reset trigger cooldowns.
@@ -530,7 +538,7 @@ This trigger setup allows you to manually drive the robot into a room so it sees
    Currently, the robot does **NOT** perform global initial localization, so it should be positioned and oriented near the map's starting point/origin for best results.
 
 
-**INCOMING GLOBAL TRIGGER VIDEOS**
+**INCOMING GLOBAL TRIGGER VIDEO CONTENT**
 
 
 Next Steps

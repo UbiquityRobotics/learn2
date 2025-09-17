@@ -31,7 +31,7 @@ Setting up the Desktop Workstation
 
 .. note:: 
 
-    This section assumes that you have already following the **Requirements for a Workstation** section.
+    This section assumes that you are already following the **Requirements for a Workstation** section.
 
 We will not cover how to install Ubuntu 24.04 itself, since there are many good guides available.
 Instead, here are some usefull resources:
@@ -104,6 +104,11 @@ You should see something like:
 
 Testing Connection to the Robot
 -------------------------------
+
+.. note:: 
+
+    This section assumes you have already received your robot. 
+    If you are still waiting, you can skip this section until your robot arrives.
 
 Once Ubuntu and ROS 2 are confirmed working, you can test the connection to your robot.
 First, follow the connection guide: :doc:`../driving/connecting`.
