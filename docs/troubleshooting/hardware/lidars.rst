@@ -17,7 +17,7 @@ The Short Range LiDAR is a compact and ideal for indoor environments and tight s
 Its high accuracy and 360 degrees scanning make it perfect for precise mapping and obstacle avoidance in confined areas.
 
 .. image:: /_static/troubleshooting/hardware/lidar_short.png
-   :alt: Short Range Lidar
+   :alt: Short Range LiDAR
    :width: 400px
    :align: center
 
@@ -59,7 +59,6 @@ Its high accuracy and 360 degrees scanning make it perfect for precise mapping a
      - Standard Asynchronous Serial Port (Baud Rate: 230400 bps)
 
 
-
 .. _lidar_long_range:
 
 Long Range LiDAR    
@@ -69,7 +68,7 @@ The Long Range LidAR is designed for long-range detection, suitable for outdoor 
 With a 120m range and robust build, it excels in extensive mapping and navigation tasks.
 
 .. image:: /_static/troubleshooting/hardware/lidar_long.png
-   :alt: Long Range Lidar
+   :alt: Long Range LiDAR
    :width: 400px
    :align: center
 
@@ -123,7 +122,6 @@ With a 120m range and robust build, it excels in extensive mapping and navigatio
      - 1050g
    * - Dimensions (DxH)
      - Ф102x77.9 mm
-
 
 
 LiDAR Compatabillity by Robot Model

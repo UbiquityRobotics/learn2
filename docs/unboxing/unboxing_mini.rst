@@ -132,7 +132,7 @@ Before powering on, check all components are included and undamaged.
 
 Watch this video for a visual guide on checking component connections and condition after unboxing:
 
-**CONTENT INCOMING**
+**VIDEO CONTENT INCOMING**
 
 .. TODO: Create a video for the check above, also add pictures there.
 
@@ -153,7 +153,7 @@ If all components are securely connected and undamaged, proceed with adding the 
 Battery Installation and Safety
 ###############################
 
-The amgni 6 Mini uses two **lead-acid batteries**.
+The Magni 6 Mini uses two **lead-acid batteries**.
 Ensure the Magni 6 Mini's these two batteries are safely installed and charged before powering on.
 For for exact instructions on how to charge the batteries before adding them to ther robot: :doc:`../requirements/batteries`.
 
@@ -360,10 +360,12 @@ Verify Wiring
 
 Ensure all spade connectors are firmly attached. Route wires as shown.
 
-.. Important::
+.. important::
+
   Double-check that all connections (all pins are firmly connected).
 
 .. note:: 
+
   UPDATE of the WIRE ROUTING is coming soon.
 
 .. TODO: Add image here without the wires being taped/secured to the second battery.
@@ -377,7 +379,8 @@ Ensure all spade connectors are firmly attached. Route wires as shown.
 ----- 
 
 .. warning::
-    **THE VOLTAGE CONNECTED TO THE MAIN CONTROL BOARD (MCB) MUST REMAIN 30.0V OR LESS AT ALL TIMES!**
+  
+  **THE VOLTAGE CONNECTED TO THE MAIN CONTROL BOARD (MCB) MUST REMAIN 30.0V OR LESS AT ALL TIMES!**
 
 The wires should be connected like this: 
 
@@ -394,7 +397,7 @@ The wires should be connected like this:
 
 You can follow the following video for exact step-by-step guide of adding the batteries inside the robot:
 
-**CONTENT INCOMING**
+**VIDEO CONTENT INCOMING**
 
 .. TODO: Video of adding the batteries inside the robot after unboxing.
 
@@ -429,11 +432,12 @@ You can follow the following video for exact step-by-step guide of adding the ba
 
 You can follow the following video for exact step-by-step guide of charging the batteries inside the robot or manually:
 
-**CONTENT INCOMING**
+**VIDEO CONTENT INCOMING**
 
 ..  TODO: Video of charging the batteries inside the robot.
 
 .. warning:: 
+
     - Do not use a damaged battery, as it may pose a safety hazard.
     - Charge in a well-ventilated area away from flammable materials.
     - See :doc:`../requirements/batteries` for more information.
@@ -462,7 +466,7 @@ Powering On
 
 You can follow the following video for exact step-by-step guide of powering on the robot. 
 
-**CONTENT INCOMING**
+**VIDEO CONTENT INCOMING**
 
 ..  TODO: Video of powering on the robot.
 
@@ -470,12 +474,13 @@ You can follow the following video for exact step-by-step guide of powering on t
 
 The robot is now powered on and ready for connection.
 
-.. note:: 
-    If the Raspberry Pi's light is not green, ensure all components are properly connected.
+.. note::
+  
+  If the Raspberry Pi's light is not green, ensure all components are properly connected.
 
 .. warning::
-
-    Before messing with the hardware, switch the white switch off, to turn off the power to the robot.
+  
+  Before messing with the hardware, switch the white switch off, to turn off the power to the robot.
 
 
 Next Step: Connecting

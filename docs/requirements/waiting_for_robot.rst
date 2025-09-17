@@ -5,12 +5,16 @@ This section covers what you'll need to prepare before your Ubiquity Robot arriv
 
 Requirements
 ############
+
 1. 12V Batteries (2x)
 ---------------------
 
 .. important:: 
+
     The robot ships without battery so you have to purchase them separetely.
-    More information in the batteries page.
+    More information in the batteries page. 
+    
+    See: :doc:`./batteries`.
 
 The robots require two 12V batteries to opearate. We recommened lead-acid batteries.
 Make sure they are safely mounted and connected as per your model's guidelines.

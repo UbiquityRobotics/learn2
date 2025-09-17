@@ -1,5 +1,5 @@
-Magni6 Midi
-===========
+Magni 6 Midi
+============
 
 .. image:: /_static/models/magni6_midi.png
    :alt: Magni 6 Midi
@@ -7,4 +7,4 @@ Magni6 Midi
    :align: center
 
 
-**CONTENT INCOMING** 
+**THE CONTENT FOR THIS ROBOT IS COMING SOON IF YOU NEED ANY SPECIFIC INFORMATION CONTACT:** `Ubiquity Robotics support <support@ubiquityrobotics.com>`_

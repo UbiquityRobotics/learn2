@@ -16,7 +16,10 @@ Each image is labeled according to its status:
 Raspberry Pi Images
 ###################
 
-**TABLE CONTENT INCOMING**
+.. important::
+
+    **THE ROS2 IMAGE IS STILL UNDER DEVELOPMENT. 
+    ONCE THE ROBOT IS AVAILABLE FOR REGULAR PURCHASE (NOT PREORDER), THE IMAGE WILL BE PUBLISHED AND LISTED IN THE TABLE BELOW.**
 
 ================ ============================
 **Download**     [Download Link to be added]

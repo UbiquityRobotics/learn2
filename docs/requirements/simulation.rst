@@ -2,17 +2,19 @@ Magni Robot Simulation
 ======================
 
 .. note::
+
    A comprehensive guide to running the Ubiquity Robotics Magni platform in simulation
 
---------
+----
 
 Overview
 ########
 
 
-The **Ubiquity Robotics Magni** is a robust differential drive mobile robot platform engineered for industrial and research applications. This guide provides step-by-step instructions for setting up and running the Magni robot in simulation using ROS and Gazebo.
+The **Ubiquity Robotics Magni** is a robust differential drive mobile robot platform engineered for industrial and research applications. 
+This guide provides step-by-step instructions for setting up and running the Magni robot in simulation using ROS2 and Gazebo.
 
---------
+----
 
 Robot Specifications
 ####################
@@ -45,12 +47,12 @@ Computing Platform
    Component           Specification
    =================== ================================
    Onboard Computer    Raspberry Pi 4
-   Operating System    Ubuntu with ROS
+   Operating System    Ubuntu with ROS2
    Connectivity        WiFi, Ethernet, 4x USB ports
    Sensors             Sonar array for obstacle avoidance
    =================== ================================
 
---------
+----
 
 Simulation Environment Setup
 ############################
@@ -62,26 +64,27 @@ System Requirements
 ~~~~~~~~~~~~~~~~~~~
 
 - **Operating System:** Ubuntu 24.04 LTS (recommended)
-- **ROS Version:** Jazzy (for Ubuntu 24.04)
+- **ROS2 Version:** Jazzy (for Ubuntu 24.04)
 - **Simulator:** Gz sim harmonic (https://gazebosim.org/docs/harmonic/install/)
 - **Graphics:** NVIDIA GPU recommended for optimal performance
 - **Memory:** Minimum 8GB RAM, 16GB recommended
 
 .. tip::
+
    For best performance, ensure your system meets the recommended specifications
 
 Installation Steps
 ------------------
 
 Step 1: Install ROS2 and Dependencies
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Follow the official ROS2 installation guide for your Ubuntu version. Ensure you have the necessary dependencies installed:
 
 https://docs.ros.org/en/jazzy/Installation/Ubuntu-Install-Debs.html
 
 Step 2: Install Magni Robot Packages
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 1. **Download** the Magni robot package from:
 
@@ -108,7 +111,7 @@ Step 3: Verify Installation
    ros2 pkg list | grep magni_description
    source /opt/ros/jazzy/share/magni_description/local_setup.bash
 
---------
+----
 
 Simulation Configuration
 ########################
@@ -143,14 +146,14 @@ Differential Drive Plugin
 
 
 Available Sensor Plugins
-~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~
 
 :IMU Sensor: Provides orientation feedback
 :Sonar Sensors: Enable obstacle detection
 :Camera Sensor: Optional visual input (configurable)
 :Lidar Sensor: Optional laser scanning capability (configurable)
 
---------
+----
 
 Running the Simulation
 ######################
@@ -159,7 +162,7 @@ Basic Simulation Launch
 -----------------------
 
 Step 1: Start Gazebo with Magni Model
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. code-block:: bash
 
@@ -167,7 +170,7 @@ Step 1: Start Gazebo with Magni Model
    ros2 launch magni_description description.launch.py
 
 Step 2: Verify Robot Spawning
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 After launching, verify the following:
 
@@ -176,7 +179,7 @@ After launching, verify the following:
 - Robot is positioned on the ground plane without falling through
 - All joints and sensors initialize properly. check RViz for joint states and sensor data
 
-Step 3: Check ROS Topics
+Step 3: Check ROS2 Topics
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. code-block:: bash
@@ -216,7 +219,7 @@ Teleoperation Testing
 ---------------------
 
 Step 1: Launch Teleop Node
-~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. code-block:: bash
 
@@ -251,28 +254,28 @@ Common Issues and Solutions
 ---------------------------
 
 Issue 1: Robot Falls Through Ground
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 :Problem: Robot model falls through the ground plane
 :Cause: Missing collision properties in URDF model
 :Solution: Verify collision tags are properly defined in robot description files
 
 Issue 2: Wheels Not Moving
-~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 :Problem: Robot wheels do not respond to velocity commands
 :Cause: Joint controller configuration errors
 :Solution: Check joint names in differential drive plugin match URDF joint definitions
 
 Issue 3: Sensors Not Publishing Data
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 :Problem: Sensor topics show no data output
 :Cause: Plugin configuration errors or missing parameters
 :Solution: Verify sensor plugin parameters and confirm topic names are correct
 
 Issue 4: Navigation Fails
-~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~
 
 :Problem: Robot navigation stack fails to function
 :Cause: Transform tree issues or missing localization data
@@ -299,7 +302,7 @@ Resource management recommendations:
 - Close unnecessary applications to free system resources  
 - Consider headless mode for automated testing scenarios
 
---------
+----
 
 Development Guidelines
 ######################
@@ -320,7 +323,7 @@ Controller Development
 For developing custom motion controllers:
 
 1. **Interface Definition:** Define clear control inputs and feedback mechanisms
-2. **ROS Integration:** Create appropriate ROS nodes and topic interfaces
+2. **ROS2 Integration:** Create appropriate ROS2 nodes and topic interfaces
 3. **Simulation Testing:** Validate controller behavior in Gazebo before hardware deployment
 4. **Parameter Tuning:** Optimize controller gains specifically for simulation environment
 
@@ -337,7 +340,7 @@ Best practices for validation:
 - Test edge cases and failure mode scenarios
 
 Performance Benchmarking
-~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~
 
 Measurement guidelines:
 
@@ -345,7 +348,7 @@ Measurement guidelines:
 - Profile computational requirements for different scenarios
 - Document system limitations and performance boundaries
 
---------
+----
 
 Support and Resources
 #####################
@@ -353,26 +356,29 @@ Support and Resources
 Official Documentation
 -----------------------
 
-- `Ubiquity Robotics Documentation <https://learn.ubiquityrobotics.com/>`_
-- `ROS Wiki - Magni Robot <http://wiki.ros.org/Robots/Magni>`_
+- `Ubiquity Robotics Documentation <https://ubiquityrobotics.github.io/learn2/>`_
+- `ROS2 Wiki - Magni Robot <http://wiki.ros.org/Robots/Magni>`_
 - `GitHub Repository <https://github.com/UbiquityRobotics/magni_robot>`_
 
 Community Support
 -----------------
 
-- `ROS Discourse Forum <https://discourse.ros.org/>`_
-- Ubiquity Robotics Community Forums
-- GitHub Issues for bug reports and feature requests
+- `ROS2 Discourse Forum <https://discourse.openrobotics.org/c/ng-ros>`_. (**You will need an Account**)
+- `Ubiquity Robotics Community Forum <https://forum.ubiquityrobotics.com/>`_
+- `GitHub Issues for bug reports and feature requests <https://github.com/UbiquityRobotics/ubiquity_main>`_
+
+.. TODO: Change the link for GitHub Issues to a newer one.
 
 Additional Resources
 --------------------
 
 - `Gazebo Simulation Tutorials <https://gazebosim.org/docs/harmonic/getstarted/>`_
-- `ROS Navigation Stack Documentation <http://wiki.ros.org/navigation>`_
+- `ROS 2 Navigation Stack GitHub <https://github.com/ros-navigation/navigation2>`_
 - `URDF Tutorials and Examples <http://wiki.ros.org/urdf/Tutorials>`_
 
---------
+----
 
 .. note::
+
    This documentation is maintained by the Ubiquity Robotics simulation team. 
    For updates and contributions, please refer to the official repositories and documentation channels.
