@@ -13,7 +13,7 @@ What is the Raspberry Pi 5?
 
 The Rasbperry Pi 5 is the smart brain inside your Magni 6 Robots. 
 It's a tiny computer that helps them move and think. 
-With fast processor, up to 8GB of memory, and a preloaded SD card with our latest image, it can run ROS 2, EZ-MAP, and other future software that we will be developing.
+With fast processor, up to 8GB of memory, and a preloaded SD card with our latest image, it can run ROS 2, EZ-Map, and other future software that we will be developing.
 
 Raspberry Pi 5 Pinout
 #####################
