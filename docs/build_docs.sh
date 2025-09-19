@@ -53,7 +53,7 @@ touch "$GH_DIR/.nojekyll"
 
 # write CNAME if using custom domain
 if [ -n "$CUSTOM_DOMAIN" ]; then
-    echo "$CUSTOM_DOMAIN" > "$GH_DIR/CNAME"
+    echo "$REPO_NAME.$CUSTOM_DOMAIN" > "$GH_DIR/CNAME"
 fi
 
 # dynamically generate index.html with redirect
