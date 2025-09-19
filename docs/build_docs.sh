@@ -80,6 +80,7 @@ EOF
 cat > "$GH_DIR/README.md" <<EOF
 # Ubiquity Robotics Documentation
 The content in this branch is what gets deployed to the live website.
+**DO NOT MANUALLY CHANGE ANYTHING HERE** without consulting the main repository maintainer.
 
 ## Structure
 - The main landing page is at `index.html` in the root, which redirects to the latest documentation version.
@@ -88,7 +89,6 @@ The content in this branch is what gets deployed to the live website.
 
 ## Build Process
 The documentation is automatically built and deployed by the `build_docs.sh` script, which pushes updates to the `gh-pages` branch.
-
 EOF
 
 # commit & push
