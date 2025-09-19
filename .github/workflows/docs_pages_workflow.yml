@@ -30,8 +30,7 @@ jobs:
         OWNER: ${{ github.repository_owner }}
         # preappend the repo name to the custom domain so we have the deploy properly
          # NOTE: The domain name will be added in secrets
-          
-        # CUSTOM_DOMAIN: ${{ github.repository_name }}.${{ secrets.CUSTOM_DOMAIN }}
+        CUSTOM_DOMAIN: ${{ github.repository_name }}.${{ secrets.CUSTOM_DOMAIN }}
       run: |
         # Go to repo root
         cd ${{ github.workspace }}
