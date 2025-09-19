@@ -22,7 +22,6 @@ source venv/bin/activate
 CURRENT_BRANCH=${CURRENT_BRANCH:-$(git rev-parse --abbrev-ref HEAD)}
 ALL_VERSIONS=${ALL_VERSIONS:-$CURRENT_BRANCH}
 REPO_NAME="${GITHUB_REPOSITORY##*/}"
-LATEST_VERSION="jazzy"
 
 # prepare build directories
 BUILD_DIR=$(mktemp -d)
@@ -60,7 +59,7 @@ fi
 if [ -n "$CUSTOM_DOMAIN" ]; then
     REDIRECT_PATH="/${LATEST_VERSION}/"
 else
-    REDIRECT_PATH="/${LATEST_VERSION}/"
+    REDIRECT_PATH="/${REPO_NAME}/${LATEST_VERSION}/"
 fi
 
 cat > "$GH_DIR/index.html" <<EOF

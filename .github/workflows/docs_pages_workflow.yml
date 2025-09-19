@@ -24,15 +24,12 @@ jobs:
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         GITHUB_REF_NAME: ${{ github.ref_name }}
-        GITHUB_REPOSITORY: ${{ github.repository }}
+        GITHUB_REPOSITORY: ${{ github.repository }} # github.repository_name does not exists as a variable, repo name has to be parsed from here.
         GITHUB_ACTOR: ${{ github.actor }}
-        REPO_NAME: ${{ github.repository_name }}
         OWNER: ${{ github.repository_owner }}
-        CUSTOM_DOMAIN: ${{ secrets.CUSTOM_DOMAIN }}
-        # preappend the repo name to the custom domain so we have the deploy properly
-         # NOTE: The domain name will be added in secrets
-          
-        # CUSTOM_DOMAIN: ${{ github.repository_name }}.${{ secrets.CUSTOM_DOMAIN }}
+        CUSTOM_DOMAIN: ${{ secrets.CUSTOM_DOMAIN }} # CUSTOM DOMAIN WRITTEN IN GITHUB SECRETS
+        LATEST_VERSION: ${{ secrets.LATEST_VERSION }} # The latest version of the documentation written in github secrets.
+
       run: |
         # Go to repo root
         cd ${{ github.workspace }}
