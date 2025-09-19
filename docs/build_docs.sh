@@ -60,7 +60,7 @@ fi
 if [ -n "$CUSTOM_DOMAIN" ]; then
     REDIRECT_PATH="/${LATEST_VERSION}/"
 else
-    REDIRECT_PATH="/${REPO_NAME}/${LATEST_VERSION}/"
+    REDIRECT_PATH="/${LATEST_VERSION}/"
 fi
 
 cat > "$GH_DIR/index.html" <<EOF
