@@ -5,6 +5,7 @@
 # Author: Paveljolak
 # Project: Ubiquity Robotics Documentation
 # Date: Sep 2, 2025
+# Updated: Sep 19, 2025 
 
 set -e
 set -x
@@ -75,6 +76,26 @@ cat > "$GH_DIR/index.html" <<EOF
 </body>
 </html>
 EOF
+
+cat > "$GH_DIR/README.md" <<EOF
+    # Ubiquity Robotics Documentation
+
+    This branch ('gh-pages') is for deploying the website to GitHub Pages.
+    **Do not manually change anything here** without consulting to the main repository maintainer.
+
+    The content in this branch is what gets deployed to the live website.
+
+    ## Structure
+    - The main landing page is at `index.html` in the root, which redirects to the latest documentation version.
+    - The latest version is \`${LATEST_VERSION}\`, served from the folder \`${LATEST_VERSION}/\`. 
+    - Other versions are stored in their own folders (e.g., \`/version-name/\`), each with its own `index.html`.
+
+    ## Build Process
+    The documentation is automatically built and deployed by the `build_docs.sh` script, which pushes updates to the `gh-pages` branch.
+
+EOF
+
+
 
 
 # commit & push
