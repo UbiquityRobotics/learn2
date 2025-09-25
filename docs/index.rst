@@ -88,7 +88,6 @@ Sections
 
    ez_map/ez_map_intro
    ez_map/ez_map_guide
-   ez_map/ez_map_advanced
 
 .. _troubleshooting:
 
@@ -99,7 +98,6 @@ Sections
    troubleshooting/hardware/lidars
    troubleshooting/hardware/rpi
    troubleshooting/hardware/pi_camera
-   troubleshooting/hardware/sonars
 
 
 

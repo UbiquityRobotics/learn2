@@ -77,21 +77,21 @@ Before powering on, check all components are included and undamaged.
 
 - Motor Controller Board
 
-.. image:: /_static/unboxing/MCB.jpg
-        :alt: Magni 6 Mini Motor Controller Board
-        :width: 400px
-        :align: center 
+  .. image:: /_static/unboxing/MCB.jpg
+      :alt: Magni 6 Mini Motor Controller Board
+      :width: 400px
+      :align: center 
 
 |
 
 - PCB Connector 
 
-**IMAGE CONTENT INCOMING**
+  .. image:: /_static/unboxing/Custom_PCB.jpg
+        :alt: Magni 6 Mini PCB Connecter
+        :width: 400px
+        :align: center 
 
-.. .. image:: /_static/unboxing/.jpg
-..         :alt: Magni 6 Mini PCB Connecter
-..         :width: 400px
-..         :align: center 
+|
 
 - Raspberry Pi 
 
@@ -109,9 +109,9 @@ Before powering on, check all components are included and undamaged.
 
 |
 
-- All the necessary wires, listed in the images bellow.
+- All the necessary wires
 
-**IMAGE CONTENT INCOMING**
+**Coming soon**: picture of wire harness 
 
 .. .. image:: /_static/unboxing/.jpg
 ..     :alt: Magni 6 Mini Wires
@@ -134,9 +134,9 @@ Before powering on, check all components are included and undamaged.
 
 Watch this video for a visual guide on checking component connections and condition after unboxing:
 
-**VIDEO CONTENT INCOMING**
-
 .. TODO: Create a video for the check above, also add pictures there.
+
+**Coming soon**: step-by-step guide of how to check the condition of the robot.
 
 | 
 
@@ -387,8 +387,6 @@ The wires should be connected like this:
 
 .. TODO: Add image of the wiring.
 
-**IMAGE CONTENT INCOMING**
-
 .. image:: /_static/unboxing/wire_harness.png
     :alt: Wiring Harnesss
     :width: 600px
@@ -396,11 +394,11 @@ The wires should be connected like this:
 
 |
 
-You can follow the following video for exact step-by-step guide of adding the batteries inside the robot:
-
-**VIDEO CONTENT INCOMING**
+.. You can follow the following video for exact step-by-step guide of adding the batteries inside the robot:
 
 .. TODO: Video of adding the batteries inside the robot after unboxing.
+
+**Coming soon**: step-by-step video guide for adding the batteries to the robot coming soon.
 
 3. Charging
 -----------
@@ -408,8 +406,6 @@ You can follow the following video for exact step-by-step guide of adding the ba
 - Use a multimeter to confirm voltage. Keep the batteries always charged.
 
 .. TODO: Image of the voltage of the batteries. 
-
-**IMAGE CONTENT INCOMING**
 
 .. .. image:: /_static/unboxing/.jpg
 ..     :alt: Checking the batteries voltage inside the Robot
@@ -422,8 +418,6 @@ You can follow the following video for exact step-by-step guide of adding the ba
 
 .. TODO: Add the image for charging the robot with provided charger here.
 
-**IMAGE CONTENT INCOMING**
-
 ..     .. image:: /_static/unboxing/.jpg
 ..        :alt: Charging the batteries inside the Robot 
 ..        :width: 400px
@@ -431,9 +425,9 @@ You can follow the following video for exact step-by-step guide of adding the ba
 .. |
 ..
 
-You can follow the following video for exact step-by-step guide of charging the batteries inside the robot or manually:
+.. You can follow the following video for exact step-by-step guide of charging the batteries inside the robot or manually:
 
-**VIDEO CONTENT INCOMING**
+**Coming soon**: step-by-step guide for charging batteries inside the robot.
 
 ..  TODO: Video of charging the batteries inside the robot.
 
@@ -465,11 +459,12 @@ Powering On
 |
 
 
-You can follow the following video for exact step-by-step guide of powering on the robot. 
-
-**VIDEO CONTENT INCOMING**
+.. You can follow the following video for exact step-by-step guide of powering on the robot. 
 
 ..  TODO: Video of powering on the robot.
+
+**Coming soon**: step-by-step guide for powering on the robot.
+
 
 |
 
