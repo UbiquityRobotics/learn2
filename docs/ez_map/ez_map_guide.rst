@@ -537,13 +537,17 @@ This trigger setup allows you to manually drive the robot into a room so it sees
 
    Currently, the robot does **NOT** perform global initial localization, so it should be positioned and oriented near the map's starting point/origin for best results.
 
+.. TODO: Add the global trigger video tutorial here. 
 
-**INCOMING GLOBAL TRIGGER VIDEO CONTENT**
-
+**Coming soon:** global trigger step-by-step video tutorial.
 
 Next Steps
 ##########
 
-To contribute to EZ-Map or customize it for your own configurations, continue to the advanced guide:
+To contribute to EZ-Map or customize it for your own configuration, reach out to us at `Ubiquity Robotics support <support@ubiquityrobotics.com>`_. 
 
-See :doc:`./ez_map_advanced`.
+.. TODO: Uncomment this when the advanced guide is out. 
+
+.. To contribute to EZ-Map or customize it for your own configurations, continue to the advanced guide:
+
+.. See :doc:`./ez_map_advanced`.

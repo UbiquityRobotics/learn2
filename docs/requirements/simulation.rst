@@ -22,6 +22,15 @@ Robot Specifications
 Physical Characteristics
 ------------------------
 
+.. important::
+
+   The physical specifications in this simulation guide are based on a Magni 5 series. 
+   However, our latest generation is the Magni 6 series, and the remainder of this documentation focuses on Magni 6. 
+
+   Information about Magni 5 is limited. 
+   For additional details, please contact: `Ubiquity Robotics support <support@ubiquityrobotics.com>`_. 
+
+
 .. table:: Physical Specifications
    :widths: 30 70
 
@@ -31,7 +40,7 @@ Physical Characteristics
    Drive System               Differential drive with 2 wheels
    Payload Capacity           Up to 100 kg
    Chassis                    Aerospace-grade aluminum construction
-   Motors                     2 × 200W hub motors
+   Motors                     2 x 200W hub motors
    Power Supply               12V and 5V outputs (10A each)
    Battery                    Up to 35 Amp hours of 24V batteries
    Operating Time             Up to 8 hours of normal operation

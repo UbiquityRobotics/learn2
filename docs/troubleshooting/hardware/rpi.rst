@@ -25,111 +25,111 @@ Raspberry Pi 5 Pinout
 
 |
  
-GPIO Lines Required by Magni Robots
-###################################
+.. GPIO Lines Required by Magni Robots
+.. ###################################
 
-Magni 6 Mini
-------------
+.. Magni 6 Mini
+.. ------------
 
-.. note:: 
+.. .. note:: 
 
-    The following table has placeholders for now. It will be updated in due time.
+..     The following table has placeholders for now. It will be updated in due time.
 
-**TABLE CONTENT INCOMING**
+.. **TABLE CONTENT INCOMING**
 
-.. TODO: Fill the table with proper values.
+.. .. TODO: Fill the table with proper values.
 
-+-------------------+-----------------------------------+
-| Feature           | Details                           |
-+===================+===================================+
-| 3.3V              | Gives a small power boost         |
-+-------------------+-----------------------------------+
-| 5V                | Gives a bigger power boost        |
-+-------------------+-----------------------------------+
-| GND               | Acts as a safety ground wire      |
-+-------------------+-----------------------------------+
-| [Pin X]           | [Controls something, e.g., motor] |
-+-------------------+-----------------------------------+
-| [Pin Y]           | [Reads something, e.g., sensor]   |
-+-------------------+-----------------------------------+
-| [Pin Z]           | [Does something, e.g., signal]    |
-+-------------------+-----------------------------------+
+.. +-------------------+-----------------------------------+
+.. | Feature           | Details                           |
+.. +===================+===================================+
+.. | 3.3V              | Gives a small power boost         |
+.. +-------------------+-----------------------------------+
+.. | 5V                | Gives a bigger power boost        |
+.. +-------------------+-----------------------------------+
+.. | GND               | Acts as a safety ground wire      |
+.. +-------------------+-----------------------------------+
+.. | [Pin X]           | [Controls something, e.g., motor] |
+.. +-------------------+-----------------------------------+
+.. | [Pin Y]           | [Reads something, e.g., sensor]   |
+.. +-------------------+-----------------------------------+
+.. | [Pin Z]           | [Does something, e.g., signal]    |
+.. +-------------------+-----------------------------------+
 
-Magni 6 Medi
-------------
+.. Magni 6 Medi
+.. ------------
 
-.. note:: 
+.. .. note:: 
 
-    The following table has placeholders for now. It will be updated in due time.
+..     The following table has placeholders for now. It will be updated in due time.
 
-**TABLE CONTENT INCOMING**
-
-
-.. TODO: Fill the table with proper values.
-
-+-------------------+--------------------------------+
-| Feature           | Details                        |
-+===================+================================+
-| 3.3V              | Gives a small power boost      |
-+-------------------+--------------------------------+
-| 5V                | Gives a bigger power boost     |
-+-------------------+--------------------------------+
-| GND               | Acts as a safety ground wire   |
-+-------------------+--------------------------------+
-| [Pin M]           | [Controls something, e.g., arm]|
-+-------------------+--------------------------------+
-| [Pin N]           | [Reads something, e.g., move]  |
-+-------------------+--------------------------------+
-| [Pin P]           | [Does something, e.g., feature]|
-+-------------------+--------------------------------+
+.. **TABLE CONTENT INCOMING**
 
 
-GPIO Lines for Customazation
-############################
+.. .. TODO: Fill the table with proper values.
 
-Magni 6 Mini - Customazation Lines
-----------------------------------
-
-.. note:: 
-
-    The following table has placeholders for now. It will be updated in due time.
-
-**TABLE CONTENT INCOMING**
-
-
-.. TODO: Fill the table with proper values.
-
-+-------------------+--------------------------------+
-| Feature           | Details                        |
-+===================+================================+
-| [Pin A]           | [Add something, (light)]       |
-+-------------------+--------------------------------+
-| [Pin B]           | [Use for something, (button)]  |
-+-------------------+--------------------------------+
-| [Pin C]           | [Try something, (sensor)]      |
-+-------------------+--------------------------------+
-
-Magni 6 Medi - Customazation Lines
-----------------------------------
-
-.. note:: 
-
-    The following table has placeholders for now. It will be updated in due time.
-
-**TABLE CONTENT INCOMING**
+.. +-------------------+--------------------------------+
+.. | Feature           | Details                        |
+.. +===================+================================+
+.. | 3.3V              | Gives a small power boost      |
+.. +-------------------+--------------------------------+
+.. | 5V                | Gives a bigger power boost     |
+.. +-------------------+--------------------------------+
+.. | GND               | Acts as a safety ground wire   |
+.. +-------------------+--------------------------------+
+.. | [Pin M]           | [Controls something, e.g., arm]|
+.. +-------------------+--------------------------------+
+.. | [Pin N]           | [Reads something, e.g., move]  |
+.. +-------------------+--------------------------------+
+.. | [Pin P]           | [Does something, e.g., feature]|
+.. +-------------------+--------------------------------+
 
 
-.. TODO: Fill the table with proper values.
+.. GPIO Lines for Customazation
+.. ############################
 
-+-------------------+--------------------------------+
-| Feature           | Details                        |
-+===================+================================+
-| [Pin D]           | [Add something, (display)]     |
-+-------------------+--------------------------------+
-| [Pin E]           | [Use for something, (switch)]  |
-+-------------------+--------------------------------+
-| [Pin F]           | [Try something, (gadget)]      |
-+-------------------+--------------------------------+
+.. Magni 6 Mini - Customazation Lines
+.. ----------------------------------
+
+.. .. note:: 
+
+..     The following table has placeholders for now. It will be updated in due time.
+
+.. **TABLE CONTENT INCOMING**
+
+
+.. .. TODO: Fill the table with proper values.
+
+.. +-------------------+--------------------------------+
+.. | Feature           | Details                        |
+.. +===================+================================+
+.. | [Pin A]           | [Add something, (light)]       |
+.. +-------------------+--------------------------------+
+.. | [Pin B]           | [Use for something, (button)]  |
+.. +-------------------+--------------------------------+
+.. | [Pin C]           | [Try something, (sensor)]      |
+.. +-------------------+--------------------------------+
+
+.. Magni 6 Medi - Customazation Lines
+.. ----------------------------------
+
+.. .. note:: 
+
+..     The following table has placeholders for now. It will be updated in due time.
+
+.. **TABLE CONTENT INCOMING**
+
+
+.. .. TODO: Fill the table with proper values.
+
+.. +-------------------+--------------------------------+
+.. | Feature           | Details                        |
+.. +===================+================================+
+.. | [Pin D]           | [Add something, (display)]     |
+.. +-------------------+--------------------------------+
+.. | [Pin E]           | [Use for something, (switch)]  |
+.. +-------------------+--------------------------------+
+.. | [Pin F]           | [Try something, (gadget)]      |
+.. +-------------------+--------------------------------+
 
 Advanced Users Section
 ######################
