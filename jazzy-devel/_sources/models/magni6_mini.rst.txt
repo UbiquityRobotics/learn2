@@ -58,8 +58,8 @@ The Magni 6 Mini is engineered for efficiency and compactness. Below are its cor
 **Feature**             **Specification**
 ======================  =================================
 Dimensions              245 mm x 222 mm x 198 mm
-Weight (no batteries)
-Weight (two batteries)  10kg
+Weight (no batteries)   ~2.3 kg
+Weight (two batteries)  ~5.3 kg
 Frame                   Metal Chasis
 Wheels                  Motor Wheel Controllers
 Motor Control           Custom Magni 6 Motor Controller

@@ -124,7 +124,7 @@ The application contains a collection of sub-menus and actions represented by ic
 The icons should always be visible somewhere in the application interface, however, their size and location may differ depending on the screen orientation.
 Since the design of EZ-Map is modular, these can be added or removed, or even custom ones can be written.
 
-To see more on how to add these buttons visit: :doc:`./ez_map_advanced`.
+.. To see more on how to add these buttons visit: :doc:`./ez_map_advanced`.
 
 .. image:: /_static/ez_map/icons/viewswitch_landscape.svg
    :alt: EZ-Map - View Swap button
@@ -218,14 +218,16 @@ The robot can be driven around using the joysticks which show up by default, see
 
 .. TODO: Add the image of the video stream. 
 
-**IMAGE INCOMING**
+**Coming soon**: image content for the video stream.
 
-.. image:: /_static/ez_map/ezmap_video_stream.png
-   :alt: EZ-Map - video stream
-   :align: center
-   :width: 400px
+.. **IMAGE INCOMING**
 
-|
+.. .. image:: /_static/ez_map/ezmap_video_stream.png
+..    :alt: EZ-Map - video stream
+..    :align: center
+..    :width: 400px
+
+.. |
 
 .. note:: 
 
