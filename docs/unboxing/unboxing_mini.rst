@@ -184,8 +184,8 @@ Pay close attention to its orientation.
 
   <div class="rst-content">
     <div style="display: flex; gap: 10px;">
-      <img src="/learn2/jazzy-devel/_static/unboxing/batteries_adding_first_one1.png" alt="Adding first battery to the robot upper pic 1." style="width: 50%; height: auto;">
-      <img src="/learn2/jazzy-devel/_static/unboxing/batteries_adding_first_one2.png" alt="Adding first battery to the robot upper pic 2." style="width: 50%; height: auto;">
+      <img src="/jazzy-devel/_static/unboxing/batteries_adding_first_one1.png" alt="Adding first battery to the robot upper pic 1." style="width: 50%; height: auto;">
+      <img src="/jazzy-devel/_static/unboxing/batteries_adding_first_one2.png" alt="Adding first battery to the robot upper pic 2." style="width: 50%; height: auto;">
     </div>
   </div>
 
@@ -195,8 +195,8 @@ Pay close attention to its orientation.
 
   <div class="rst-content">
     <div style="display: flex; gap: 10px;">
-      <img src="/learn2/jazzy-devel/_static/unboxing/batteries_adding_first_one3.png" alt="Adding first battery to the robot lower pic 1." style="width: 50%; height: auto;">
-      <img src="/learn2/jazzy-devel/_static/unboxing/batteries_adding_first_one4.png" alt="Adding first battery to the robot lower pic 2." style="width: 50%; height: auto;">
+      <img src="/jazzy-devel/_static/unboxing/batteries_adding_first_one3.png" alt="Adding first battery to the robot lower pic 1." style="width: 50%; height: auto;">
+      <img src="/jazzy-devel/_static/unboxing/batteries_adding_first_one4.png" alt="Adding first battery to the robot lower pic 2." style="width: 50%; height: auto;">
     </div>
   </div>
 
@@ -211,8 +211,8 @@ Use the BATTERY HOLDER to secure the second BATTERY in the BASE as shown in the 
 
   <div class="rst-content">
     <div style="display: flex; gap: 10px;">
-      <img src="/learn2/jazzy-devel/_static/unboxing/batteries_adding_second_one1.png" alt="Adding second battery to the robot with battery holder pic 1." style="width: 45%; height: auto;">
-      <img src="/learn2/jazzy-devel/_static/unboxing/batteries_adding_second_one2.png" alt="Adding second battery to the robot with battery holder pic 2." style="width: 55%; height: auto;">
+      <img src="/jazzy-devel/_static/unboxing/batteries_adding_second_one1.png" alt="Adding second battery to the robot with battery holder pic 1." style="width: 45%; height: auto;">
+      <img src="/jazzy-devel/_static/unboxing/batteries_adding_second_one2.png" alt="Adding second battery to the robot with battery holder pic 2." style="width: 55%; height: auto;">
     </div>
   </div>
 
@@ -243,8 +243,8 @@ Attach the yellow-green wire: red connector to the RED spade of the first batter
 
   <div class="rst-content">
     <div style="display: flex; gap: 10px;">
-      <img src="/learn2/jazzy-devel/_static/unboxing/batteries_connecting_in_series.png" alt="Connecting the batteries in series pic 1." style="width: 50%; height: auto;">
-      <img src="/learn2/jazzy-devel/_static/unboxing/batteries_connected_in_series.png" alt="Connecting the batteries in series pic 2." style="width: 50%; height: 50%">
+      <img src="/jazzy-devel/_static/unboxing/batteries_connecting_in_series.png" alt="Connecting the batteries in series pic 1." style="width: 50%; height: auto;">
+      <img src="/jazzy-devel/_static/unboxing/batteries_connected_in_series.png" alt="Connecting the batteries in series pic 2." style="width: 50%; height: 50%">
     </div>
   </div>
 
@@ -260,8 +260,8 @@ Press it in firmly.
 
   <div class="rst-content">
     <div style="display: flex; gap: 10px;">
-      <img src="/learn2/jazzy-devel/_static/unboxing/wire_harness_connector_for_battery1.png" alt="Wire harness with shown black connector." style="width: 50%; height: auto;">
-      <img src="/learn2/jazzy-devel/_static/unboxing/batteries_wires_connected_to_first_battery.png" alt="Connecting the wires to the batteries." style="width: 50%; height: auto;">
+      <img src="/jazzy-devel/_static/unboxing/wire_harness_connector_for_battery1.png" alt="Wire harness with shown black connector." style="width: 50%; height: auto;">
+      <img src="/jazzy-devel/_static/unboxing/batteries_wires_connected_to_first_battery.png" alt="Connecting the wires to the batteries." style="width: 50%; height: auto;">
     </div>
   </div>
 
@@ -276,8 +276,8 @@ Grab the only free black female spade connector and attach it to the GND pin on 
 
   <div class="rst-content">
     <div style="display: flex; gap: 10px;">
-      <img src="/learn2/jazzy-devel/_static/unboxing/wire_harness_connector_for_MCB2.png" alt="Wire black connector with green circle." style="width: 55%; height: auto;">
-      <img src="/learn2/jazzy-devel/_static/unboxing/MCB_wire_harness_connected_to_MCB.png" alt="Wire black connector added to the MCB with green circle." style="width: 45%; height: auto;">
+      <img src="/jazzy-devel/_static/unboxing/wire_harness_connector_for_MCB2.png" alt="Wire black connector with green circle." style="width: 55%; height: auto;">
+      <img src="/jazzy-devel/_static/unboxing/MCB_wire_harness_connected_to_MCB.png" alt="Wire black connector added to the MCB with green circle." style="width: 45%; height: auto;">
     </div>
   </div>
 
@@ -300,8 +300,8 @@ Attach the short RED spade connector to the positive battery pin (green circle).
 
   <div class="rst-content">
     <div style="display: flex; gap: 10px;">
-      <img src="/learn2/jazzy-devel/_static/unboxing/wire_harness_connector_for_battery2.png" alt="Wires with green and yellow circle." style="width: 50%; height: auto;">
-      <img src="/learn2/jazzy-devel/_static/unboxing/batteries_wires_connected_to_second_battery.png" alt="Wires connected to the battery with yellow and green circle. " style="width: 50%; height: auto;">
+      <img src="/jazzy-devel/_static/unboxing/wire_harness_connector_for_battery2.png" alt="Wires with green and yellow circle." style="width: 50%; height: auto;">
+      <img src="/jazzy-devel/_static/unboxing/batteries_wires_connected_to_second_battery.png" alt="Wires connected to the battery with yellow and green circle. " style="width: 50%; height: auto;">
     </div>
   </div>
 
@@ -317,8 +317,8 @@ Attach the remaining red spade connector to the upper pin of the ON/OFF switch.
 
   <div class="rst-content">
     <div style="display: flex; gap: 10px;">
-      <img src="/learn2/jazzy-devel/_static/unboxing/wire_harness_connector_for_switch.png" alt="Rest of the wires with green circle." style="width: 55%; height: auto;">
-      <img src="/learn2/jazzy-devel/_static/unboxing/switch_spade_connector_for_wire.png" alt="ON/OFF SWITCH with green circle for upper spade connector." style="width: 45%; height: auto;">
+      <img src="/jazzy-devel/_static/unboxing/wire_harness_connector_for_switch.png" alt="Rest of the wires with green circle." style="width: 55%; height: auto;">
+      <img src="/jazzy-devel/_static/unboxing/switch_spade_connector_for_wire.png" alt="ON/OFF SWITCH with green circle for upper spade connector." style="width: 45%; height: auto;">
     </div>
   </div>
 
@@ -333,8 +333,8 @@ Attach the split connector (yellow circle) to the bottom pin of the ON/OFF SWITC
 
   <div class="rst-content">
     <div style="display: flex; gap: 10px;">
-      <img src="/learn2/jazzy-devel/_static/unboxing/wire_harness_connector_for_lower_spade_on_switch.png" alt="Second wire harness with green circle.." style="width: 55%; height: auto;">
-      <img src="/learn2/jazzy-devel/_static/unboxing/switch_lower_spade.png" alt="ON/OFF SWITCH with green circle for lower spade connector." style="width: 45%; height: auto;">
+      <img src="/jazzy-devel/_static/unboxing/wire_harness_connector_for_lower_spade_on_switch.png" alt="Second wire harness with green circle.." style="width: 55%; height: auto;">
+      <img src="/jazzy-devel/_static/unboxing/switch_lower_spade.png" alt="ON/OFF SWITCH with green circle for lower spade connector." style="width: 45%; height: auto;">
     </div>
   </div>
 
