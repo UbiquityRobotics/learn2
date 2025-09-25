@@ -107,6 +107,8 @@ Before powering on, check all components are included and undamaged.
         :width: 400px
         :align: center 
 
+|
+
 - All the necessary wires, listed in the images bellow.
 
 **IMAGE CONTENT INCOMING**
@@ -375,7 +377,6 @@ Ensure all spade connectors are firmly attached. Route wires as shown.
     :width: 400px
     :align: center
 
-
 ----- 
 
 .. warning::
@@ -388,12 +389,12 @@ The wires should be connected like this:
 
 **IMAGE CONTENT INCOMING**
 
-.. .. image:: /_static/unboxing/wiring.jpg
-..     :alt: Wiring Harnesss
-..     :width: 400px
-..     :align: center
+.. image:: /_static/unboxing/wire_harness.png
+    :alt: Wiring Harnesss
+    :width: 600px
+    :align: center
 
-.. |
+|
 
 You can follow the following video for exact step-by-step guide of adding the batteries inside the robot:
 
