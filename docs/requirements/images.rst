@@ -26,7 +26,7 @@ Raspberry Pi Images
 ================ ============================
 **OS Version**   Ubuntu 24.04.2 LTS 
 **ROS 2**        Jazzy
-**Architecture** [Architecture to be added]
+**Architecture** ARM                             
 **SHA256 Sum**   [SHA to be added]
 **Status**       **Latest**
 **Firmware**     [Firmware to be added]
@@ -50,7 +50,7 @@ Image Bugs and Contributions
 The current image is tested and considered stable.
 If you encounter bugs or issues, please:
 
-- File a `GitHub Issue <https://github.com/UbiquityRobotics/rpi-image-gen>`_
+- File a `GitHub Issue <https://github.com/UbiquityRobotics/rpi-image-gen/issues/new>`_
 - Or contact us via email: `support@ubiquityrobotics.com <mailto:support@ubiquityrobotics.com>`_.
 
 

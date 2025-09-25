@@ -22,7 +22,7 @@ Explore the Magni 6 Mini in action with this video demonstration:
     <div style="display: flex; justify-content: center;"> 
         <iframe 
             width="560" height="315" 
-            src="https://www.youtube.com/embed/dL5KSdB5WjE" 
+            src="https://www.youtube.com/embed/Iw3Y6vlf8M0" 
             frameborder="0" 
             allowfullscreen 
             referrerpolicy="no-referrer-when-downgrade">
