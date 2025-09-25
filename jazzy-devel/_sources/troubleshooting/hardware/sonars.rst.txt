@@ -1,7 +1,0 @@
-Sonars
-======
-
-**SONARS ARE PLANNED FUTURE FEATURE. 
-THIS PAGE WILL BE UPDATED ONCE THE FEATURE IS IMPLEMENTED.**
-
-**FOR SPECIFIC INQUIRES, PLEASE CONTACT US:** `Ubiquity Robotics support <support@ubiquityrobotics.com>`_

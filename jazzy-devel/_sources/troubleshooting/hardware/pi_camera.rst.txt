@@ -35,7 +35,7 @@ If you want to switch to the standard camera module and run into trouble with th
 How to use?
 ###########
 
-**CONTENT REGARDING CAMERA USAGE INCOMING**
+**Coming soon:** step-by-step video tutorial and written guide regarding camera usage.
 
 .. TODO: This section will be written once we have the camera working on the Mini's.
 .. TODO: How to take turn it on, how to record videos, how to save them, how to adjust settings.

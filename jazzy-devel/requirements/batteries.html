@@ -68,11 +68,6 @@
 <li class="toctree-l3"><a class="reference internal" href="#charging-with-power-supply">Charging with Power Supply</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#typical-current-draw">Typical Current Draw</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#typical-current-draw-for-mini">Typical Current Draw for Mini</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#typical-current-draw-for-midi">Typical Current Draw for Midi</a></li>
-</ul>
-</li>
 <li class="toctree-l2"><a class="reference internal" href="#capacity-and-aging">Capacity and Aging</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#charge-capacity-reference-table">Charge Capacity Reference Table</a></li>
 </ul>
@@ -98,14 +93,12 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../ez_map/ez_map_intro.html">Introduction to EZ-Map</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../ez_map/ez_map_guide.html">EZ-Map Guide</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../ez_map/ez_map_advanced.html">EZ-Map Advanced Guide</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Troubleshooting</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../troubleshooting/hardware/lidars.html">LiDAR Sensors</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../troubleshooting/hardware/rpi.html">Raspberry Pi 5</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../troubleshooting/hardware/pi_camera.html">Pi Camera 3 Module</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../troubleshooting/hardware/sonars.html">Sonars</a></li>
 </ul>
 
         </div>
@@ -161,40 +154,48 @@ These batteries are safe, maintanance-free, and don’t leak, making them ideal 
 <p>Recommendation for batteries:</p>
 <section id="magni-6-mini">
 <h3>Magni 6 Mini<a class="headerlink" href="#magni-6-mini" title="Link to this heading"></a></h3>
+<p>The recommended batteries for <strong>Magni 6 Mini are two identical 12V ~5Ah Sealed Lead Acid batteries</strong>.</p>
 <div class="admonition important">
 <p class="admonition-title">Important</p>
 <p>This list of equivalent batteries was written from an internet search.
 It is not exaustive, definitve, or the primary reference, but merely a sample of compatible options.</p>
 </div>
-<p>The recommended battery for Magni 6 Mini is Fiamm 12FGH23.</p>
-<a class="reference internal image-reference" href="../_images/battery_small.png"><img alt="Small Battery 12V ~5Ah" class="align-center" src="../_images/battery_small.png" style="width: 400px;" />
-</a>
 <p>Some equivalent batteries include:</p>
 <ul class="simple">
+<li><p>Fiamm 12FGH23</p></li>
 <li><p>Yuasa NP5-12</p></li>
 <li><p>PowerSonic PS-1250</p></li>
 <li><p>Universal Power UB1250</p></li>
 <li><p>CSB HR1221W F2</p></li>
 </ul>
+<a class="reference internal image-reference" href="../_images/battery_small.png"><img alt="Small Battery 12V ~5Ah" class="align-center" src="../_images/battery_small.png" style="width: 400px;" />
+</a>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
 <p>As noted earlier, this list is only a sample of compatible options and is not exhaustive or definitive.
 Additional batteries that meet the voltage, capacity, and size requirements will also work with the robot.</p>
 </section>
 <section id="magni-6-midi">
 <h3>Magni 6 Midi<a class="headerlink" href="#magni-6-midi" title="Link to this heading"></a></h3>
+<p>The recommended batteries for <strong>Magni 6 Midi are two identical 12V ~12Ah Lead Acid Batteries</strong>.</p>
 <div class="admonition important">
 <p class="admonition-title">Important</p>
 <p>This list of equivalent batteries was written from an internet search.
 It is not exaustive, definitve, or the primary reference, but merely a sample of compatible options.</p>
 </div>
-<p>The recommended battery for Magni 6 Midi is Fiamm FG21202.</p>
-<a class="reference internal image-reference" href="../_images/battery_medium.png"><img alt="Medium Battery 12V ~12Ah" class="align-center" src="../_images/battery_medium.png" style="width: 400px;" />
-</a>
 <p>Some equivalent batteries include:</p>
 <ul class="simple">
+<li><p>Fiamm FG21202.</p></li>
 <li><p>CSB GP12120</p></li>
 <li><p>Ritar RT12120</p></li>
 <li><p>Yuasa NP12-12 (2.5 mm higher than the rest)</p></li>
 </ul>
+<a class="reference internal image-reference" href="../_images/battery_medium.png"><img alt="Medium Battery 12V ~12Ah" class="align-center" src="../_images/battery_medium.png" style="width: 400px;" />
+</a>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
 <p>As noted earlier, this list is only a sample of compatible options and is not exhaustive or definitive.
 Additional batteries that meet the voltage, capacity, and size requirements will also work with the robot.</p>
 <hr class="docutils" />
@@ -207,8 +208,8 @@ Additional batteries that meet the voltage, capacity, and size requirements will
 <h3>Mini<a class="headerlink" href="#mini" title="Link to this heading"></a></h3>
 <table class="docutils align-default">
 <thead>
-<tr class="row-odd"><th class="head"><p>Feature</p></th>
-<th class="head"><p>Details</p></th>
+<tr class="row-odd"><th class="head"><p><strong>Feature</strong></p></th>
+<th class="head"><p><strong>Details</strong></p></th>
 </tr>
 </thead>
 <tbody>
@@ -216,7 +217,7 @@ Additional batteries that meet the voltage, capacity, and size requirements will
 <td><p>12V</p></td>
 </tr>
 <tr class="row-odd"><td><p>Capacity</p></td>
-<td><p>5Ah (20h rate)</p></td>
+<td><p>~5Ah (20h rate)</p></td>
 </tr>
 <tr class="row-even"><td><p>Terminals</p></td>
 <td><p>F2 (6.3mm)</p></td>
@@ -225,7 +226,7 @@ Additional batteries that meet the voltage, capacity, and size requirements will
 <td><p>90x70x101mm</p></td>
 </tr>
 <tr class="row-even"><td><p>Weight (approx.)</p></td>
-<td><p>1.65-2 kg</p></td>
+<td><p>1.65-2kg</p></td>
 </tr>
 </tbody>
 </table>
@@ -234,8 +235,8 @@ Additional batteries that meet the voltage, capacity, and size requirements will
 <h3>Midi<a class="headerlink" href="#midi" title="Link to this heading"></a></h3>
 <table class="docutils align-default">
 <thead>
-<tr class="row-odd"><th class="head"><p>Feature</p></th>
-<th class="head"><p>Details</p></th>
+<tr class="row-odd"><th class="head"><p><strong>Feature</strong></p></th>
+<th class="head"><p><strong>Details</strong></p></th>
 </tr>
 </thead>
 <tbody>
@@ -243,7 +244,7 @@ Additional batteries that meet the voltage, capacity, and size requirements will
 <td><p>12V</p></td>
 </tr>
 <tr class="row-odd"><td><p>Capacity</p></td>
-<td><p>12Ah (20hr rate)</p></td>
+<td><p>~12Ah (20h rate)</p></td>
 </tr>
 <tr class="row-even"><td><p>Terminals</p></td>
 <td><p>F2 (6.3mm)</p></td>
@@ -252,7 +253,7 @@ Additional batteries that meet the voltage, capacity, and size requirements will
 <td><p>151x98x95mm</p></td>
 </tr>
 <tr class="row-even"><td><p>Weight (approx.)</p></td>
-<td><p>3.8-4.0 kg</p></td>
+<td><p>3.8-4.0kg</p></td>
 </tr>
 </tbody>
 </table>
@@ -351,78 +352,6 @@ Higher current can be used for faster charging, but never exceed the manufacture
 </div>
 </section>
 </section>
-<section id="typical-current-draw">
-<h2>Typical Current Draw<a class="headerlink" href="#typical-current-draw" title="Link to this heading"></a></h2>
-<section id="typical-current-draw-for-mini">
-<h3>Typical Current Draw for Mini<a class="headerlink" href="#typical-current-draw-for-mini" title="Link to this heading"></a></h3>
-<p><strong>THE FOLLOWING INFORMATION IS PLANNED FOR FUTURE TESTING. FOR SPECIFIC INQUIRES:</strong> <a class="reference external" href="mailto:support&#37;&#52;&#48;ubiquityrobotics&#46;com">Ubiquity Robotics support</a>.</p>
-<table class="docutils align-default">
-<thead>
-<tr class="row-odd"><th class="head"><p>Operating State</p></th>
-<th class="head"><p>Current (Amps)</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="row-even"><td><p>Stationary, Pi4/Pi5 (4GB) only, motors off</p></td>
-<td><p>[to be tested]</p></td>
-</tr>
-<tr class="row-odd"><td><p>Driving, flat surface, ~0.5 m/s, no load</p></td>
-<td><p>[to be tested]</p></td>
-</tr>
-<tr class="row-even"><td><p>Rotating in place, no load</p></td>
-<td><p>[to be tested]</p></td>
-</tr>
-<tr class="row-odd"><td><p>Stationary, motors powered</p></td>
-<td><p>[to be tested]</p></td>
-</tr>
-<tr class="row-even"><td><p>Stationary, pushing wheels (fighting torque, no slipping)</p></td>
-<td><p>[to be tested]</p></td>
-</tr>
-<tr class="row-odd"><td><p>Locked wheels, applying strong torque</p></td>
-<td><p>[to be tested]</p></td>
-</tr>
-</tbody>
-</table>
-</section>
-<section id="typical-current-draw-for-midi">
-<h3>Typical Current Draw for Midi<a class="headerlink" href="#typical-current-draw-for-midi" title="Link to this heading"></a></h3>
-<p><strong>THE FOLLOWING INFORMATION IS PLANNED FOR FUTURE TESTING. FOR SPECIFIC INQUIRES:</strong> <a class="reference external" href="mailto:support&#37;&#52;&#48;ubiquityrobotics&#46;com">Ubiquity Robotics support</a>.</p>
-<table class="docutils align-default">
-<thead>
-<tr class="row-odd"><th class="head"><p>Operating State</p></th>
-<th class="head"><p>Current (Amps)</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="row-even"><td><p>Stationary, Pi4/Pi5 (4GB) only, motors off</p></td>
-<td><p>[to be tested]</p></td>
-</tr>
-<tr class="row-odd"><td><p>Driving, flat surface, ~0.5 m/s, no load</p></td>
-<td><p>[to be tested]</p></td>
-</tr>
-<tr class="row-even"><td><p>Rotating in place, no load</p></td>
-<td><p>[to be tested]</p></td>
-</tr>
-<tr class="row-odd"><td><p>Stationary, motors powered</p></td>
-<td><p>[to be tested]</p></td>
-</tr>
-<tr class="row-even"><td><p>Stationary, pushing wheels (fighting torque, no slipping)</p></td>
-<td><p>[to be tested]</p></td>
-</tr>
-<tr class="row-odd"><td><p>Locked wheels, applying strong torque</p></td>
-<td><p>[to be tested]</p></td>
-</tr>
-</tbody>
-</table>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<ul class="simple">
-<li><p>Instantaneous peaks can exceed 10A but are transient and not useful for battery.</p></li>
-<li><p>Driving uphill or with heavy loads increases draw further.</p></li>
-</ul>
-</div>
-</section>
-</section>
 <section id="capacity-and-aging">
 <h2>Capacity and Aging<a class="headerlink" href="#capacity-and-aging" title="Link to this heading"></a></h2>
 <div class="admonition important">
@@ -446,9 +375,9 @@ For storage longer than 3 weeks, <strong>disconnect at least one battery lead</s
 <h3>Charge Capacity Reference Table<a class="headerlink" href="#charge-capacity-reference-table" title="Link to this heading"></a></h3>
 <table class="docutils align-default">
 <thead>
-<tr class="row-odd"><th class="head"><p>Capacity</p></th>
-<th class="head"><p>24V System Voltage</p></th>
-<th class="head"><p>12V Battery</p></th>
+<tr class="row-odd"><th class="head"><p><strong>Capacity</strong></p></th>
+<th class="head"><p><strong>24V System Voltage</strong></p></th>
+<th class="head"><p><strong>12V Battery</strong></p></th>
 </tr>
 </thead>
 <tbody>

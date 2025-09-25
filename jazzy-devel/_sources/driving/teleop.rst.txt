@@ -9,7 +9,7 @@ To drive the robot using the terminal you must fulfill the following requirement
 
 .. TODO: Add video for this. 
 
-**VIDEO CONTENT INCOMING**
+**Coming soon:** step-by-step video tutorial.
 
 .. warning:: 
 
@@ -25,7 +25,7 @@ To drive the robot using the terminal you must fulfill the following requirement
     ros2 run teleop_twist_keyboard teleop_twist_keyboard --ros-args --remap cmd_vel:=mcb/cmd_vel
 
 
-**IMAGE CONTENT INCOMING**
+.. TODO: Add the image how the teleop looks like. 
 
 .. .. image:: /_static/magni-mini/getting_started/.jpg
 ..     :alt: Terminal with teleop shown
@@ -35,13 +35,11 @@ To drive the robot using the terminal you must fulfill the following requirement
 
 5. Focus the terminal and follow the teleop instructions to drive the robot. 
 
+..  TODO: Video of driving the robot. Once it is done, uncomment the line bellow and add the video.
 
-You can follow the next video for exact step-by-step guide of driving the robot through Teleop: 
+.. You can follow the next video for exact step-by-step guide of driving the robot through Teleop: 
 
-**VIDEO CONTENT INCOMING**
-
-..  TODO: Video of driving the robot.
-
+**Coming soon:** step-by-step video tutorial.
 
 ----
 

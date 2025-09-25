@@ -16,22 +16,16 @@ Each image is labeled according to its status:
 Raspberry Pi Images
 ###################
 
-.. important::
-
-    **THE ROS2 IMAGE IS STILL UNDER DEVELOPMENT. 
-    ONCE THE ROBOT IS AVAILABLE FOR REGULAR PURCHASE (NOT PREORDER), THE IMAGE WILL BE PUBLISHED AND LISTED IN THE TABLE BELOW.**
-
 ================ ============================
-**Download**     [Download Link to be added]
+**Download**     `2025-09-25-ubiquity-base-jazzy <https://ubiquity-pi-image.sfo2.cdn.digitaloceanspaces.com/ros2_20250925_6476.img.xz>`_
 ================ ============================
 **OS Version**   Ubuntu 24.04.2 LTS 
 **ROS 2**        Jazzy
-**Architecture** ARM                             
-**SHA256 Sum**   [SHA to be added]
+**Architecture** aarch64                             
+**SHA256 Sum**   9fadc8d4265fdc4082a916dacc1b09b0fda05acac605387a49017a1777046101
 **Status**       **Latest**
-**Firmware**     [Firmware to be added]
-**Notes**        [Notes to be added]
-**Changelog**    [Changelog to be added]
+**Notes**        Headless (no desktop)
+**Changelog**    Initial version for ROS2 Jazzy
 ================ ============================
 
 About the Pi Images

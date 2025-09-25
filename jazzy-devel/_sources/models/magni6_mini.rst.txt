@@ -54,17 +54,17 @@ Build Specifications
 
 The Magni 6 Mini is engineered for efficiency and compactness. Below are its core specifications:
 
-==================  ================================
-**Feature**         **Specification**
-==================  ================================
-Dimensions          245 mm x 222 mm x 198 mm
-Weight              10kg (including 1240 battery)
-Max Payload         [needs to be tested, around 10kg]
-Frame               Metal Chasis
-Wheels              Motor Wheel Controllers
-Motor Control       Custom Magni 6 Motor Controller
-Battery             1240 Battery
-==================  ================================
+======================  =================================
+**Feature**             **Specification**
+======================  =================================
+Dimensions              245 mm x 222 mm x 198 mm
+Weight (no batteries)
+Weight (two batteries)  10kg
+Frame                   Metal Chasis
+Wheels                  Motor Wheel Controllers
+Motor Control           Custom Magni 6 Motor Controller
+Battery                 Two 12V ~5Ah Lead Acid Batteries
+======================  =================================
 
 Sensors
 #######
@@ -78,9 +78,9 @@ It also has support for additional add-ons to expand functionality.
 
 **Supported Add-ons**:
     - :doc:`Second Raspberry Pi Camera <../troubleshooting/hardware/pi_camera>`
-    - :doc:`Sonars <../troubleshooting/hardware/sonars>`
+    .. - :doc:`Sonars <../troubleshooting/hardware/sonars>`
 
-.. TODO: Ask regarding the sonars.
+.. TODO: Uncomment the Sonars from the add-ons when they are added.
 
 .. note:: 
 

@@ -36,24 +36,27 @@ Recommendation for batteries:
 Magni 6 Mini
 ~~~~~~~~~~~~
 
+The recommended batteries for **Magni 6 Mini are two identical 12V ~5Ah Sealed Lead Acid batteries**.
+
 .. important:: 
 
     This list of equivalent batteries was written from an internet search. 
     It is not exaustive, definitve, or the primary reference, but merely a sample of compatible options.
 
-The recommended battery for Magni 6 Mini is Fiamm 12FGH23.
+Some equivalent batteries include:
+
+- Fiamm 12FGH23
+- Yuasa NP5-12
+- PowerSonic PS-1250
+- Universal Power UB1250
+- CSB HR1221W F2 
 
 .. image:: /_static/requirements/batteries/battery_small.png
    :alt: Small Battery 12V ~5Ah
    :width: 400px
    :align: center
 
-Some equivalent batteries include:
-
-- Yuasa NP5-12
-- PowerSonic PS-1250
-- Universal Power UB1250
-- CSB HR1221W F2 
+|
 
 As noted earlier, this list is only a sample of compatible options and is not exhaustive or definitive. 
 Additional batteries that meet the voltage, capacity, and size requirements will also work with the robot.
@@ -61,24 +64,26 @@ Additional batteries that meet the voltage, capacity, and size requirements will
 Magni 6 Midi
 ~~~~~~~~~~~~
 
+The recommended batteries for **Magni 6 Midi are two identical 12V ~12Ah Lead Acid Batteries**. 
+
 .. important:: 
 
     This list of equivalent batteries was written from an internet search. 
     It is not exaustive, definitve, or the primary reference, but merely a sample of compatible options.
 
-The recommended battery for Magni 6 Midi is Fiamm FG21202.
+Some equivalent batteries include:
+
+- Fiamm FG21202.
+- CSB GP12120 
+- Ritar RT12120 
+- Yuasa NP12-12 (2.5 mm higher than the rest)
 
 .. image:: /_static/requirements/batteries/battery_medium.png
    :alt: Medium Battery 12V ~12Ah
    :width: 400px
    :align: center
 
-Some equivalent batteries include:
-
-- CSB GP12120 
-- Ritar RT12120 
-- Yuasa NP12-12 (2.5 mm higher than the rest)
-
+|
 
 As noted earlier, this list is only a sample of compatible options and is not exhaustive or definitive. 
 Additional batteries that meet the voltage, capacity, and size requirements will also work with the robot.
@@ -93,37 +98,28 @@ Battery Specifications
 Mini 
 ~~~~
 
-+---------------------+---------------+
-| Feature             | Details       |
-+=====================+===============+
-| Voltage             | 12V           |
-+---------------------+---------------+
-| Capacity            | 5Ah (20h rate)|
-+---------------------+---------------+
-| Terminals           | F2 (6.3mm)    |
-+---------------------+---------------+
-| Size(LxWxH) approx. | 90x70x101mm   |
-+---------------------+---------------+
-| Weight (approx.)    | 1.65-2 kg     |
-+---------------------+---------------+
+====================  ==================
+**Feature**             **Details**
+====================  ==================
+Voltage                 12V
+Capacity                ~5Ah (20h rate)
+Terminals               F2 (6.3mm)
+Size(LxWxH) approx.     90x70x101mm
+Weight (approx.)        1.65-2kg
+====================  ==================
 
 Midi 
 ~~~~
 
-+--------------------+-----------------+
-| Feature            | Details         |
-+====================+=================+
-| Voltage            | 12V             |
-+--------------------+-----------------+
-| Capacity           | 12Ah (20hr rate)|  
-+--------------------+-----------------+
-| Terminals          | F2 (6.3mm)      |
-+--------------------+-----------------+
-| Size(LxWxH) approx.| 151x98x95mm     |
-+--------------------+-----------------+
-| Weight (approx.)   | 3.8-4.0 kg      |
-+--------------------+-----------------+
-
+====================  =================
+**Feature**           **Details**
+====================  =================
+Voltage               12V
+Capacity              ~12Ah (20h rate)
+Terminals             F2 (6.3mm)
+Size(LxWxH) approx.   151x98x95mm
+Weight (approx.)      3.8-4.0kg
+====================  =================
 
 Charging
 ########
@@ -200,60 +196,60 @@ Higher current can be used for faster charging, but never exceed the manufacture
     The guide also assumes that you are using one of the lead acid batteries listed above.
 
 
-Typical Current Draw
-####################
+.. Typical Current Draw
+.. ####################
 
-Typical Current Draw for Mini
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+.. Typical Current Draw for Mini
+.. ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-.. TODO: Add the table content. 
+.. .. TODO: Add the table content. 
 
-**THE FOLLOWING INFORMATION IS PLANNED FOR FUTURE TESTING. FOR SPECIFIC INQUIRES:** `Ubiquity Robotics support <support@ubiquityrobotics.com>`_.
+.. **THE FOLLOWING INFORMATION IS PLANNED FOR FUTURE TESTING. FOR SPECIFIC INQUIRES:** `Ubiquity Robotics support <support@ubiquityrobotics.com>`_.
 
-+------------------------------------------------------------+-----------------+
-| Operating State                                            | Current (Amps)  |
-+============================================================+=================+
-| Stationary, Pi4/Pi5 (4GB) only, motors off                 | [to be tested]  |
-+------------------------------------------------------------+-----------------+
-| Driving, flat surface, ~0.5 m/s, no load                   | [to be tested]  |
-+------------------------------------------------------------+-----------------+
-| Rotating in place, no load                                 | [to be tested]  |
-+------------------------------------------------------------+-----------------+
-| Stationary, motors powered                                 | [to be tested]  |
-+------------------------------------------------------------+-----------------+
-| Stationary, pushing wheels (fighting torque, no slipping)  | [to be tested]  |
-+------------------------------------------------------------+-----------------+
-| Locked wheels, applying strong torque                      | [to be tested]  |
-+------------------------------------------------------------+-----------------+
+.. +------------------------------------------------------------+-----------------+
+.. | Operating State                                            | Current (Amps)  |
+.. +============================================================+=================+
+.. | Stationary, Pi4/Pi5 (4GB) only, motors off                 | [to be tested]  |
+.. +------------------------------------------------------------+-----------------+
+.. | Driving, flat surface, ~0.5 m/s, no load                   | [to be tested]  |
+.. +------------------------------------------------------------+-----------------+
+.. | Rotating in place, no load                                 | [to be tested]  |
+.. +------------------------------------------------------------+-----------------+
+.. | Stationary, motors powered                                 | [to be tested]  |
+.. +------------------------------------------------------------+-----------------+
+.. | Stationary, pushing wheels (fighting torque, no slipping)  | [to be tested]  |
+.. +------------------------------------------------------------+-----------------+
+.. | Locked wheels, applying strong torque                      | [to be tested]  |
+.. +------------------------------------------------------------+-----------------+
 
 
-Typical Current Draw for Midi
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+.. Typical Current Draw for Midi
+.. ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-.. TODO: Add the table content. 
+.. .. TODO: Add the table content. 
 
-**THE FOLLOWING INFORMATION IS PLANNED FOR FUTURE TESTING. FOR SPECIFIC INQUIRES:** `Ubiquity Robotics support <support@ubiquityrobotics.com>`_.
+.. **THE FOLLOWING INFORMATION IS PLANNED FOR FUTURE TESTING. FOR SPECIFIC INQUIRES:** `Ubiquity Robotics support <support@ubiquityrobotics.com>`_.
 
-+------------------------------------------------------------+-----------------+
-| Operating State                                            | Current (Amps)  |
-+============================================================+=================+
-| Stationary, Pi4/Pi5 (4GB) only, motors off                 | [to be tested]  |
-+------------------------------------------------------------+-----------------+
-| Driving, flat surface, ~0.5 m/s, no load                   | [to be tested]  |
-+------------------------------------------------------------+-----------------+
-| Rotating in place, no load                                 | [to be tested]  | 
-+------------------------------------------------------------+-----------------+
-| Stationary, motors powered                                 | [to be tested]  |  
-+------------------------------------------------------------+-----------------+
-| Stationary, pushing wheels (fighting torque, no slipping)  | [to be tested]  | 
-+------------------------------------------------------------+-----------------+
-| Locked wheels, applying strong torque                      | [to be tested]  |  
-+------------------------------------------------------------+-----------------+
+.. +------------------------------------------------------------+-----------------+
+.. | Operating State                                            | Current (Amps)  |
+.. +============================================================+=================+
+.. | Stationary, Pi4/Pi5 (4GB) only, motors off                 | [to be tested]  |
+.. +------------------------------------------------------------+-----------------+
+.. | Driving, flat surface, ~0.5 m/s, no load                   | [to be tested]  |
+.. +------------------------------------------------------------+-----------------+
+.. | Rotating in place, no load                                 | [to be tested]  | 
+.. +------------------------------------------------------------+-----------------+
+.. | Stationary, motors powered                                 | [to be tested]  |  
+.. +------------------------------------------------------------+-----------------+
+.. | Stationary, pushing wheels (fighting torque, no slipping)  | [to be tested]  | 
+.. +------------------------------------------------------------+-----------------+
+.. | Locked wheels, applying strong torque                      | [to be tested]  |  
+.. +------------------------------------------------------------+-----------------+
 
-.. note:: 
+.. .. note:: 
 
-    - Instantaneous peaks can exceed 10A but are transient and not useful for battery.
-    - Driving uphill or with heavy loads increases draw further.
+..     - Instantaneous peaks can exceed 10A but are transient and not useful for battery.
+..     - Driving uphill or with heavy loads increases draw further.
 
 
 Capacity and Aging 
@@ -283,31 +279,21 @@ Key points:
 Charge Capacity Reference Table
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-+----------+----------------------+---------------+
-| Capacity | 24V System Voltage   | 12V Battery   |
-+==========+======================+===============+
-| 100%     | 26.0 V               | 13.0 V        |
-+----------+----------------------+---------------+
-| 90%      | 25.5 V               | 12.75 V       |
-+----------+----------------------+---------------+
-| 80%      | 25.0 V               | 12.50 V       |
-+----------+----------------------+---------------+
-| 70%      | 24.60 V              | 12.30 V       |
-+----------+----------------------+---------------+
-| 60%      | 24.30 V              | 12.15 V       |
-+----------+----------------------+---------------+
-| 50%      | 24.10 V              | 12.05 V       |
-+----------+----------------------+---------------+
-| 40%      | 23.9 V               | 11.95 V       |
-+----------+----------------------+---------------+
-| 30%      | 23.62 V              | 11.81 V       |
-+----------+----------------------+---------------+
-| 20%      | 23.32 V              | 11.66 V       |
-+----------+----------------------+---------------+
-| 10%      | 23.02 V              | 11.51 V       |
-+----------+----------------------+---------------+
-| 0%       | 21.0 V               | 10.50 V       |
-+----------+----------------------+---------------+
+=============  =======================  ===============
+**Capacity**   **24V System Voltage**   **12V Battery**
+=============  =======================  ===============
+100%           26.0 V                   13.0 V
+90%            25.5 V                   12.75 V
+80%            25.0 V                   12.50 V
+70%            24.60 V                  12.30 V
+60%            24.30 V                  12.15 V
+50%            24.10 V                  12.05 V
+40%            23.9 V                   11.95 V
+30%            23.62 V                  11.81 V
+20%            23.32 V                  11.66 V
+10%            23.02 V                  11.51 V
+0%             21.0 V                   10.50 V
+=============  =======================  ===============
 
 .. note::
 
