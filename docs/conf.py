@@ -45,7 +45,8 @@ except NameError:
 html_context['display_lower_left'] = True
 
 # Repo and environment info
-REPO_NAME = os.environ.get('REPO_NAME', '')
+full_repo = os.environ.get('GITHUB_REPOSITORY', '')
+REPO_NAME = full_repo.split('/')[-1] 
 OWNER = os.environ.get('OWNER', '') 
 
 # Use ALL_VERSIONS from workflow environment
