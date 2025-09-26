@@ -37,9 +37,8 @@ html_theme = 'sphinx_rtd_theme'
 html_static_path = ['_static']
 
 html_css_files = [
-    "custom.css"
+    'custom.css'
 ]
-
 
 # -- RTD lower-left menu setup -----------------------------------------------
 try:
@@ -50,7 +49,8 @@ except NameError:
 html_context['display_lower_left'] = True
 
 # Repo and environment info
-REPO_NAME = os.environ.get('REPO_NAME', '')
+full_repo = os.environ.get('GITHUB_REPOSITORY', '')
+REPO_NAME = full_repo.split('/')[-1] 
 OWNER = os.environ.get('OWNER', '') 
 
 # Use ALL_VERSIONS from workflow environment
@@ -85,5 +85,4 @@ html_context['display_github'] = True
 html_context['github_user'] = OWNER
 html_context['github_repo'] = REPO_NAME
 html_context['github_version'] = f'{current_version}/docs/'
-
 
