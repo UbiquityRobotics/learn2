@@ -1,0 +1,37 @@
+/* Change body font */
+body {
+    font-family: "Verdana", sans-serif;
+    font-weight: 400;
+    line-height: 34px;
+    letter-spacing: -1px;
+    color: #121212 !important;
+}
+
+/* Headings */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "Saira", Sans-serif;
+    font-weight: 500;
+    text-transform: uppercase;
+    line-height: 61px;
+    letter-spacing: -1.3px;
+}
+
+/* Spans - this will change the font inside the toctree */
+span {
+    font-family: "Saira", Sans-serif;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+
+/* Navbar Title - this will change the font style on the navbar title */
+.wy-side-nav-search {
+    font-family: "Saira", Sans-serif;
+    font-weight: 500;
+    text-transform: uppercase;
+}

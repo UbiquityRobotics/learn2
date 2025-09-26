@@ -10,3 +10,13 @@ Main documentation, here we might explain how these docs work. But might leave i
    file
 
 .. Redeploy 1 
+
+
+.. code-block::  bash
+
+   if something
+   then something else
+
+   # it is not like that
+
+
