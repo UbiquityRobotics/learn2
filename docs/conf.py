@@ -14,7 +14,7 @@ sys.path.insert(0, os.path.abspath('../src'))
 # -- Project information -----------------------------------------------------
 project = 'Ubiquity Robotics Documentation'
 copyright = '2025, Ubiquity Robotics'
-author = 'Pavel for now'
+author = 'Paveljolak'
 version = ''
 release = '1.0.0'
 
@@ -35,6 +35,10 @@ pygments_style = None
 # -- HTML output -------------------------------------------------------------
 html_theme = 'sphinx_rtd_theme'
 html_static_path = ['_static']
+
+html_css_files = [
+    'custom.css'
+]
 
 # -- RTD lower-left menu setup -----------------------------------------------
 try:
