@@ -84,7 +84,7 @@ You are now connected directly to the robot.
 
 ..  TODO: Video of connecting to the robot through AP mode.
 
-**Coming soon:** step-by-step video tutorial.
+.. **Coming soon:** step-by-step video tutorial.
 
 If you successfully connected to the robot you can now drive it through the terminal.
 Follow this guide: :doc:`./teleop` to see how to do it.
@@ -146,7 +146,7 @@ Example:
 
 You are now connected through the local network with the internet access.
 
-**Coming soon:** step-by-step video tutorial.
+.. **Coming soon:** step-by-step video tutorial.
 
 Test your connection by driving the robot: :doc:`./teleop`.
 

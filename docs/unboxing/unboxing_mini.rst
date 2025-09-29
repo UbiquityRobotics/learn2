@@ -111,7 +111,7 @@ Before powering on, check all components are included and undamaged.
 
 - All the necessary wires
 
-**Coming soon**: picture of wire harness 
+.. **Coming soon**: picture of wire harness 
 
 .. .. image:: /_static/unboxing/.jpg
 ..     :alt: Magni 6 Mini Wires
@@ -132,11 +132,11 @@ Before powering on, check all components are included and undamaged.
 
     The robot is shipped pre-assembled, but verify all parts are secure.
 
-Watch this video for a visual guide on checking component connections and condition after unboxing:
+.. Watch this video for a visual guide on checking component connections and condition after unboxing:
 
 .. TODO: Create a video for the check above, also add pictures there.
 
-**Coming soon**: step-by-step guide of how to check the condition of the robot.
+.. **Coming soon**: step-by-step guide of how to check the condition of the robot.
 
 | 
 
@@ -398,7 +398,7 @@ The wires should be connected like this:
 
 .. TODO: Video of adding the batteries inside the robot after unboxing.
 
-**Coming soon**: step-by-step video guide for adding the batteries to the robot coming soon.
+.. **Coming soon**: step-by-step video guide for adding the batteries to the robot coming soon.
 
 3. Charging
 -----------
@@ -427,7 +427,7 @@ The wires should be connected like this:
 
 .. You can follow the following video for exact step-by-step guide of charging the batteries inside the robot or manually:
 
-**Coming soon**: step-by-step guide for charging batteries inside the robot.
+.. **Coming soon**: step-by-step guide for charging batteries inside the robot.
 
 ..  TODO: Video of charging the batteries inside the robot.
 
@@ -463,8 +463,7 @@ Powering On
 
 ..  TODO: Video of powering on the robot.
 
-**Coming soon**: step-by-step guide for powering on the robot.
-
+.. **Coming soon**: step-by-step guide for powering on the robot.
 
 |
 
