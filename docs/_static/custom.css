@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Saira&display=swap');
+
 /* Change body font */
 body {
     font-family: "Verdana", sans-serif;
@@ -15,7 +17,7 @@ h4,
 h5,
 h6 {
     font-family: "Saira", Sans-serif;
-    font-weight: 500;
+    font-weight: 600;
     text-transform: uppercase;
     line-height: 61px;
     letter-spacing: -1.3px;
@@ -25,7 +27,6 @@ h6 {
 span {
     font-family: "Saira", Sans-serif;
     font-weight: 500;
-    text-transform: uppercase;
 }
 
 
