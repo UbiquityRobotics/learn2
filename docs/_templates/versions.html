@@ -2,6 +2,8 @@
 Inspired by typical Read the Docs version selector; fully rewritten for Ubiquity Robotics documentation.
 #}
 
+
+
 {% if display_lower_left %}
 <div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="versions">
   <span class="rst-current-version" data-toggle="rst-current-version">
@@ -15,7 +17,7 @@ Inspired by typical Read the Docs version selector; fully rewritten for Ubiquity
       <dt>{{ _('Versions') }}</dt>
       {% for slug, url in versions %}
       {% if slug == current_version %} <strong> {% endif %}
-        <dd><a href="{{ url }}">{{ slug }}</a></dd>
+        <dd><a href="{{ version_link }}">{{ slug }}</a></dd>
         {% if slug == current_version %}
       </strong> {% endif %}
       {% endfor %}

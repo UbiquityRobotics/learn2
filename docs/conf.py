@@ -84,5 +84,6 @@ html_context['language'] = ''
 html_context['display_github'] = True
 html_context['github_user'] = OWNER
 html_context['github_repo'] = REPO_NAME
+html_context['version_link'] = f'{REPO_NAME}.{CUSTOM_DOMAIN}'
 html_context['github_version'] = f'{current_version}/docs/'
 
