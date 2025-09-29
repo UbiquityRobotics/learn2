@@ -218,7 +218,7 @@ The robot can be driven around using the joysticks which show up by default, see
 
 .. TODO: Add the image of the video stream. 
 
-**Coming soon**: image content for the video stream.
+.. **Coming soon**: image content for the video stream.
 
 .. **IMAGE INCOMING**
 
@@ -368,7 +368,7 @@ As soon as the robot moves, it should snap to the map and confirm its position.
 
 |
 
-**VIDEO CONTENT INCOMING**
+.. **VIDEO CONTENT INCOMING**
 
 Routes
 ######
@@ -541,7 +541,7 @@ This trigger setup allows you to manually drive the robot into a room so it sees
 
 .. TODO: Add the global trigger video tutorial here. 
 
-**Coming soon:** global trigger step-by-step video tutorial.
+.. **Coming soon:** global trigger step-by-step video tutorial.
 
 Next Steps
 ##########

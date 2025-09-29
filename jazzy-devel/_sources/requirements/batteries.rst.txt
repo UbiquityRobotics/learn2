@@ -31,6 +31,8 @@ For all of our robots we suggest using two identical 12V, lead acid batteries wi
 
 .. TODO: Check the terminals F1 or F2.
 
+---- 
+
 Recommendation for batteries:
 
 Magni 6 Mini

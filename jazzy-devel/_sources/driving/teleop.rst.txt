@@ -9,7 +9,7 @@ To drive the robot using the terminal you must fulfill the following requirement
 
 .. TODO: Add video for this. 
 
-**Coming soon:** step-by-step video tutorial.
+.. **Coming soon:** step-by-step video tutorial.
 
 .. warning:: 
 
@@ -39,7 +39,7 @@ To drive the robot using the terminal you must fulfill the following requirement
 
 .. You can follow the next video for exact step-by-step guide of driving the robot through Teleop: 
 
-**Coming soon:** step-by-step video tutorial.
+.. **Coming soon:** step-by-step video tutorial.
 
 ----
 
