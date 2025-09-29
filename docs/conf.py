@@ -61,6 +61,7 @@ current_version = os.environ.get('CURRENT_BRANCH') or (ALL_VERSIONS[0] if ALL_VE
 html_context['current_version'] = current_version
 html_context['version'] = current_version
 
+
 # Base URL for GitHub Pages
 
 # Get the custom domain 
@@ -75,6 +76,11 @@ html_context['versions'] = [
     (v, f"{GITHUB_PAGES_BASE}/{v}/") for v in ALL_VERSIONS
 ]
 
+
+
+# Version link for the version controller 
+html_context["version_link"] = f"https://{REPO_NAME}.{CUSTOM_DOMAIN}"
+
 # project_name = project.replace(' ', '_')
 
 html_context['current_language'] = ''
@@ -84,6 +90,5 @@ html_context['language'] = ''
 html_context['display_github'] = True
 html_context['github_user'] = OWNER
 html_context['github_repo'] = REPO_NAME
-html_context['version_link'] = f'{REPO_NAME}.{CUSTOM_DOMAIN}'
 html_context['github_version'] = f'{current_version}/docs/'
 
