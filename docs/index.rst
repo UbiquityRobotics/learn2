@@ -100,5 +100,3 @@ Sections
    troubleshooting/hardware/pi_camera
 
 
-
-
