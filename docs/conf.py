@@ -14,7 +14,7 @@ sys.path.insert(0, os.path.abspath('../src'))
 # -- Project information -----------------------------------------------------
 project = 'Ubiquity Robotics Documentation'
 copyright = '2025, Ubiquity Robotics'
-author = 'Pavel for now'
+author = 'Paveljolak'
 version = ''
 release = '1.0.0'
 
@@ -36,6 +36,10 @@ pygments_style = None
 html_theme = 'sphinx_rtd_theme'
 html_static_path = ['_static']
 
+html_css_files = [
+    'custom.css'
+]
+
 # -- RTD lower-left menu setup -----------------------------------------------
 try:
     html_context
@@ -45,7 +49,8 @@ except NameError:
 html_context['display_lower_left'] = True
 
 # Repo and environment info
-REPO_NAME = os.environ.get('REPO_NAME', '')
+full_repo = os.environ.get('GITHUB_REPOSITORY', '')
+REPO_NAME = full_repo.split('/')[-1] 
 OWNER = os.environ.get('OWNER', '') 
 
 # Use ALL_VERSIONS from workflow environment
@@ -56,6 +61,7 @@ current_version = os.environ.get('CURRENT_BRANCH') or (ALL_VERSIONS[0] if ALL_VE
 html_context['current_version'] = current_version
 html_context['version'] = current_version
 
+
 # Base URL for GitHub Pages
 
 # Get the custom domain 
@@ -63,9 +69,11 @@ CUSTOM_DOMAIN = os.environ.get("CUSTOM_DOMAIN", "")
 
 # If the DOMAIN exists in the workflow then use it
 if CUSTOM_DOMAIN:
-    GITHUB_PAGES_BASE = f"https://{CUSTOM_DOMAIN}"
+    GITHUB_PAGES_BASE = f"https://{REPO_NAME}.{CUSTOM_DOMAIN}"
 else:
     GITHUB_PAGES_BASE = f"https://{OWNER}.github.io/{REPO_NAME}"# Set versions for selector with absolute URLs
+    
+# Build the absolute URLs for each version
 html_context['versions'] = [
     (v, f"{GITHUB_PAGES_BASE}/{v}/") for v in ALL_VERSIONS
 ]
@@ -77,8 +85,7 @@ html_context['language'] = ''
 
 # -- "Edit on GitHub" links --------------------------------------------------
 html_context['display_github'] = True
-html_context['github_user'] = ''
+html_context['github_user'] = OWNER
 html_context['github_repo'] = REPO_NAME
 html_context['github_version'] = f'{current_version}/docs/'
-
 
