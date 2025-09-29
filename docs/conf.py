@@ -66,10 +66,11 @@ html_context['version'] = current_version
 
 # Get the custom domain 
 CUSTOM_DOMAIN = os.environ.get("CUSTOM_DOMAIN", "")
+k 
 
 # If the DOMAIN exists in the workflow then use it
 if CUSTOM_DOMAIN:
-    GITHUB_PAGES_BASE = f"https://{CUSTOM_DOMAIN}"
+    GITHUB_PAGES_BASE = f"https://{REPO_NAME}.{CUSTOM_DOMAIN}"
 else:
     GITHUB_PAGES_BASE = f"https://{OWNER}.github.io/{REPO_NAME}"# Set versions for selector with absolute URLs
     
