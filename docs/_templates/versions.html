@@ -17,7 +17,7 @@ Inspired by typical Read the Docs version selector; fully rewritten for Ubiquity
       <dt>{{ _('Versions') }}</dt>
       {% for slug, url in versions %}
       {% if slug == current_version %} <strong> {% endif %}
-        <dd><a href="{{ version_link }}{{ url }}">{{ slug }}</a></dd>
+        <dd><a href="{{ url }}">{{ slug }}</a></dd>
         {% if slug == current_version %}
       </strong> {% endif %}
       {% endfor %}
