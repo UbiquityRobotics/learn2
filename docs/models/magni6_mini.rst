@@ -47,12 +47,12 @@ Key features include:
 
 **Already got a Mini?**
 
-Dive into our :doc:`../unboxing/unboxing_mini` guide to start unboxing your robot and to get it ready for driving.
+Dive into our :doc:`../unboxing/unboxing_mini` guide to start unboxing your robot and to get it ready to drive.
 
 Build Specifications
 ####################
 
-The Magni 6 Mini is engineered for efficiency and compactness. Below are its core specifications:
+The Magni 6 Mini is engineered for efficiency and compactness. Below are its specifications:
 
 ======================  =================================
 **Feature**             **Specification**
@@ -94,13 +94,11 @@ To explore the possibilites and capabilities of the Magni 6 Mini, try the follow
 
 .. important:: 
 
-    Our robot solutions are designed to be safe for use on a table. 
-    However, we strongly recommend testing in a safe, obstacle-free environment to ensure smooth operation.
+    while our sample examples are designed to be safe for use on a table,  we strongly recommend testing on a safe, obstacle-free surface, like a floor or a raised table with bumpers.
 
 .. warning::
     
-    While tabletop testing is generally safe, make sure there is enough space for the robot to move,
-    and handle it carefully when driving to avoid accidents.
+    While tabletop testing is generally safe, the robot is not warantied for abupt drops.
 
 
 Room Mapping Starter 
