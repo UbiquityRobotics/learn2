@@ -45,8 +45,8 @@ Package Contents
 Initial Inspection
 ##################
 
-Before powering on, check all components are included and undamaged.
-
+Before powering on, check that all components are included and undamaged.
+ 
 1. Exterior
 -----------
 
@@ -111,7 +111,7 @@ Before powering on, check all components are included and undamaged.
 
 - All the necessary wires
 
-.. **Coming soon**: picture of wire harness 
+.. **Coming soon**: a picture of the wire harness 
 
 .. .. image:: /_static/unboxing/.jpg
 ..     :alt: Magni 6 Mini Wires
@@ -122,7 +122,7 @@ Before powering on, check all components are included and undamaged.
 3. Checklist
 ------------
 
- - Ensure all pre-assembled components are firmly connected:
+ - Please ensure all pre-assembled components are firmly connected:
 
     - MCB connected to Raspberry Pi 5 via the PCB connector.
     - Motor wheels connected to MCB.
@@ -130,7 +130,7 @@ Before powering on, check all components are included and undamaged.
 
 .. important:: 
 
-    The robot is shipped pre-assembled, but verify all parts are secure.
+    The robot is shipped pre-assembled, but let's verify that all parts are secure.
 
 .. Watch this video for a visual guide on checking component connections and condition after unboxing:
 
@@ -140,10 +140,10 @@ Before powering on, check all components are included and undamaged.
 
 | 
 
-If all components are securely connected and undamaged, proceed with adding the batteries in the robot.
+If all components are securely connected and undamaged, proceed with inserting the batteries.
 
 .. Important:: 
-    Upon receiving the package if any of the components:
+    Upon receiving the package, if any of the components:
 
     - Are missing,
     - Are not properly connected, 
@@ -156,16 +156,16 @@ Battery Installation and Safety
 ###############################
 
 The Magni 6 Mini uses two **lead-acid batteries**.
-Ensure the Magni 6 Mini's these two batteries are safely installed and charged before powering on.
+Ensure that the Magni 6 Mini's two batteries are safely installed and charged before powering on.
 For for exact instructions on how to charge the batteries before adding them to ther robot: :doc:`../requirements/batteries`.
 
-1. Inspect Batteries
+1. Inspect the Batteries
 --------------------
 
 - Look for visible damages (cracks, swellng, or leaks).
 - Do not use damaged batteries.
 
-2. Install Batteries
+2. Install the Batteries
 --------------------
 
 - Place both batteries inside the chassis.
@@ -174,7 +174,7 @@ For for exact instructions on how to charge the batteries before adding them to 
 
 ----- 
 
-Install First Battery
+Install the First Battery
 ~~~~~~~~~~~~~~~~~~~~~
 
 Position the first BATTERY in the BASE according to the pictures below. 
@@ -202,7 +202,7 @@ Pay close attention to its orientation.
 
 |
 
-Install Second Battery
+Install the Second Battery
 ~~~~~~~~~~~~~~~~~~~~~~
 
 Use the BATTERY HOLDER to secure the second BATTERY in the BASE as shown in the picture.
@@ -230,7 +230,7 @@ Be careful with the wires.
 
 |
 
-Connect Batteries in Series
+Connect the Batteries in Series
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Attach the yellow-green wire: red connector to the RED spade of the first battery, black connector to the BLACK spade of the second battery.
@@ -357,7 +357,7 @@ Attach on red spade connector to the 12V pin on the CONNECTION BOARD and the oth
 
 |
 
-Verify Wiring
+Verify the Wiring
 ~~~~~~~~~~~~~
 
 Ensure all spade connectors are firmly attached. Route wires as shown.
@@ -403,7 +403,7 @@ The wires should be connected like this:
 3. Charging
 -----------
 
-- Use a multimeter to confirm voltage. Keep the batteries always charged.
+- Use a multimeter to confirm the voltage. Keep the batteries fully charged.(Confusing, since you then tell them to charge the batteries once they're installed)
 
 .. TODO: Image of the voltage of the batteries. 
 
@@ -459,15 +459,15 @@ Powering On
 |
 
 
-.. You can follow the following video for exact step-by-step guide of powering on the robot. 
+.. You can follow the following video for exact step-by-step guide to start the robot. 
 
-..  TODO: Video of powering on the robot.
+..  TODO: Video of starting the robot.
 
-.. **Coming soon**: step-by-step guide for powering on the robot.
+.. **Coming soon**: step-by-step guide for starting the robot.
 
 |
 
-The robot is now powered on and ready for connection.
+The robot is now powered up and ready for connection.
 
 .. note::
   
@@ -475,7 +475,7 @@ The robot is now powered on and ready for connection.
 
 .. warning::
   
-  Before messing with the hardware, switch the white switch off, to turn off the power to the robot.
+  Before trouble shooting, turn the white switch off, to turn off the power.
 
 
 Next Step: Connecting
