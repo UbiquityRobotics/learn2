@@ -36,6 +36,8 @@ pygments_style = None
 html_theme = 'sphinx_rtd_theme'
 html_static_path = ['_static']
 
+html_logo = "_static/logos/UbiquityRobotics_Logo_Full_White.png"
+
 html_css_files = [
     'custom.css'
 ]
