@@ -54,3 +54,10 @@ pre,
     white-space: pre-wrap;
     /* optional: wrap long lines */
 }
+
+/* Logo - ensures the logo to show nicely in sidebar */
+.wy-side-nav-search .logo,
+.wy-side-nav-search>a:first-child {
+    display: block;
+    text-align: center;
+}
