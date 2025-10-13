@@ -1,7 +1,7 @@
 Unboxing and Setting Up the Magni 6 Midi
 ========================================
 
-.. image:: /_static/models/magni6_midi.png
+.. image:: /_static/models/magni6_midi_2WD.png
    :alt: Magni 6 Midi
    :width: 400px
    :align: center
