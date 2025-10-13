@@ -91,10 +91,6 @@ pre,
     padding: 3px 7px;
 }
 
-.rst-versions:hover .rst-other-versions {
-    display: block;
-}
-
 .rst-other-versions a {
     color: #ddd;
     text-decoration: none;
