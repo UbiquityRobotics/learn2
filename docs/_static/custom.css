@@ -1,9 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Saira&display=swap');
+
 /* Change body font */
 body {
     font-family: "Verdana", sans-serif;
     font-weight: 400;
     line-height: 34px;
-    letter-spacing: -1px;
     color: #121212 !important;
 }
 
@@ -15,7 +16,7 @@ h4,
 h5,
 h6 {
     font-family: "Saira", Sans-serif;
-    font-weight: 500;
+    font-weight: 600;
     text-transform: uppercase;
     line-height: 61px;
     letter-spacing: -1.3px;
@@ -25,7 +26,6 @@ h6 {
 span {
     font-family: "Saira", Sans-serif;
     font-weight: 500;
-    text-transform: uppercase;
 }
 
 
@@ -34,4 +34,23 @@ span {
     font-family: "Saira", Sans-serif;
     font-weight: 500;
     text-transform: uppercase;
+}
+
+pre,
+.highlight pre {
+    font-family: "Fira Code", monospace;
+    font-size: 0.9em;
+    line-height: 1.4;
+    background-color: #f8f8f8;
+    /* light gray background */
+    color: #1e1e1e;
+    /* dark text */
+    padding: 12px 14px;
+    border: 1px solid #ddd;
+    /* subtle border */
+    border-radius: 6px;
+    overflow-x: auto;
+    /* horizontal scroll if code is long */
+    white-space: pre-wrap;
+    /* optional: wrap long lines */
 }

@@ -5,7 +5,6 @@
 # Author: Paveljolak
 # Project: Ubiquity Robotics Documentation
 # Date: Sep 2, 2025
-# Updated: Sep 19, 2025 
 
 set -e
 set -x
