@@ -78,6 +78,7 @@ It also has support for additional add-ons to expand functionality.
 
 **Supported Add-ons**:
     - :doc:`Second Raspberry Pi Camera <../troubleshooting/hardware/pi_camera>`
+
     .. - :doc:`Sonars <../troubleshooting/hardware/sonars>`
 
 .. TODO: Uncomment the Sonars from the add-ons when they are added.
