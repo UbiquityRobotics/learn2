@@ -42,6 +42,8 @@ html_css_files = [
     'custom.css'
 ]
 
+html_js_files = ['custom.js']
+
 # -- RTD lower-left menu setup -----------------------------------------------
 try:
     html_context
