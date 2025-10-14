@@ -72,7 +72,6 @@ pre,
     height: auto;
     display: inline-block !important;
     background: #2c2c2c;
-    padding: 4px 8px;
     z-index: 9999;
 }
 
@@ -88,16 +87,18 @@ pre,
     bottom: 100%;
     right: 0;
     background: #333;
-    padding: 3px 7px;
 }
 
 .rst-other-versions a {
     color: #ddd;
     text-decoration: none;
     display: block;
-    padding: 2px 0;
 }
 
 .rst-other-versions a:hover {
     color: #fff;
+}
+
+.wy-nav-side {
+    padding-bottom: 0 !important;
 }
