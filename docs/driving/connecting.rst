@@ -1,6 +1,12 @@
 Connecting to the Robot
 =======================
 
+.. important::
+
+    This page assumes that you are using one of our **newest generation robots**, the **Magni Gen 6**.
+    
+    For information about **older robot generations or images**, please refer to our `Legacy Documentation <https://learn.ubiquityrobotics.com/noetic_quick_start_connecting>`_.
+
 Magni 6 robots broadcast their own Wi-Fi network by default.
 You can connect via this Wi-Fi or integrate the robot into your local network.
 
