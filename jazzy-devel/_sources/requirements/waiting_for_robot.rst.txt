@@ -1,7 +1,7 @@
 Waiting for Your Robot
 ======================
 
-This section covers what you'll need to prepare before your Ubiquity Robot arrives. 
+This section covers what you'll need to prepare before your Ubiquity Gen 6 Robot arrives. 
 
 Requirements
 ############

@@ -1,6 +1,13 @@
 LiDAR Sensors
 =============
 
+.. important:: 
+
+  This documentation covers **only the latest LiDAR models**.
+
+  For details on legacy LiDARs, please refer to the `Legacy Documentation <https://learn.ubiquityrobotics.com/noetic_magnisilver_lidar>`_.
+
+
 Our robots support two LiDAR options: 
 
 - **Short Range LiDAR**
