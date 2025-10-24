@@ -1,6 +1,14 @@
 Setting up your Workstation
 ===========================
 
+
+.. important::
+
+    This documentation assumes you are setting up a workstation for our **newest generation**, the **Magni Gen 6 robots**, built on **ROS 2**.
+
+    To set up a workstation for **older generation robots** built on **ROS**, please refer to our `Legacy Documentation <https://learn.ubiquityrobotics.com/noetic_quick_start_workstation>`_.
+
+
 What is a Workstation?
 ######################
 

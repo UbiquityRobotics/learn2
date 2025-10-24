@@ -1,6 +1,13 @@
 Batteries
 =========
 
+.. important::
+
+    This page provides battery information for our **latest generation**, the **Magni Gen 6 robots**.
+
+    Some details may also apply to earlier models, however for comprehensive information on these older generations,
+    please refer to our `Legacy Documentation <https://learn.ubiquityrobotics.com/noetic_overview_batteries>`_.
+
 Shipping
 ########
 

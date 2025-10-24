@@ -13,6 +13,13 @@ Each image is labeled according to its status:
     If you encounter issues with an older image, we recommend switching to a **new** or **latest** image.
     For further assistance, contact: `Ubiquity Robotics support <support@ubiquityrobotics.com>`_.
 
+.. important::
+
+    This page includes the images for **Magni Gen 6 and newer robots**, which are built on **ROS 2**.
+
+    For older images or a complete list of **ROS** images, please see the `Legacy Documentation <https://learn.ubiquityrobotics.com/noetic_pi_image_downloads>`_.
+
+
 Raspberry Pi Images
 ###################
 
