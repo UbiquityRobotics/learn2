@@ -24,7 +24,7 @@ Raspberry Pi Images
 ###################
 
 ================ ============================
-**Download**     `2025-09-25-ubiquity-base-jazzy <https://ubiquity-pi-image.sfo2.cdn.digitaloceanspaces.com/ros2_20250925_6476.img.xz>`_
+**Download**     `2025-10-24-ubiquity-base-jazzy <https://ubiquity-pi-image.sfo2.cdn.digitaloceanspaces.com/ros2-base-image_20251024_7366.img.xz>`_
 ================ ============================
 **OS Version**   Ubuntu 24.04.2 LTS 
 **ROS 2**        Jazzy
