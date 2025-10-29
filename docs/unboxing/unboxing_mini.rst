@@ -159,14 +159,14 @@ The Magni 6 Mini uses two **lead-acid batteries**.
 Ensure the Magni 6 Mini's these two batteries are safely installed and charged before powering on.
 For for exact instructions on how to charge the batteries before adding them to ther robot: :doc:`../requirements/batteries`.
 
-1. Inspect Batteries
---------------------
+1. Inspect the Batteries
+------------------------
 
 - Look for visible damages (cracks, swellng, or leaks).
 - Do not use damaged batteries.
 
-2. Install Batteries
---------------------
+2. Install the Batteries
+------------------------
 
 - Place both batteries inside the chassis.
 - Connect them to the MCB, the switch, and to each other using the supplied cables.
@@ -174,8 +174,8 @@ For for exact instructions on how to charge the batteries before adding them to 
 
 ----- 
 
-Install First Battery
-~~~~~~~~~~~~~~~~~~~~~
+Install the First Battery
+~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Position the first BATTERY in the BASE according to the pictures below. 
 Pay close attention to its orientation.
@@ -202,8 +202,8 @@ Pay close attention to its orientation.
 
 |
 
-Install Second Battery
-~~~~~~~~~~~~~~~~~~~~~~
+Install the Second Battery
+~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Use the BATTERY HOLDER to secure the second BATTERY in the BASE as shown in the picture.
 
@@ -230,8 +230,8 @@ Be careful with the wires.
 
 |
 
-Connect Batteries in Series
-~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Connect the Batteries in Series
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Attach the yellow-green wire: red connector to the RED spade of the first battery, black connector to the BLACK spade of the second battery.
 
@@ -357,8 +357,8 @@ Attach on red spade connector to the 12V pin on the CONNECTION BOARD and the oth
 
 |
 
-Verify Wiring
-~~~~~~~~~~~~~
+Verify the Wiring
+~~~~~~~~~~~~~~~~~
 
 Ensure all spade connectors are firmly attached. Route wires as shown.
 
@@ -403,7 +403,7 @@ The wires should be connected like this:
 3. Charging
 -----------
 
-- Use a multimeter to confirm voltage. Keep the batteries always charged.
+- Use a multimeter to confirm the voltage of the batteries.
 
 .. TODO: Image of the voltage of the batteries. 
 
@@ -414,7 +414,9 @@ The wires should be connected like this:
 
 .. |
 
-- Once the batteries are inside the robot use the provided charger to charge them.
+- Use fully charged batteries. 
+  If the batteries are installed in the robot, charge them using the provided charger. 
+  Otherwise, use a power supply. For detailed charging instructions, refer to the :ref:`Charging Guide <charging_guide>`.
 
 .. TODO: Add the image for charging the robot with provided charger here.
 
