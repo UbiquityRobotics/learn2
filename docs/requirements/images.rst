@@ -31,7 +31,8 @@ Raspberry Pi Images
 **Architecture** aarch64                             
 **SHA256 Sum**   9fadc8d4265fdc4082a916dacc1b09b0fda05acac605387a49017a1777046101
 **Status**       **Latest**
-**Notes**        Headless (no desktop)
+**Notes**        - Headless (no desktop)
+                 - Occasionally, manually restarting the MCB on the robot to enable teleoperation is required.
 **Changelog**    Initial version for ROS2 Jazzy
 ================ ============================
 
