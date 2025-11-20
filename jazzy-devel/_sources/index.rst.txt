@@ -30,7 +30,7 @@ Sections
 
 |  
 
-- `Unboxing <unboxing_>`_: Step-by-step instructions for unboxing your robot. Learn how to safely unpack it, check for any damages, verify all components are included, install the batteries and power on the robot.
+- `Unboxing <unboxing_>`_: Step-by-step instructions for unboxing your robot. Learn how to safely unpack it, check for any damage, verify all components are included, install the batteries and power on the robot.
 
 |  
 
