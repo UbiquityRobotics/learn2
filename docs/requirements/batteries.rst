@@ -130,6 +130,9 @@ Size(LxWxH) approx.   151x98x95mm
 Weight (approx.)      3.8-4.0kg
 ====================  =================
 
+
+.. _charging_guide:
+
 Charging
 ########
 

@@ -95,8 +95,9 @@ To explore the possibilites and capabilities of the Magni 6 Mini, try the follow
 
 .. important:: 
 
-    Our robot solutions are designed to be safe for use on a table. 
-    However, we strongly recommend testing in a safe, obstacle-free environment to ensure smooth operation.
+    While our robots are designed to be safe for use on a table,
+    we strongly recommend testing on a safe, obstacle-free surface, 
+    like a floor or a raised table with bumpers.
 
 .. warning::
     
