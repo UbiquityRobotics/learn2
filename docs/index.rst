@@ -13,7 +13,7 @@ Learn how to connect, operate, and interact with our robots, all in a step-by-st
 
 .. note:: 
 
-    This documentation is designed for beginners.
+    This documentation is designed to take people from being a beginner to being able to complete projects on the robot.
 
     Expect clear, friendly instructions that guide you from unboxing your robot to running it smoothly.
 
