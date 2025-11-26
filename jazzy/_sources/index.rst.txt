@@ -5,11 +5,18 @@ Welcome to the Ubiquity Robotics Magni Gen 6 documentation!
 This  guide will help you get started with your robot, from unboxing to driving, and provide resources you need to troubleshoot common issues.
 Learn how to connect, operate, and interact with our robots, all in a step-by-step, beginner-friendly format.
 
+.. important::
+
+   This documentation applies **only** to Magni Gen 6 robots running **ROS 2 Jazzy**.
+
+   For information about earlier robot generations, software images, or legacy systems, please refer to our `Legacy Documentation <https://learn.ubiquityrobotics.com>`_.
+
 .. note:: 
 
     This documentation is designed for beginners.
 
     Expect clear, friendly instructions that guide you from unboxing your robot to running it smoothly.
+
 
 Sections
 ########
@@ -23,7 +30,7 @@ Sections
 
 |  
 
-- `Unboxing <unboxing_>`_: Step-by-step instructions for unboxing your robot. Learn how to safely unpack it, check for any damages, verify all components are included, install the batteries and power on the robot.
+- `Unboxing <unboxing_>`_: Step-by-step instructions for unboxing your robot. Learn how to safely unpack it, check for any damage, verify all components are included, install the batteries and power on the robot.
 
 |  
 

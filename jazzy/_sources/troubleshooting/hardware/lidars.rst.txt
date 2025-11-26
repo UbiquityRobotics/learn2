@@ -1,6 +1,13 @@
 LiDAR Sensors
 =============
 
+.. important:: 
+
+  This documentation covers **only the latest LiDAR models**.
+
+  For details on legacy LiDARs, please refer to the `Legacy Documentation <https://learn.ubiquityrobotics.com/noetic_magnisilver_lidar>`_.
+
+
 Our robots support two LiDAR options: 
 
 - **Short Range LiDAR**
@@ -31,6 +38,8 @@ Its high accuracy and 360 degrees scanning make it perfect for precise mapping a
      - 905 nm
    * - Scanning Angle
      - 360°
+   * - Detection Method
+     - Time-of-Flight (ToF)
    * - Detection Range
      - 0 m ~ 12 m (70% reflectivity)
    * - Detection Accuracy
@@ -40,13 +49,15 @@ Its high accuracy and 360 degrees scanning make it perfect for precise mapping a
    * - Angular Resolution
      - 0.48°~0.96°
    * - Scanning Rate
-     - 6 Hz ~ 12 Hz
+     - 10 Hz
    * - Output Data Resolution
      - 15 mm
    * - Data Content
      - Azimuth, Distance, Intensity
-   * - Power Supply
+   * - Operating Voltage
      - 5 VDC (4.75 V ~ 5.25 V)
+   * - Operating Power
+     - 1 W 
    * - Operating Temperature
      - -10°C ~ 40°C
    * - Storage Temperature
@@ -57,6 +68,8 @@ Its high accuracy and 360 degrees scanning make it perfect for precise mapping a
      - Built-in Brushless Motor
    * - Communication Interface
      - Standard Asynchronous Serial Port (Baud Rate: 230400 bps)
+   * - IP Grade
+     - IPX-4
 
 
 .. _lidar_long_range:
@@ -78,50 +91,44 @@ With a 120m range and robust build, it excels in extensive mapping and navigatio
    
    * - Model
      - Long Range LiDAR
+   * - Detection Method
+     - Time-of-Flight (ToF)
    * - Wavelength
      - 905 nm
-   * - FPS
-     - 5 / 10 / 20 Hz
    * - Laser Class
-     - Class I
-   * - Data Point Generating Rate
-     - Single Echo, Dual Echo
+     - Class I (eye-safe)
    * - Channels
      - 1
-   * - Communication Interface
-     - Ethernet 100base-TX, PPS
-   * - Detection Method
-     - TOF
-   * - Input Voltage
-     - 9V ~ 32V DC
    * - Detection Range
-     - 120m detection range, 80m@10%
-   * - Power Consumption
-     - 7W (10Hz)
+     - 120m detection range, 80m@10% reflectivity
    * - Range Accuracy
      - ±3 cm
    * - Range Precision
      - ±1 cm (1σ)
-   * - IP Grade
-     - IP67
-   * - Operating Temperature
-     - -20°C ~ 60°C
    * - Horizontal FOV
      - 360°
-   * - Vertical FOV
-     - N/A
-   * - Horizontal Resolution
-     - 0.09° / 0.18° / 0.36°
-   * - Vertical Resolution
-     - N/A
+   * - Scanning Rate 
+     - 20 Hz (Can be manullly adjusted to 5 Hz or 10 Hz)
+   * - Horizontal Angular Resolution
+     - 0.36° at 20 Hz (0.09°\: 5 Hz, 0.18°\: 10 Hz)
+   * - Data Point Generating Rate
+     - Single Echo 20,000 pts/sec, Dual Echo 40,000 pts/sec
+   * - Communication Interface
+     - Fast Ethernet, PPS
+   * - Operating Voltage
+     - 9V ~ 32 VDC
+   * - Operating Power
+     - 7 W (20Hz)
+   * - Operating Temperature
+     - -20°C ~ 60°C
+   * - Storage Temperature
+     - -40°C ~ 85°C
    * - Vibration Test
-     - 5Hz-2000Hz, 3G rms
+     - 5 Hz ~ 2000 Hz, 3G rms
    * - Shock Test
-     - 500m/sec², lasting for 11ms
-   * - Weight
-     - 1050g
-   * - Dimensions (DxH)
-     - Ф102x77.9 mm
+     - 500 m/sec², lasting for 11ms
+   * - IP Grade
+     - IP67
 
 
 LiDAR Compatabillity by Robot Model

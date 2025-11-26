@@ -9,7 +9,7 @@
   <title>LiDAR Sensors &mdash; Ubiquity Robotics Documentation 1.0.0 documentation</title>
       <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=b86133f3" />
       <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=e59714d7" />
-      <link rel="stylesheet" type="text/css" href="../../_static/custom.css?v=7336f38f" />
+      <link rel="stylesheet" type="text/css" href="../../_static/custom.css?v=946d5f4a" />
 
   
       <script src="../../_static/jquery.js?v=5d32c60e"></script>
@@ -17,6 +17,7 @@
       <script src="../../_static/documentation_options.js?v=96017b54"></script>
       <script src="../../_static/doctools.js?v=9bcbadda"></script>
       <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="../../_static/custom.js?v=57b5b994"></script>
     <script src="../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
@@ -34,6 +35,7 @@
           
           <a href="../../index.html" class="icon icon-home">
             Ubiquity Robotics Documentation
+              <img src="../../_static/UbiquityRobotics_Logo_Full_White.png" class="logo" alt="Logo"/>
           </a>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
@@ -110,6 +112,11 @@
              
   <section id="lidar-sensors">
 <h1>LiDAR Sensors<a class="headerlink" href="#lidar-sensors" title="Link to this heading"></a></h1>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>This documentation covers <strong>only the latest LiDAR models</strong>.</p>
+<p>For details on legacy LiDARs, please refer to the <a class="reference external" href="https://learn.ubiquityrobotics.com/noetic_magnisilver_lidar">Legacy Documentation</a>.</p>
+</div>
 <p>Our robots support two LiDAR options:</p>
 <ul class="simple">
 <li><p><strong>Short Range LiDAR</strong></p></li>
@@ -139,29 +146,35 @@ Its high accuracy and 360 degrees scanning make it perfect for precise mapping a
 <tr class="row-odd"><td><p>Scanning Angle</p></td>
 <td><p>360°</p></td>
 </tr>
-<tr class="row-even"><td><p>Detection Range</p></td>
+<tr class="row-even"><td><p>Detection Method</p></td>
+<td><p>Time-of-Flight (ToF)</p></td>
+</tr>
+<tr class="row-odd"><td><p>Detection Range</p></td>
 <td><p>0 m ~ 12 m (70% reflectivity)</p></td>
 </tr>
-<tr class="row-odd"><td><p>Detection Accuracy</p></td>
+<tr class="row-even"><td><p>Detection Accuracy</p></td>
 <td><p>±3 cm (0~6 m); ±4.5 cm (≥6m) (70% reflectivity)</p></td>
 </tr>
-<tr class="row-even"><td><p>PRF</p></td>
+<tr class="row-odd"><td><p>PRF</p></td>
 <td><p>4.5 kHz</p></td>
 </tr>
-<tr class="row-odd"><td><p>Angular Resolution</p></td>
+<tr class="row-even"><td><p>Angular Resolution</p></td>
 <td><p>0.48°~0.96°</p></td>
 </tr>
-<tr class="row-even"><td><p>Scanning Rate</p></td>
-<td><p>6 Hz ~ 12 Hz</p></td>
+<tr class="row-odd"><td><p>Scanning Rate</p></td>
+<td><p>10 Hz</p></td>
 </tr>
-<tr class="row-odd"><td><p>Output Data Resolution</p></td>
+<tr class="row-even"><td><p>Output Data Resolution</p></td>
 <td><p>15 mm</p></td>
 </tr>
-<tr class="row-even"><td><p>Data Content</p></td>
+<tr class="row-odd"><td><p>Data Content</p></td>
 <td><p>Azimuth, Distance, Intensity</p></td>
 </tr>
-<tr class="row-odd"><td><p>Power Supply</p></td>
+<tr class="row-even"><td><p>Operating Voltage</p></td>
 <td><p>5 VDC (4.75 V ~ 5.25 V)</p></td>
+</tr>
+<tr class="row-odd"><td><p>Operating Power</p></td>
+<td><p>1 W</p></td>
 </tr>
 <tr class="row-even"><td><p>Operating Temperature</p></td>
 <td><p>-10°C ~ 40°C</p></td>
@@ -177,6 +190,9 @@ Its high accuracy and 360 degrees scanning make it perfect for precise mapping a
 </tr>
 <tr class="row-even"><td><p>Communication Interface</p></td>
 <td><p>Standard Asynchronous Serial Port (Baud Rate: 230400 bps)</p></td>
+</tr>
+<tr class="row-odd"><td><p>IP Grade</p></td>
+<td><p>IPX-4</p></td>
 </tr>
 </tbody>
 </table>
@@ -198,71 +214,62 @@ With a 120m range and robust build, it excels in extensive mapping and navigatio
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td><p>Wavelength</p></td>
+<tr class="row-even"><td><p>Detection Method</p></td>
+<td><p>Time-of-Flight (ToF)</p></td>
+</tr>
+<tr class="row-odd"><td><p>Wavelength</p></td>
 <td><p>905 nm</p></td>
 </tr>
-<tr class="row-odd"><td><p>FPS</p></td>
-<td><p>5 / 10 / 20 Hz</p></td>
-</tr>
 <tr class="row-even"><td><p>Laser Class</p></td>
-<td><p>Class I</p></td>
+<td><p>Class I (eye-safe)</p></td>
 </tr>
-<tr class="row-odd"><td><p>Data Point Generating Rate</p></td>
-<td><p>Single Echo, Dual Echo</p></td>
-</tr>
-<tr class="row-even"><td><p>Channels</p></td>
+<tr class="row-odd"><td><p>Channels</p></td>
 <td><p>1</p></td>
 </tr>
-<tr class="row-odd"><td><p>Communication Interface</p></td>
-<td><p>Ethernet 100base-TX, PPS</p></td>
-</tr>
-<tr class="row-even"><td><p>Detection Method</p></td>
-<td><p>TOF</p></td>
-</tr>
-<tr class="row-odd"><td><p>Input Voltage</p></td>
-<td><p>9V ~ 32V DC</p></td>
-</tr>
 <tr class="row-even"><td><p>Detection Range</p></td>
-<td><p>120m detection range, 80m&#64;10%</p></td>
+<td><p>120m detection range, 80m&#64;10% reflectivity</p></td>
 </tr>
-<tr class="row-odd"><td><p>Power Consumption</p></td>
-<td><p>7W (10Hz)</p></td>
-</tr>
-<tr class="row-even"><td><p>Range Accuracy</p></td>
+<tr class="row-odd"><td><p>Range Accuracy</p></td>
 <td><p>±3 cm</p></td>
 </tr>
-<tr class="row-odd"><td><p>Range Precision</p></td>
+<tr class="row-even"><td><p>Range Precision</p></td>
 <td><p>±1 cm (1σ)</p></td>
+</tr>
+<tr class="row-odd"><td><p>Horizontal FOV</p></td>
+<td><p>360°</p></td>
+</tr>
+<tr class="row-even"><td><p>Scanning Rate</p></td>
+<td><p>20 Hz (Can be manullly adjusted to 5 Hz or 10 Hz)</p></td>
+</tr>
+<tr class="row-odd"><td><p>Horizontal Angular Resolution</p></td>
+<td><p>0.36° at 20 Hz (0.09°: 5 Hz, 0.18°: 10 Hz)</p></td>
+</tr>
+<tr class="row-even"><td><p>Data Point Generating Rate</p></td>
+<td><p>Single Echo 20,000 pts/sec, Dual Echo 40,000 pts/sec</p></td>
+</tr>
+<tr class="row-odd"><td><p>Communication Interface</p></td>
+<td><p>Fast Ethernet, PPS</p></td>
+</tr>
+<tr class="row-even"><td><p>Operating Voltage</p></td>
+<td><p>9V ~ 32 VDC</p></td>
+</tr>
+<tr class="row-odd"><td><p>Operating Power</p></td>
+<td><p>7 W (20Hz)</p></td>
+</tr>
+<tr class="row-even"><td><p>Operating Temperature</p></td>
+<td><p>-20°C ~ 60°C</p></td>
+</tr>
+<tr class="row-odd"><td><p>Storage Temperature</p></td>
+<td><p>-40°C ~ 85°C</p></td>
+</tr>
+<tr class="row-even"><td><p>Vibration Test</p></td>
+<td><p>5 Hz ~ 2000 Hz, 3G rms</p></td>
+</tr>
+<tr class="row-odd"><td><p>Shock Test</p></td>
+<td><p>500 m/sec², lasting for 11ms</p></td>
 </tr>
 <tr class="row-even"><td><p>IP Grade</p></td>
 <td><p>IP67</p></td>
-</tr>
-<tr class="row-odd"><td><p>Operating Temperature</p></td>
-<td><p>-20°C ~ 60°C</p></td>
-</tr>
-<tr class="row-even"><td><p>Horizontal FOV</p></td>
-<td><p>360°</p></td>
-</tr>
-<tr class="row-odd"><td><p>Vertical FOV</p></td>
-<td><p>N/A</p></td>
-</tr>
-<tr class="row-even"><td><p>Horizontal Resolution</p></td>
-<td><p>0.09° / 0.18° / 0.36°</p></td>
-</tr>
-<tr class="row-odd"><td><p>Vertical Resolution</p></td>
-<td><p>N/A</p></td>
-</tr>
-<tr class="row-even"><td><p>Vibration Test</p></td>
-<td><p>5Hz-2000Hz, 3G rms</p></td>
-</tr>
-<tr class="row-odd"><td><p>Shock Test</p></td>
-<td><p>500m/sec², lasting for 11ms</p></td>
-</tr>
-<tr class="row-even"><td><p>Weight</p></td>
-<td><p>1050g</p></td>
-</tr>
-<tr class="row-odd"><td><p>Dimensions (DxH)</p></td>
-<td><p>Ф102x77.9 mm</p></td>
 </tr>
 </tbody>
 </table>

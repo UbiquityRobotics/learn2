@@ -29,6 +29,7 @@ Physical Characteristics
 
    Information about Magni 5 is limited. 
    For additional details, please contact: `Ubiquity Robotics support <support@ubiquityrobotics.com>`_. 
+   You can also refer to our legacy documentation `Legacy Documentation <https://learn.ubiquityrobotics.com>`_.
 
 
 .. table:: Physical Specifications
