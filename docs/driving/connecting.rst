@@ -1,6 +1,12 @@
 Connecting to the Robot
 =======================
 
+.. important::
+
+    This page assumes that you are using one of our **newest generation robots**, the **Magni Gen 6**.
+    
+    For information about **older robot generations or images**, please refer to our `Legacy Documentation <https://learn.ubiquityrobotics.com/noetic_quick_start_connecting>`_.
+
 Magni 6 robots broadcast their own Wi-Fi network by default.
 You can connect via this Wi-Fi or integrate the robot into your local network.
 
@@ -53,17 +59,17 @@ Option 1: Connect via Robot's Wi-Fi
 
     .. code-block:: bash
 
-        ssh ubuntu@192.168.4.1
+        ssh ubuntu@192.168.0.1
 
     .. important:: 
 
-        The IP ``192.168.4.1`` is static and is valid for all of the robots.
+        The IP ``192.168.0.1`` is static and is valid for all of the robots.
 
         Meaning that for every robot, when the robot emits its own Wi-Fi you can SSH through this IP.
 
 4. Enter the SSH password when prompted: **ubuntu**. Note that the password will not be visible while typing.
 
-.. image:: /_static/connecting/SSH_url.jpg
+.. image:: /_static/connecting/SSH_url.png
     :alt: SSH-ing to the robot through Robot's Wi-Fi
     :width: 400px
     :align: center
@@ -74,7 +80,7 @@ You are now connected directly to the robot.
 
 .. TODO: Here you can add the outcome of the ssh of the robot, do the ls command or something inside the robot.
 
-.. image:: /_static/connecting/SSH_outcome.jpg
+.. image:: /_static/connecting/SSH_outcome.png
     :alt: The outcome of the SSH to the robot
     :width: 800px
     :align: center

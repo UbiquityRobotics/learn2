@@ -1,6 +1,13 @@
 Batteries
 =========
 
+.. important::
+
+    This page provides battery information for our **latest generation**, the **Magni Gen 6 robots**.
+
+    Some details may also apply to earlier models, however for comprehensive information on these older generations,
+    please refer to our `Legacy Documentation <https://learn.ubiquityrobotics.com/noetic_overview_batteries>`_.
+
 Shipping
 ########
 
@@ -122,6 +129,9 @@ Terminals             F2 (6.3mm)
 Size(LxWxH) approx.   151x98x95mm
 Weight (approx.)      3.8-4.0kg
 ====================  =================
+
+
+.. _charging_guide:
 
 Charging
 ########

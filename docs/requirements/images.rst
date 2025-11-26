@@ -13,18 +13,26 @@ Each image is labeled according to its status:
     If you encounter issues with an older image, we recommend switching to a **new** or **latest** image.
     For further assistance, contact: `Ubiquity Robotics support <support@ubiquityrobotics.com>`_.
 
+.. important::
+
+    This page includes the images for **Magni Gen 6 and newer robots**, which are built on **ROS 2**.
+
+    For older images or a complete list of **ROS** images, please see the `Legacy Documentation <https://learn.ubiquityrobotics.com/noetic_pi_image_downloads>`_.
+
+
 Raspberry Pi Images
 ###################
 
 ================ ============================
-**Download**     `2025-09-25-ubiquity-base-jazzy <https://ubiquity-pi-image.sfo2.cdn.digitaloceanspaces.com/ros2_20250925_6476.img.xz>`_
+**Download**     `2025-10-24-ubiquity-base-jazzy <https://ubiquity-pi-image.sfo2.cdn.digitaloceanspaces.com/ros2-base-image_20251024_7366.img.xz>`_
 ================ ============================
 **OS Version**   Ubuntu 24.04.2 LTS 
 **ROS 2**        Jazzy
 **Architecture** aarch64                             
 **SHA256 Sum**   9fadc8d4265fdc4082a916dacc1b09b0fda05acac605387a49017a1777046101
 **Status**       **Latest**
-**Notes**        Headless (no desktop)
+**Notes**        - Headless (no desktop)
+                 - Occasionally, manually restarting the MCB on the robot to enable teleoperation is required.
 **Changelog**    Initial version for ROS2 Jazzy
 ================ ============================
 
