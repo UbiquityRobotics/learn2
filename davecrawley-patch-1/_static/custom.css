@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Saira&display=swap');
+
+/* Change body font */
+body {
+    font-family: "Verdana", sans-serif;
+    font-weight: 400;
+    line-height: 34px;
+    color: #121212 !important;
+}
+
+/* Headings */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "Saira", Sans-serif;
+    font-weight: 600;
+    text-transform: uppercase;
+    line-height: 61px;
+    letter-spacing: -1.3px;
+}
+
+/* Spans - this will change the font inside the toctree */
+span {
+    font-family: "Saira", Sans-serif;
+    font-weight: 500;
+}
+
+
+/* Navbar Title - this will change the font style on the navbar title */
+.wy-side-nav-search {
+    font-family: "Saira", Sans-serif;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+pre,
+.highlight pre {
+    font-family: "Fira Code", monospace;
+    font-size: 0.9em;
+    line-height: 1.4;
+    background-color: #f8f8f8;
+    /* light gray background */
+    color: #1e1e1e;
+    /* dark text */
+    padding: 12px 14px;
+    border: 1px solid #ddd;
+    /* subtle border */
+    border-radius: 6px;
+    overflow-x: auto;
+    /* horizontal scroll if code is long */
+    white-space: pre-wrap;
+    /* optional: wrap long lines */
+}
+
+/* Logo - ensures the logo to show nicely in sidebar */
+.wy-side-nav-search .logo,
+.wy-side-nav-search>a:first-child {
+    display: block;
+    text-align: center;
+}
+
+/* Version Controller - makes floating version controller on the bottom right side of the screen. */
+.rst-versions {
+    position: fixed !important;
+    bottom: 10px;
+    left: auto !important;
+    right: 10px;
+    width: 200px;
+    height: auto;
+    display: inline-block !important;
+    background: #2c2c2c;
+    z-index: 9999;
+}
+
+.rst-current-version {
+    color: #fff;
+    cursor: pointer;
+    display: block;
+}
+
+.rst-other-versions {
+    display: none;
+    position: absolute;
+    bottom: 100%;
+    right: 0;
+    background: #333;
+}
+
+.rst-other-versions a {
+    color: #ddd;
+    text-decoration: none;
+    display: block;
+}
+
+.rst-other-versions a:hover {
+    color: #fff;
+}
+
+.wy-nav-side {
+    padding-bottom: 0 !important;
+}

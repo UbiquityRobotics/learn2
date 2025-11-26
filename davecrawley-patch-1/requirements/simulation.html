@@ -1,0 +1,734 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Magni Robot Simulation &mdash; Ubiquity Robotics Documentation 1.0.0 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=946d5f4a" />
+
+  
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=96017b54"></script>
+      <script src="../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="../_static/custom.js?v=57b5b994"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Magni 6 Images" href="images.html" />
+    <link rel="prev" title="Setting up your Workstation" href="workstation.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            Ubiquity Robotics Documentation
+              <img src="../_static/UbiquityRobotics_Logo_Full_White.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Magni 6 Model Introduction</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../models/magni6_mini.html">Magni 6 Mini</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../models/magni6_midi.html">Magni 6 Midi</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Waiting for Your Robot</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="waiting_for_robot.html">Waiting for Your Robot</a></li>
+<li class="toctree-l1"><a class="reference internal" href="batteries.html">Batteries</a></li>
+<li class="toctree-l1"><a class="reference internal" href="workstation.html">Setting up your Workstation</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Magni Robot Simulation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#overview">Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#robot-specifications">Robot Specifications</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#physical-characteristics">Physical Characteristics</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#computing-platform">Computing Platform</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#simulation-environment-setup">Simulation Environment Setup</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#prerequisites">Prerequisites</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#system-requirements">System Requirements</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#installation-steps">Installation Steps</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#step-1-install-ros2-and-dependencies">Step 1: Install ROS2 and Dependencies</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#step-2-install-magni-robot-packages">Step 2: Install Magni Robot Packages</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#step-3-verify-installation">Step 3: Verify Installation</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#simulation-configuration">Simulation Configuration</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#urdf-model-structure">URDF Model Structure</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#base-components">Base Components</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#joint-definitions">Joint Definitions</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#gazebo-plugin-configuration">Gazebo Plugin Configuration</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#differential-drive-plugin">Differential Drive Plugin</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#available-sensor-plugins">Available Sensor Plugins</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#running-the-simulation">Running the Simulation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#basic-simulation-launch">Basic Simulation Launch</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#step-1-start-gazebo-with-magni-model">Step 1: Start Gazebo with Magni Model</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#step-2-verify-robot-spawning">Step 2: Verify Robot Spawning</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#step-3-check-ros2-topics">Step 3: Check ROS2 Topics</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#teleoperation-testing">Teleoperation Testing</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#step-1-launch-teleop-node">Step 1: Launch Teleop Node</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#step-2-robot-control-commands">Step 2: Robot Control Commands</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#troubleshooting">Troubleshooting</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#common-issues-and-solutions">Common Issues and Solutions</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#issue-1-robot-falls-through-ground">Issue 1: Robot Falls Through Ground</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#issue-2-wheels-not-moving">Issue 2: Wheels Not Moving</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#issue-3-sensors-not-publishing-data">Issue 3: Sensors Not Publishing Data</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#issue-4-navigation-fails">Issue 4: Navigation Fails</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#performance-optimization">Performance Optimization</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#graphics-settings">Graphics Settings</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#system-resources">System Resources</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#development-guidelines">Development Guidelines</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#custom-sensor-integration">Custom Sensor Integration</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#controller-development">Controller Development</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#validation-procedures">Validation Procedures</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#simulation-accuracy">Simulation Accuracy</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#performance-benchmarking">Performance Benchmarking</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#support-and-resources">Support and Resources</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#official-documentation">Official Documentation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#community-support">Community Support</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#additional-resources">Additional Resources</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="images.html">Magni 6 Images</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Unboxing Your Model</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../unboxing/unboxing_mini.html">Unboxing and Setting Up the Magni 6 Mini</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../unboxing/unboxing_midi.html">Unboxing and Setting Up the Magni 6 Midi</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Driving the Robot</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../driving/connecting.html">Connecting to the Robot</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../driving/teleop.html">Driving the robot using Terminal</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../driving/ez_map_simple_drive.html">Driving the robot through EZ-Map</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">EZ-Map</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../ez_map/ez_map_intro.html">Introduction to EZ-Map</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ez_map/ez_map_guide.html">EZ-Map Guide</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Troubleshooting</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../troubleshooting/hardware/lidars.html">LiDAR Sensors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../troubleshooting/hardware/rpi.html">Raspberry Pi 5</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../troubleshooting/hardware/pi_camera.html">Pi Camera 3 Module</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Ubiquity Robotics Documentation</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Magni Robot Simulation</li>
+      <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/UbiquityRobotics/learn2/blob/davecrawley-patch-1/docs/requirements/simulation.rst" class="fa fa-github"> Edit on GitHub</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="magni-robot-simulation">
+<h1>Magni Robot Simulation<a class="headerlink" href="#magni-robot-simulation" title="Link to this heading"></a></h1>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>A comprehensive guide to running the Ubiquity Robotics Magni platform in simulation</p>
+</div>
+<hr class="docutils" />
+<section id="overview">
+<h2>Overview<a class="headerlink" href="#overview" title="Link to this heading"></a></h2>
+<p>The <strong>Ubiquity Robotics Magni</strong> is a robust differential drive mobile robot platform engineered for industrial and research applications.
+This guide provides step-by-step instructions for setting up and running the Magni robot in simulation using ROS2 and Gazebo.</p>
+</section>
+<hr class="docutils" />
+<section id="robot-specifications">
+<h2>Robot Specifications<a class="headerlink" href="#robot-specifications" title="Link to this heading"></a></h2>
+<section id="physical-characteristics">
+<h3>Physical Characteristics<a class="headerlink" href="#physical-characteristics" title="Link to this heading"></a></h3>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>The physical specifications in this simulation guide are based on a Magni 5 series.
+However, our latest generation is the Magni 6 series, and the remainder of this documentation focuses on Magni 6.</p>
+<p>Information about Magni 5 is limited.
+For additional details, please contact: <a class="reference external" href="mailto:support&#37;&#52;&#48;ubiquityrobotics&#46;com">Ubiquity Robotics support</a>.
+You can also refer to our legacy documentation <a class="reference external" href="https://learn.ubiquityrobotics.com">Legacy Documentation</a>.</p>
+</div>
+<table class="docutils align-default" id="id1">
+<caption><span class="caption-text">Physical Specifications</span><a class="headerlink" href="#id1" title="Link to this table"></a></caption>
+<colgroup>
+<col style="width: 30.0%" />
+<col style="width: 70.0%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Component</p></th>
+<th class="head"><p>Specification</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Drive System</p></td>
+<td><p>Differential drive with 2 wheels</p></td>
+</tr>
+<tr class="row-odd"><td><p>Payload Capacity</p></td>
+<td><p>Up to 100 kg</p></td>
+</tr>
+<tr class="row-even"><td><p>Chassis</p></td>
+<td><p>Aerospace-grade aluminum construction</p></td>
+</tr>
+<tr class="row-odd"><td><p>Motors</p></td>
+<td><p>2 x 200W hub motors</p></td>
+</tr>
+<tr class="row-even"><td><p>Power Supply</p></td>
+<td><p>12V and 5V outputs (10A each)</p></td>
+</tr>
+<tr class="row-odd"><td><p>Battery</p></td>
+<td><p>Up to 35 Amp hours of 24V batteries</p></td>
+</tr>
+<tr class="row-even"><td><p>Operating Time</p></td>
+<td><p>Up to 8 hours of normal operation</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="computing-platform">
+<h3>Computing Platform<a class="headerlink" href="#computing-platform" title="Link to this heading"></a></h3>
+<table class="docutils align-default" id="id2">
+<caption><span class="caption-text">Computing Specifications</span><a class="headerlink" href="#id2" title="Link to this table"></a></caption>
+<colgroup>
+<col style="width: 30.0%" />
+<col style="width: 70.0%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Component</p></th>
+<th class="head"><p>Specification</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Onboard Computer</p></td>
+<td><p>Raspberry Pi 4</p></td>
+</tr>
+<tr class="row-odd"><td><p>Operating System</p></td>
+<td><p>Ubuntu with ROS2</p></td>
+</tr>
+<tr class="row-even"><td><p>Connectivity</p></td>
+<td><p>WiFi, Ethernet, 4x USB ports</p></td>
+</tr>
+<tr class="row-odd"><td><p>Sensors</p></td>
+<td><p>Sonar array for obstacle avoidance</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+<hr class="docutils" />
+<section id="simulation-environment-setup">
+<h2>Simulation Environment Setup<a class="headerlink" href="#simulation-environment-setup" title="Link to this heading"></a></h2>
+<section id="prerequisites">
+<h3>Prerequisites<a class="headerlink" href="#prerequisites" title="Link to this heading"></a></h3>
+<section id="system-requirements">
+<h4>System Requirements<a class="headerlink" href="#system-requirements" title="Link to this heading"></a></h4>
+<ul class="simple">
+<li><p><strong>Operating System:</strong> Ubuntu 24.04 LTS (recommended)</p></li>
+<li><p><strong>ROS2 Version:</strong> Jazzy (for Ubuntu 24.04)</p></li>
+<li><p><strong>Simulator:</strong> Gz sim harmonic (<a class="reference external" href="https://gazebosim.org/docs/harmonic/install/">https://gazebosim.org/docs/harmonic/install/</a>)</p></li>
+<li><p><strong>Graphics:</strong> NVIDIA GPU recommended for optimal performance</p></li>
+<li><p><strong>Memory:</strong> Minimum 8GB RAM, 16GB recommended</p></li>
+</ul>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>For best performance, ensure your system meets the recommended specifications</p>
+</div>
+</section>
+</section>
+<section id="installation-steps">
+<h3>Installation Steps<a class="headerlink" href="#installation-steps" title="Link to this heading"></a></h3>
+<section id="step-1-install-ros2-and-dependencies">
+<h4>Step 1: Install ROS2 and Dependencies<a class="headerlink" href="#step-1-install-ros2-and-dependencies" title="Link to this heading"></a></h4>
+<p>Follow the official ROS2 installation guide for your Ubuntu version. Ensure you have the necessary dependencies installed:</p>
+<p><a class="reference external" href="https://docs.ros.org/en/jazzy/Installation/Ubuntu-Install-Debs.html">https://docs.ros.org/en/jazzy/Installation/Ubuntu-Install-Debs.html</a></p>
+</section>
+<section id="step-2-install-magni-robot-packages">
+<h4>Step 2: Install Magni Robot Packages<a class="headerlink" href="#step-2-install-magni-robot-packages" title="Link to this heading"></a></h4>
+<ol class="arabic">
+<li><p><strong>Download</strong> the Magni robot package from:</p>
+<p><a class="reference external" href="https://drive.google.com/file/d/1SRjRAT85jVueIivhKSYl1sVWF8c6LNqB/view?usp=drive_link">https://drive.google.com/file/d/1SRjRAT85jVueIivhKSYl1sVWF8c6LNqB/view?usp=drive_link</a></p>
+</li>
+<li><p><strong>Install</strong> the package:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>dpkg<span class="w"> </span>-i<span class="w"> </span>path/to/magni-description_1.0.1_all.deb
+</pre></div>
+</div>
+</li>
+<li><p><strong>Fix</strong> any dependency issues:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>apt-get<span class="w"> </span>install<span class="w"> </span>-f
+</pre></div>
+</div>
+</li>
+</ol>
+</section>
+<section id="step-3-verify-installation">
+<h4>Step 3: Verify Installation<a class="headerlink" href="#step-3-verify-installation" title="Link to this heading"></a></h4>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">source</span><span class="w"> </span>/opt/ros/jazzy/setup.bash
+ros2<span class="w"> </span>pkg<span class="w"> </span>list<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>magni_description
+<span class="nb">source</span><span class="w"> </span>/opt/ros/jazzy/share/magni_description/local_setup.bash
+</pre></div>
+</div>
+</section>
+</section>
+</section>
+<hr class="docutils" />
+<section id="simulation-configuration">
+<h2>Simulation Configuration<a class="headerlink" href="#simulation-configuration" title="Link to this heading"></a></h2>
+<section id="urdf-model-structure">
+<h3>URDF Model Structure<a class="headerlink" href="#urdf-model-structure" title="Link to this heading"></a></h3>
+<p>The Magni robot simulation uses a <strong>Unified Robot Description Format (URDF)</strong> model that defines the following components:</p>
+<section id="base-components">
+<h4>Base Components<a class="headerlink" href="#base-components" title="Link to this heading"></a></h4>
+<dl class="field-list simple">
+<dt class="field-odd">Base Link<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Main chassis with inertial properties</p>
+</dd>
+<dt class="field-even">Wheel Links<span class="colon">:</span></dt>
+<dd class="field-even"><p>Left and right drive wheels with friction parameters</p>
+</dd>
+<dt class="field-odd">Caster Wheel<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Front support wheel for stability</p>
+</dd>
+<dt class="field-even">Sensor Mounts<span class="colon">:</span></dt>
+<dd class="field-even"><p>Attachment points for sensors</p>
+</dd>
+</dl>
+</section>
+<section id="joint-definitions">
+<h4>Joint Definitions<a class="headerlink" href="#joint-definitions" title="Link to this heading"></a></h4>
+<dl class="field-list simple">
+<dt class="field-odd">Wheel Joints<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Continuous rotation joints for differential drive</p>
+</dd>
+<dt class="field-even">Caster Joint<span class="colon">:</span></dt>
+<dd class="field-even"><p>Fixed joint for support wheel</p>
+</dd>
+<dt class="field-odd">Sensor Joints<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Fixed joints for sensor mounting</p>
+</dd>
+</dl>
+</section>
+</section>
+<section id="gazebo-plugin-configuration">
+<h3>Gazebo Plugin Configuration<a class="headerlink" href="#gazebo-plugin-configuration" title="Link to this heading"></a></h3>
+<p>The simulation utilizes several Gazebo plugins for realistic robot behavior.</p>
+<section id="differential-drive-plugin">
+<h4>Differential Drive Plugin<a class="headerlink" href="#differential-drive-plugin" title="Link to this heading"></a></h4>
+</section>
+<section id="available-sensor-plugins">
+<h4>Available Sensor Plugins<a class="headerlink" href="#available-sensor-plugins" title="Link to this heading"></a></h4>
+<dl class="field-list simple">
+<dt class="field-odd">IMU Sensor<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Provides orientation feedback</p>
+</dd>
+<dt class="field-even">Sonar Sensors<span class="colon">:</span></dt>
+<dd class="field-even"><p>Enable obstacle detection</p>
+</dd>
+<dt class="field-odd">Camera Sensor<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Optional visual input (configurable)</p>
+</dd>
+<dt class="field-even">Lidar Sensor<span class="colon">:</span></dt>
+<dd class="field-even"><p>Optional laser scanning capability (configurable)</p>
+</dd>
+</dl>
+</section>
+</section>
+</section>
+<hr class="docutils" />
+<section id="running-the-simulation">
+<h2>Running the Simulation<a class="headerlink" href="#running-the-simulation" title="Link to this heading"></a></h2>
+<section id="basic-simulation-launch">
+<h3>Basic Simulation Launch<a class="headerlink" href="#basic-simulation-launch" title="Link to this heading"></a></h3>
+<section id="step-1-start-gazebo-with-magni-model">
+<h4>Step 1: Start Gazebo with Magni Model<a class="headerlink" href="#step-1-start-gazebo-with-magni-model" title="Link to this heading"></a></h4>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># Launch empty world with Magni robot</span>
+ros2<span class="w"> </span>launch<span class="w"> </span>magni_description<span class="w"> </span>description.launch.py
+</pre></div>
+</div>
+</section>
+<section id="step-2-verify-robot-spawning">
+<h4>Step 2: Verify Robot Spawning<a class="headerlink" href="#step-2-verify-robot-spawning" title="Link to this heading"></a></h4>
+<p>After launching, verify the following:</p>
+<ul class="simple">
+<li><p>Gazebo simulator window opens with the Magni robot visible</p></li>
+<li><p>Robot model loads with correct visual and collision properties. You will see 2 windows: Gazebo and RViz</p></li>
+<li><p>Robot is positioned on the ground plane without falling through</p></li>
+<li><p>All joints and sensors initialize properly. check RViz for joint states and sensor data</p></li>
+</ul>
+</section>
+<section id="step-3-check-ros2-topics">
+<h4>Step 3: Check ROS2 Topics<a class="headerlink" href="#step-3-check-ros2-topics" title="Link to this heading"></a></h4>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># List active topics</span>
+ros2<span class="w"> </span>topic<span class="w"> </span>list
+</pre></div>
+</div>
+<p>Expected topics include:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>/cmd_vel              # Velocity commands
+/odom                 # Odometry feedback
+/joint_states         # Joint position/velocity states
+/tf                   # Transform tree
+/scan                 # Laser scan data (if lidar enabled)
+/sonar_*              # Sonar sensor readings
+/battery_state
+/camera/camera_info
+/clicked_point
+/clock
+/controller_manager/activity
+/controller_manager/introspection_data/full
+/controller_manager/introspection_data/names
+/controller_manager/introspection_data/values
+/diagnostics
+/diff_drive_controller/cmd_vel
+/goal_pose
+/initialpose
+/parameter_events
+/robot_description
+/rosout
+/tf_static
+</pre></div>
+</div>
+</section>
+</section>
+<section id="teleoperation-testing">
+<h3>Teleoperation Testing<a class="headerlink" href="#teleoperation-testing" title="Link to this heading"></a></h3>
+<section id="step-1-launch-teleop-node">
+<h4>Step 1: Launch Teleop Node<a class="headerlink" href="#step-1-launch-teleop-node" title="Link to this heading"></a></h4>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># Keyboard teleoperation</span>
+ros2<span class="w"> </span>run<span class="w"> </span>teleop_twist_keyboard<span class="w"> </span>teleop_twist_keyboard<span class="w"> </span>--ros-args<span class="w"> </span>-p<span class="w"> </span>stamped:<span class="o">=</span><span class="nb">true</span>
+</pre></div>
+</div>
+</section>
+<section id="step-2-robot-control-commands">
+<h4>Step 2: Robot Control Commands<a class="headerlink" href="#step-2-robot-control-commands" title="Link to this heading"></a></h4>
+<table class="docutils align-default" id="id3">
+<caption><span class="caption-text">Keyboard Control Reference</span><a class="headerlink" href="#id3" title="Link to this table"></a></caption>
+<colgroup>
+<col style="width: 20.0%" />
+<col style="width: 80.0%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Key</p></th>
+<th class="head"><p>Action</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>i</p></td>
+<td><p>Move forward</p></td>
+</tr>
+<tr class="row-odd"><td><p>,</p></td>
+<td><p>Move backward</p></td>
+</tr>
+<tr class="row-even"><td><p>j</p></td>
+<td><p>Turn left</p></td>
+</tr>
+<tr class="row-odd"><td><p>l</p></td>
+<td><p>Turn right</p></td>
+</tr>
+<tr class="row-even"><td><p>k</p></td>
+<td><p>Stop</p></td>
+</tr>
+<tr class="row-odd"><td><p>u</p></td>
+<td><p>Move forward with left turn</p></td>
+</tr>
+<tr class="row-even"><td><p>o</p></td>
+<td><p>Move forward with right turn</p></td>
+</tr>
+<tr class="row-odd"><td><p>m</p></td>
+<td><p>Move backward with left turn</p></td>
+</tr>
+<tr class="row-even"><td><p>.</p></td>
+<td><p>Move backward with right turn</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+</section>
+<section id="troubleshooting">
+<h2>Troubleshooting<a class="headerlink" href="#troubleshooting" title="Link to this heading"></a></h2>
+<section id="common-issues-and-solutions">
+<h3>Common Issues and Solutions<a class="headerlink" href="#common-issues-and-solutions" title="Link to this heading"></a></h3>
+<section id="issue-1-robot-falls-through-ground">
+<h4>Issue 1: Robot Falls Through Ground<a class="headerlink" href="#issue-1-robot-falls-through-ground" title="Link to this heading"></a></h4>
+<dl class="field-list simple">
+<dt class="field-odd">Problem<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Robot model falls through the ground plane</p>
+</dd>
+<dt class="field-even">Cause<span class="colon">:</span></dt>
+<dd class="field-even"><p>Missing collision properties in URDF model</p>
+</dd>
+<dt class="field-odd">Solution<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Verify collision tags are properly defined in robot description files</p>
+</dd>
+</dl>
+</section>
+<section id="issue-2-wheels-not-moving">
+<h4>Issue 2: Wheels Not Moving<a class="headerlink" href="#issue-2-wheels-not-moving" title="Link to this heading"></a></h4>
+<dl class="field-list simple">
+<dt class="field-odd">Problem<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Robot wheels do not respond to velocity commands</p>
+</dd>
+<dt class="field-even">Cause<span class="colon">:</span></dt>
+<dd class="field-even"><p>Joint controller configuration errors</p>
+</dd>
+<dt class="field-odd">Solution<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Check joint names in differential drive plugin match URDF joint definitions</p>
+</dd>
+</dl>
+</section>
+<section id="issue-3-sensors-not-publishing-data">
+<h4>Issue 3: Sensors Not Publishing Data<a class="headerlink" href="#issue-3-sensors-not-publishing-data" title="Link to this heading"></a></h4>
+<dl class="field-list simple">
+<dt class="field-odd">Problem<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Sensor topics show no data output</p>
+</dd>
+<dt class="field-even">Cause<span class="colon">:</span></dt>
+<dd class="field-even"><p>Plugin configuration errors or missing parameters</p>
+</dd>
+<dt class="field-odd">Solution<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Verify sensor plugin parameters and confirm topic names are correct</p>
+</dd>
+</dl>
+</section>
+<section id="issue-4-navigation-fails">
+<h4>Issue 4: Navigation Fails<a class="headerlink" href="#issue-4-navigation-fails" title="Link to this heading"></a></h4>
+<dl class="field-list simple">
+<dt class="field-odd">Problem<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Robot navigation stack fails to function</p>
+</dd>
+<dt class="field-even">Cause<span class="colon">:</span></dt>
+<dd class="field-even"><p>Transform tree issues or missing localization data</p>
+</dd>
+<dt class="field-odd">Solution<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Check TF tree integrity and ensure proper odometry publication</p>
+</dd>
+</dl>
+</section>
+</section>
+<section id="performance-optimization">
+<h3>Performance Optimization<a class="headerlink" href="#performance-optimization" title="Link to this heading"></a></h3>
+<section id="graphics-settings">
+<h4>Graphics Settings<a class="headerlink" href="#graphics-settings" title="Link to this heading"></a></h4>
+<p>For improved simulation performance:</p>
+<ul class="simple">
+<li><p>Reduce Gazebo graphics quality settings</p></li>
+<li><p>Disable shadows and reflections when not required</p></li>
+<li><p>Lower physics update rate for non-real-time applications</p></li>
+</ul>
+</section>
+<section id="system-resources">
+<h4>System Resources<a class="headerlink" href="#system-resources" title="Link to this heading"></a></h4>
+<p>Resource management recommendations:</p>
+<ul class="simple">
+<li><p>Monitor CPU and memory usage during simulation</p></li>
+<li><p>Close unnecessary applications to free system resources</p></li>
+<li><p>Consider headless mode for automated testing scenarios</p></li>
+</ul>
+</section>
+</section>
+</section>
+<hr class="docutils" />
+<section id="development-guidelines">
+<h2>Development Guidelines<a class="headerlink" href="#development-guidelines" title="Link to this heading"></a></h2>
+<section id="custom-sensor-integration">
+<h3>Custom Sensor Integration<a class="headerlink" href="#custom-sensor-integration" title="Link to this heading"></a></h3>
+<p>When adding new sensors to the Magni simulation:</p>
+<ol class="arabic simple">
+<li><p><strong>Update URDF:</strong> Add sensor links and joints to robot description</p></li>
+<li><p><strong>Configure Plugins:</strong> Set appropriate Gazebo sensor plugins with correct parameters</p></li>
+<li><p><strong>Test Integration:</strong> Verify sensor data publication and topic connectivity</p></li>
+<li><p><strong>Document Changes:</strong> Update simulation documentation with new sensor capabilities</p></li>
+</ol>
+</section>
+<section id="controller-development">
+<h3>Controller Development<a class="headerlink" href="#controller-development" title="Link to this heading"></a></h3>
+<p>For developing custom motion controllers:</p>
+<ol class="arabic simple">
+<li><p><strong>Interface Definition:</strong> Define clear control inputs and feedback mechanisms</p></li>
+<li><p><strong>ROS2 Integration:</strong> Create appropriate ROS2 nodes and topic interfaces</p></li>
+<li><p><strong>Simulation Testing:</strong> Validate controller behavior in Gazebo before hardware deployment</p></li>
+<li><p><strong>Parameter Tuning:</strong> Optimize controller gains specifically for simulation environment</p></li>
+</ol>
+</section>
+<section id="validation-procedures">
+<h3>Validation Procedures<a class="headerlink" href="#validation-procedures" title="Link to this heading"></a></h3>
+<section id="simulation-accuracy">
+<h4>Simulation Accuracy<a class="headerlink" href="#simulation-accuracy" title="Link to this heading"></a></h4>
+<p>Best practices for validation:</p>
+<ul class="simple">
+<li><p>Compare simulated robot behavior against real hardware performance</p></li>
+<li><p>Validate sensor readings and timing characteristics</p></li>
+<li><p>Test edge cases and failure mode scenarios</p></li>
+</ul>
+</section>
+<section id="performance-benchmarking">
+<h4>Performance Benchmarking<a class="headerlink" href="#performance-benchmarking" title="Link to this heading"></a></h4>
+<p>Measurement guidelines:</p>
+<ul class="simple">
+<li><p>Measure simulation real-time factor under various conditions</p></li>
+<li><p>Profile computational requirements for different scenarios</p></li>
+<li><p>Document system limitations and performance boundaries</p></li>
+</ul>
+</section>
+</section>
+</section>
+<hr class="docutils" />
+<section id="support-and-resources">
+<h2>Support and Resources<a class="headerlink" href="#support-and-resources" title="Link to this heading"></a></h2>
+<section id="official-documentation">
+<h3>Official Documentation<a class="headerlink" href="#official-documentation" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p><a class="reference external" href="https://ubiquityrobotics.github.io/learn2/">Ubiquity Robotics Documentation</a></p></li>
+<li><p><a class="reference external" href="http://wiki.ros.org/Robots/Magni">ROS2 Wiki - Magni Robot</a></p></li>
+<li><p><a class="reference external" href="https://github.com/UbiquityRobotics/magni_robot">GitHub Repository</a></p></li>
+</ul>
+</section>
+<section id="community-support">
+<h3>Community Support<a class="headerlink" href="#community-support" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p><a class="reference external" href="https://discourse.openrobotics.org/c/ng-ros">ROS2 Discourse Forum</a>. (<strong>You will need an Account</strong>)</p></li>
+<li><p><a class="reference external" href="https://forum.ubiquityrobotics.com/">Ubiquity Robotics Community Forum</a></p></li>
+<li><p><a class="reference external" href="https://github.com/UbiquityRobotics/ubiquity_main">GitHub Issues for bug reports and feature requests</a></p></li>
+</ul>
+</section>
+<section id="additional-resources">
+<h3>Additional Resources<a class="headerlink" href="#additional-resources" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p><a class="reference external" href="https://gazebosim.org/docs/harmonic/getstarted/">Gazebo Simulation Tutorials</a></p></li>
+<li><p><a class="reference external" href="https://github.com/ros-navigation/navigation2">ROS 2 Navigation Stack GitHub</a></p></li>
+<li><p><a class="reference external" href="http://wiki.ros.org/urdf/Tutorials">URDF Tutorials and Examples</a></p></li>
+</ul>
+<hr class="docutils" />
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This documentation is maintained by the Ubiquity Robotics simulation team.
+For updates and contributions, please refer to the official repositories and documentation channels.</p>
+</div>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="workstation.html" class="btn btn-neutral float-left" title="Setting up your Workstation" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="images.html" class="btn btn-neutral float-right" title="Magni 6 Images" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2025, Ubiquity Robotics.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  
+
+
+
+
+<div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    <span class="fa fa-book"> Docs</span>
+    v: davecrawley-patch-1
+    <span class="fa fa-caret-down"></span>
+  </span>
+  <div class="rst-other-versions">
+    
+    <dl>
+      <dt>Versions</dt>
+      
+       <strong> 
+        <dd><a href="https://learn2.ubiquityrobotics.com/davecrawley-patch-1/">davecrawley-patch-1</a></dd>
+        
+      </strong> 
+      
+      
+        <dd><a href="https://learn2.ubiquityrobotics.com/jazzy/">jazzy</a></dd>
+        
+      
+      
+        <dd><a href="https://learn2.ubiquityrobotics.com/jazzy-devel/">jazzy-devel</a></dd>
+        
+      
+    </dl>
+    
+  </div>
+</div>
+<script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

@@ -1,0 +1,350 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="" data-content_root="../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LiDAR Sensors &mdash; Ubiquity Robotics Documentation 1.0.0 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../../_static/custom.css?v=946d5f4a" />
+
+  
+      <script src="../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../_static/documentation_options.js?v=96017b54"></script>
+      <script src="../../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="../../_static/custom.js?v=57b5b994"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Raspberry Pi 5" href="rpi.html" />
+    <link rel="prev" title="EZ-Map Guide" href="../../ez_map/ez_map_guide.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            Ubiquity Robotics Documentation
+              <img src="../../_static/UbiquityRobotics_Logo_Full_White.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Magni 6 Model Introduction</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../models/magni6_mini.html">Magni 6 Mini</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../models/magni6_midi.html">Magni 6 Midi</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Waiting for Your Robot</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../requirements/waiting_for_robot.html">Waiting for Your Robot</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../requirements/batteries.html">Batteries</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../requirements/workstation.html">Setting up your Workstation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../requirements/simulation.html">Magni Robot Simulation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../requirements/images.html">Magni 6 Images</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Unboxing Your Model</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../unboxing/unboxing_mini.html">Unboxing and Setting Up the Magni 6 Mini</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../unboxing/unboxing_midi.html">Unboxing and Setting Up the Magni 6 Midi</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Driving the Robot</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../driving/connecting.html">Connecting to the Robot</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../driving/teleop.html">Driving the robot using Terminal</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../driving/ez_map_simple_drive.html">Driving the robot through EZ-Map</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">EZ-Map</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../ez_map/ez_map_intro.html">Introduction to EZ-Map</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../ez_map/ez_map_guide.html">EZ-Map Guide</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Troubleshooting</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">LiDAR Sensors</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#short-range-lidar">Short Range LiDAR</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#long-range-lidar">Long Range LiDAR</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#lidar-compatabillity-by-robot-model">LiDAR Compatabillity by Robot Model</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="rpi.html">Raspberry Pi 5</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pi_camera.html">Pi Camera 3 Module</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Ubiquity Robotics Documentation</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">LiDAR Sensors</li>
+      <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/UbiquityRobotics/learn2/blob/davecrawley-patch-1/docs/troubleshooting/hardware/lidars.rst" class="fa fa-github"> Edit on GitHub</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="lidar-sensors">
+<h1>LiDAR Sensors<a class="headerlink" href="#lidar-sensors" title="Link to this heading"></a></h1>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>This documentation covers <strong>only the latest LiDAR models</strong>.</p>
+<p>For details on legacy LiDARs, please refer to the <a class="reference external" href="https://learn.ubiquityrobotics.com/noetic_magnisilver_lidar">Legacy Documentation</a>.</p>
+</div>
+<p>Our robots support two LiDAR options:</p>
+<ul class="simple">
+<li><p><strong>Short Range LiDAR</strong></p></li>
+<li><p><strong>Long Range LiDAR</strong></p></li>
+</ul>
+<p>These sensors enhance navigation and mapping capabilities, and fitting various operational needs.</p>
+<section id="short-range-lidar">
+<span id="lidar-short-range"></span><h2>Short Range LiDAR<a class="headerlink" href="#short-range-lidar" title="Link to this heading"></a></h2>
+<p>The Short Range LiDAR is a compact and ideal for indoor environments and tight spaces.
+Its high accuracy and 360 degrees scanning make it perfect for precise mapping and obstacle avoidance in confined areas.</p>
+<a class="reference internal image-reference" href="../../_images/lidar_short.png"><img alt="Short Range LiDAR" class="align-center" src="../../_images/lidar_short.png" style="width: 400px;" />
+</a>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 50.0%" />
+<col style="width: 50.0%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Model</p></th>
+<th class="head"><p>Short Range LiDAR</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Wavelength</p></td>
+<td><p>905 nm</p></td>
+</tr>
+<tr class="row-odd"><td><p>Scanning Angle</p></td>
+<td><p>360°</p></td>
+</tr>
+<tr class="row-even"><td><p>Detection Method</p></td>
+<td><p>Time-of-Flight (ToF)</p></td>
+</tr>
+<tr class="row-odd"><td><p>Detection Range</p></td>
+<td><p>0 m ~ 12 m (70% reflectivity)</p></td>
+</tr>
+<tr class="row-even"><td><p>Detection Accuracy</p></td>
+<td><p>±3 cm (0~6 m); ±4.5 cm (≥6m) (70% reflectivity)</p></td>
+</tr>
+<tr class="row-odd"><td><p>PRF</p></td>
+<td><p>4.5 kHz</p></td>
+</tr>
+<tr class="row-even"><td><p>Angular Resolution</p></td>
+<td><p>0.48°~0.96°</p></td>
+</tr>
+<tr class="row-odd"><td><p>Scanning Rate</p></td>
+<td><p>10 Hz</p></td>
+</tr>
+<tr class="row-even"><td><p>Output Data Resolution</p></td>
+<td><p>15 mm</p></td>
+</tr>
+<tr class="row-odd"><td><p>Data Content</p></td>
+<td><p>Azimuth, Distance, Intensity</p></td>
+</tr>
+<tr class="row-even"><td><p>Operating Voltage</p></td>
+<td><p>5 VDC (4.75 V ~ 5.25 V)</p></td>
+</tr>
+<tr class="row-odd"><td><p>Operating Power</p></td>
+<td><p>1 W</p></td>
+</tr>
+<tr class="row-even"><td><p>Operating Temperature</p></td>
+<td><p>-10°C ~ 40°C</p></td>
+</tr>
+<tr class="row-odd"><td><p>Storage Temperature</p></td>
+<td><p>-30°C ~ 70°C</p></td>
+</tr>
+<tr class="row-even"><td><p>Maximum Acceptable Ambient Light Intensity</p></td>
+<td><p>4 K Lux</p></td>
+</tr>
+<tr class="row-odd"><td><p>Motor</p></td>
+<td><p>Built-in Brushless Motor</p></td>
+</tr>
+<tr class="row-even"><td><p>Communication Interface</p></td>
+<td><p>Standard Asynchronous Serial Port (Baud Rate: 230400 bps)</p></td>
+</tr>
+<tr class="row-odd"><td><p>IP Grade</p></td>
+<td><p>IPX-4</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="long-range-lidar">
+<span id="lidar-long-range"></span><h2>Long Range LiDAR<a class="headerlink" href="#long-range-lidar" title="Link to this heading"></a></h2>
+<p>The Long Range LidAR is designed for long-range detection, suitable for outdoor applications and large-scale enviromnets.
+With a 120m range and robust build, it excels in extensive mapping and navigation tasks.</p>
+<a class="reference internal image-reference" href="../../_images/lidar_long.png"><img alt="Long Range LiDAR" class="align-center" src="../../_images/lidar_long.png" style="width: 400px;" />
+</a>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 50.0%" />
+<col style="width: 50.0%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Model</p></th>
+<th class="head"><p>Long Range LiDAR</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Detection Method</p></td>
+<td><p>Time-of-Flight (ToF)</p></td>
+</tr>
+<tr class="row-odd"><td><p>Wavelength</p></td>
+<td><p>905 nm</p></td>
+</tr>
+<tr class="row-even"><td><p>Laser Class</p></td>
+<td><p>Class I (eye-safe)</p></td>
+</tr>
+<tr class="row-odd"><td><p>Channels</p></td>
+<td><p>1</p></td>
+</tr>
+<tr class="row-even"><td><p>Detection Range</p></td>
+<td><p>120m detection range, 80m&#64;10% reflectivity</p></td>
+</tr>
+<tr class="row-odd"><td><p>Range Accuracy</p></td>
+<td><p>±3 cm</p></td>
+</tr>
+<tr class="row-even"><td><p>Range Precision</p></td>
+<td><p>±1 cm (1σ)</p></td>
+</tr>
+<tr class="row-odd"><td><p>Horizontal FOV</p></td>
+<td><p>360°</p></td>
+</tr>
+<tr class="row-even"><td><p>Scanning Rate</p></td>
+<td><p>20 Hz (Can be manullly adjusted to 5 Hz or 10 Hz)</p></td>
+</tr>
+<tr class="row-odd"><td><p>Horizontal Angular Resolution</p></td>
+<td><p>0.36° at 20 Hz (0.09°: 5 Hz, 0.18°: 10 Hz)</p></td>
+</tr>
+<tr class="row-even"><td><p>Data Point Generating Rate</p></td>
+<td><p>Single Echo 20,000 pts/sec, Dual Echo 40,000 pts/sec</p></td>
+</tr>
+<tr class="row-odd"><td><p>Communication Interface</p></td>
+<td><p>Fast Ethernet, PPS</p></td>
+</tr>
+<tr class="row-even"><td><p>Operating Voltage</p></td>
+<td><p>9V ~ 32 VDC</p></td>
+</tr>
+<tr class="row-odd"><td><p>Operating Power</p></td>
+<td><p>7 W (20Hz)</p></td>
+</tr>
+<tr class="row-even"><td><p>Operating Temperature</p></td>
+<td><p>-20°C ~ 60°C</p></td>
+</tr>
+<tr class="row-odd"><td><p>Storage Temperature</p></td>
+<td><p>-40°C ~ 85°C</p></td>
+</tr>
+<tr class="row-even"><td><p>Vibration Test</p></td>
+<td><p>5 Hz ~ 2000 Hz, 3G rms</p></td>
+</tr>
+<tr class="row-odd"><td><p>Shock Test</p></td>
+<td><p>500 m/sec², lasting for 11ms</p></td>
+</tr>
+<tr class="row-even"><td><p>IP Grade</p></td>
+<td><p>IP67</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="lidar-compatabillity-by-robot-model">
+<h2>LiDAR Compatabillity by Robot Model<a class="headerlink" href="#lidar-compatabillity-by-robot-model" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p><strong>Magni Mini:</strong> Equipped with the Short Range LiDAR.</p></li>
+<li><p><strong>Magni Medi:</strong> Supports both Short Range LiDAR and Long Range LiDAR.</p></li>
+</ul>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../../ez_map/ez_map_guide.html" class="btn btn-neutral float-left" title="EZ-Map Guide" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="rpi.html" class="btn btn-neutral float-right" title="Raspberry Pi 5" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2025, Ubiquity Robotics.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  
+
+
+
+
+<div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    <span class="fa fa-book"> Docs</span>
+    v: davecrawley-patch-1
+    <span class="fa fa-caret-down"></span>
+  </span>
+  <div class="rst-other-versions">
+    
+    <dl>
+      <dt>Versions</dt>
+      
+       <strong> 
+        <dd><a href="https://learn2.ubiquityrobotics.com/davecrawley-patch-1/">davecrawley-patch-1</a></dd>
+        
+      </strong> 
+      
+      
+        <dd><a href="https://learn2.ubiquityrobotics.com/jazzy/">jazzy</a></dd>
+        
+      
+      
+        <dd><a href="https://learn2.ubiquityrobotics.com/jazzy-devel/">jazzy-devel</a></dd>
+        
+      
+    </dl>
+    
+  </div>
+</div>
+<script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
