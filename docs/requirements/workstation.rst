@@ -150,6 +150,118 @@ You should see something like this:
 If you see a list of topics, your workstation is successfully connected and ready to use.
 
 
+
+Zenoh Setup
+###########
+
+Zenoh is a communication middleware that enables efficient data exchange between distributed systems,
+such as your workstation and robot.
+It is designed to work well in environments with limited connectivity,
+making it ideal for robotics applications.   
+
+Installation Prerequisites 
+--------------------------
+
+Ensure your workstation has ROS 2 Jazzy and the necessary Zenoh packages installed.
+
+.. code-block:: bash
+
+    # Install ROS 2 Desktop (if not already installed)
+    sudo apt update
+    sudo apt install ros-jazzy-desktop ros-dev-tools -y
+
+    # Install Zenoh Middleware and Teleop Tools
+    sudo apt install ros-jazzy-rmw-zenoh-cpp ros-jazzy-teleop-twist-keyboard -y
+
+.. note:: 
+
+    Ensure your workstation and the robot are running the same version of ``ros-jazzy-rmw-zenoh-cpp``.
+
+
+Establishing the Connection
+---------------------------
+
+To connect your workstation to the robot,
+you will manually configure the ROS 2 environment in your temrinal to act as a Zenoh Client.
+
+
+Step 1: Prepare the Robot
+~~~~~~~~~~~~~~~~~~~~~~~~~
+
+SSH into your robot following the :doc:`../driving/connecting` guide and ensure the Zenoh Router is running.
+This acts as the bridge for your connection. 
+
+**Verify the Router is Running**: Open a new terminal window on the robot (SSH in again) and run:
+
+.. code-block:: bash 
+
+    pgrep -a zenoh
+
+You should see output similar to ``[PID] rmw_zenohd`` or ``[PID] zenoh-router``. 
+If you see nothing, the router is not running.
+
+.. TODO: What then?
+
+
+Step 2: Configure Workstation Terminal
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Open a new terminal on your wokstation.
+Run the following commands to configure this specific terminal session to connect to the robot.
+
+Replace ``<ROBOT_UP>`` with the actual IP address of your robot.
+
+.. code-block:: bash
+
+    # 1. Select Zenoh as the middleware
+    export RMW_IMPLEMENTATION=rmw_zenoh_cpp
+
+    # 2. Disable local multicast (forces direct connection)
+    export ZENOH_SCOUT_MULTICAST_ENABLED=false
+
+    # 3. Configure the connection to the robot (Replace <ROBOT_IP>)
+    export ZENOH_CONFIG_OVERRIDE='mode="client";connect/endpoints=["tcp/<ROBOT_IP>:7447"]'
+
+
+Step 3: Verify Connection
+~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Once connected, you can run standard ROS2 tools from your workstation.
+
+
+Keyboard Teleoperation
+**********************
+
+To drive the robot using your keyboard:
+
+.. code-block:: bash
+
+    ros2 run teleop_twist_keyboard teleop_twist_keyboard
+
+
+Visualization
+*************
+
+To view sensor data:
+
+.. code-block:: bash
+
+    rviz2
+
+
+Disconecting
+------------
+
+To return your terminal to its default local state,
+simply close the terminal window or unset the configuration variables:
+
+.. code-block:: bash 
+
+    unset RMW_IMPLEMENTATION
+    unset ZENOH_SCOUT_MULTICAST_ENABLED
+    unset ZENOH_CONFIG_OVERRIDE
+
+
 Next Steps
 ##########
 
