@@ -159,6 +159,8 @@ such as your workstation and robot.
 It is designed to work well in environments with limited connectivity,
 making it ideal for robotics applications.   
 
+.. TODO: Why do we use it with out robots? Maybe a quick list could help. 
+
 Installation Prerequisites 
 --------------------------
 
