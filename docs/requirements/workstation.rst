@@ -42,16 +42,16 @@ Setting up the Desktop Workstation
     This section assumes that you are already following the **Requirements for a Workstation** section.
 
 We will not cover how to install Ubuntu 24.04 itself, since there are many good guides available.
-Instead, here are some usefull resources:
+Instead, here are some useful resources:
 
 - `Download Ubuntu 24.04 Desktop <https://ubuntu.com/download/desktop>`_
-- `Instalation Guide for Ubuntu 24.04 <https://onlinux.systems/guides/20240925_ubuntu-2404-installation-guide/>`_
+- `Installation Guide for Ubuntu 24.04 <https://onlinux.systems/guides/20240925_ubuntu-2404-installation-guide/>`_
 
 
 Once Ubuntu 24.04 is installed and configured, you can proceed with setting up **ROS 2 Jazzy**.
 We recommend following the official ROS 2 installation guide:
 
-- `ROS 2 Jazzy Instalation Guide <https://docs.ros.org/en/jazzy/Installation.html>`_
+- `ROS 2 Jazzy Installation Guide <https://docs.ros.org/en/jazzy/Installation.html>`_
 
 This will walk you through the step-by-step installation process.
 
@@ -95,7 +95,7 @@ Something like this:
     Codename:	noble
 
 
-Testing ROS 2 Instalation
+Testing ROS 2 Installation
 -------------------------
 
 To verify ROS 2 is installed correctly and check its version, run:
@@ -148,6 +148,109 @@ You should see something like this:
     The goal is simply to confirm that your workstation is correctly connected to the robot and able to see ROS 2 topics.
 
 If you see a list of topics, your workstation is successfully connected and ready to use.
+
+
+
+Zenoh Setup
+###########
+
+Zenoh is a communication middleware that enables efficient data exchange between distributed systems, such as your workstation and robot. It is particularly useful for robotics because it handles unstable network connections (like Wi-Fi) much better than the default ROS 2 middleware.
+
+Installation Prerequisites 
+--------------------------
+
+Ensure the Zenoh RMW is installed on your workstation.
+
+.. code-block:: bash
+
+    sudo apt update
+    sudo apt install ros-jazzy-rmw-zenoh-cpp -y
+
+.. note:: 
+
+    Ensure your workstation and the robot are running the same version of ``ros-jazzy-rmw-zenoh-cpp``.
+
+
+Establishing the Connection
+---------------------------
+
+To connect your workstation to the robot, you will manually configure the ROS 2 environment in your terminal to act as a Zenoh Client.
+
+Step 1: Prepare the Robot
+~~~~~~~~~~~~~~~~~~~~~~~~~
+
+SSH into your robot following the :doc:`../driving/connecting` guide and ensure the Zenoh Router is running. This acts as the bridge for your connection. 
+
+**Verify the Router is Running**: Open a new terminal window on the robot (SSH in again) and run:
+
+.. code-block:: bash 
+
+    pgrep -a zenoh
+
+You should see output similar to ``[PID] rmw_zenohd``. If you see nothing, the router is not running.
+
+
+Step 2: Configure Workstation Terminal
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Open a new terminal on your computer. Run the following commands to configure this specific terminal session to connect to the robot.
+
+.. important::
+
+    The ``ROS_DOMAIN_ID`` on your workstation **must match** the one set on the robot (the default is ``0``). If they do not match, the workstation will not see any topics even if the Zenoh connection is established.
+
+.. code-block:: bash
+
+    # 1. Select Zenoh as the middleware
+    export RMW_IMPLEMENTATION=rmw_zenoh_cpp
+
+    # 2. Set the Domain ID (Must match the robot)
+    export ROS_DOMAIN_ID=0
+
+    # 3. Disable local multicast (forces direct connection)
+    export ZENOH_SCOUT_MULTICAST_ENABLED=false
+
+    # 4. Configure the connection to the robot (Replace <ROBOT_IP>)
+    export ZENOH_CONFIG_OVERRIDE='mode="client";connect/endpoints=["tcp/<ROBOT_IP>:7447"]'
+
+
+Step 3: Verify Connection
+~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Once connected, you can run standard ROS2 tools from your workstation.
+
+
+Keyboard Teleoperation
+**********************
+
+To drive the robot using your keyboard:
+
+.. code-block:: bash
+
+    ros2 run teleop_twist_keyboard teleop_twist_keyboard
+
+
+Visualization and Plotting
+*************
+
+To view sensor data:
+
+.. code-block:: bash
+
+    rviz2
+
+
+Disconecting
+------------
+
+To return your terminal to its default local state,
+simply close the terminal window or unset the configuration variables:
+
+.. code-block:: bash 
+
+    unset RMW_IMPLEMENTATION
+    unset ZENOH_SCOUT_MULTICAST_ENABLED
+    unset ZENOH_CONFIG_OVERRIDE
 
 
 Next Steps
