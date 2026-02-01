@@ -6,7 +6,7 @@
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Introduction to EZ-Map &mdash; Ubiquity Robotics Documentation 1.0.0 documentation</title>
+  <title>Open RMF Advanced Guide &mdash; Ubiquity Robotics Documentation 1.0.0 documentation</title>
       <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b86133f3" />
       <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=9edc463e" />
       <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=946d5f4a" />
@@ -21,8 +21,8 @@
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="EZ-Map Guide" href="ez_map_guide.html" />
-    <link rel="prev" title="Driving the robot through EZ-Map" href="../driving/ez_map_simple_drive.html" /> 
+    <link rel="next" title="LiDAR Sensors" href="../troubleshooting/hardware/lidars.html" />
+    <link rel="prev" title="Open-RMF Guide" href="open_rmf_guide.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -70,25 +70,20 @@
 <li class="toctree-l1"><a class="reference internal" href="../driving/ez_map_simple_drive.html">Driving the robot through EZ-Map</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">EZ-Map</span></p>
-<ul class="current">
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Introduction to EZ-Map</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#setup">Setup</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#magni-robot">Magni robot</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#lidar-sensor">LiDAR Sensor</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#pi-camera">Pi Camera</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#ez-map-software-image">EZ-Map Software Image</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#next-up">Next up?</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="ez_map_guide.html">EZ-Map Guide</a></li>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../ez_map/ez_map_intro.html">Introduction to EZ-Map</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ez_map/ez_map_guide.html">EZ-Map Guide</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Open-RMF</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../open_rmf/open_rmf_intro.html">Introduction to Open-RMF</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../open_rmf/open_rmf_guide.html">Open-RMF Guide</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../open_rmf/open_rmf_advanced.html">Open RMF Advanced Guide</a></li>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="open_rmf_intro.html">Introduction to Open-RMF</a></li>
+<li class="toctree-l1"><a class="reference internal" href="open_rmf_guide.html">Open-RMF Guide</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Open RMF Advanced Guide</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#overview">Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#api-overview">API Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#authentication-authorization">Authentication &amp; Authorization</a></li>
+</ul>
+</li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Troubleshooting</span></p>
 <ul>
@@ -111,9 +106,9 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
-      <li class="breadcrumb-item active">Introduction to EZ-Map</li>
+      <li class="breadcrumb-item active">Open RMF Advanced Guide</li>
       <li class="wy-breadcrumbs-aside">
-              <a href="https://github.com/UbiquityRobotics/learn2/blob/jazzy-devel/docs/ez_map/ez_map_intro.rst" class="fa fa-github"> Edit on GitHub</a>
+              <a href="https://github.com/UbiquityRobotics/learn2/blob/jazzy-devel/docs/open_rmf/open_rmf_advanced.rst" class="fa fa-github"> Edit on GitHub</a>
       </li>
   </ul>
   <hr/>
@@ -121,74 +116,34 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <section id="introduction-to-ez-map">
-<h1>Introduction to EZ-Map<a class="headerlink" href="#introduction-to-ez-map" title="Link to this heading"></a></h1>
-<div class="line-block">
-<div class="line"><br /></div>
-</div>
-<a class="reference internal image-reference" href="../_images/ezmap_logo.png"><img alt="EZ-Map Logo" class="align-center" src="../_images/ezmap_logo.png" style="width: 400px;" />
-</a>
-<div class="line-block">
-<div class="line"><br /></div>
-</div>
-<p>Welcome to <strong>EZ-Map</strong>.
-This application will help you map a room using LiDAR, create routes for the robot to follow, and control the robot remotely with live video streaming.</p>
-<div style="display: flex; justify-content: center;">
-    <iframe
-        width="560" height="315"
-        src="https://www.youtube-nocookie.com/embed/r7kaECd3c0o"
-        frameborder="0"
-        allowfullscreen
-        referrerpolicy="no-referrer-when-downgrade">
-    </iframe>
-</div><div class="line-block">
-<div class="line"><br /></div>
-</div>
-<section id="setup">
-<h2>Setup<a class="headerlink" href="#setup" title="Link to this heading"></a></h2>
-<p>Before you begin, make sure you have the following ready:</p>
-<section id="magni-robot">
-<h3>Magni robot<a class="headerlink" href="#magni-robot" title="Link to this heading"></a></h3>
-<p>You’ll need a Magni robot to run the software.
-If you haven’t selected one yet, choose from our available models:</p>
-<ul class="simple">
-<li><p><a class="reference internal" href="../models/magni6_mini.html"><span class="doc">Magni 6 Mini</span></a></p></li>
-<li><p><a class="reference internal" href="../models/magni6_midi.html"><span class="doc">Magni 6 Midi</span></a></p></li>
-</ul>
-<p>Once you have your robot, follow the corresponding unboxing and power-on guide in the navigation menu to complete the initial setup.</p>
+  <section id="open-rmf-advanced-guide">
+<h1>Open RMF Advanced Guide<a class="headerlink" href="#open-rmf-advanced-guide" title="Link to this heading"></a></h1>
+<section id="overview">
+<h2>Overview<a class="headerlink" href="#overview" title="Link to this heading"></a></h2>
+<p>The Open-RMF web dashboard consists of <strong>React front-end</strong> communicating via <strong>REST APIs</strong> with a <strong>Node.js back-end</strong>, which handles authentication, database access, and all business logic.
+<strong>Maps and fleet adapters</strong> provide a shared representation of the environment, allowing the dashboard to <strong>monitor robots in real time</strong>, while <strong>RMF coordinates traffic, tasks, and conflicts</strong> behind the scenes.
+<strong>Authentication is centralized through Keycloak</strong>, secrets are stored in environment variables, and all components can be deployed independently across development, testing, and production environments.</p>
 </section>
-<section id="lidar-sensor">
-<h3>LiDAR Sensor<a class="headerlink" href="#lidar-sensor" title="Link to this heading"></a></h3>
-<p>EZ-Map requires a LiDAR for mapping, and all Magni robots come with one pre-installed.
-We currently offer two LiDAR options:</p>
-<ul class="simple">
-<li><p><a class="reference internal" href="../troubleshooting/hardware/lidars.html#lidar-short-range"><span class="std std-ref">Short Range LIDAR</span></a> (Magni 6 Mini, and Magni 6 Midi)</p></li>
-<li><p><a class="reference internal" href="../troubleshooting/hardware/lidars.html#lidar-long-range"><span class="std std-ref">Long Range LiDAR</span></a> (Magni 6 Midi)</p></li>
-</ul>
-<p>Other LiDAR sensors can be installed, but we recommend using the ones supplied with our robots.
-If you need help with alternative sensors or drivers, contact <a class="reference external" href="mailto:support&#37;&#52;&#48;ubiquityrobotics&#46;com">Ubiquity Robotics support</a>.</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>EZ-Map ships with its own configuration files.
-If you’ve made manual changes to the robot software and EZ-Map no longer works, re-flash the original image before troubleshooting further.</p>
+<section id="api-overview">
+<h2>API Overview<a class="headerlink" href="#api-overview" title="Link to this heading"></a></h2>
+<p>The Open-RMF web dashboard exposes a <strong>RESTful API</strong> that the front-end uses to interact with the system.
+Communication is stateless and uses JSON for requests and responses.
+The API acts as a bridge to RMF-managed robots and fleets, giving the dashboard access to higher-level services representing fleets, tasks, and system state without directly controlling individual robots.
+In development, the API is available at:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>http://localhost:3000
+</pre></div>
 </div>
 </section>
-<section id="pi-camera">
-<h3>Pi Camera<a class="headerlink" href="#pi-camera" title="Link to this heading"></a></h3>
-<p>Each Magni robot includes a Pi Camera for remote viewing and fiducial marker detection.
-For more details, see <a class="reference internal" href="../troubleshooting/hardware/pi_camera.html"><span class="doc">Pi Camera 3 Module</span></a>.</p>
-</section>
-<section id="ez-map-software-image">
-<h3>EZ-Map Software Image<a class="headerlink" href="#ez-map-software-image" title="Link to this heading"></a></h3>
-<p>The EZ-Map software image is usually delivered via email.
-After downloading the <cite>img.xz</cite> file, flash it to a microSD card and insert it into the robot.</p>
-<p>You can read more about our images on this page: <a class="reference internal" href="../requirements/images.html"><span class="doc">Magni 6 Images</span></a>.</p>
-<p>If you encounter issues, reach out to <a class="reference external" href="mailto:support&#37;&#52;&#48;ubiquityrobotics&#46;com">Ubiquity Robotics support</a>.</p>
-</section>
-<section id="next-up">
-<h3>Next up?<a class="headerlink" href="#next-up" title="Link to this heading"></a></h3>
-<p>Once you have all required items set up, continue to <a class="reference internal" href="ez_map_guide.html"><span class="doc">EZ-Map Guide</span></a> to explore EZ-Map’s features.</p>
-</section>
+<section id="authentication-authorization">
+<h2>Authentication &amp; Authorization<a class="headerlink" href="#authentication-authorization" title="Link to this heading"></a></h2>
+<p>Authentication is handled entirely by <strong>Keycloak</strong>, which manages user identifies, roles, and token issuance.
+The back-end validates Keycloak-issued access tokens sent in the <code class="docutils literal notranslate"><span class="pre">Authorization</span></code> header using <strong>OpenID Connect (OIDC)</strong> for each request.
+Requests with missing, expired, or invalid tokens receive a <strong>401 Unauthorized</strong> response.
+Role-based access control (RBAC) is enforced based on roles defined in Keycloak, and the back-end evaluates role information embedded in the token to determine access permissions.</p>
+<p>The back-end also manages application-level sessions.
+The <strong>POST /login</strong> endpoint validates a Keycloak-issued token and establishes a session, while <strong>POST /logout</strong> terminates the session on the back-end.
+Token revocation and identity management remain the responsibility of Keycloak.
+This separation ensures that authentication and role management are centralized, while the back-end handles secure token validation, session management, and API authorization.</p>
 </section>
 </section>
 
@@ -196,8 +151,8 @@ After downloading the <cite>img.xz</cite> file, flash it to a microSD card and i
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="../driving/ez_map_simple_drive.html" class="btn btn-neutral float-left" title="Driving the robot through EZ-Map" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="ez_map_guide.html" class="btn btn-neutral float-right" title="EZ-Map Guide" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="open_rmf_guide.html" class="btn btn-neutral float-left" title="Open-RMF Guide" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../troubleshooting/hardware/lidars.html" class="btn btn-neutral float-right" title="LiDAR Sensors" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>

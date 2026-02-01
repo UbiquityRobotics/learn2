@@ -42,6 +42,10 @@ Sections
 
 |  
 
+- `Open-RMF <open_rmf_>`_: Our custom web dashboard for managing fleets, build on open-rmf.
+
+|
+
 - `Troubleshooting <troubleshooting_>`_: Solutions to common hardware and software issues. Your first stop if you encounter problems.
 
 ----
@@ -95,6 +99,18 @@ Sections
 
    ez_map/ez_map_intro
    ez_map/ez_map_guide
+
+
+.. _open_rmf:
+
+.. toctree:: 
+   :maxdepth: 2
+   :caption: Open-RMF 
+
+   open_rmf/open_rmf_intro
+   open_rmf/open_rmf_guide
+   open_rmf/open_rmf_advanced
+
 
 .. _troubleshooting:
 
