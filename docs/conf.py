@@ -84,8 +84,13 @@ html_context['versions'] = [
 
 # project_name = project.replace(' ', '_')
 
+# IMPORTANT:
+# ---------------------------------------------------------------------------------------------
+# This part gives error that language does not exists and set it to "None" in the local build process
+# DO NOT CHANGE IT: you will break the version management for the deployed documentation
 html_context['current_language'] = ''
 html_context['language'] = ''
+# ---------------------------------------------------------------------------------------------
 
 # -- "Edit on GitHub" links --------------------------------------------------
 html_context['display_github'] = True

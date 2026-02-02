@@ -14,8 +14,7 @@ The site hosts technical documentation for Ubiquity Robotics robots, covering ha
 
 The documentation is built and deployed automatically using GitHub Actions. The latest version is available at:
 
-<!-- TODO: Change this to the actual website when the repo is switched. -->
-**[https://paveljolak.github.io/learn2/](https://paveljolak.github.io/learn2/)**
+**[https://learn2.ubiquityrobotics.com/jazzy/](https://learn2.ubiquityrobotics.com/jazzy/)**
 
 ## Local Development
 
@@ -23,7 +22,7 @@ To build and run the documentation locally:
 
 <!-- TODO: Add the right links and names for cloning the repository. -->
 ```bash
-git clone https://github.com/Paveljolak/learn2.git
+git clone https://github.com/UbiquityRobotics/learn2.git
 cd learn2
 git fetch --all
 git branch -a
