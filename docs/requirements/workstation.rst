@@ -96,7 +96,7 @@ Something like this:
 
 
 Testing ROS 2 Installation
--------------------------
+--------------------------
 
 To verify ROS 2 is installed correctly and check its version, run:
 
@@ -231,7 +231,7 @@ To drive the robot using your keyboard:
 
 
 Visualization and Plotting
-*************
+**************************
 
 To view sensor data:
 
