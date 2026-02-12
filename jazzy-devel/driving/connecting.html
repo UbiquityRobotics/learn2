@@ -194,9 +194,15 @@ Follow this guide: <a class="reference internal" href="teleop.html"><span class=
 </section>
 <section id="option-2-connect-via-local-network">
 <h2>Option 2: Connect via Local Network<a class="headerlink" href="#option-2-connect-via-local-network" title="Link to this heading"></a></h2>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This method allows simultaneous access to the robot <strong>and</strong> the internet.</p>
+</div>
 <div class="admonition important">
 <p class="admonition-title">Important</p>
-<p>This method allows simultaneous access to the robot <strong>and</strong> the internet.</p>
+<p>Finishing this step will cause the terminal to become unresponsive.
+This is expected behavior, as the connection is switching from the robot’s Wi-Fi network to the local network.</p>
+<p>You may safely close the terminal once it stops responding.</p>
 </div>
 <ol class="arabic simple">
 <li><p>First connect to the robot via robots Wi-Fi (see <a class="reference internal" href="#connect-ap"><span class="std std-ref">Option 1</span></a>).</p></li>
@@ -217,10 +223,64 @@ Follow this guide: <a class="reference internal" href="teleop.html"><span class=
 <ol class="arabic simple" start="3">
 <li><p>Find the robot’s new IP address on your router (hostname: <code class="docutils literal notranslate"><span class="pre">ubiquityrobotXXXX</span></code>).</p></li>
 </ol>
+<p>You can find the robot’s IP address in two ways:</p>
+<ul class="simple">
+<li><p><strong>Simple way (if you have access to router credentials)</strong>: Log in to your router settings and locate the robot in the list of connected devices.</p></li>
+<li><p><strong>Alternative</strong>: Scan your local network using <code class="docutils literal notranslate"><span class="pre">nmap</span></code>.</p></li>
+</ul>
+<ol class="loweralpha simple">
+<li><p><strong>Method 1 - Router Settings</strong></p></li>
+</ol>
+<p>If you know your router credentials, first determine your default gateway by running the following command in a local terminal:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ip<span class="w"> </span>route
+</pre></div>
+</div>
+<p>You should see an output similar to:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>default<span class="w"> </span>via<span class="w"> </span><span class="m">192</span>.168.1.1
+</pre></div>
+</div>
+<p>The IP address shown is your default gateway.
+Enter this IP into your web browser to open the router login page.</p>
+<p>After logging in, navigate to the connected devices section and look for the robot.
+It should appear as <code class="docutils literal notranslate"><span class="pre">ubiquityrobotXXXX</span></code>, where <code class="docutils literal notranslate"><span class="pre">XXXX</span></code> represents four hexadecimal characters.</p>
+<p>For reference, our connected devices sections looks like this (your interface may differ):</p>
 <a class="reference internal image-reference" href="../_images/robot_name_in_router_list.jpg"><img alt="The robot name screenshotted from the router list." class="align-center" src="../_images/robot_name_in_router_list.jpg" style="width: 800px;" />
 </a>
 <div class="line-block">
 <div class="line"><br /></div>
+</div>
+<ol class="loweralpha simple" start="2">
+<li><p><strong>Method 2 - Using</strong> <code class="docutils literal notranslate"><span class="pre">nmap</span></code></p></li>
+</ol>
+<p>First, install <code class="docutils literal notranslate"><span class="pre">nmap</span></code>:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>apt<span class="w"> </span>update
+sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>nmap
+</pre></div>
+</div>
+<p>Next, determine your device’s IP address and network interface.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ip</span> <span class="n">route</span> <span class="n">get</span> <span class="mf">1.1.1.1</span>
+</pre></div>
+</div>
+<p>The output will include your device’s source IP address and the interface name (for example, <code class="docutils literal notranslate"><span class="pre">wlp</span></code>, or <code class="docutils literal notranslate"><span class="pre">enp</span></code>.).</p>
+<p>Now find the network mask:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ip</span> <span class="o">-</span><span class="n">brief</span> <span class="n">addr</span>
+</pre></div>
+</div>
+<p>This command lists the active network interfaces on your device.
+Locate the same interface identified in the previous step.
+The IP address will include a suffix such as <code class="docutils literal notranslate"><span class="pre">/&lt;mask&gt;</span></code>.
+Copy the full address together with the mask.</p>
+<p>Run the following command:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>nmap<span class="w"> </span>-sn<span class="w"> </span>&lt;IP&gt;/&lt;MASK&gt;
+</pre></div>
+</div>
+<p>This scans your network and returns a list of connected devices along with their IP addresses.
+Look for the hostname <code class="docutils literal notranslate"><span class="pre">ubiquityrobotXXXXX</span></code>.</p>
+<p>Once identified, you can see this IP address to SSH into the robot.</p>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">nmap</span></code> command will only detect the robot if it is on the same local network.
+Ensure your computer is connected to the same network that the robot was connected to in the previous step.</p>
 </div>
 <ol class="arabic simple" start="4">
 <li><p>SSH into the robot using the IP:</p></li>
