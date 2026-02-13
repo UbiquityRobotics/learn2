@@ -32,8 +32,7 @@ To drive the robot using the terminal you must fulfill the following requirement
 
 .. code-block:: bash
 
-    ros2 run teleop_twist_keyboard teleop_twist_keyboard --ros-args --remap cmd_vel:=mcb/cmd_vel
-
+    ros2 run teleop_twist_keyboard teleop_twist_keyboard 
 
 .. TODO: Add the image how the teleop looks like. 
 
