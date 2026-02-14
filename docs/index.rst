@@ -34,7 +34,7 @@ Sections
 
 |  
 
-- `Driving the Robot <driving_>`_: Learn how to operate your robot in the most basic way possible. How to drive it through Teleop and through our custom sofware EZ-Map.
+- `Driving the Robot <driving_>`_: Learn how to operate your robot in the most basic way possible. How to drive it through Teleop and through our custom sofware EZ-Map. This section also includes advanced motor parameter configuration.
 
 |  
 
@@ -89,6 +89,7 @@ Sections
    driving/connecting
    driving/teleop
    driving/ez_map_simple_drive
+   driving/motor_parameters
 
 
 .. _ez_map:
