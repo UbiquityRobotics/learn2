@@ -1,7 +1,8 @@
-Open-RMF Guide
-==============
+OdinFleet Guide
+===============
 
-This section provides a detailed walkthrough of our Web Dashboard. 
+This section provides a detailed guide of OdinFleet.
+Starting with a detailed walkthrough of our Web Dashboard.
 We will begin with the core concepts, followed by an overview of the main features and instructions on how to use them effectively.
 
 Core Concepts
@@ -20,7 +21,8 @@ A task represents a unit of work assigned to a robot, such as navigation, delive
 Traffic Scheduling
 ------------------
 
-Traffic scheduling ensures that robots move through shared spaces without collisions or deadlocks. RMF coordinates robot paths using time-based schedules rather than direct robot-to-robot communication.
+Traffic scheduling ensures that robots move through shared spaces without collisions or deadlocks. 
+RMF coordinates robot paths using time-based schedules rather than direct robot-to-robot communication.
 
 Shared Resources
 ----------------
@@ -172,4 +174,4 @@ Next Steps
 ##########
 
 With an understanding of the core concepts and features of the Web Dashboard, you can now start using it to manage your own robot fleets.
-For a deeper dive into the implementation of thee features, see the advanced guide: :doc:`open_rmf_advanced`.
+For a deeper dive into the implementation of thee features, see the advanced guide: :doc:`odin_fleet_advanced`.
