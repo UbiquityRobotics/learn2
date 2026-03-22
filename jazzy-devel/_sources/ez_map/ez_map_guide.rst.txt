@@ -62,10 +62,25 @@ The EZ-Map interface is available on the following webpage:
 
     http://<ROBOT-IP>:3000
 
+Alternatively, you can use the robot's hostname (where ``XXXX`` is your robot's unique ID):
+
+.. code-block:: bash
+
+    http://ubiquityrobotXXXX.local:3000
+
 .. note:: 
 
    This ``ROBOT-IP`` is the same IP that you used to connect to the robot. 
    If you followed the :doc:`../driving/connecting` properly then you should have this IP.
+   The hostname method may or may not work depending on your network's DNS or mDNS configuration.
+
+
+.. danger::
+
+   **CHECK YOUR BROWSER ADDRESS BAR!** 
+   
+   Modern browsers (like Chrome or Safari) often automatically force an ``https://`` connection. 
+   EZ-Map **requires** ``http://`` to function. If the page does not load, or you see a "Connection Refused" error, manually change the ``https://`` back to ``http://`` in your address bar.
 
 
 .. warning::

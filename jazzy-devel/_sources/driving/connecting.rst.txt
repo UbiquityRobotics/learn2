@@ -135,23 +135,6 @@ Example:
 
 | 
 
-
-.. .. important:: 
-
-..     This step will cause the terminal to become unresponsive. 
-..     This is expected behavior, as the connection is switching from the robot's Wi-Fi network to the local network.
-    
-..     You may safely close the terminal once it stops responding.
-
-.. .. note:: 
-
-..     This step will cause the terminal to become unresponsive. 
-..     This is expected behavior, as the connection is switching from the robot's Wi-Fi network to the local network.
-    
-..     You may safely close the terminal once it stops responding.
-
-
-
 3. Find the robot's new IP address on your router (hostname: ``ubiquityrobotXXXX``).
 
 You can find the robot's IP address in two ways:

@@ -103,11 +103,12 @@
 <li class="toctree-l1"><a class="reference internal" href="../open_rmf/open_rmf_guide.html">Open-RMF Guide</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../open_rmf/open_rmf_advanced.html">Open RMF Advanced Guide</a></li>
 </ul>
-<p class="caption" role="heading"><span class="caption-text">Troubleshooting</span></p>
+<p class="caption" role="heading"><span class="caption-text">Let's get Technical</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../troubleshooting/hardware/lidars.html">LiDAR Sensors</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../troubleshooting/hardware/rpi.html">Raspberry Pi 5</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../troubleshooting/hardware/pi_camera.html">Pi Camera 3 Module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../troubleshooting/hardware/motor_parameters.html">Configuring Motor Parameters</a></li>
 </ul>
 
         </div>
@@ -151,10 +152,21 @@ However, almost all devices that can run a browser should work.</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>http://&lt;ROBOT-IP&gt;:3000
 </pre></div>
 </div>
+<p>Alternatively, you can use the robot’s hostname (where <code class="docutils literal notranslate"><span class="pre">XXXX</span></code> is your robot’s unique ID):</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>http://ubiquityrobotXXXX.local:3000
+</pre></div>
+</div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>This <code class="docutils literal notranslate"><span class="pre">ROBOT-IP</span></code> is the same IP that you used to connect to the robot.
-If you followed the <a class="reference internal" href="../driving/connecting.html"><span class="doc">Connecting to the Robot</span></a> properly then you should have this IP.</p>
+If you followed the <a class="reference internal" href="../driving/connecting.html"><span class="doc">Connecting to the Robot</span></a> properly then you should have this IP.
+The hostname method may or may not work depending on your network’s DNS or mDNS configuration.</p>
+</div>
+<div class="admonition danger">
+<p class="admonition-title">Danger</p>
+<p><strong>CHECK YOUR BROWSER ADDRESS BAR!</strong></p>
+<p>Modern browsers (like Chrome or Safari) often automatically force an <code class="docutils literal notranslate"><span class="pre">https://</span></code> connection.
+EZ-Map <strong>requires</strong> <code class="docutils literal notranslate"><span class="pre">http://</span></code> to function. If the page does not load, or you see a “Connection Refused” error, manually change the <code class="docutils literal notranslate"><span class="pre">https://</span></code> back to <code class="docutils literal notranslate"><span class="pre">http://</span></code> in your address bar.</p>
 </div>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
