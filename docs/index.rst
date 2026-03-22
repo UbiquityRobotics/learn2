@@ -89,7 +89,6 @@ Sections
    driving/connecting
    driving/teleop
    driving/ez_map_simple_drive
-   driving/motor_parameters
 
 
 .. _ez_map:
