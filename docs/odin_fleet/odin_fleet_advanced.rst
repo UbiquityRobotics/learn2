@@ -1,11 +1,11 @@
-Open RMF Advanced Guide
-=======================
+OdinFleet Advanced Guide
+========================
 
 
 Overview
 ########
 
-The Open-RMF web dashboard consists of **React front-end** communicating via **REST APIs** with a **Node.js back-end**, which handles authentication, database access, and all business logic.
+The OdinFleet web dashboard consists of **React front-end** communicating via **REST APIs** with a **Node.js back-end**, which handles authentication, database access, and all business logic.
 **Maps and fleet adapters** provide a shared representation of the environment, allowing the dashboard to **monitor robots in real time**, while **RMF coordinates traffic, tasks, and conflicts** behind the scenes.
 **Authentication is centralized through Keycloak**, secrets are stored in environment variables, and all components can be deployed independently across development, testing, and production environments.
 
@@ -13,7 +13,7 @@ The Open-RMF web dashboard consists of **React front-end** communicating via **R
 API Overview
 ############
 
-The Open-RMF web dashboard exposes a **RESTful API** that the front-end uses to interact with the system. 
+The OdinFleet web dashboard exposes a **RESTful API** that the front-end uses to interact with the system. 
 Communication is stateless and uses JSON for requests and responses.
 The API acts as a bridge to RMF-managed robots and fleets, giving the dashboard access to higher-level services representing fleets, tasks, and system state without directly controlling individual robots.
 In development, the API is available at:
@@ -40,6 +40,7 @@ This separation ensures that authentication and role management are centralized,
 
 
 .. TODO: Information about how patrolling, delivery, and the other stuff is implemented, or how a new feature can be implemented should be added to this section.
+.. TODO: API information.
 
 
 

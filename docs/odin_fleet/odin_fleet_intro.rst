@@ -4,7 +4,7 @@ Introduction to OdinFleet
 General Overview
 ################
 
-**OdinFleet is an application made on top of OpenRMF.** 
+**OdinFleet is an application built on top of OpenRMF.** 
 **OpenRMF (Open Robot Middleware Framework)** is an open-source framework that coordinates multiple robots and automation systems operating in shared environments such as hospitals and warehouses.
 It manages traffic, scheduling, and interoperability, allowing robots from different vendors to operate together without collisions or resource conflicts. 
 

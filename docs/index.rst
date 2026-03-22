@@ -42,7 +42,7 @@ Sections
 
 |  
 
-- `Open-RMF <odin_fleet_>`_: Our custom web dashboard for managing fleets, build on open-rmf.
+- `OdinFleet <odin_fleet_>`_: Our custom OdinFleet software for managing fleets through a web dashboard, build on top of Open-RMF.
 
 |
 
@@ -105,7 +105,7 @@ Sections
 
 .. toctree:: 
    :maxdepth: 2
-   :caption: Open-RMF 
+   :caption: OdinFleet 
 
    odin_fleet/odin_fleet_intro
    odin_fleet/odin_fleet_guide
