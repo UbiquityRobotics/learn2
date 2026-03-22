@@ -34,7 +34,7 @@ Sections
 
 |  
 
-- `Driving the Robot <driving_>`_: Learn how to operate your robot in the most basic way possible. How to drive it through Teleop and through our custom sofware EZ-Map.
+- `Driving the Robot <driving_>`_: Learn how to operate your robot in the most basic way possible. How to drive it through Teleop and through our custom sofware EZ-Map. This section also includes advanced motor parameter configuration.
 
 |  
 
@@ -46,7 +46,7 @@ Sections
 
 |
 
-- `Troubleshooting <troubleshooting_>`_: Solutions to common hardware and software issues. Your first stop if you encounter problems.
+- `Let's get technical <troubleshooting_>`_: Solutions to common hardware and software issues. Your first stop if you encounter problems.
 
 ----
 
@@ -116,10 +116,11 @@ Sections
 
 .. toctree:: 
    :maxdepth: 2
-   :caption: Troubleshooting
+   :caption: Let's get Technical
 
    troubleshooting/hardware/lidars
    troubleshooting/hardware/rpi
    troubleshooting/hardware/pi_camera
+   troubleshooting/hardware/motor_parameters
 
 
