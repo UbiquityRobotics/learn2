@@ -85,6 +85,7 @@ Sections
    driving/connecting
    driving/teleop
    driving/ez_map_simple_drive
+   driving/shutdown
 
 
 .. _ez_map:
@@ -102,6 +103,7 @@ Sections
    :maxdepth: 2
    :caption: Troubleshooting
 
+   troubleshooting/quick_tips
    troubleshooting/hardware/lidars
    troubleshooting/hardware/rpi
    troubleshooting/hardware/pi_camera
