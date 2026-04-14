@@ -4,53 +4,64 @@ Introduction to OdinFleet
 General Overview
 ################
 
-**OdinFleet is an application built on top of OpenRMF.** 
-**OpenRMF (Open Robot Middleware Framework)** is an open-source framework that coordinates multiple robots and automation systems operating in shared environments such as hospitals and warehouses.
-It manages traffic, scheduling, and interoperability, allowing robots from different vendors to operate together without collisions or resource conflicts. 
+**OdinFleet is an application built on top of OpenRMF (Open Robot Middleware Framework)**.
+**OpenRMF** is an open-source framework designed to coordinate multiple robots and automation systems in shared environments. 
 
-By centralizing coordination, OpenRMF reduces the need for manual oversight, prevents traffic jams between robots, and scales smoothly as more robots are added.
-This turns otherwise complex and split multi-robot deployments into a predictable, efficient, and manageable system.
+OdinFleet provides a user-friendly interface for traffic managements, scheduling, and interoperability.
+This enables robots from different vendors to operate together without collisions or resource conflicts.
+Through our custom web dashboard, it offers clear system visibility and simplifies interaction with the entire fleet.
 
-We use OpenRMF through our own Web Dashboard, utilizing OpenRMF's APIs, along with fleet managers.
-The dashboard provides a centralized interface for monitoring and controlling the system, while the fleet managers integrate individual robot fleets and handle communication between OpenRMF and each robot.
+By utilizing OpenRMF's APIs, OdinFleet serves as a practical tool for monitoring and controlling multiple robot fleets while improving communication between users and systems.
+It uses RMW Zenoh to ensure fast and efficient communication across all components.
+
+Managing multiple robots has never been easier.
+
 
 Web Dashboard
 #############
 
-The **OdinFleet's Web Dashboard** is a web-based application that enables users to authenticate, view system state, and perform authorized actions from a single centralized interface. 
-Its purpose is to provide operators and administrators with a clear and accessible way to interact with OpenRMF services without needing direct access to backend systems.
-By combining information and controls into one interface, the dashboard simplifies system management.
+**OdinFleet's Web Dashboard** is a custom web application that allows users to authenticate, monitor system state, and perform actions from a single interface.
 
-The dashboard is designed for environments where multiple robots from one or more fleets must operate in shared spaces.
-In such systems, robots need to coordinate movement, tasks, and access to shared resources such as doors, lifts, and corridors.
-OdinFleet provides the coordination layer for these multi-robot systems, building on ROS2 to enable interoperability between heterogenous robot fleets and infrastructure systems.
+Its goal is to provide a clear and accessible way to interact with robot fleets and automation systems without dealing with multiple backend tools.
+By combining controls and system data in one place, it simplifies overall fleet management.
 
-In simple terms, OdinFleet with our custom dashboard serves as the human-facing interface on top of OpenRMF, allowing operators to observe system state and interact with fleets without needing to work directly with low-level robotic middleware.
+The dashboard enables visualization of all robot fleets and their tasks, supports task dispatching and cancellation, and provides a live map view showing each robot's position within the environment.
+
+It gives centralized, real-time control over multiple robot operating in the same space.
+
 
 Fleet Manager
 #############
 
-
 The **Fleet Manager** acts as the bridge between OdinFleet and individual robot fleets. 
 It translates OdinFleet commands into vendor-specific instructions for each robot. 
 It collects status updates, and reports back to the system. 
-By doing so, it enables coordinated operation across heterogenous fleets, ensures safe navigation, and allows multiple robots to share tasks and resources efficiently within the same environemnt.
+By doing so, it enables coordinated operation across heterogeneous fleets, ensures safe navigation, and allows multiple robots to share tasks and resources efficiently within the same environment.
+
+
+RMW Zenoh
+#########
+
+RMW Zenoh is the communication layer used by OdinFleet to enable fast and efficient data exchange between robots and the system. 
+It provides low-latency, scalable messaging across distributed components, even ii complex network setups.
+This ensures reliable real-time communication between fleets, services, and users.
 
 
 Extra Resources
 ###############
 
-To learn more about OpenRMF and ROS2 consider the following resources:
+To learn more about OpenRMF, ROS2, and Zenoh consider the following resources:
 
 - `OpenRMF Website <https://www.openrmf.io/>`_
 - `OpenRMF Official Documentations <https://cingulara.github.io/openrmf-docs/>`_
 - `ROS2 Jazzy Documentation <https://docs.ros.org/en/jazzy/index.html>`_
 - `OpenRMF + ROS2 Guide <https://osrf.github.io/ros2multirobotbook/>`_
+- `Zenoh Official Documentation <https://zenoh.io/docs/overview/what-is-zenoh/>`_
 
 
 Next Steps
 ##########
 
 Get started with our **Web Dashboard** by following the documentation: :doc:`./odin_fleet_guide`.
-It covers adding robots to fleets, setting up maps and areas, and using all dashboard features.
+It goes through the key features for monitoring and controlling robots through the dashboard.   
 

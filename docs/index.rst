@@ -109,7 +109,6 @@ Sections
 
    odin_fleet/odin_fleet_intro
    odin_fleet/odin_fleet_guide
-   odin_fleet/odin_fleet_advanced
 
 
 .. _troubleshooting:

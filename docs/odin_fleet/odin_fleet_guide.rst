@@ -1,9 +1,9 @@
 OdinFleet Guide
 ===============
 
-This section provides a detailed guide of OdinFleet.
-Starting with a detailed walkthrough of our Web Dashboard.
-We will begin with the core concepts, followed by an overview of the main features and instructions on how to use them effectively.
+This section provides a detailed guide to OdinFleet, starting with core concepts and then covering the Web Dashboard features in more detail.
+
+----
 
 Core Concepts
 #############
@@ -11,39 +11,167 @@ Core Concepts
 Fleet
 -----
 
-A fleet represents a group of robots that share common capabilities and are managed through a single fleet adapter.
+A fleet is a group of robots that share common capabilities and are managed through a single fleet adapter.
 
 Task
 ----
 
-A task represents a unit of work assigned to a robot, such as navigation, delivery, or inspection.
+A task is a unit of work assigned to a robot, such as navigation, delivery, or patrol.
 
 Traffic Scheduling
 ------------------
 
-Traffic scheduling ensures that robots move through shared spaces without collisions or deadlocks. 
-RMF coordinates robot paths using time-based schedules rather than direct robot-to-robot communication.
+Traffic scheduling ensures that robots move through shared spaces without collisions or deadlocks.
+
+OdinFleet coordinates robot paths using time-based schedules rather than direct robot-to-robot communication.
 
 Shared Resources
 ----------------
 
-Resources such as doors, lifts, and narrow corridors are managed centrally to prevent conflicts between robots from different fleets.
+Shared resources such as doors, lifts, and narrow corridors are centrally menaged to prevent conflicts between robots from the same and different fleets.
 
+----
 
-Core dashboard features
+Core OdinFleet Features
 #######################
 
-This subsection describes the main features of the web dashboard.
+This section describes the main features of OdinFleet.
 
-The dashboard currently supports the following features:
+.. image:: /_static/odin_fleet/dashboard_page.png
+    :alt: Dashboard Page
+    :width: 800px
+    :align: center
 
-- **Move To** - Sends a robot or an entire fleet to a user-defined location on the map.
-- **Patrol** - Commands a robot or a fleet to continuously patrol between user-defined waypoints.
-- **Delivery** - Directs a robot to a specified pickup location, collects and item, and delivers it to a user-defined drop-off point.
+OdinFleet currently supports the following core functionalities:
+
+- **Go to Place** - Sends a robot or an entire fleet to a specified location on the map. 
+- **Patrol** - Commands a robot or fleet to continuously move between defined waypoints.
+- **Delivery** - Directs a robot to pick up an item from a specified location and deliver it to a designated drop-off point.
+
+Go to Place
+-----------
+
+The **Go To Place** command allows users to send a robot or fleet to a selected destination on the map. 
+
+You add a Go to Place task by  selecting the robot or a fleet you want to use and then setting the location you want the fleet or the robot to move to.
+
+.. image of move to task
+
+.. image:: /_static/odin_fleet/task_gotoplace.png
+    :alt: Task - Go to Place
+    :width: 800px
+    :align: center
+
+|
+
+Patrol
+------
+
+The **Patrol** command enables robots to continuously move between predefined waypoints.
+This is useful for monitoring areas or performing repetitive tasks.
+
+To create a Patrol task, select a robot or fleet and define at least two waypoints. 
+A minimum of two locations is required, selecting only one location will be treated as a **Go To Place** task.
+
+.. image:: /_static/odin_fleet/task_patrol.png
+    :alt: Task - Patrol 
+    :width: 800px
+    :align: center
+
+|
+
+Delivery
+--------
+
+The **Delivery** command allows a robot to move to a specified pickup location, collect an an item using its ID, and deliver it to a specified drop-off point.
+This feature is designed for efficient transport between predefined location.
+
+To create a Delivery task, select the robot or fleet, define the pickup and drop-off locations, and provide the ID of the cargo.
+
+.. image:: /_static/odin_fleet/task_delivery.png
+    :alt: Task - Delivery
+    :width: 800px
+    :align: center
+
+|
+
+Task Queue
+##########
+
+All created tasks are added to the Task Queue.
+
+.. image:: /_static/odin_fleet/tasks_queue.png
+    :alt: Tasks Queue
+    :width: 400px
+    :align: center
+
+To execute a task, select it from the queue and confirm dispatch. 
+A prompt will display the task name and description for verification before execution. 
+Once confirmed, the assigned robot or fleet will begin the task.
+
+.. raw:: html
+
+  <div class="rst-content">
+    <div style="display: flex; gap: 10px;">
+      <img src="/jazzy-devel/_static/odin_fleet/dispatching_task.png " alt="Tasks Queue - Dispatching task." style="width: 50%; height: auto;">
+      <img src="/jazzy-devel/_static/odin_fleet/task_dispatched.png" alt="Tasks Queue - Task dispatched." style="width: 50%; height: auto;">
+    </div>
+  </div>
+
+After a task is completed, it can be re-dispatched by selecting it again from the queue.
+
+.. image:: /_static/odin_fleet/task_dispatched.png
+    :alt: Tasks Queue - Dispatched task
+    :width: 300px
+    :align: center
+
+Tasks can be removed by clicking the bin icon.
+A confirmation prompt ensures tasks are not deleted accidentally.
+One confirmed, the task is permanently removed.
+
+.. image:: /_static/odin_fleet/task_queue_bin.png
+    :alt: Tasks Queue - Remove queue bin icon
+    :width: 800px
+    :align: center
+
+.. image:: /_static/odin_fleet/deleting_queued_tasks.png
+    :alt: Tasks Queue - Deleting a task
+    :width: 800px
+    :align: center
+
+|
+
+Task List
+#########
+
+The Task List page displays all tasks that have been dispatched.
+
+For each task, you can view its type, dispatch date and time, duration, and current status (queued, in progress, completed, or cancelled).
+
+.. image:: /_static/odin_fleet/tasks_list.png
+    :alt: Tasks List
+    :width: 800px
+    :align: center
+
+Clicking on a task will give you a prompt with the choice of cancelling the task or keeping it alive.
+
+.. image:: /_static/odin_fleet/task_cancelation.png
+    :alt: Tasks List - Cancelling a task
+    :width: 800px
+    :align: center
+
+|
+
+.. note:: 
+
+	Only dispatched tasks appear in this list.
+	Tasks in the Task Queue are not shown here.
+	 
+	A task marked as queued in the Task List indicated that no robot or fleet was available at the time of dispatch. 
+	The task will be automatically assigned once resources become available.
 
 
-.. TODO: Let's think how we want to show this to users. 
-
+.. TODO:  Think about the following:
 .. Do we want to have it here, which will make this page too long. Or do we want to have a single page per feature.
 .. Single page per feature makes more sense to me as we can explain each feature in details and show it with pictures and videos. 
 
@@ -51,122 +179,132 @@ The dashboard currently supports the following features:
 Map Page
 ########
 
-Maps define the physical environment in which robots operate and determine where they can move and navigate.
-Each map is created outside the dashboard using standard ROS-compatible tools and represents a real-word environment.
+The Map Page provides a 2D top-down view of the environment in which robots and fleets operate.
+It represents the physical space and defines where robots can move and navigate.
 
-A map consists of an occupancy grid image and a corresponding YAML file, which together define scale, coordinates, and obstacles.
-White areas represent free space, black areas indicate obstacles, and gray areas mark unknown or restricted regions.
+On this page, you can view: 
 
-Predefined points of interest, such as waypoints and task locations, are stored with the map and visualized in the dashboard.
-For multi-level environments, different map levels are displayed in separate quadrants of the grid-based map.
+- All robots and their associated fleets.
+- Waypoints that define valid robot navigation paths.
+- Map levels if multiple levels exists
+- Environmental resources such as doors and lifts
+- Detailed information about robots and waypoints.
 
-Maps are assigned unique names and are linked to robots through fleet configuration files.
-When the system starts, the appropriate map is loaded automatically, and robots are placed and aligned correctly within the environment, allowing their positions and movements to be monitored in real time on the map.
+.. map_visualisation
+.. image:: /_static/odin_fleet/map_visualization.png
+    :alt: Map Page - Map visualizaton.
+    :width: 800px
+    :align: center
 
-This design allows maps to be reused, updated, and added without modifying dashboard or task logic.
+When a task is dispatched to a robot or fleet, the map updates in real time, showing robot movement throughout the environment.
 
-.. TODO: Add an images here for more clarity.
+.. image:: /_static/odin_fleet/map_visualization_robot_in_transit.png
+    :alt: Map Page - Map visualization with an active robot.
+    :width: 800px
+    :align: center
 
-Scanning a Real-World Location and Uploading a Map
---------------------------------------------------
+|
 
-Information regarding scanning a map and uploading it to the dashboard coming soon.
+Robot's Page
+############
 
-.. TODO: Add additional explanation for this part and pictures for clarity.
+The Robot's Page displays all avaialble robots, each represented by an individual card.
 
+.. TODO: Add another image once we have multiple robots here
 
-Controlling the Fleet Manager 
-#############################
+.. image:: /_static/odin_fleet/robots_list.png
+    :alt: Robot Page - Full list of available robots.
+    :width: 800px
+    :align: center
 
-Add a robot to the fleet manager
---------------------------------
+Each card contains key information about a robot, including its current state (idle, charging, or executing task), connection signal strength, battery level, and current position.
 
-Robots are added to the system through the fleet configuration file.
-This file defines which robots exist, which fleet they belong to, and how they appear and behave on the map.
-Robots are not added manually through the user interface.
-Instead, they are registered automatically when the system starts by reading this configuration.
+.. raw:: html
 
-The fleet configuration describes a fleet, which is a group of robots that share the same motion limits, battery model, and task capabilities.
-Once the fleet is loaded, all robots defined inside it become visible on the map and available for task assignment.
+  <div class="rst-content">
+    <div style="display: flex; gap: 10px;">
+      <img src="/jazzy-devel/_static/odin_fleet/_static/odin_fleet/robot_card_idle.png " alt="Robot Page - A detailed view of a single robot." style="width: 50%; height: auto;">
+      <img src="/jazzy-devel/_static/odin_fleet/robot_card_in_transit.png" alt="Robot Page - A detailed view of a single robot." style="width: 50%; height: auto;">
+    </div>
+  </div>
 
-Each fleet has a unique name and a set of shared parameters such as maximum speed, robot size, battery capacity, and supported task types (for example delivery, patrol, or go-to-place). These settings apply to all robots in the fleet and ensure consistent behavior across the system.
+You can decommission a robot by clicking the **Decommission** button.
+A confirmation prompt will appear, allowing you to either reassign the robot's active tasks to other robots or set it to an idle behavior, such as moving to a charging station.
 
-At the end of the fleet configuration file, there is a dedicated section called ``robots``.
-This section is where individual robots are defined.
-Each robot entry represents a single physical or simulated robot and includes its name, charger assignment, initial map, coordinate frames, and the map file it should use.
+.. image:: /_static/odin_fleet/robot_decomission.png
+    :alt: Robot Page - Robot Card - Decommission a robot.
+    :width: 800px
+    :align: center
 
-.. TODO: a yaml code block here can be to visualize how this looks.
+Another important feature is the **Diagnostics** view.
+When you click the Diagnostics button, a dedicated page opens where you can inspect detailed information about the robot, including ROS2 topics, current state, battery status, and other system data. 
+This provides a clear interface for monitoring and troubleshooting robot behavior.
 
-To add a robot to the map, a new robot entry is simply added under the ``robots`` section.
-Once this entry exists, the robot automatically becomes part of the fleet.
-When the system starts, the robot loads the specified map, initializes its position, and appears on the map interface without any additional manual steps.
+.. image:: /_static/odin_fleet/diagnostics_page.png
+    :alt: Diagnostics Page.
+    :width: 800px
+    :align: center
 
-.. TODO: A screenshot visualizing this can be added for the above paragraph for more clarity.
+| 
 
-Multiple robots can be added by listing them one after another in the same section.
-All robots defined in this way are automatically registered, displayed on the map, and made available to receive tasks.
-No changes to the map file or the user interface are required.
+.. TODO: Info regarding scanning a map and uploading it to the dashboard.
 
-This configuration-based approach ensures that robot deployment is reliable, repeatable, and scalable.
-Robots can be added, removed, or updated in a single central file, making it easy to manage fleets across different environments such as simulation, testing, and real-world deployment.
-
-In summary, to add a robot to the map, you only need to define it in the fleet configuration file under the ``robots`` section.
-After restarting the system, the robot will automatically appear on the map and be ready for operation.
-
-
-Remove a robot from the fleet manager
--------------------------------------
-
-To remove a robot from the fleet manager, follow the same steps as adding it, but instead of adding the robot to the ``robots`` section of the configuration file, simply delete its entry.
-
-.. TODO: Screenshots of this for clarity.
-
-Task List
-#########
-
-This page displays all user-defined tasks assigned to robots or fleets.
-You can view the progress of each task, the current location of the robot or fleet, and the estimated time of arrival (ETA).
-Individual tasks can be selected and cancelled directly from this page.
-
-Robots List
-###########
-
-This page shows all robots registered in the fleet manager.
-For each robot, you can see its current location, battery level, operation status (e.g. moving or idle), and the fleet it belongs to.
-You can also open the diagnostics page for more detailed information about a specific robot.
-
-Diagnostics
------------
-
-This subpage provides detailed information about the selected robot.
-It includes battery status, active ROS 2 topics, running nodes, and other critical data needed for monitoring, diagnosing, and controlling the robot.
+.. TODO: Adding/removing a robot to a fleet.
 
 Doors and Lifts
 ###############
 
-This page displays all doors and lifts available within the mapped environment.
-You can monitor and control them directly from the dashboard.
-Rules can be configured to define when doors or lifts should open or move, based on specific robot actions and conditions.
+The Doors and Lifts page provides two separate lists: one for doors and one for lifts.
+
+The doors list includes information such as the door ID, name, and control system details. 
+The lifts list contains the relevant information required to manage and monitor lift resources.
+
+This page not only allows you to monitor doors and lifts, but also to control them.
+You can configure rules that define when doors should open or when lifts should move, based on specific robot actions or system conditions.
+
+.. warning::
+
+    These features are not yet fully implemented or tested.
+    Use them at your own risk.
+
+.. TODO: Adding picture here for more clarity.
+         Once we have this features implemented and the means to test them, show it, and explain it in more details.
 
 Configuration
 #############
 
-This page allows you to configure the web dashboard.
-You can switch between light and dark mode, and update your account details such as name, email, and password.
+The Configuration Page allows you to configure the web dashboard and manage your personal settings.
 
-----
+You can update your profile details, including your profile name, email, and password.
+
+It also allows you to switch between light and dark mode.
+
+.. image:: /_static/odin_fleet/config_page.png
+    :alt: Configuration Page.
+    :width: 800px
+    :align: center
+
+|
 
 Feedback
 ########
 
-If you encounter any issues with the dashboard or robot control, you can use the feedback page.
-Provide your contact information, select the affected robot and software component, and describe the issue in detail.
+The Feedback Page allows you to quickly report issues to the team.
 
-Our team will review your report and get back to you as soon as possible.
+If you encounter problems with the dashboard, robot control, or other system resources, you can use this page to submit a report.
 
+Provide your contact information, select the affected robot or software, and describe the issue in detail.
 
-.. TODO: Here we can also add commuinication email.
+Our team will respond as soon as possible.
 
+.. image:: /_static/odin_fleet/feedback_page.png
+    :alt: Feedback Page.
+    :width: 400px
+    :align: center
+
+.. note:: 
+
+    You can also contact us directly through our contact email: `Ubiquity Robotics support <support@ubiquityrobotics.com>`_.
 
 ----
 
@@ -174,4 +312,12 @@ Next Steps
 ##########
 
 With an understanding of the core concepts and features of the Web Dashboard, you can now start using it to manage your own robot fleets.
-For a deeper dive into the implementation of thee features, see the advanced guide: :doc:`odin_fleet_advanced`.
+
+To contribute to OdinFleet or customize it for your own configuration, reach out to us at `Ubiquity Robotics support <support@ubiquityrobotics.com>`_. 
+
+.. TODO: Uncomment this when the advanced guide is out. 
+
+.. To contribute to OdinFleet or customize it for your own configurations, continue to the advanced guide:
+
+.. See :doc:`./odin_fleet_advanced`.
+
