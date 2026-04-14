@@ -52,12 +52,10 @@ Extra Resources
 
 To learn more about OpenRMF, ROS2, and Zenoh consider the following resources:
 
-- `OpenRMF Website <https://www.openrmf.io/>`_
-- `OpenRMF Official Documentations <https://cingulara.github.io/openrmf-docs/>`_
+- `OpenRMF Website <https://www.open-rmf.org/>`_
+- `OpenRMF Official Documentation <https://osrf.github.io/ros2multirobotbook/>`_
 - `ROS2 Jazzy Documentation <https://docs.ros.org/en/jazzy/index.html>`_
-- `OpenRMF + ROS2 Guide <https://osrf.github.io/ros2multirobotbook/>`_
 - `Zenoh Official Documentation <https://zenoh.io/docs/overview/what-is-zenoh/>`_
-
 
 Next Steps
 ##########
