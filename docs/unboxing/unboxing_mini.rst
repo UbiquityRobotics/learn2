@@ -159,6 +159,9 @@ The Magni 6 Mini uses two **lead-acid batteries**.
 Ensure the Magni 6 Mini's these two batteries are safely installed and charged before powering on.
 For for exact instructions on how to charge the batteries before adding them to ther robot: :doc:`../requirements/batteries`.
 
+.. note:: 
+    When ordering batteries, ensure they have **6.35mm (or 6.4mm) FASTON terminals**. Some batteries come with smaller 4.75mm terminals, which are not compatible with the standard Magni wire harness.
+
 1. Inspect the Batteries
 ------------------------
 
