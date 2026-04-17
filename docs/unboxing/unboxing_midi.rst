@@ -27,6 +27,9 @@ Battery Specifications
 
 The recommended battery for this model is the **FG20721**.
 
+.. note:: 
+    When ordering batteries, ensure they have **6.35mm (or 6.4mm) FASTON terminals**. Some batteries come with smaller 4.75mm terminals, which are not compatible with the standard Magni wire harness.
+
 .. image:: /_static/unboxing/battery_type.jpg
     :alt: FG20721 Battery Type
     :width: 400px
