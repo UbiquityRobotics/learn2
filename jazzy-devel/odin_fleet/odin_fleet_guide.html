@@ -1,0 +1,404 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>OdinFleet Guide &mdash; Ubiquity Robotics Documentation 1.0.0 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=9edc463e" />
+      <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=946d5f4a" />
+
+  
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=96017b54"></script>
+      <script src="../_static/doctools.js?v=fd6eb6e6"></script>
+      <script src="../_static/sphinx_highlight.js?v=6ffebe34"></script>
+      <script src="../_static/custom.js?v=57b5b994"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="LiDAR Sensors" href="../troubleshooting/hardware/lidars.html" />
+    <link rel="prev" title="Introduction to OdinFleet" href="odin_fleet_intro.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            Ubiquity Robotics Documentation
+              <img src="../_static/UbiquityRobotics_Logo_Full_White.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Magni 6 Model Introduction</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../models/magni6_mini.html">Magni 6 Mini</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../models/magni6_midi.html">Magni 6 Midi</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Waiting for Your Robot</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../requirements/waiting_for_robot.html">Waiting for Your Robot</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../requirements/batteries.html">Batteries</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../requirements/workstation.html">Setting up your Workstation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../requirements/simulation.html">Magni Robot Simulation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../requirements/images.html">Magni 6 Images</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Unboxing Your Model</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../unboxing/unboxing_mini.html">Unboxing and Setting Up the Magni 6 Mini</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../unboxing/unboxing_midi.html">Unboxing Magni 6 MIDI</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Driving the Robot</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../driving/connecting.html">Connecting to the Robot</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../driving/teleop.html">Driving the robot using Terminal</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../driving/ez_map_simple_drive.html">Driving the robot through EZ-Map</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">EZ-Map</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../ez_map/ez_map_intro.html">Introduction to EZ-Map</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ez_map/ez_map_guide.html">EZ-Map Guide</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">OdinFleet</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="odin_fleet_intro.html">Introduction to OdinFleet</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">OdinFleet Guide</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#core-concepts">Core Concepts</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#fleet">Fleet</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#task">Task</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#traffic-scheduling">Traffic Scheduling</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#shared-resources">Shared Resources</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#core-odinfleet-features">Core OdinFleet Features</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#go-to-place">Go to Place</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#patrol">Patrol</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#delivery">Delivery</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#task-queue">Task Queue</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#task-list">Task List</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#map-page">Map Page</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#robot-s-page">Robot’s Page</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#doors-and-lifts">Doors and Lifts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#configuration">Configuration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#feedback">Feedback</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#next-steps">Next Steps</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Let's get Technical</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../troubleshooting/hardware/lidars.html">LiDAR Sensors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../troubleshooting/hardware/rpi.html">Raspberry Pi 5</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../troubleshooting/hardware/pi_camera.html">Pi Camera 3 Module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../troubleshooting/hardware/motor_parameters.html">Configuring Motor Parameters</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Ubiquity Robotics Documentation</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">OdinFleet Guide</li>
+      <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/UbiquityRobotics/learn2/blob/jazzy-devel/docs/odin_fleet/odin_fleet_guide.rst" class="fa fa-github"> Edit on GitHub</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="odinfleet-guide">
+<h1>OdinFleet Guide<a class="headerlink" href="#odinfleet-guide" title="Link to this heading"></a></h1>
+<p>This section provides a detailed guide to OdinFleet, starting with core concepts and then covering the Web Dashboard features in more detail.</p>
+<hr class="docutils" />
+<section id="core-concepts">
+<h2>Core Concepts<a class="headerlink" href="#core-concepts" title="Link to this heading"></a></h2>
+<section id="fleet">
+<h3>Fleet<a class="headerlink" href="#fleet" title="Link to this heading"></a></h3>
+<p>A fleet is a group of robots that share common capabilities and are managed through a single fleet adapter.</p>
+</section>
+<section id="task">
+<h3>Task<a class="headerlink" href="#task" title="Link to this heading"></a></h3>
+<p>A task is a unit of work assigned to a robot, such as navigation, delivery, or patrol.</p>
+</section>
+<section id="traffic-scheduling">
+<h3>Traffic Scheduling<a class="headerlink" href="#traffic-scheduling" title="Link to this heading"></a></h3>
+<p>Traffic scheduling ensures that robots move through shared spaces without collisions or deadlocks.</p>
+<p>OdinFleet coordinates robot paths using time-based schedules rather than direct robot-to-robot communication.</p>
+</section>
+<section id="shared-resources">
+<h3>Shared Resources<a class="headerlink" href="#shared-resources" title="Link to this heading"></a></h3>
+<p>Shared resources such as doors, lifts, and narrow corridors are centrally menaged to prevent conflicts between robots from the same and different fleets.</p>
+</section>
+</section>
+<hr class="docutils" />
+<section id="core-odinfleet-features">
+<h2>Core OdinFleet Features<a class="headerlink" href="#core-odinfleet-features" title="Link to this heading"></a></h2>
+<p>This section describes the main features of OdinFleet.</p>
+<a class="reference internal image-reference" href="../_images/dashboard_page.png"><img alt="Dashboard Page" class="align-center" src="../_images/dashboard_page.png" style="width: 800px;" />
+</a>
+<p>OdinFleet currently supports the following core functionalities:</p>
+<ul class="simple">
+<li><p><strong>Go to Place</strong> - Sends a robot or an entire fleet to a specified location on the map.</p></li>
+<li><p><strong>Patrol</strong> - Commands a robot or fleet to continuously move between defined waypoints.</p></li>
+<li><p><strong>Delivery</strong> - Directs a robot to pick up an item from a specified location and deliver it to a designated drop-off point.</p></li>
+</ul>
+<section id="go-to-place">
+<h3>Go to Place<a class="headerlink" href="#go-to-place" title="Link to this heading"></a></h3>
+<p>The <strong>Go To Place</strong> command allows users to send a robot or fleet to a selected destination on the map.</p>
+<p>You add a Go to Place task by  selecting the robot or a fleet you want to use and then setting the location you want the fleet or the robot to move to.</p>
+<a class="reference internal image-reference" href="../_images/task_gotoplace.png"><img alt="Task - Go to Place" class="align-center" src="../_images/task_gotoplace.png" style="width: 800px;" />
+</a>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</section>
+<section id="patrol">
+<h3>Patrol<a class="headerlink" href="#patrol" title="Link to this heading"></a></h3>
+<p>The <strong>Patrol</strong> command enables robots to continuously move between predefined waypoints.
+This is useful for monitoring areas or performing repetitive tasks.</p>
+<p>To create a Patrol task, select a robot or fleet and define at least two waypoints.
+A minimum of two locations is required, selecting only one location will be treated as a <strong>Go To Place</strong> task.</p>
+<a class="reference internal image-reference" href="../_images/task_patrol.png"><img alt="Task - Patrol" class="align-center" src="../_images/task_patrol.png" style="width: 800px;" />
+</a>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</section>
+<section id="delivery">
+<h3>Delivery<a class="headerlink" href="#delivery" title="Link to this heading"></a></h3>
+<p>The <strong>Delivery</strong> command allows a robot to move to a specified pickup location, collect an an item using its ID, and deliver it to a specified drop-off point.
+This feature is designed for efficient transport between predefined location.</p>
+<p>To create a Delivery task, select the robot or fleet, define the pickup and drop-off locations, and provide the ID of the cargo.</p>
+<a class="reference internal image-reference" href="../_images/task_delivery.png"><img alt="Task - Delivery" class="align-center" src="../_images/task_delivery.png" style="width: 800px;" />
+</a>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</section>
+</section>
+<section id="task-queue">
+<h2>Task Queue<a class="headerlink" href="#task-queue" title="Link to this heading"></a></h2>
+<p>All created tasks are added to the Task Queue.</p>
+<a class="reference internal image-reference" href="../_images/tasks_queue.png"><img alt="Tasks Queue" class="align-center" src="../_images/tasks_queue.png" style="width: 400px;" />
+</a>
+<p>To execute a task, select it from the queue and confirm dispatch.
+A prompt will display the task name and description for verification before execution.
+Once confirmed, the assigned robot or fleet will begin the task.</p>
+<div class="rst-content">
+  <div style="display: flex; gap: 10px;">
+    <img src="/jazzy-devel/_static/odin_fleet/dispatching_task.png " alt="Tasks Queue - Dispatching task." style="width: 50%; height: auto;">
+    <img src="/jazzy-devel/_static/odin_fleet/task_dispatched.png" alt="Tasks Queue - Task dispatched." style="width: 50%; height: auto;">
+  </div>
+</div><p>After a task is completed, it can be re-dispatched by selecting it again from the queue.</p>
+<a class="reference internal image-reference" href="../_images/task_dispatched.png"><img alt="Tasks Queue - Dispatched task" class="align-center" src="../_images/task_dispatched.png" style="width: 300px;" />
+</a>
+<p>Tasks can be removed by clicking the bin icon.
+A confirmation prompt ensures tasks are not deleted accidentally.
+One confirmed, the task is permanently removed.</p>
+<a class="reference internal image-reference" href="../_images/task_queue_bin.png"><img alt="Tasks Queue - Remove queue bin icon" class="align-center" src="../_images/task_queue_bin.png" style="width: 800px;" />
+</a>
+<a class="reference internal image-reference" href="../_images/deleting_queued_tasks.png"><img alt="Tasks Queue - Deleting a task" class="align-center" src="../_images/deleting_queued_tasks.png" style="width: 800px;" />
+</a>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</section>
+<section id="task-list">
+<h2>Task List<a class="headerlink" href="#task-list" title="Link to this heading"></a></h2>
+<p>The Task List page displays all tasks that have been dispatched.</p>
+<p>For each task, you can view its type, dispatch date and time, duration, and current status (queued, in progress, completed, or cancelled).</p>
+<a class="reference internal image-reference" href="../_images/tasks_list.png"><img alt="Tasks List" class="align-center" src="../_images/tasks_list.png" style="width: 800px;" />
+</a>
+<p>Clicking on a task will give you a prompt with the choice of cancelling the task or keeping it alive.</p>
+<a class="reference internal image-reference" href="../_images/task_cancelation.png"><img alt="Tasks List - Cancelling a task" class="align-center" src="../_images/task_cancelation.png" style="width: 800px;" />
+</a>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Only dispatched tasks appear in this list.
+Tasks in the Task Queue are not shown here.</p>
+<p>A task marked as queued in the Task List indicated that no robot or fleet was available at the time of dispatch.
+The task will be automatically assigned once resources become available.</p>
+</div>
+</section>
+<section id="map-page">
+<h2>Map Page<a class="headerlink" href="#map-page" title="Link to this heading"></a></h2>
+<p>The Map Page provides a 2D top-down view of the environment in which robots and fleets operate.
+It represents the physical space and defines where robots can move and navigate.</p>
+<p>On this page, you can view:</p>
+<ul class="simple">
+<li><p>All robots and their associated fleets.</p></li>
+<li><p>Waypoints that define valid robot navigation paths.</p></li>
+<li><p>Map levels if multiple levels exists</p></li>
+<li><p>Environmental resources such as doors and lifts</p></li>
+<li><p>Detailed information about robots and waypoints.</p></li>
+</ul>
+<a class="reference internal image-reference" href="../_images/map_visualization.png"><img alt="Map Page - Map visualizaton." class="align-center" src="../_images/map_visualization.png" style="width: 800px;" />
+</a>
+<p>When a task is dispatched to a robot or fleet, the map updates in real time, showing robot movement throughout the environment.</p>
+<a class="reference internal image-reference" href="../_images/map_visualization_robot_in_transit.png"><img alt="Map Page - Map visualization with an active robot." class="align-center" src="../_images/map_visualization_robot_in_transit.png" style="width: 800px;" />
+</a>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</section>
+<section id="robot-s-page">
+<h2>Robot’s Page<a class="headerlink" href="#robot-s-page" title="Link to this heading"></a></h2>
+<p>The Robot’s Page displays all avaialble robots, each represented by an individual card.</p>
+<a class="reference internal image-reference" href="../_images/robots_list.png"><img alt="Robot Page - Full list of available robots." class="align-center" src="../_images/robots_list.png" style="width: 800px;" />
+</a>
+<p>Each card contains key information about a robot, including its current state (idle, charging, or executing task), connection signal strength, battery level, and current position.</p>
+<div class="rst-content">
+  <div style="display: flex; gap: 10px;">
+    <img src="/jazzy-devel/_static/odin_fleet/_static/odin_fleet/robot_card_idle.png " alt="Robot Page - A detailed view of a single robot." style="width: 50%; height: auto;">
+    <img src="/jazzy-devel/_static/odin_fleet/robot_card_in_transit.png" alt="Robot Page - A detailed view of a single robot." style="width: 50%; height: auto;">
+  </div>
+</div><p>You can decommission a robot by clicking the <strong>Decommission</strong> button.
+A confirmation prompt will appear, allowing you to either reassign the robot’s active tasks to other robots or set it to an idle behavior, such as moving to a charging station.</p>
+<a class="reference internal image-reference" href="../_images/robot_decomission.png"><img alt="Robot Page - Robot Card - Decommission a robot." class="align-center" src="../_images/robot_decomission.png" style="width: 800px;" />
+</a>
+<p>Another important feature is the <strong>Diagnostics</strong> view.
+When you click the Diagnostics button, a dedicated page opens where you can inspect detailed information about the robot, including ROS2 topics, current state, battery status, and other system data.
+This provides a clear interface for monitoring and troubleshooting robot behavior.</p>
+<a class="reference internal image-reference" href="../_images/diagnostics_page.png"><img alt="Diagnostics Page." class="align-center" src="../_images/diagnostics_page.png" style="width: 800px;" />
+</a>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</section>
+<section id="doors-and-lifts">
+<h2>Doors and Lifts<a class="headerlink" href="#doors-and-lifts" title="Link to this heading"></a></h2>
+<p>The Doors and Lifts page provides two separate lists: one for doors and one for lifts.</p>
+<p>The doors list includes information such as the door ID, name, and control system details.
+The lifts list contains the relevant information required to manage and monitor lift resources.</p>
+<p>This page not only allows you to monitor doors and lifts, but also to control them.
+You can configure rules that define when doors should open or when lifts should move, based on specific robot actions or system conditions.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>These features are not yet fully implemented or tested.
+Use them at your own risk.</p>
+</div>
+</section>
+<section id="configuration">
+<h2>Configuration<a class="headerlink" href="#configuration" title="Link to this heading"></a></h2>
+<p>The Configuration Page allows you to configure the web dashboard and manage your personal settings.</p>
+<p>You can update your profile details, including your profile name, email, and password.</p>
+<p>It also allows you to switch between light and dark mode.</p>
+<a class="reference internal image-reference" href="../_images/config_page.png"><img alt="Configuration Page." class="align-center" src="../_images/config_page.png" style="width: 800px;" />
+</a>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</section>
+<section id="feedback">
+<h2>Feedback<a class="headerlink" href="#feedback" title="Link to this heading"></a></h2>
+<p>The Feedback Page allows you to quickly report issues to the team.</p>
+<p>If you encounter problems with the dashboard, robot control, or other system resources, you can use this page to submit a report.</p>
+<p>Provide your contact information, select the affected robot or software, and describe the issue in detail.</p>
+<p>Our team will respond as soon as possible.</p>
+<a class="reference internal image-reference" href="../_images/feedback_page.png"><img alt="Feedback Page." class="align-center" src="../_images/feedback_page.png" style="width: 400px;" />
+</a>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>You can also contact us directly through our contact email: <a class="reference external" href="mailto:support&#37;&#52;&#48;ubiquityrobotics&#46;com">Ubiquity Robotics support</a>.</p>
+</div>
+</section>
+<hr class="docutils" />
+<section id="next-steps">
+<h2>Next Steps<a class="headerlink" href="#next-steps" title="Link to this heading"></a></h2>
+<p>With an understanding of the core concepts and features of the Web Dashboard, you can now start using it to manage your own robot fleets.</p>
+<p>To contribute to OdinFleet or customize it for your own configuration, reach out to us at <a class="reference external" href="mailto:support&#37;&#52;&#48;ubiquityrobotics&#46;com">Ubiquity Robotics support</a>.</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="odin_fleet_intro.html" class="btn btn-neutral float-left" title="Introduction to OdinFleet" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../troubleshooting/hardware/lidars.html" class="btn btn-neutral float-right" title="LiDAR Sensors" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2025, Ubiquity Robotics.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  
+
+
+
+
+<div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    <span class="fa fa-book"> Docs</span>
+    v: jazzy-devel
+    <span class="fa fa-caret-down"></span>
+  </span>
+  <div class="rst-other-versions">
+    
+    <dl>
+      <dt>Versions</dt>
+      
+      
+        <dd><a href="https://learn2.ubiquityrobotics.com/jazzy/">jazzy</a></dd>
+        
+      
+       <strong> 
+        <dd><a href="https://learn2.ubiquityrobotics.com/jazzy-devel/">jazzy-devel</a></dd>
+        
+      </strong> 
+      
+    </dl>
+    
+  </div>
+</div>
+<script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
