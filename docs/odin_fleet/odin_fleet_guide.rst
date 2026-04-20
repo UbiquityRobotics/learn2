@@ -223,7 +223,7 @@ Each card contains key information about a robot, including its current state (i
 
   <div class="rst-content">
     <div style="display: flex; gap: 10px;">
-      <img src="/jazzy-devel/_static/odin_fleet/_static/odin_fleet/robot_card_idle.png " alt="Robot Page - A detailed view of a single robot." style="width: 50%; height: auto;">
+      <img src="/jazzy-devel/_static/odin_fleet/robot_card_idle.png " alt="Robot Page - A detailed view of a single robot." style="width: 50%; height: auto;">
       <img src="/jazzy-devel/_static/odin_fleet/robot_card_in_transit.png" alt="Robot Page - A detailed view of a single robot." style="width: 50%; height: auto;">
     </div>
   </div>
@@ -320,4 +320,3 @@ To contribute to OdinFleet or customize it for your own configuration, reach out
 .. To contribute to OdinFleet or customize it for your own configurations, continue to the advanced guide:
 
 .. See :doc:`./odin_fleet_advanced`.
-

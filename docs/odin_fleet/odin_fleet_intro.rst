@@ -61,5 +61,4 @@ Next Steps
 ##########
 
 Get started with our **Web Dashboard** by following the documentation: :doc:`./odin_fleet_guide`.
-It goes through the key features for monitoring and controlling robots through the dashboard.   
-
+It goes through the key features for monitoring and controlling robots through the dashboard.
