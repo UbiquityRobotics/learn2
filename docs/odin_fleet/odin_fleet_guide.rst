@@ -44,14 +44,14 @@ This section describes the main features of OdinFleet.
 
 OdinFleet currently supports the following core functionalities:
 
-- **Go to Place** - Sends a robot or an entire fleet to a specified location on the map. 
+- **Go to Place** - Sends a robot or an entire fleet to a specified location on the map.
 - **Patrol** - Commands a robot or fleet to continuously move between defined waypoints.
 - **Delivery** - Directs a robot to pick up an item from a specified location and deliver it to a designated drop-off point.
 
 Go to Place
 -----------
 
-The **Go To Place** command allows users to send a robot or fleet to a selected destination on the map. 
+The **Go To Place** command allows users to send a robot or fleet to a selected destination on the map.
 
 You add a Go to Place task by  selecting the robot or a fleet you want to use and then setting the location you want the fleet or the robot to move to.
 
@@ -70,11 +70,11 @@ Patrol
 The **Patrol** command enables robots to continuously move between predefined waypoints.
 This is useful for monitoring areas or performing repetitive tasks.
 
-To create a Patrol task, select a robot or fleet and define at least two waypoints. 
+To create a Patrol task, select a robot or fleet and define at least two waypoints.
 A minimum of two locations is required, selecting only one location will be treated as a **Go To Place** task.
 
 .. image:: /_static/odin_fleet/task_patrol.png
-    :alt: Task - Patrol 
+    :alt: Task - Patrol
     :width: 800px
     :align: center
 
@@ -105,8 +105,8 @@ All created tasks are added to the Task Queue.
     :width: 400px
     :align: center
 
-To execute a task, select it from the queue and confirm dispatch. 
-A prompt will display the task name and description for verification before execution. 
+To execute a task, select it from the queue and confirm dispatch.
+A prompt will display the task name and description for verification before execution.
 Once confirmed, the assigned robot or fleet will begin the task.
 
 .. raw:: html
@@ -162,18 +162,18 @@ Clicking on a task will give you a prompt with the choice of cancelling the task
 
 |
 
-.. note:: 
+.. note::
 
 	Only dispatched tasks appear in this list.
 	Tasks in the Task Queue are not shown here.
-	 
-	A task marked as queued in the Task List indicated that no robot or fleet was available at the time of dispatch. 
+
+	A task marked as queued in the Task List indicated that no robot or fleet was available at the time of dispatch.
 	The task will be automatically assigned once resources become available.
 
 
 .. TODO:  Think about the following:
 .. Do we want to have it here, which will make this page too long. Or do we want to have a single page per feature.
-.. Single page per feature makes more sense to me as we can explain each feature in details and show it with pictures and videos. 
+.. Single page per feature makes more sense to me as we can explain each feature in details and show it with pictures and videos.
 
 
 Map Page
@@ -182,7 +182,7 @@ Map Page
 The Map Page provides a 2D top-down view of the environment in which robots and fleets operate.
 It represents the physical space and defines where robots can move and navigate.
 
-On this page, you can view: 
+On this page, you can view:
 
 - All robots and their associated fleets.
 - Waypoints that define valid robot navigation paths.
@@ -223,7 +223,7 @@ Each card contains key information about a robot, including its current state (i
 
   <div class="rst-content">
     <div style="display: flex; gap: 10px;">
-      <img src="/jazzy-devel/_static/odin_fleet/_static/odin_fleet/robot_card_idle.png " alt="Robot Page - A detailed view of a single robot." style="width: 50%; height: auto;">
+      <img src="/jazzy-devel/_static/odin_fleet/odin_fleet/robot_card_idle.png " alt="Robot Page - A detailed view of a single robot." style="width: 50%; height: auto;">
       <img src="/jazzy-devel/_static/odin_fleet/robot_card_in_transit.png" alt="Robot Page - A detailed view of a single robot." style="width: 50%; height: auto;">
     </div>
   </div>
@@ -237,7 +237,7 @@ A confirmation prompt will appear, allowing you to either reassign the robot's a
     :align: center
 
 Another important feature is the **Diagnostics** view.
-When you click the Diagnostics button, a dedicated page opens where you can inspect detailed information about the robot, including ROS2 topics, current state, battery status, and other system data. 
+When you click the Diagnostics button, a dedicated page opens where you can inspect detailed information about the robot, including ROS2 topics, current state, battery status, and other system data.
 This provides a clear interface for monitoring and troubleshooting robot behavior.
 
 .. image:: /_static/odin_fleet/diagnostics_page.png
@@ -245,7 +245,7 @@ This provides a clear interface for monitoring and troubleshooting robot behavio
     :width: 800px
     :align: center
 
-| 
+|
 
 .. TODO: Info regarding scanning a map and uploading it to the dashboard.
 
@@ -256,7 +256,7 @@ Doors and Lifts
 
 The Doors and Lifts page provides two separate lists: one for doors and one for lifts.
 
-The doors list includes information such as the door ID, name, and control system details. 
+The doors list includes information such as the door ID, name, and control system details.
 The lifts list contains the relevant information required to manage and monitor lift resources.
 
 This page not only allows you to monitor doors and lifts, but also to control them.
@@ -302,7 +302,7 @@ Our team will respond as soon as possible.
     :width: 400px
     :align: center
 
-.. note:: 
+.. note::
 
     You can also contact us directly through our contact email: `Ubiquity Robotics support <support@ubiquityrobotics.com>`_.
 
@@ -313,11 +313,10 @@ Next Steps
 
 With an understanding of the core concepts and features of the Web Dashboard, you can now start using it to manage your own robot fleets.
 
-To contribute to OdinFleet or customize it for your own configuration, reach out to us at `Ubiquity Robotics support <support@ubiquityrobotics.com>`_. 
+To contribute to OdinFleet or customize it for your own configuration, reach out to us at `Ubiquity Robotics support <support@ubiquityrobotics.com>`_.
 
-.. TODO: Uncomment this when the advanced guide is out. 
+.. TODO: Uncomment this when the advanced guide is out.
 
 .. To contribute to OdinFleet or customize it for your own configurations, continue to the advanced guide:
 
 .. See :doc:`./odin_fleet_advanced`.
-
