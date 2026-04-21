@@ -135,6 +135,16 @@ Example:
 
 | 
 
+.. tip::
+
+    If the robot cannot find your local network, first list nearby Wi-Fi networks from the robot:
+
+    .. code-block:: bash
+
+        nmcli device wifi list
+
+    If your local Wi-Fi (SSID) does not appear in the list, restart the robot and try the connection process again.
+
 3. Find the robot's new IP address on your router (hostname: ``ubiquityrobotXXXX``).
 
 You can find the robot's IP address in two ways:
@@ -144,7 +154,11 @@ You can find the robot's IP address in two ways:
 
 a. **Method 1 - Router Settings**
 
-If you know your router credentials, first determine your default gateway by running the following command in a local terminal:
+If you know your router credentials, first determine your default gateway.
+
+**For Linux/Mac:**
+
+Run the following command in a local terminal:
 
 .. code-block:: bash
 
@@ -155,6 +169,18 @@ You should see an output similar to:
 .. code-block:: bash
 
     default via 192.168.1.1 
+
+**For Windows:**
+
+Open PowerShell or Command Prompt and run:
+
+.. code-block:: bash
+
+    ipconfig
+
+Look for ``Default Gateway`` under your active network adapter.
+
+**For all platforms:**
 
 The IP address shown is your default gateway.
 Enter this IP into your web browser to open the router login page.
@@ -172,6 +198,8 @@ For reference, our connected devices sections looks like this (your interface ma
 | 
 
 b. **Method 2 - Using** ``nmap``
+
+**For Linux/Mac:**
 
 First, install ``nmap``:
 
@@ -204,6 +232,50 @@ Run the following command:
 .. code-block:: bash
 
     nmap -sn <IP>/<MASK>
+
+**For Windows:**
+
+First, download and install ``nmap`` from `nmap.org <https://nmap.org/download.html>`_.
+
+**Step 1: Find your network information**
+
+Open PowerShell or Command Prompt and run:
+
+.. code-block:: bash
+
+    ipconfig
+
+Look for your active network adapter (usually Ethernet or Wi-Fi) with the following information:
+
+- **IPv4 Address:** Your computer's IP on the network (e.g., ``192.168.1.100``)
+- **Subnet Mask:** Defines the network range (e.g., ``255.255.255.0``)
+
+**Step 2: Convert the subnet mask to CIDR notation**
+
+The subnet mask ``255.255.255.0`` corresponds to ``/24`` in CIDR notation. Here's a quick reference:
+
+- ``255.255.255.0`` = ``/24`` (most common)
+- ``255.255.0.0`` = ``/16``
+- ``255.0.0.0`` = ``/8``
+
+**Step 3: Calculate your network address**
+
+For a typical ``/24`` network, replace the last number in your IP address with ``.0``:
+
+- Your IP: ``192.168.1.100``
+- Network address: ``192.168.1.0/24``
+
+**Step 4: Run nmap**
+
+Now scan your network to find connected devices:
+
+.. code-block:: bash
+
+    nmap -sn 192.168.1.0/24
+
+Replace ``192.168.1.0/24`` with your actual network address calculated in Step 3.
+
+**For all platforms:**
 
 This scans your network and returns a list of connected devices along with their IP addresses. 
 Look for the hostname ``ubiquityrobotXXXXX``.

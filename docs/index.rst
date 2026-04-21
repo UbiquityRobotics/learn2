@@ -89,6 +89,7 @@ Sections
    driving/connecting
    driving/teleop
    driving/ez_map_simple_drive
+   driving/shutdown
 
 
 .. _ez_map:
@@ -123,4 +124,10 @@ Sections
    troubleshooting/hardware/pi_camera
    troubleshooting/hardware/motor_parameters
 
+.. _troubleshooting_tips:
 
+.. toctree:: 
+   :maxdepth: 2
+   :caption: Troubleshooting
+
+   troubleshooting/troubleshooting_tips
