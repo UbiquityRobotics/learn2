@@ -11,7 +11,10 @@ Magni 6 Mini
    The issue may be caused by an intermittent internal hardware contact.
    Try pressing the switch firmly, or give the switch area a light tap.
 
-.. dropdown:: **Motors/robot are not moving**
+General
+#######
+
+.. dropdown:: **Motors/robot is not moving**
 
    If the robot's wheels do not lock automatically, manually lock them by pressing the button on the Motor Control Board (MCB).
    It's the button closest to the wire connector.
@@ -32,9 +35,6 @@ Magni 6 Mini
 
    After that, make sure wheels are locked again, and try driving the robot.
    If that does not work, restart the robot and try again.
-
-General
-#######
 
 .. dropdown:: **Robot cannot find the local network**
 
