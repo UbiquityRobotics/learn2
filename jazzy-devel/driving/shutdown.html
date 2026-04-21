@@ -6,7 +6,7 @@
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Waiting for Your Robot &mdash; Ubiquity Robotics Documentation 1.0.0 documentation</title>
+  <title>Shutting Down the Robot &mdash; Ubiquity Robotics Documentation 1.0.0 documentation</title>
       <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b86133f3" />
       <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=9edc463e" />
       <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
@@ -23,8 +23,8 @@
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Batteries" href="batteries.html" />
-    <link rel="prev" title="Magni 6 Midi" href="../models/magni6_midi.html" /> 
+    <link rel="next" title="Introduction to EZ-Map" href="../ez_map/ez_map_intro.html" />
+    <link rel="prev" title="Driving the robot through EZ-Map" href="ez_map_simple_drive.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -53,21 +53,12 @@
 <li class="toctree-l1"><a class="reference internal" href="../models/magni6_midi.html">Magni 6 Midi</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Waiting for Your Robot</span></p>
-<ul class="current">
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Waiting for Your Robot</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#requirements">Requirements</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#v-batteries-2x">1. 12V Batteries (2x)</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#workstation-ssh-capable">2. Workstation (SSH Capable)</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#simulation">3. Simulation</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#robot-s-image">4. Robot’s Image</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="batteries.html">Batteries</a></li>
-<li class="toctree-l1"><a class="reference internal" href="workstation.html">Setting up your Workstation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="simulation.html">Magni Robot Simulation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="images.html">Magni 6 Images</a></li>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../requirements/waiting_for_robot.html">Waiting for Your Robot</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../requirements/batteries.html">Batteries</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../requirements/workstation.html">Setting up your Workstation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../requirements/simulation.html">Magni Robot Simulation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../requirements/images.html">Magni 6 Images</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Unboxing Your Model</span></p>
 <ul>
@@ -75,11 +66,20 @@
 <li class="toctree-l1"><a class="reference internal" href="../unboxing/unboxing_midi.html">Unboxing Magni 6 MIDI</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Driving the Robot</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../driving/connecting.html">Connecting to the Robot</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../driving/teleop.html">Driving the robot using Terminal</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../driving/ez_map_simple_drive.html">Driving the robot through EZ-Map</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../driving/shutdown.html">Shutting Down the Robot</a></li>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="connecting.html">Connecting to the Robot</a></li>
+<li class="toctree-l1"><a class="reference internal" href="teleop.html">Driving the robot using Terminal</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ez_map_simple_drive.html">Driving the robot through EZ-Map</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Shutting Down the Robot</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#step-1-choose-robot-shutdown-method">Step 1: Choose Robot Shutdown Method</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#method-1-shutdown-from-gui">Method 1: Shutdown from GUI</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#method-2-shutdown-from-terminal">Method 2: Shutdown from Terminal</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#step-2-wait-for-shutdown-complete">Step 2: Wait for Shutdown Complete</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#step-3-power-off-the-robot">Step 3: Power Off the Robot</a></li>
+</ul>
+</li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">EZ-Map</span></p>
 <ul>
@@ -117,9 +117,9 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
-      <li class="breadcrumb-item active">Waiting for Your Robot</li>
+      <li class="breadcrumb-item active">Shutting Down the Robot</li>
       <li class="wy-breadcrumbs-aside">
-              <a href="https://github.com/UbiquityRobotics/learn2/blob/jazzy-devel/docs/requirements/waiting_for_robot.rst" class="fa fa-github"> Edit on GitHub</a>
+              <a href="https://github.com/UbiquityRobotics/learn2/blob/jazzy-devel/docs/driving/shutdown.rst" class="fa fa-github"> Edit on GitHub</a>
       </li>
   </ul>
   <hr/>
@@ -127,46 +127,40 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <section id="waiting-for-your-robot">
-<h1>Waiting for Your Robot<a class="headerlink" href="#waiting-for-your-robot" title="Link to this heading"></a></h1>
-<p>This section covers what you’ll need to prepare before your Ubiquity Gen 6 Robot arrives.</p>
-<section id="requirements">
-<h2>Requirements<a class="headerlink" href="#requirements" title="Link to this heading"></a></h2>
-<section id="v-batteries-2x">
-<h3>1. 12V Batteries (2x)<a class="headerlink" href="#v-batteries-2x" title="Link to this heading"></a></h3>
-<div class="admonition important">
-<p class="admonition-title">Important</p>
-<p>The robot ships without battery so you have to purchase them separetely.
-More information in the batteries page.</p>
-<p>See: <a class="reference internal" href="batteries.html"><span class="doc">Batteries</span></a>.</p>
-</div>
-<p>The robots require two 12V batteries to opearate. We recommened lead-acid batteries.
-Make sure they are safely mounted and connected as per your model’s guidelines.</p>
-<p>As this is a very important topic please read <a class="reference internal" href="batteries.html"><span class="doc">Batteries</span></a> for specific details.</p>
-</section>
-<section id="workstation-ssh-capable">
-<h3>2. Workstation (SSH Capable)<a class="headerlink" href="#workstation-ssh-capable" title="Link to this heading"></a></h3>
-<p>You will need a laptop or desktop computer capable of SSH connections to connect to the robot.
-This workstation will be used for tasks such as remote access, updates, and running software tools on the robot.
-To properly set up your workstation please see: <a class="reference internal" href="workstation.html"><span class="doc">Setting up your Workstation</span></a></p>
-</section>
-<section id="simulation">
-<h3>3. Simulation<a class="headerlink" href="#simulation" title="Link to this heading"></a></h3>
-<p>Once your Ubuntu 24.04 workstation is set up, you can try out the Magni 6 Mini in <a class="reference internal" href="simulation.html"><span class="doc">Magni Robot Simulation</span></a>.
-The simulation lets you explore how the robot works, practice using our system, and test your setup before using the real robot.</p>
-<p>It’s also a cost-effective way to evaluate whether our solution fits your needs before pruchasing the physical robot.</p>
-</section>
-<section id="robot-s-image">
-<h3>4. Robot’s Image<a class="headerlink" href="#robot-s-image" title="Link to this heading"></a></h3>
-<p>The Magni 6 robots use a custom software image that comes pre-installed on the robot.
-If you want to explore other versions or experiment with the system, you can find them here: <a class="reference internal" href="images.html"><span class="doc">Magni 6 Images</span></a>.</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>Older images may be marked as deprecated.
-We strongly recommend using the latest version for best compatibility and support.</p>
-<p>If you believe an older image better suits your needs and enouncter issues, please contact us at <a class="reference external" href="mailto:support&#37;&#52;&#48;ubiquityrobotics&#46;com">Ubiquity Robotics support</a>.</p>
+  <section id="shutting-down-the-robot">
+<h1>Shutting Down the Robot<a class="headerlink" href="#shutting-down-the-robot" title="Link to this heading"></a></h1>
+<section id="step-1-choose-robot-shutdown-method">
+<h2>Step 1: Choose Robot Shutdown Method<a class="headerlink" href="#step-1-choose-robot-shutdown-method" title="Link to this heading"></a></h2>
+<p>You can shut down the robot either from the GUI or from a terminal session connected to the robot.</p>
+<section id="method-1-shutdown-from-gui">
+<h3>Method 1: Shutdown from GUI<a class="headerlink" href="#method-1-shutdown-from-gui" title="Link to this heading"></a></h3>
+<a class="reference internal image-reference" href="../_images/shutdown_GUI.png"><img alt="Shutdown from GUI" class="align-center" src="../_images/shutdown_GUI.png" style="width: 600px;" />
+</a>
+<div class="line-block">
+<div class="line"><br /></div>
 </div>
 </section>
+<section id="method-2-shutdown-from-terminal">
+<h3>Method 2: Shutdown from Terminal<a class="headerlink" href="#method-2-shutdown-from-terminal" title="Link to this heading"></a></h3>
+<p>Open a terminal session connected to the robot (see <a class="reference internal" href="connecting.html"><span class="doc">Connecting to the Robot</span></a> for details) and run:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>shutdown<span class="w"> </span>-h<span class="w"> </span>now
+</pre></div>
+</div>
+</section>
+</section>
+<section id="step-2-wait-for-shutdown-complete">
+<h2>Step 2: Wait for Shutdown Complete<a class="headerlink" href="#step-2-wait-for-shutdown-complete" title="Link to this heading"></a></h2>
+<p>After issuing the shutdown command or selecting the shutdown option from the GUI, wait until the Raspberry Pi LED turns red.
+This indicates the system has fully shut down and all data has been safely written.</p>
+<a class="reference internal image-reference" href="../_images/turnedOffRaspberry.jpg"><img alt="Raspberry Pi LED turned red (shutdown complete)" class="align-center" src="../_images/turnedOffRaspberry.jpg" style="width: 600px;" />
+</a>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</section>
+<section id="step-3-power-off-the-robot">
+<h2>Step 3: Power Off the Robot<a class="headerlink" href="#step-3-power-off-the-robot" title="Link to this heading"></a></h2>
+<p>Once the Raspberry Pi LED is red, turn the robot off using the on/off switch.</p>
 </section>
 </section>
 
@@ -174,8 +168,8 @@ We strongly recommend using the latest version for best compatibility and suppor
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="../models/magni6_midi.html" class="btn btn-neutral float-left" title="Magni 6 Midi" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="batteries.html" class="btn btn-neutral float-right" title="Batteries" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="ez_map_simple_drive.html" class="btn btn-neutral float-left" title="Driving the robot through EZ-Map" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../ez_map/ez_map_intro.html" class="btn btn-neutral float-right" title="Introduction to EZ-Map" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
