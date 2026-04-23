@@ -246,9 +246,7 @@ This is expected behavior, as the connection is switching from the robot’s Wi-
 <ol class="loweralpha simple">
 <li><p><strong>Method 1 - Router Settings</strong></p></li>
 </ol>
-<p>If you know your router credentials, first determine your default gateway.</p>
-<p><strong>For Linux/Mac:</strong></p>
-<p>Run the following command in a local terminal:</p>
+<p>If you know your router credentials, first determine your default gateway by running the following command in a local terminal:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ip<span class="w"> </span>route
 </pre></div>
 </div>
@@ -256,13 +254,6 @@ This is expected behavior, as the connection is switching from the robot’s Wi-
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>default<span class="w"> </span>via<span class="w"> </span><span class="m">192</span>.168.1.1
 </pre></div>
 </div>
-<p><strong>For Windows:</strong></p>
-<p>Open PowerShell or Command Prompt and run:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ipconfig
-</pre></div>
-</div>
-<p>Look for <code class="docutils literal notranslate"><span class="pre">Default</span> <span class="pre">Gateway</span></code> under your active network adapter.</p>
-<p><strong>For all platforms:</strong></p>
 <p>The IP address shown is your default gateway.
 Enter this IP into your web browser to open the router login page.</p>
 <p>After logging in, navigate to the connected devices section and look for the robot.
@@ -276,7 +267,6 @@ It should appear as <code class="docutils literal notranslate"><span class="pre"
 <ol class="loweralpha simple" start="2">
 <li><p><strong>Method 2 - Using</strong> <code class="docutils literal notranslate"><span class="pre">nmap</span></code></p></li>
 </ol>
-<p><strong>For Linux/Mac:</strong></p>
 <p>First, install <code class="docutils literal notranslate"><span class="pre">nmap</span></code>:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>apt<span class="w"> </span>update
 sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>nmap
@@ -299,38 +289,6 @@ Copy the full address together with the mask.</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>nmap<span class="w"> </span>-sn<span class="w"> </span>&lt;IP&gt;/&lt;MASK&gt;
 </pre></div>
 </div>
-<p><strong>For Windows:</strong></p>
-<p>First, download and install <code class="docutils literal notranslate"><span class="pre">nmap</span></code> from <a class="reference external" href="https://nmap.org/download.html">nmap.org</a>.</p>
-<p><strong>Step 1: Find your network information</strong></p>
-<p>Open PowerShell or Command Prompt and run:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ipconfig
-</pre></div>
-</div>
-<p>Look for your active network adapter (usually Ethernet or Wi-Fi) with the following information:</p>
-<ul class="simple">
-<li><p><strong>IPv4 Address:</strong> Your computer’s IP on the network (e.g., <code class="docutils literal notranslate"><span class="pre">192.168.1.100</span></code>)</p></li>
-<li><p><strong>Subnet Mask:</strong> Defines the network range (e.g., <code class="docutils literal notranslate"><span class="pre">255.255.255.0</span></code>)</p></li>
-</ul>
-<p><strong>Step 2: Convert the subnet mask to CIDR notation</strong></p>
-<p>The subnet mask <code class="docutils literal notranslate"><span class="pre">255.255.255.0</span></code> corresponds to <code class="docutils literal notranslate"><span class="pre">/24</span></code> in CIDR notation. Here’s a quick reference:</p>
-<ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">255.255.255.0</span></code> = <code class="docutils literal notranslate"><span class="pre">/24</span></code> (most common)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">255.255.0.0</span></code> = <code class="docutils literal notranslate"><span class="pre">/16</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">255.0.0.0</span></code> = <code class="docutils literal notranslate"><span class="pre">/8</span></code></p></li>
-</ul>
-<p><strong>Step 3: Calculate your network address</strong></p>
-<p>For a typical <code class="docutils literal notranslate"><span class="pre">/24</span></code> network, replace the last number in your IP address with <code class="docutils literal notranslate"><span class="pre">.0</span></code>:</p>
-<ul class="simple">
-<li><p>Your IP: <code class="docutils literal notranslate"><span class="pre">192.168.1.100</span></code></p></li>
-<li><p>Network address: <code class="docutils literal notranslate"><span class="pre">192.168.1.0/24</span></code></p></li>
-</ul>
-<p><strong>Step 4: Run nmap</strong></p>
-<p>Now scan your network to find connected devices:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>nmap<span class="w"> </span>-sn<span class="w"> </span><span class="m">192</span>.168.1.0/24
-</pre></div>
-</div>
-<p>Replace <code class="docutils literal notranslate"><span class="pre">192.168.1.0/24</span></code> with your actual network address calculated in Step 3.</p>
-<p><strong>For all platforms:</strong></p>
 <p>This scans your network and returns a list of connected devices along with their IP addresses.
 Look for the hostname <code class="docutils literal notranslate"><span class="pre">ubiquityrobotXXXXX</span></code>.</p>
 <p>Once identified, you can see this IP address to SSH into the robot.</p>
