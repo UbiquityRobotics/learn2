@@ -34,7 +34,7 @@ Sections
 
 |  
 
-- `Driving the Robot <driving_>`_: Learn how to operate your robot in the most basic way possible. How to drive it through Teleop and through our custom sofware EZ-Map.
+- `Driving the Robot <driving_>`_: Learn how to operate your robot in the most basic way possible. How to drive it through Teleop and through our custom sofware EZ-Map. This section also includes advanced motor parameter configuration.
 
 |  
 
@@ -42,7 +42,11 @@ Sections
 
 |  
 
-- `Troubleshooting <troubleshooting_>`_: Solutions to common hardware and software issues. Your first stop if you encounter problems.
+- `OdinFleet <odin_fleet_>`_: Our custom OdinFleet software for managing fleets through a web dashboard, build on top of Open-RMF.
+
+|
+
+- `Let's get technical <troubleshooting_>`_: Solutions to common hardware and software issues. Your first stop if you encounter problems.
 
 ----
 
@@ -85,6 +89,7 @@ Sections
    driving/connecting
    driving/teleop
    driving/ez_map_simple_drive
+   driving/shutdown
 
 
 .. _ez_map:
@@ -96,14 +101,32 @@ Sections
    ez_map/ez_map_intro
    ez_map/ez_map_guide
 
+
+.. _odin_fleet:
+
+.. toctree:: 
+   :maxdepth: 2
+   :caption: OdinFleet 
+
+   odin_fleet/odin_fleet_intro
+   odin_fleet/odin_fleet_guide
+
+
 .. _troubleshooting:
+
+.. toctree:: 
+   :maxdepth: 2
+   :caption: Let's get Technical
+
+   troubleshooting/hardware/lidars
+   troubleshooting/hardware/rpi
+   troubleshooting/hardware/pi_camera
+   troubleshooting/hardware/motor_parameters
+
+.. _troubleshooting_tips:
 
 .. toctree:: 
    :maxdepth: 2
    :caption: Troubleshooting
 
-   troubleshooting/hardware/lidars
-   troubleshooting/hardware/rpi
-   troubleshooting/hardware/pi_camera
-
-
+   troubleshooting/troubleshooting_tips
