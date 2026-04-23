@@ -1,0 +1,291 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="" data-content_root="../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Configuring Motor Parameters &mdash; Ubiquity Robotics Documentation 1.0.0 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=9edc463e" />
+      <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
+      <link rel="stylesheet" type="text/css" href="../../_static/custom.css?v=946d5f4a" />
+
+  
+      <script src="../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../_static/documentation_options.js?v=96017b54"></script>
+      <script src="../../_static/doctools.js?v=fd6eb6e6"></script>
+      <script src="../../_static/sphinx_highlight.js?v=6ffebe34"></script>
+      <script src="../../_static/design-tabs.js?v=f930bc37"></script>
+      <script src="../../_static/custom.js?v=57b5b994"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Quick Troubleshooting Tips" href="../troubleshooting_tips.html" />
+    <link rel="prev" title="Pi Camera 3 Module" href="pi_camera.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            Ubiquity Robotics Documentation
+              <img src="../../_static/UbiquityRobotics_Logo_Full_White.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Magni 6 Model Introduction</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../models/magni6_mini.html">Magni 6 Mini</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../models/magni6_midi.html">Magni 6 Midi</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Waiting for Your Robot</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../requirements/waiting_for_robot.html">Waiting for Your Robot</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../requirements/batteries.html">Batteries</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../requirements/workstation.html">Setting up your Workstation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../requirements/simulation.html">Magni Robot Simulation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../requirements/images.html">Magni 6 Images</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Unboxing Your Model</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../unboxing/unboxing_mini.html">Unboxing and Setting Up the Magni 6 Mini</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../unboxing/unboxing_midi.html">Unboxing Magni 6 MIDI</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Driving the Robot</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../driving/connecting.html">Connecting to the Robot</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../driving/teleop.html">Driving the robot using Terminal</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../driving/ez_map_simple_drive.html">Driving the robot through EZ-Map</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../driving/shutdown.html">Shutting Down the Robot</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">EZ-Map</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../ez_map/ez_map_intro.html">Introduction to EZ-Map</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../ez_map/ez_map_guide.html">EZ-Map Guide</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">OdinFleet</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../odin_fleet/odin_fleet_intro.html">Introduction to OdinFleet</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../odin_fleet/odin_fleet_guide.html">OdinFleet Guide</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Let's get Technical</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="lidars.html">LiDAR Sensors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="rpi.html">Raspberry Pi 5</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pi_camera.html">Pi Camera 3 Module</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Configuring Motor Parameters</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#overview">Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#recommended-workflow">Recommended Workflow</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#disable-auto-enable">1. Disable Auto-Enable</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#modify-parameters">2. Modify Parameters</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#reset-the-mcb">3. Reset the MCB</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#enable-the-drive">4. Enable the Drive</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#commonly-modified-parameters">Commonly Modified Parameters</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#kinematic-settings">Kinematic settings</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#motor-calibration">Motor Calibration</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pid-position-control">PID Position Control</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Troubleshooting</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../troubleshooting_tips.html">Quick Troubleshooting Tips</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Ubiquity Robotics Documentation</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Configuring Motor Parameters</li>
+      <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/UbiquityRobotics/learn2/blob/jazzy/docs/troubleshooting/hardware/motor_parameters.rst" class="fa fa-github"> Edit on GitHub</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="configuring-motor-parameters">
+<h1>Configuring Motor Parameters<a class="headerlink" href="#configuring-motor-parameters" title="Link to this heading"></a></h1>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p><strong>ADVANCED USERS ONLY</strong></p>
+<p>This section is intended for advanced users who need to fine-tune the motor performance of the Magni robot.
+Incorrectly configuring these parameters can lead to unstable and potentially dangerous situations, hardware damage, or safety hazards.
+Do not modify these settings unless you fully understand what they do and their impact.</p>
+</div>
+<div class="admonition danger">
+<p class="admonition-title">Danger</p>
+<p><strong>CRITICAL SAFETY REQUIREMENT: WHEELS OFF THE GROUND</strong></p>
+<p>When performing any operations or tuning motor parameters, the robot’s wheels <strong>MUST NEVER</strong> touch the ground.
+Support the robot’s frame so that the wheels are floating and can spin without moving the robot itself.
+Failure to do so can result in the robot “going wild” and causing injury or damage if parameters are set incorrectly.</p>
+</div>
+<section id="overview">
+<h2>Overview<a class="headerlink" href="#overview" title="Link to this heading"></a></h2>
+<p>The Magni robot’s motor control system (the <code class="docutils literal notranslate"><span class="pre">/mcb</span></code> node) uses several parameters to define its movement characteristics.
+Because tuning involves changing internal control coefficients, a specific workflow must be followed to ensure the system remains under control.</p>
+</section>
+<section id="recommended-workflow">
+<h2>Recommended Workflow<a class="headerlink" href="#recommended-workflow" title="Link to this heading"></a></h2>
+<p>To safely tune the robot, you should first disable the automatic wheel locking (auto-enable) and use manual service calls to test your changes.</p>
+<section id="disable-auto-enable">
+<h3>1. Disable Auto-Enable<a class="headerlink" href="#disable-auto-enable" title="Link to this heading"></a></h3>
+<p>Before you start, it is best to ensure the robot will not automatically attempt to drive or lock its wheels on boot/reset.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ros2<span class="w"> </span>param<span class="w"> </span><span class="nb">set</span><span class="w"> </span>/mcb<span class="w"> </span>drive.general.auto_enable<span class="w"> </span><span class="nb">false</span>
+</pre></div>
+</div>
+</section>
+<section id="modify-parameters">
+<h3>2. Modify Parameters<a class="headerlink" href="#modify-parameters" title="Link to this heading"></a></h3>
+<p>Set your desired parameters using <code class="docutils literal notranslate"><span class="pre">ros2</span> <span class="pre">param</span> <span class="pre">set</span></code>. For example, to change the Proportional coefficient of the position control:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ros2<span class="w"> </span>param<span class="w"> </span><span class="nb">set</span><span class="w"> </span>/mcb<span class="w"> </span>drive.pid.position.p<span class="w"> </span><span class="m">2000</span>
+</pre></div>
+</div>
+</section>
+<section id="reset-the-mcb">
+<h3>3. Reset the MCB<a class="headerlink" href="#reset-the-mcb" title="Link to this heading"></a></h3>
+<p>For most parameters to take effect, the MCB must be reset. Press the <strong>middle tactile switch</strong> located in the upper left of the Motor Control Board PCB.</p>
+<a class="reference internal image-reference" href="../../_images/restart_MCB.jpg"><img alt="Restart the MCB button" class="align-center" src="../../_images/restart_MCB.jpg" style="width: 400px;" />
+</a>
+</section>
+<section id="enable-the-drive">
+<h3>4. Enable the Drive<a class="headerlink" href="#enable-the-drive" title="Link to this heading"></a></h3>
+<p>Once the MCB has been reset, you must manually enable the drive system.</p>
+<p>First, ensure you have pressed the <strong>upper right-most physical switch</strong> .
+Or you can also execute the following service call:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ros2<span class="w"> </span>service<span class="w"> </span>call<span class="w"> </span>/mcb/enable_drive<span class="w"> </span>std_srvs/srv/SetBool<span class="w"> </span><span class="s2">&quot;{data: true}&quot;</span>
+</pre></div>
+</div>
+<p>If the wheels are off the ground, they should now respond to the new control parameters.</p>
+</section>
+</section>
+<section id="commonly-modified-parameters">
+<h2>Commonly Modified Parameters<a class="headerlink" href="#commonly-modified-parameters" title="Link to this heading"></a></h2>
+<p>All parameters below are under the <code class="docutils literal notranslate"><span class="pre">/mcb</span></code> node.</p>
+<section id="kinematic-settings">
+<h3>Kinematic settings<a class="headerlink" href="#kinematic-settings" title="Link to this heading"></a></h3>
+<p>These define the physical limits of the robot’s motion. Increasing acceleration makes the robot more responsive but may cause jerking or slipping.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">drive.movement.max_lin_accel_mm_s2</span></code>: Maximum linear acceleration (default is often 500).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">drive.movement.max_rot_accel_mrad_s2</span></code>: Maximum rotational acceleration.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">drive.movement.max_lin_speed_mm_s</span></code>: Maximum linear speed.</p></li>
+</ul>
+</section>
+<section id="motor-calibration">
+<h3>Motor Calibration<a class="headerlink" href="#motor-calibration" title="Link to this heading"></a></h3>
+<p>If your motors are not “locking” or holding position properly during startup calibration, you may need to increase the calibration current.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">drive.motors.encoder_calib_current_A</span></code>: The current used during encoder calibration.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>If you find that the calibration fails to lock the motors sometimes, try increasing this value (e.g., to <code class="docutils literal notranslate"><span class="pre">2.5</span></code>).</p>
+</div>
+</li>
+</ul>
+</section>
+<section id="pid-position-control">
+<h3>PID Position Control<a class="headerlink" href="#pid-position-control" title="Link to this heading"></a></h3>
+<p>These coefficients control the PD position controller for the motors.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">drive.pid.position.p</span></code>: Proportional coefficient.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">drive.pid.position.d</span></code>: Derivative/Differential coefficient.</p></li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Changes made via <code class="docutils literal notranslate"><span class="pre">ros2</span> <span class="pre">param</span> <span class="pre">set</span></code> are persistent and will remain set until changed again. Once you have found the ideal settings, you should ensure they are correctly reflected in your permanent configuration files if necessary.</p>
+</div>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="pi_camera.html" class="btn btn-neutral float-left" title="Pi Camera 3 Module" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../troubleshooting_tips.html" class="btn btn-neutral float-right" title="Quick Troubleshooting Tips" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2025, Ubiquity Robotics.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  
+
+
+
+
+<div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    <span class="fa fa-book"> Docs</span>
+    v: jazzy
+    <span class="fa fa-caret-down"></span>
+  </span>
+  <div class="rst-other-versions">
+    
+    <dl>
+      <dt>Versions</dt>
+      
+       <strong> 
+        <dd><a href="https://learn2.ubiquityrobotics.com/jazzy/">jazzy</a></dd>
+        
+      </strong> 
+      
+      
+        <dd><a href="https://learn2.ubiquityrobotics.com/jazzy-devel/">jazzy-devel</a></dd>
+        
+      
+    </dl>
+    
+  </div>
+</div>
+<script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

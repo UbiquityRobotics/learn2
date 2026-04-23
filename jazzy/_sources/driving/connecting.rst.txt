@@ -135,6 +135,15 @@ Example:
 
 | 
 
+.. tip::
+
+    If the robot cannot find your local network, first list nearby Wi-Fi networks from the robot:
+
+    .. code-block:: bash
+
+        nmcli device wifi list
+
+    If your local Wi-Fi (SSID) does not appear in the list, restart the robot and try the connection process again.
 
 .. .. important:: 
 

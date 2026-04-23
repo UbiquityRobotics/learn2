@@ -6,9 +6,10 @@
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Unboxing and Setting Up the Magni 6 Midi &mdash; Ubiquity Robotics Documentation 1.0.0 documentation</title>
+  <title>Unboxing Magni 6 MIDI &mdash; Ubiquity Robotics Documentation 1.0.0 documentation</title>
       <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b86133f3" />
       <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=9edc463e" />
+      <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
       <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=946d5f4a" />
 
   
@@ -17,6 +18,7 @@
       <script src="../_static/documentation_options.js?v=96017b54"></script>
       <script src="../_static/doctools.js?v=fd6eb6e6"></script>
       <script src="../_static/sphinx_highlight.js?v=6ffebe34"></script>
+      <script src="../_static/design-tabs.js?v=f930bc37"></script>
       <script src="../_static/custom.js?v=57b5b994"></script>
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
@@ -61,24 +63,51 @@
 <p class="caption" role="heading"><span class="caption-text">Unboxing Your Model</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="unboxing_mini.html">Unboxing and Setting Up the Magni 6 Mini</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Unboxing and Setting Up the Magni 6 Midi</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Unboxing Magni 6 MIDI</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#what-s-in-the-box">What’s in the Box?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#battery-installation">Battery Installation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#battery-specifications">Battery Specifications</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#preparing-the-battery-bay">Preparing the Battery Bay</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#installing-the-first-battery">Installing the First Battery</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#installing-the-second-battery">Installing the Second Battery</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#wiring-and-connections">Wiring and Connections</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#series-connection-24v">Series Connection (24V)</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#final-check">Final Check</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#next-steps">Next Steps</a></li>
+</ul>
+</li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Driving the Robot</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../driving/connecting.html">Connecting to the Robot</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../driving/teleop.html">Driving the robot using Terminal</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../driving/ez_map_simple_drive.html">Driving the robot through EZ-Map</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../driving/shutdown.html">Shutting Down the Robot</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">EZ-Map</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../ez_map/ez_map_intro.html">Introduction to EZ-Map</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../ez_map/ez_map_guide.html">EZ-Map Guide</a></li>
 </ul>
-<p class="caption" role="heading"><span class="caption-text">Troubleshooting</span></p>
+<p class="caption" role="heading"><span class="caption-text">OdinFleet</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../odin_fleet/odin_fleet_intro.html">Introduction to OdinFleet</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../odin_fleet/odin_fleet_guide.html">OdinFleet Guide</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Let's get Technical</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../troubleshooting/hardware/lidars.html">LiDAR Sensors</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../troubleshooting/hardware/rpi.html">Raspberry Pi 5</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../troubleshooting/hardware/pi_camera.html">Pi Camera 3 Module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../troubleshooting/hardware/motor_parameters.html">Configuring Motor Parameters</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Troubleshooting</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../troubleshooting/troubleshooting_tips.html">Quick Troubleshooting Tips</a></li>
 </ul>
 
         </div>
@@ -95,7 +124,7 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
-      <li class="breadcrumb-item active">Unboxing and Setting Up the Magni 6 Midi</li>
+      <li class="breadcrumb-item active">Unboxing Magni 6 MIDI</li>
       <li class="wy-breadcrumbs-aside">
               <a href="https://github.com/UbiquityRobotics/learn2/blob/jazzy/docs/unboxing/unboxing_midi.rst" class="fa fa-github"> Edit on GitHub</a>
       </li>
@@ -105,11 +134,91 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <section id="unboxing-and-setting-up-the-magni-6-midi">
-<h1>Unboxing and Setting Up the Magni 6 Midi<a class="headerlink" href="#unboxing-and-setting-up-the-magni-6-midi" title="Link to this heading"></a></h1>
-<a class="reference internal image-reference" href="../_images/magni6_midi_2WD.png"><img alt="Magni 6 Midi" class="align-center" src="../_images/magni6_midi_2WD.png" style="width: 400px;" />
+  <section id="unboxing-magni-6-midi">
+<h1>Unboxing Magni 6 MIDI<a class="headerlink" href="#unboxing-magni-6-midi" title="Link to this heading"></a></h1>
+<p>This guide covers the unboxing and initial setup of the Magni 6 MIDI robot.</p>
+<hr class="docutils" />
+<section id="what-s-in-the-box">
+<h2>What’s in the Box?<a class="headerlink" href="#what-s-in-the-box" title="Link to this heading"></a></h2>
+<p>When you first open your Magni 6 MIDI, please verify that you have received the following components:</p>
+<ul class="simple">
+<li><p><strong>Magni 6 MIDI Chassis</strong></p></li>
+<li><p><strong>Battery Brackets:</strong> Designed for larger batteries (FG20721).</p></li>
+<li><p><strong>Wire Harness:</strong> Configured for standard connection.</p></li>
+<li><p><strong>Documentation &amp; Quick Start Guide</strong></p></li>
+</ul>
+</section>
+<hr class="docutils" />
+<section id="battery-installation">
+<h2>Battery Installation<a class="headerlink" href="#battery-installation" title="Link to this heading"></a></h2>
+<p>The Magni 6 MIDI is designed to also use high-capacity 33Ah batteries. Please ensure you are using the correct battery type.</p>
+<section id="battery-specifications">
+<h3>Battery Specifications<a class="headerlink" href="#battery-specifications" title="Link to this heading"></a></h3>
+<p>The recommended battery for this model is the <strong>FG20721</strong>.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>When ordering batteries, ensure they have <strong>6.35mm (or 6.4mm) FASTON terminals</strong>. Some batteries come with smaller 4.75mm terminals, which are not compatible with the standard Magni wire harness.</p>
+</div>
+<a class="reference internal image-reference" href="../_images/battery_type.jpg"><img alt="FG20721 Battery Type" class="align-center" src="../_images/battery_type.jpg" style="width: 400px;" />
 </a>
-<p><strong>THE CONTENT FOR THIS ROBOT IS COMING SOON IF YOU NEED ANY SPECIFIC INFORMATION CONTACT:</strong> <a class="reference external" href="mailto:support&#37;&#52;&#48;ubiquityrobotics&#46;com">Ubiquity Robotics support</a></p>
+</section>
+<section id="preparing-the-battery-bay">
+<h3>Preparing the Battery Bay<a class="headerlink" href="#preparing-the-battery-bay" title="Link to this heading"></a></h3>
+<p>Before installing the batteries, ensure the brackets are correctly positioned in the battery bay.</p>
+<a class="reference internal image-reference" href="../_images/battery_bay_brackets.jpg"><img alt="Battery Bay Brackets" class="align-center" src="../_images/battery_bay_brackets.jpg" style="width: 600px;" />
+</a>
+</section>
+<section id="installing-the-first-battery">
+<h3>Installing the First Battery<a class="headerlink" href="#installing-the-first-battery" title="Link to this heading"></a></h3>
+<p>Place the first battery into the bay as shown below.</p>
+<a class="reference internal image-reference" href="../_images/one_battery_sitting_in_the_battery_bay.jpg"><img alt="Single battery in bay" class="align-center" src="../_images/one_battery_sitting_in_the_battery_bay.jpg" style="width: 600px;" />
+</a>
+</section>
+<section id="installing-the-second-battery">
+<h3>Installing the Second Battery<a class="headerlink" href="#installing-the-second-battery" title="Link to this heading"></a></h3>
+<p>Add the second battery alongside the first.</p>
+<a class="reference internal image-reference" href="../_images/batteries_sitting_in_the_battery_bay.jpg"><img alt="Both batteries in bay" class="align-center" src="../_images/batteries_sitting_in_the_battery_bay.jpg" style="width: 600px;" />
+</a>
+</section>
+</section>
+<hr class="docutils" />
+<section id="wiring-and-connections">
+<h2>Wiring and Connections<a class="headerlink" href="#wiring-and-connections" title="Link to this heading"></a></h2>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p><strong>CRITICAL BATTERY SAFETY:</strong></p>
+<ul class="simple">
+<li><p><strong>Red Terminals:</strong> The wire harness terminals with <strong>red end termination</strong> MUST be connected only to the battery terminal that is <strong>RED</strong> and currently free.</p></li>
+<li><p><strong>Black Terminals:</strong> The wire harness terminals with <strong>black end termination</strong> MUST be connected only to the battery terminal that is <strong>BLACK</strong> and currently free.</p></li>
+</ul>
+<p>Failure to match these correctly will cause a short circuit and potentially damage the electronics.</p>
+</div>
+<section id="series-connection-24v">
+<h3>Series Connection (24V)<a class="headerlink" href="#series-connection-24v" title="Link to this heading"></a></h3>
+<p>The batteries must be connected in series to provide the required 24V power. Use the provided diagrams for reference.</p>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>Ensure the batteries are connected in <strong>series</strong> (Positive of one battery to Negative of the other) as shown in the diagrams below to achieve 24V. Do NOT connect them in parallel.</p>
+</div>
+<a class="reference internal image-reference" href="../_images/batt_to_batt_series_connction_wires.jpg"><img alt="Battery to Battery Series Connection Wires Diagram" class="align-center" src="../_images/batt_to_batt_series_connction_wires.jpg" style="width: 800px;" />
+</a>
+<a class="reference internal image-reference" href="../_images/connecting_the_batterie_in_series.jpg"><img alt="Connecting the batteries in series - Step 1" class="align-center" src="../_images/connecting_the_batterie_in_series.jpg" style="width: 600px;" />
+</a>
+<a class="reference internal image-reference" href="../_images/connecting_the_batteries_in_series2.jpg"><img alt="Connecting the batteries in series - Step 2" class="align-center" src="../_images/connecting_the_batteries_in_series2.jpg" style="width: 600px;" />
+</a>
+<a class="reference internal image-reference" href="../_images/batt_to_batt_series_connection.jpg"><img alt="Completed Series Connection" class="align-center" src="../_images/batt_to_batt_series_connection.jpg" style="width: 600px;" />
+</a>
+</section>
+</section>
+<hr class="docutils" />
+<section id="final-check">
+<h2>Final Check<a class="headerlink" href="#final-check" title="Link to this heading"></a></h2>
+<p>Before powering on, verify all connections and ensure the robot is on a flat surface.</p>
+</section>
+<section id="next-steps">
+<h2>Next Steps<a class="headerlink" href="#next-steps" title="Link to this heading"></a></h2>
+<p>Once unboxed and powered, proceed to <a class="reference internal" href="../driving/connecting.html"><span class="doc">Connecting to the Robot</span></a> to start using your robot.</p>
+</section>
 </section>
 
 

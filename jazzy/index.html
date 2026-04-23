@@ -9,6 +9,7 @@
   <title>Ubiquity Robotics Gen 6 Documentation &mdash; Ubiquity Robotics Documentation 1.0.0 documentation</title>
       <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=b86133f3" />
       <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=9edc463e" />
+      <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
       <link rel="stylesheet" type="text/css" href="_static/custom.css?v=946d5f4a" />
 
   
@@ -17,6 +18,7 @@
       <script src="_static/documentation_options.js?v=96017b54"></script>
       <script src="_static/doctools.js?v=fd6eb6e6"></script>
       <script src="_static/sphinx_highlight.js?v=6ffebe34"></script>
+      <script src="_static/design-tabs.js?v=f930bc37"></script>
       <script src="_static/custom.js?v=57b5b994"></script>
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
@@ -60,24 +62,35 @@
 <p class="caption" role="heading"><span class="caption-text">Unboxing Your Model</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="unboxing/unboxing_mini.html">Unboxing and Setting Up the Magni 6 Mini</a></li>
-<li class="toctree-l1"><a class="reference internal" href="unboxing/unboxing_midi.html">Unboxing and Setting Up the Magni 6 Midi</a></li>
+<li class="toctree-l1"><a class="reference internal" href="unboxing/unboxing_midi.html">Unboxing Magni 6 MIDI</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Driving the Robot</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="driving/connecting.html">Connecting to the Robot</a></li>
 <li class="toctree-l1"><a class="reference internal" href="driving/teleop.html">Driving the robot using Terminal</a></li>
 <li class="toctree-l1"><a class="reference internal" href="driving/ez_map_simple_drive.html">Driving the robot through EZ-Map</a></li>
+<li class="toctree-l1"><a class="reference internal" href="driving/shutdown.html">Shutting Down the Robot</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">EZ-Map</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="ez_map/ez_map_intro.html">Introduction to EZ-Map</a></li>
 <li class="toctree-l1"><a class="reference internal" href="ez_map/ez_map_guide.html">EZ-Map Guide</a></li>
 </ul>
-<p class="caption" role="heading"><span class="caption-text">Troubleshooting</span></p>
+<p class="caption" role="heading"><span class="caption-text">OdinFleet</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="odin_fleet/odin_fleet_intro.html">Introduction to OdinFleet</a></li>
+<li class="toctree-l1"><a class="reference internal" href="odin_fleet/odin_fleet_guide.html">OdinFleet Guide</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Let's get Technical</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="troubleshooting/hardware/lidars.html">LiDAR Sensors</a></li>
 <li class="toctree-l1"><a class="reference internal" href="troubleshooting/hardware/rpi.html">Raspberry Pi 5</a></li>
 <li class="toctree-l1"><a class="reference internal" href="troubleshooting/hardware/pi_camera.html">Pi Camera 3 Module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="troubleshooting/hardware/motor_parameters.html">Configuring Motor Parameters</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Troubleshooting</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="troubleshooting/troubleshooting_tips.html">Quick Troubleshooting Tips</a></li>
 </ul>
 
         </div>
@@ -140,7 +153,7 @@ Learn how to connect, operate, and interact with our robots, all in a step-by-st
 <div class="line"><br /></div>
 </div>
 <ul class="simple">
-<li><p><a class="reference internal" href="#driving">Driving the Robot</a>: Learn how to operate your robot in the most basic way possible. How to drive it through Teleop and through our custom sofware EZ-Map.</p></li>
+<li><p><a class="reference internal" href="#driving">Driving the Robot</a>: Learn how to operate your robot in the most basic way possible. How to drive it through Teleop and through our custom sofware EZ-Map. This section also includes advanced motor parameter configuration.</p></li>
 </ul>
 <div class="line-block">
 <div class="line"><br /></div>
@@ -152,7 +165,13 @@ Learn how to connect, operate, and interact with our robots, all in a step-by-st
 <div class="line"><br /></div>
 </div>
 <ul class="simple">
-<li><p><a class="reference internal" href="#id3">Troubleshooting</a>: Solutions to common hardware and software issues. Your first stop if you encounter problems.</p></li>
+<li><p><a class="reference internal" href="#odin-fleet">OdinFleet</a>: Our custom OdinFleet software for managing fleets through a web dashboard, build on top of Open-RMF.</p></li>
+</ul>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<ul class="simple">
+<li><p><a class="reference internal" href="#troubleshooting">Let’s get technical</a>: Solutions to common hardware and software issues. Your first stop if you encounter problems.</p></li>
 </ul>
 <hr class="docutils" />
 <div class="toctree-wrapper compound" id="model-introduction">
@@ -195,6 +214,7 @@ Learn how to connect, operate, and interact with our robots, all in a step-by-st
 <li class="toctree-l2"><a class="reference internal" href="requirements/workstation.html#setting-up-the-desktop-workstation">Setting up the Desktop Workstation</a></li>
 <li class="toctree-l2"><a class="reference internal" href="requirements/workstation.html#setting-up-a-virtual-machine">Setting up a Virtual Machine</a></li>
 <li class="toctree-l2"><a class="reference internal" href="requirements/workstation.html#testing-the-connection">Testing the connection</a></li>
+<li class="toctree-l2"><a class="reference internal" href="requirements/workstation.html#zenoh-setup">Zenoh Setup</a></li>
 <li class="toctree-l2"><a class="reference internal" href="requirements/workstation.html#next-steps">Next Steps</a></li>
 </ul>
 </li>
@@ -230,7 +250,14 @@ Learn how to connect, operate, and interact with our robots, all in a step-by-st
 <li class="toctree-l2"><a class="reference internal" href="unboxing/unboxing_mini.html#next-step-connecting">Next Step: Connecting</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="unboxing/unboxing_midi.html">Unboxing and Setting Up the Magni 6 Midi</a></li>
+<li class="toctree-l1"><a class="reference internal" href="unboxing/unboxing_midi.html">Unboxing Magni 6 MIDI</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="unboxing/unboxing_midi.html#what-s-in-the-box">What’s in the Box?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="unboxing/unboxing_midi.html#battery-installation">Battery Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="unboxing/unboxing_midi.html#wiring-and-connections">Wiring and Connections</a></li>
+<li class="toctree-l2"><a class="reference internal" href="unboxing/unboxing_midi.html#final-check">Final Check</a></li>
+<li class="toctree-l2"><a class="reference internal" href="unboxing/unboxing_midi.html#next-steps">Next Steps</a></li>
+</ul>
+</li>
 </ul>
 </div>
 <div class="toctree-wrapper compound" id="driving">
@@ -244,6 +271,12 @@ Learn how to connect, operate, and interact with our robots, all in a step-by-st
 </li>
 <li class="toctree-l1"><a class="reference internal" href="driving/teleop.html">Driving the robot using Terminal</a></li>
 <li class="toctree-l1"><a class="reference internal" href="driving/ez_map_simple_drive.html">Driving the robot through EZ-Map</a></li>
+<li class="toctree-l1"><a class="reference internal" href="driving/shutdown.html">Shutting Down the Robot</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="driving/shutdown.html#step-1-choose-robot-shutdown-method">Step 1: Choose Robot Shutdown Method</a></li>
+<li class="toctree-l2"><a class="reference internal" href="driving/shutdown.html#step-2-wait-for-shutdown-complete">Step 2: Wait for Shutdown Complete</a></li>
+<li class="toctree-l2"><a class="reference internal" href="driving/shutdown.html#step-3-power-off-the-robot">Step 3: Power Off the Robot</a></li>
+</ul>
+</li>
 </ul>
 </div>
 <div class="toctree-wrapper compound" id="id2">
@@ -267,8 +300,35 @@ Learn how to connect, operate, and interact with our robots, all in a step-by-st
 </li>
 </ul>
 </div>
-<div class="toctree-wrapper compound" id="id3">
-<p class="caption" role="heading"><span class="caption-text">Troubleshooting</span></p>
+<div class="toctree-wrapper compound" id="odin-fleet">
+<p class="caption" role="heading"><span class="caption-text">OdinFleet</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="odin_fleet/odin_fleet_intro.html">Introduction to OdinFleet</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="odin_fleet/odin_fleet_intro.html#general-overview">General Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="odin_fleet/odin_fleet_intro.html#web-dashboard">Web Dashboard</a></li>
+<li class="toctree-l2"><a class="reference internal" href="odin_fleet/odin_fleet_intro.html#fleet-manager">Fleet Manager</a></li>
+<li class="toctree-l2"><a class="reference internal" href="odin_fleet/odin_fleet_intro.html#rmw-zenoh">RMW Zenoh</a></li>
+<li class="toctree-l2"><a class="reference internal" href="odin_fleet/odin_fleet_intro.html#extra-resources">Extra Resources</a></li>
+<li class="toctree-l2"><a class="reference internal" href="odin_fleet/odin_fleet_intro.html#next-steps">Next Steps</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="odin_fleet/odin_fleet_guide.html">OdinFleet Guide</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="odin_fleet/odin_fleet_guide.html#core-concepts">Core Concepts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="odin_fleet/odin_fleet_guide.html#core-odinfleet-features">Core OdinFleet Features</a></li>
+<li class="toctree-l2"><a class="reference internal" href="odin_fleet/odin_fleet_guide.html#task-queue">Task Queue</a></li>
+<li class="toctree-l2"><a class="reference internal" href="odin_fleet/odin_fleet_guide.html#task-list">Task List</a></li>
+<li class="toctree-l2"><a class="reference internal" href="odin_fleet/odin_fleet_guide.html#map-page">Map Page</a></li>
+<li class="toctree-l2"><a class="reference internal" href="odin_fleet/odin_fleet_guide.html#robot-s-page">Robot’s Page</a></li>
+<li class="toctree-l2"><a class="reference internal" href="odin_fleet/odin_fleet_guide.html#doors-and-lifts">Doors and Lifts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="odin_fleet/odin_fleet_guide.html#configuration">Configuration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="odin_fleet/odin_fleet_guide.html#feedback">Feedback</a></li>
+<li class="toctree-l2"><a class="reference internal" href="odin_fleet/odin_fleet_guide.html#next-steps">Next Steps</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound" id="troubleshooting">
+<p class="caption" role="heading"><span class="caption-text">Let's get Technical</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="troubleshooting/hardware/lidars.html">LiDAR Sensors</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="troubleshooting/hardware/lidars.html#short-range-lidar">Short Range LiDAR</a></li>
@@ -288,6 +348,22 @@ Learn how to connect, operate, and interact with our robots, all in a step-by-st
 <li class="toctree-l2"><a class="reference internal" href="troubleshooting/hardware/pi_camera.html#basic-setup">Basic Setup</a></li>
 <li class="toctree-l2"><a class="reference internal" href="troubleshooting/hardware/pi_camera.html#how-to-use">How to use?</a></li>
 <li class="toctree-l2"><a class="reference internal" href="troubleshooting/hardware/pi_camera.html#project-suggestion">Project Suggestion</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="troubleshooting/hardware/motor_parameters.html">Configuring Motor Parameters</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="troubleshooting/hardware/motor_parameters.html#overview">Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="troubleshooting/hardware/motor_parameters.html#recommended-workflow">Recommended Workflow</a></li>
+<li class="toctree-l2"><a class="reference internal" href="troubleshooting/hardware/motor_parameters.html#commonly-modified-parameters">Commonly Modified Parameters</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound" id="troubleshooting-tips">
+<p class="caption" role="heading"><span class="caption-text">Troubleshooting</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="troubleshooting/troubleshooting_tips.html">Quick Troubleshooting Tips</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="troubleshooting/troubleshooting_tips.html#magni-6-mini">Magni 6 Mini</a></li>
+<li class="toctree-l2"><a class="reference internal" href="troubleshooting/troubleshooting_tips.html#general">General</a></li>
 </ul>
 </li>
 </ul>
