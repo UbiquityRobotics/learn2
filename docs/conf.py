@@ -21,6 +21,7 @@ release = '1.0.0'
 # -- General configuration ---------------------------------------------------
 extensions = [
     'sphinx_rtd_theme',
+    'sphinx_design',
     'sphinx.ext.viewcode',
     'sphinx.ext.githubpages',
 ]
