@@ -49,7 +49,7 @@ not officially supported and may not work reliably.
 Flashing hte image on to a SD Card
 ##################################
 
-We recommend [Etcher](https://www.balena.io/etcher/) to flash the image on most systems. Under Ubuntu The GNOME disk tool can be used. Install it with `sudo apt install gnome-disk-utility`. Then you can double click on the downloaded image file, the GNOME Disks tool will automatically come up, and you can direct it to expand the image onto an SD card drive attached to your computer.
+We recommend [Etcher](https://www.balena.io/etcher/) to flash the image on most systems. Under Ubuntu The GNOME disk tool can be used. Install it with "sudo apt install gnome-disk-utility". Then you can double click on the downloaded image file, the GNOME Disks tool will automatically come up, and you can direct it to expand the image onto an SD card drive attached to your computer.
 
 Image Bugs and Contributions
 ############################
